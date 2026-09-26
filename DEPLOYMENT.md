@@ -27,3 +27,11 @@ Both configured A records and the www CNAME were confirmed from the authoritativ
 ## Production acceptance
 
 The primary domain and backup Vercel alias each passed all 30 browser acceptance cases in real Chrome and 291 HTTP checks. Full details, bounded network retries and remaining scope limits are in VERIFICATION.md. No application secret, API key or environment variable is needed; Vercel authentication remains outside Git.
+
+## English default and Google Search Console update
+
+Application commit `e1190976978267b001005dfe2c647fa631cc4f5b` defaults first-time root visits to English while retaining saved manual language selections and explicit language routes. Its Vercel production deployment is `dpl_xApMNcKszW3yaQqUshJhwTCLLjQE` (Ready); GitHub CI passed at https://github.com/cuilinhao/rngdle-code/actions/runs/36227703995 . Local and production targeted Chrome checks each passed 7/7.
+
+The user-selected Google account owns the verified Domain property `sc-domain:rngdle.art`. A Google site-verification TXT was added at Namecheap with host `@` and Automatic TTL; retain that record for continued verification. Existing web and mail DNS records were retained.
+
+Search Console confirmed that https://rngdle.art/sitemap.xml was successfully processed on 2026-09-26 with 282 discovered pages. This confirms sitemap processing, not indexing of every page. Console: https://search.google.com/search-console/sitemaps?resource_id=sc-domain%3Arngdle.art .

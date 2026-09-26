@@ -1,0 +1,17 @@
+{
+  "checkedAt": "2026-09-26T07:50:38.239236+00:00",
+  "evidenceSource": "Native Chrome UI through Codex computer use",
+  "property": "sc-domain:rngdle.art",
+  "verificationMethod": "Domain provider DNS TXT",
+  "ownershipStatus": "Verified; GSC displayed 已完成所有权验证",
+  "dnsProvider": "Namecheap",
+  "existingWebAndMailRecordsRetained": true,
+  "sitemap": "https://rngdle.art/sitemap.xml",
+  "sitemapStatus": "Success; GSC displayed 已成功处理站点地图",
+  "lastReadDisplayed": "2026/9/26",
+  "discoveredPages": 282,
+  "discoveredVideos": 0,
+  "initialTransientStatus": "Could not fetch, resolved on first detail view without resubmission",
+  "indexingStatus": "Not asserted; discovered pages are not necessarily indexed",
+  "applicationCommit": "e1190976978267b001005dfe2c647fa631cc4f5b"
+}
