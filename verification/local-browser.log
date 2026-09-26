@@ -1,0 +1,39 @@
+
+> rngdle-art@1.0.0 test:browser
+> playwright test
+
+
+Running 30 tests using 3 workers
+
+  ✓   3 tests/browser/acceptance.spec.ts:44:3 › A01 A12 A16 A17 all primary routes, metadata and reload: en (2.8s)
+  ✓   1 tests/browser/acceptance.spec.ts:44:3 › A01 A12 A16 A17 all primary routes, metadata and reload: ja (2.8s)
+  ✓   2 tests/browser/acceptance.spec.ts:44:3 › A01 A12 A16 A17 all primary routes, metadata and reload: zh (2.9s)
+  ✓   4 tests/browser/acceptance.spec.ts:44:3 › A01 A12 A16 A17 all primary routes, metadata and reload: ko (2.3s)
+  ✓   5 tests/browser/acceptance.spec.ts:44:3 › A01 A12 A16 A17 all primary routes, metadata and reload: de (2.4s)
+  ✓   6 tests/browser/acceptance.spec.ts:44:3 › A01 A12 A16 A17 all primary routes, metadata and reload: fr (2.4s)
+  ✓   8 tests/browser/acceptance.spec.ts:89:1 › A02 A03 number validation and reference sample (1.3s)
+  ✓   9 tests/browser/acceptance.spec.ts:113:1 › A04 A05 single, batch, turbo target, stop, save and new session (2.0s)
+  ✓  10 tests/browser/acceptance.spec.ts:159:1 › A04 reveal controls, simulated page-hidden event and navigation pause (1.2s)
+  ✓   7 tests/browser/acceptance.spec.ts:74:1 › A01 A11 every pattern detail has an accessible exact count and live example (2.9s)
+  ✓  11 tests/browser/acceptance.spec.ts:198:3 › A06 A07 daily draft: resume, complete, practice, locked result (1.1s)
+  ✓  12 tests/browser/acceptance.spec.ts:198:3 › A06 A07 daily hunt: resume, complete, practice, locked result (1.0s)
+  ✓  14 tests/browser/acceptance.spec.ts:265:1 › A07 hunt timeout settles after elapsed time and UTC midnight changes challenge (647ms)
+  ✓  13 tests/browser/acceptance.spec.ts:198:3 › A06 A07 daily quiz: resume, complete, practice, locked result (1.3s)
+  ✓  15 tests/browser/acceptance.spec.ts:284:1 › A08 comparison, random battle and independent quiz (1.2s)
+  ✓  16 tests/browser/acceptance.spec.ts:308:1 › A09 full-range explorer exact count, no matches, filters and random result (919ms)
+  ✓  17 tests/browser/acceptance.spec.ts:335:1 › A10 sandbox keyboard, length, reset and best edit (802ms)
+  ✓  18 tests/browser/acceptance.spec.ts:372:1 › A11 atlas is only stamped by daily specimens and survives reload (976ms)
+  ✓  20 tests/browser/acceptance.spec.ts:427:1 › A14 share link clipboard, real image download and focus restoration (1.2s)
+  ✓  19 tests/browser/acceptance.spec.ts:401:1 › A12 A13 browser locale fallback, selection, theme persistence and route preservation (2.2s)
+  ✓  21 tests/browser/acceptance.spec.ts:456:3 › A15 mobile and tablet responsive routes: en (1.9s)
+  ✓  22 tests/browser/acceptance.spec.ts:456:3 › A15 mobile and tablet responsive routes: zh (1.9s)
+  ✓  23 tests/browser/acceptance.spec.ts:456:3 › A15 mobile and tablet responsive routes: ja (1.9s)
+  ✓  24 tests/browser/acceptance.spec.ts:456:3 › A15 mobile and tablet responsive routes: ko (1.9s)
+  ✓  25 tests/browser/acceptance.spec.ts:456:3 › A15 mobile and tablet responsive routes: de (1.8s)
+  ✓  27 tests/browser/acceptance.spec.ts:492:1 › A15 keyboard navigation, mobile menu and reduced motion (843ms)
+  ✓  28 tests/browser/acceptance.spec.ts:518:1 › A16 graceful corrupt storage and data-load failure retry (786ms)
+  ✓  26 tests/browser/acceptance.spec.ts:456:3 › A15 mobile and tablet responsive routes: fr (1.9s)
+  ✓  29 tests/browser/acceptance.spec.ts:540:1 › A01 404 renders a real recovery route (685ms)
+  ✓  30 tests/browser/acceptance.spec.ts:555:1 › A03 tiny nonzero probabilities never display as zero (578ms)
+
+  30 passed (17.7s)

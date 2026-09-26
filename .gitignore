@@ -1,0 +1,17 @@
+node_modules/
+dist/
+.vercel/
+.env*
+!.env.example
+*.tsbuildinfo
+RECON/*.html
+RECON/reference-assets/
+verification/raw/
+test-results/
+playwright-report/
+.DS_Store
+
+.prerender/
+RECON/screenshots/
+RECON/routes/screenshots/
+verification/browser-results.json

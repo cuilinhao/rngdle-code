@@ -1,0 +1,979 @@
+{
+  "label": "original",
+  "url": "https://rngdle.net",
+  "capturedAt": "2026-09-26T06:30:13.035Z",
+  "maxPages": 20,
+  "maxDepth": 1,
+  "allowSubdomains": false,
+  "routes": [
+    {
+      "url": "https://rngdle.net",
+      "from": "",
+      "depth": 0,
+      "status": 200,
+      "title": "RNGdle – Number Rarity Calculator, Infinite Rolls & Daily Challenges",
+      "lang": "en",
+      "metaDescription": "Analyze any number, estimate its rarity, discover hidden patterns, run unlimited simulations, and compete in daily number challenges.",
+      "h1": [
+        "How Rare Is Your Number?"
+      ],
+      "headings": [
+        {
+          "tag": "h1",
+          "text": "How Rare Is Your Number?"
+        },
+        {
+          "tag": "h2",
+          "text": "Seven rarity tiers, grounded in real frequency"
+        },
+        {
+          "tag": "h2",
+          "text": "A complete number rarity platform"
+        },
+        {
+          "tag": "h3",
+          "text": "Rarity Calculator"
+        },
+        {
+          "tag": "h3",
+          "text": "Unlimited Rolls"
+        },
+        {
+          "tag": "h3",
+          "text": "Daily Challenges"
+        },
+        {
+          "tag": "h3",
+          "text": "Number Compare"
+        },
+        {
+          "tag": "h3",
+          "text": "Pattern Atlas"
+        },
+        {
+          "tag": "h3",
+          "text": "Number Sandbox"
+        }
+      ],
+      "counts": {
+        "links": 52,
+        "images": 0,
+        "canvas": 0,
+        "forms": 0,
+        "buttons": 3
+      },
+      "linkCount": 52,
+      "screenshot": "screenshots/rngdle.net-31e8b98c.png",
+      "consoleErrors": []
+    },
+    {
+      "url": "https://rngdle.net/calculator",
+      "from": "https://rngdle.net",
+      "depth": 1,
+      "status": 200,
+      "title": "RNGdle Calculator – Analyze Number Rarity and Patterns",
+      "lang": "en",
+      "metaDescription": "Analyze any number from 0 to 1,000,000. Get an exact rarity score, global percentile, detected patterns, math properties and a shareable Number DNA card.",
+      "h1": [
+        "Number Rarity Calculator"
+      ],
+      "headings": [
+        {
+          "tag": "h1",
+          "text": "Number Rarity Calculator"
+        },
+        {
+          "tag": "h2",
+          "text": "Try a pattern, then make it your own"
+        },
+        {
+          "tag": "h2",
+          "text": "Is this an EP calculator?"
+        }
+      ],
+      "counts": {
+        "links": 46,
+        "images": 0,
+        "canvas": 0,
+        "forms": 0,
+        "buttons": 3
+      },
+      "linkCount": 46,
+      "screenshot": "screenshots/rngdle.net-calculator-3f5e8cce.png",
+      "consoleErrors": []
+    },
+    {
+      "url": "https://rngdle.net/infinite",
+      "from": "https://rngdle.net",
+      "depth": 1,
+      "status": 200,
+      "title": "RNGdle Infinite – Unlimited Number Rolls | RNGdle.net",
+      "lang": "en",
+      "metaDescription": "Roll unlimited numbers and reveal their badges one by one. Discover rarity scores, see what each pattern adds, save your finds or keep rolling with Turbo.",
+      "h1": [
+        "RNGdle Infinite"
+      ],
+      "headings": [
+        {
+          "tag": "h1",
+          "text": "RNGdle Infinite"
+        },
+        {
+          "tag": "h2",
+          "text": "?01?02?03?04?05?06"
+        },
+        {
+          "tag": "h2",
+          "text": "One number to come back for."
+        },
+        {
+          "tag": "h2",
+          "text": "Unlimited rolls, saved progress"
+        },
+        {
+          "tag": "h2",
+          "text": "Does a rare badge change the odds?"
+        }
+      ],
+      "counts": {
+        "links": 39,
+        "images": 0,
+        "canvas": 0,
+        "forms": 0,
+        "buttons": 9
+      },
+      "linkCount": 39,
+      "screenshot": "screenshots/rngdle.net-infinite-d333378a.png",
+      "consoleErrors": []
+    },
+    {
+      "url": "https://rngdle.net/daily",
+      "from": "https://rngdle.net",
+      "depth": 1,
+      "status": 200,
+      "title": "RNGdle Daily – Skill-Based Daily Number Challenges",
+      "lang": "en",
+      "metaDescription": "Play a shared daily number challenge, build a streak, then practice unlimited fresh rounds. Draft the rarest number, hunt patterns, or call rare vs common.",
+      "h1": [
+        "Daily Number Challenge"
+      ],
+      "headings": [
+        {
+          "tag": "h1",
+          "text": "Daily Number Challenge"
+        },
+        {
+          "tag": "h2",
+          "text": "Number Draft"
+        },
+        {
+          "tag": "h3",
+          "text": "Which one is the rarest?"
+        },
+        {
+          "tag": "h2",
+          "text": "How to Play"
+        },
+        {
+          "tag": "h3",
+          "text": "◆ Number Draft"
+        },
+        {
+          "tag": "h3",
+          "text": "⌖ Pattern Hunt"
+        },
+        {
+          "tag": "h3",
+          "text": "⇄ Rare or Common"
+        },
+        {
+          "tag": "h3",
+          "text": "Reading rarity"
+        },
+        {
+          "tag": "h3",
+          "text": "Streaks and sharing"
+        },
+        {
+          "tag": "h2",
+          "text": "Frequently Asked Questions"
+        }
+      ],
+      "counts": {
+        "links": 38,
+        "images": 0,
+        "canvas": 0,
+        "forms": 0,
+        "buttons": 8
+      },
+      "linkCount": 38,
+      "screenshot": "screenshots/rngdle.net-daily-475973a3.png",
+      "consoleErrors": []
+    },
+    {
+      "url": "https://rngdle.net/compare",
+      "from": "https://rngdle.net",
+      "depth": 1,
+      "status": 200,
+      "title": "Compare Numbers – Which Number Is Rarer?",
+      "lang": "en",
+      "metaDescription": "Compare two numbers side by side, battle random draws, or play the daily Rare-or-Common quiz. See scores, percentiles and detected traits head to head.",
+      "h1": [
+        "Which Number Is Rarer?"
+      ],
+      "headings": [
+        {
+          "tag": "h1",
+          "text": "Which Number Is Rarer?"
+        }
+      ],
+      "counts": {
+        "links": 33,
+        "images": 0,
+        "canvas": 0,
+        "forms": 0,
+        "buttons": 5
+      },
+      "linkCount": 33,
+      "screenshot": "screenshots/rngdle.net-compare-233cd108.png",
+      "consoleErrors": []
+    },
+    {
+      "url": "https://rngdle.net/explore",
+      "from": "https://rngdle.net",
+      "depth": 1,
+      "status": 200,
+      "title": "RNGdle Explore – Number Pattern Explorer and Database",
+      "lang": "en",
+      "metaDescription": "Filter all 1,000,001 supported numbers by palindromes, primes, perfect squares, digit sums and more. Get exact match counts and the rarest result.",
+      "h1": [
+        "Number Pattern Explorer"
+      ],
+      "headings": [
+        {
+          "tag": "h1",
+          "text": "Number Pattern Explorer"
+        }
+      ],
+      "counts": {
+        "links": 33,
+        "images": 0,
+        "canvas": 0,
+        "forms": 0,
+        "buttons": 2
+      },
+      "linkCount": 33,
+      "screenshot": "screenshots/rngdle.net-explore-42c5ca6d.png",
+      "consoleErrors": []
+    },
+    {
+      "url": "https://rngdle.net/sandbox",
+      "from": "https://rngdle.net",
+      "depth": 1,
+      "status": 200,
+      "title": "RNGdle Sandbox – Edit Digits and Watch Rarity Change Live",
+      "lang": "en",
+      "metaDescription": "An open bench for number rarity. Change any digit and watch the score, tier and detected traits update instantly — plus the single best edit available from where you are.",
+      "h1": [
+        "RNGdle Sandbox"
+      ],
+      "headings": [
+        {
+          "tag": "h1",
+          "text": "RNGdle Sandbox"
+        },
+        {
+          "tag": "h2",
+          "text": "One digit. A new discovery."
+        },
+        {
+          "tag": "h2",
+          "text": "How to use it"
+        },
+        {
+          "tag": "h2",
+          "text": "Why the starting number is 524,287"
+        },
+        {
+          "tag": "h2",
+          "text": "Local maxima"
+        }
+      ],
+      "counts": {
+        "links": 41,
+        "images": 0,
+        "canvas": 0,
+        "forms": 1,
+        "buttons": 25
+      },
+      "linkCount": 41,
+      "screenshot": "screenshots/rngdle.net-sandbox-995b5df8.png",
+      "consoleErrors": []
+    },
+    {
+      "url": "https://rngdle.net/patterns",
+      "from": "https://rngdle.net",
+      "depth": 1,
+      "status": 200,
+      "title": "Pattern Atlas – Exact Number Patterns and Personal Discoveries | RNGdle.net",
+      "lang": "en",
+      "metaDescription": "Explore all 31 number patterns RNGdle.net scores, see exact counts across 1,000,001 numbers, and record the patterns found in your Daily Specimens.",
+      "h1": [
+        "Pattern Atlas"
+      ],
+      "headings": [
+        {
+          "tag": "h1",
+          "text": "Pattern Atlas"
+        },
+        {
+          "tag": "h2",
+          "text": "Research families"
+        },
+        {
+          "tag": "h2",
+          "text": "Repetition"
+        },
+        {
+          "tag": "h3",
+          "text": "Repeating Digit Numbers"
+        },
+        {
+          "tag": "h3",
+          "text": "Five or More of One Digit"
+        },
+        {
+          "tag": "h3",
+          "text": "Quadruple Digits"
+        },
+        {
+          "tag": "h3",
+          "text": "Triple Digits"
+        },
+        {
+          "tag": "h3",
+          "text": "Double Pair Numbers"
+        },
+        {
+          "tag": "h3",
+          "text": "Numbers With One Repeated Digit"
+        },
+        {
+          "tag": "h3",
+          "text": "Adjacent Digit Runs"
+        },
+        {
+          "tag": "h3",
+          "text": "Numbers Built From Two Digits"
+        },
+        {
+          "tag": "h2",
+          "text": "Symmetry"
+        },
+        {
+          "tag": "h3",
+          "text": "Palindrome Numbers"
+        },
+        {
+          "tag": "h2",
+          "text": "Sequences"
+        },
+        {
+          "tag": "h3",
+          "text": "Ascending Sequence Numbers"
+        },
+        {
+          "tag": "h3",
+          "text": "Descending Sequence Numbers"
+        },
+        {
+          "tag": "h3",
+          "text": "Ascending Digit Runs"
+        },
+        {
+          "tag": "h3",
+          "text": "Descending Digit Runs"
+        },
+        {
+          "tag": "h3",
+          "text": "ABAB Pattern Numbers"
+        },
+        {
+          "tag": "h3",
+          "text": "ABCABC Pattern Numbers"
+        },
+        {
+          "tag": "h3",
+          "text": "Alternating Odd and Even Digits"
+        },
+        {
+          "tag": "h3",
+          "text": "Zigzag Digit Numbers"
+        },
+        {
+          "tag": "h2",
+          "text": "Digit Arithmetic"
+        },
+        {
+          "tag": "h3",
+          "text": "Harshad Numbers"
+        },
+        {
+          "tag": "h3",
+          "text": "Happy Numbers"
+        },
+        {
+          "tag": "h2",
+          "text": "Number Theory"
+        },
+        {
+          "tag": "h3",
+          "text": "Prime Numbers"
+        },
+        {
+          "tag": "h3",
+          "text": "Semiprime Numbers"
+        },
+        {
+          "tag": "h3",
+          "text": "Perfect Squares"
+        },
+        {
+          "tag": "h3",
+          "text": "Perfect Cubes"
+        },
+        {
+          "tag": "h3",
+          "text": "Powers of Two"
+        },
+        {
+          "tag": "h3",
+          "text": "Fibonacci Numbers"
+        },
+        {
+          "tag": "h3",
+          "text": "Triangular Numbers"
+        },
+        {
+          "tag": "h3",
+          "text": "Factorial Numbers"
+        },
+        {
+          "tag": "h3",
+          "text": "Highly Divisible Numbers"
+        },
+        {
+          "tag": "h2",
+          "text": "Encodings"
+        },
+        {
+          "tag": "h3",
+          "text": "Binary Palindromes"
+        },
+        {
+          "tag": "h3",
+          "text": "Binary Repunits"
+        },
+        {
+          "tag": "h3",
+          "text": "Hexadecimal Repdigits"
+        }
+      ],
+      "counts": {
+        "links": 67,
+        "images": 0,
+        "canvas": 0,
+        "forms": 0,
+        "buttons": 7
+      },
+      "linkCount": 67,
+      "screenshot": "screenshots/rngdle.net-patterns-544e59d3.png",
+      "consoleErrors": []
+    },
+    {
+      "url": "https://rngdle.net/guides/rngdle-rarity",
+      "from": "https://rngdle.net",
+      "depth": 1,
+      "status": 200,
+      "title": "RNGdle Rarity Explained – Scores, Percentiles and Number Patterns",
+      "lang": "en",
+      "metaDescription": "Understand what makes a number rare on RNGdle.net: trait frequency, information content, tiers and percentiles — all computed from a complete enumeration of the range.",
+      "h1": [
+        "What \"rarity\" means on RNGdle.net"
+      ],
+      "headings": [
+        {
+          "tag": "h1",
+          "text": "What \"rarity\" means on RNGdle.net"
+        },
+        {
+          "tag": "h2",
+          "text": "Rarity is about frequency, not opinion"
+        },
+        {
+          "tag": "h2",
+          "text": "From score to tier"
+        }
+      ],
+      "counts": {
+        "links": 36,
+        "images": 0,
+        "canvas": 0,
+        "forms": 0,
+        "buttons": 0
+      },
+      "linkCount": 36,
+      "screenshot": "screenshots/rngdle.net-guides-rngdle-rarity-cd05fc14.png",
+      "consoleErrors": []
+    },
+    {
+      "url": "https://rngdle.net/leaderboard",
+      "from": "https://rngdle.net",
+      "depth": 1,
+      "status": 200,
+      "title": "RNGdle Best & Worst Numbers – Highest and Lowest Scores",
+      "lang": "en",
+      "metaDescription": "The highest RNGdle.net score is 1677; the lowest is 108. See the numbers, tied results, rarity badges and full rankings across 0 to 1,000,000.",
+      "h1": [
+        "RNGdle Best & Worst Numbers"
+      ],
+      "headings": [
+        {
+          "tag": "h1",
+          "text": "RNGdle Best & Worst Numbers"
+        },
+        {
+          "tag": "h2",
+          "text": "Highest score"
+        },
+        {
+          "tag": "h2",
+          "text": "Lowest score"
+        },
+        {
+          "tag": "h2",
+          "text": "What is the worst RNGdle number?"
+        },
+        {
+          "tag": "h2",
+          "text": "What is the best RNGdle number?"
+        },
+        {
+          "tag": "h2",
+          "text": "Highest scores among four-digit and longer numbers"
+        },
+        {
+          "tag": "h2",
+          "text": "Today’s daily challenge players"
+        }
+      ],
+      "counts": {
+        "links": 83,
+        "images": 0,
+        "canvas": 0,
+        "forms": 0,
+        "buttons": 0
+      },
+      "linkCount": 83,
+      "screenshot": "screenshots/rngdle.net-leaderboard-5589ddf4.png",
+      "consoleErrors": []
+    },
+    {
+      "url": "https://rngdle.net/guides/rngdle-ep",
+      "from": "https://rngdle.net",
+      "depth": 1,
+      "status": 200,
+      "title": "RNGdle EP Explained – Entropy Points and Number Rarity",
+      "lang": "en",
+      "metaDescription": "EP, or Entropy Points, is shorthand for how much surprise a number carries. Learn how RNGdle.net uses its own transparent, information-based score.",
+      "h1": [
+        "Entropy Points (EP), explained"
+      ],
+      "headings": [
+        {
+          "tag": "h1",
+          "text": "Entropy Points (EP), explained"
+        },
+        {
+          "tag": "h2",
+          "text": "What \"entropy\" means for a number"
+        },
+        {
+          "tag": "h2",
+          "text": "How RNGdle.net scores instead of EP"
+        },
+        {
+          "tag": "h2",
+          "text": "Why transparency matters"
+        }
+      ],
+      "counts": {
+        "links": 36,
+        "images": 0,
+        "canvas": 0,
+        "forms": 0,
+        "buttons": 0
+      },
+      "linkCount": 36,
+      "screenshot": "screenshots/rngdle.net-guides-rngdle-ep-f9cfbfce.png",
+      "consoleErrors": []
+    },
+    {
+      "url": "https://rngdle.net/guides/rngdle-badges",
+      "from": "https://rngdle.net",
+      "depth": 1,
+      "status": 200,
+      "title": "RNGdle Badges Explained – The Seven Rarity Tiers and Their Score Cutoffs",
+      "lang": "en",
+      "metaDescription": "Every RNGdle badge, from Standard to Singular: the exact rarity score each tier requires, how many of the 1,000,001 supported numbers qualify, and what it takes to earn one.",
+      "h1": [
+        "RNGdle badges explained"
+      ],
+      "headings": [
+        {
+          "tag": "h1",
+          "text": "RNGdle badges explained"
+        },
+        {
+          "tag": "h2",
+          "text": "The seven badges"
+        },
+        {
+          "tag": "h2",
+          "text": "Where the cutoffs come from"
+        },
+        {
+          "tag": "h2",
+          "text": "What a Singular number looks like"
+        }
+      ],
+      "counts": {
+        "links": 50,
+        "images": 0,
+        "canvas": 0,
+        "forms": 0,
+        "buttons": 0
+      },
+      "linkCount": 50,
+      "screenshot": "screenshots/rngdle.net-guides-rngdle-badges-e3b740c5.png",
+      "consoleErrors": []
+    },
+    {
+      "url": "https://rngdle.net/compare?a=142857",
+      "from": "https://rngdle.net",
+      "depth": 1,
+      "status": 200,
+      "title": "Compare Numbers – Which Number Is Rarer?",
+      "lang": "en",
+      "metaDescription": "Compare two numbers side by side, battle random draws, or play the daily Rare-or-Common quiz. See scores, percentiles and detected traits head to head.",
+      "h1": [
+        "Which Number Is Rarer?"
+      ],
+      "headings": [
+        {
+          "tag": "h1",
+          "text": "Which Number Is Rarer?"
+        }
+      ],
+      "counts": {
+        "links": 34,
+        "images": 0,
+        "canvas": 0,
+        "forms": 0,
+        "buttons": 5
+      },
+      "linkCount": 34,
+      "screenshot": "screenshots/rngdle.net-compare-8aef36fa.png",
+      "consoleErrors": []
+    },
+    {
+      "url": "https://rngdle.net/sandbox?n=142857",
+      "from": "https://rngdle.net",
+      "depth": 1,
+      "status": 200,
+      "title": "RNGdle Sandbox – Edit Digits and Watch Rarity Change Live",
+      "lang": "en",
+      "metaDescription": "An open bench for number rarity. Change any digit and watch the score, tier and detected traits update instantly — plus the single best edit available from where you are.",
+      "h1": [
+        "RNGdle Sandbox"
+      ],
+      "headings": [
+        {
+          "tag": "h1",
+          "text": "RNGdle Sandbox"
+        },
+        {
+          "tag": "h2",
+          "text": "One digit. A new discovery."
+        },
+        {
+          "tag": "h2",
+          "text": "How to use it"
+        },
+        {
+          "tag": "h2",
+          "text": "Why the starting number is 524,287"
+        },
+        {
+          "tag": "h2",
+          "text": "Local maxima"
+        }
+      ],
+      "counts": {
+        "links": 41,
+        "images": 0,
+        "canvas": 0,
+        "forms": 1,
+        "buttons": 26
+      },
+      "linkCount": 41,
+      "screenshot": "screenshots/rngdle.net-sandbox-423e7bf0.png",
+      "consoleErrors": []
+    },
+    {
+      "url": "https://rngdle.net/explore?near=142857",
+      "from": "https://rngdle.net",
+      "depth": 1,
+      "status": 200,
+      "title": "RNGdle Explore – Number Pattern Explorer and Database",
+      "lang": "en",
+      "metaDescription": "Filter all 1,000,001 supported numbers by palindromes, primes, perfect squares, digit sums and more. Get exact match counts and the rarest result.",
+      "h1": [
+        "Number Pattern Explorer"
+      ],
+      "headings": [
+        {
+          "tag": "h1",
+          "text": "Number Pattern Explorer"
+        }
+      ],
+      "counts": {
+        "links": 33,
+        "images": 0,
+        "canvas": 0,
+        "forms": 0,
+        "buttons": 2
+      },
+      "linkCount": 33,
+      "screenshot": "screenshots/rngdle.net-explore-48eae292.png",
+      "consoleErrors": []
+    },
+    {
+      "url": "https://rngdle.net/methodology",
+      "from": "https://rngdle.net",
+      "depth": 1,
+      "status": 200,
+      "title": "RNGdle Rarity Explained – Scores, Percentiles and Number Patterns",
+      "lang": "en",
+      "metaDescription": "The full methodology behind every RNGdle.net rarity score: exact trait frequencies, information content, group de-duplication, and percentile mapping.",
+      "h1": [
+        "Rarity Methodology"
+      ],
+      "headings": [
+        {
+          "tag": "h1",
+          "text": "Rarity Methodology"
+        },
+        {
+          "tag": "h2",
+          "text": "Supported range and representation"
+        },
+        {
+          "tag": "h2",
+          "text": "Step 1 — Extract features"
+        },
+        {
+          "tag": "h2",
+          "text": "Step 2 — Exact probability and information"
+        },
+        {
+          "tag": "h3",
+          "text": "Distribution features"
+        },
+        {
+          "tag": "h2",
+          "text": "Step 3 — Avoid double counting"
+        },
+        {
+          "tag": "h2",
+          "text": "Step 4 — Score to percentile"
+        },
+        {
+          "tag": "h2",
+          "text": "Step 5 — Versioning"
+        },
+        {
+          "tag": "h2",
+          "text": "A known limitation — length"
+        },
+        {
+          "tag": "h2",
+          "text": "Cultural features"
+        }
+      ],
+      "counts": {
+        "links": 35,
+        "images": 0,
+        "canvas": 0,
+        "forms": 0,
+        "buttons": 0
+      },
+      "linkCount": 35,
+      "screenshot": "screenshots/rngdle.net-methodology-bd0359c7.png",
+      "consoleErrors": []
+    },
+    {
+      "url": "https://rngdle.net/about",
+      "from": "https://rngdle.net",
+      "depth": 1,
+      "status": 200,
+      "title": "About – RNGdle.net",
+      "lang": "en",
+      "metaDescription": "RNGdle.net is an independent number-analysis and browser-game website built around transparent number rarity.",
+      "h1": [
+        "About RNGdle.net"
+      ],
+      "headings": [
+        {
+          "tag": "h1",
+          "text": "About RNGdle.net"
+        }
+      ],
+      "counts": {
+        "links": 37,
+        "images": 0,
+        "canvas": 0,
+        "forms": 0,
+        "buttons": 0
+      },
+      "linkCount": 37,
+      "screenshot": "screenshots/rngdle.net-about-9b56281c.png",
+      "consoleErrors": []
+    },
+    {
+      "url": "https://rngdle.net/privacy",
+      "from": "https://rngdle.net",
+      "depth": 1,
+      "status": 200,
+      "title": "Privacy – RNGdle.net",
+      "lang": "en",
+      "metaDescription": "How RNGdle.net handles data: analysis runs in your browser, no accounts, and only anonymous, aggregate event metrics.",
+      "h1": [
+        "Privacy"
+      ],
+      "headings": [
+        {
+          "tag": "h1",
+          "text": "Privacy"
+        },
+        {
+          "tag": "h2",
+          "text": "Analysis stays on your device"
+        },
+        {
+          "tag": "h2",
+          "text": "Local storage"
+        },
+        {
+          "tag": "h2",
+          "text": "Daily Specimens and the Pattern Atlas"
+        },
+        {
+          "tag": "h2",
+          "text": "Anonymous analytics"
+        },
+        {
+          "tag": "h2",
+          "text": "No accounts"
+        },
+        {
+          "tag": "h2",
+          "text": "Contact"
+        }
+      ],
+      "counts": {
+        "links": 37,
+        "images": 0,
+        "canvas": 0,
+        "forms": 0,
+        "buttons": 0
+      },
+      "linkCount": 37,
+      "screenshot": "screenshots/rngdle.net-privacy-36e72185.png",
+      "consoleErrors": []
+    },
+    {
+      "url": "https://rngdle.net/terms",
+      "from": "https://rngdle.net",
+      "depth": 1,
+      "status": 200,
+      "title": "Terms – RNGdle.net",
+      "lang": "en",
+      "metaDescription": "Terms of use for RNGdle.net, an independent number-analysis and browser-game website.",
+      "h1": [
+        "Terms of Use"
+      ],
+      "headings": [
+        {
+          "tag": "h1",
+          "text": "Terms of Use"
+        },
+        {
+          "tag": "h2",
+          "text": "Use of the site"
+        },
+        {
+          "tag": "h2",
+          "text": "Acceptable use"
+        },
+        {
+          "tag": "h2",
+          "text": "Intellectual property"
+        },
+        {
+          "tag": "h2",
+          "text": "Changes"
+        }
+      ],
+      "counts": {
+        "links": 34,
+        "images": 0,
+        "canvas": 0,
+        "forms": 0,
+        "buttons": 0
+      },
+      "linkCount": 34,
+      "screenshot": "screenshots/rngdle.net-terms-2b322a3d.png",
+      "consoleErrors": []
+    },
+    {
+      "url": "https://rngdle.net/contact",
+      "from": "https://rngdle.net",
+      "depth": 1,
+      "status": 200,
+      "title": "Contact – RNGdle.net",
+      "lang": "en",
+      "metaDescription": "Get in touch with RNGdle.net about feedback, embeds, or the number rarity methodology.",
+      "h1": [
+        "Contact"
+      ],
+      "headings": [
+        {
+          "tag": "h1",
+          "text": "Contact"
+        }
+      ],
+      "counts": {
+        "links": 36,
+        "images": 0,
+        "canvas": 0,
+        "forms": 0,
+        "buttons": 0
+      },
+      "linkCount": 36,
+      "screenshot": "screenshots/rngdle.net-contact-2b6eec39.png",
+      "consoleErrors": []
+    }
+  ],
+  "skipped": []
+}

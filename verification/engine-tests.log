@@ -1,0 +1,74 @@
+
+> rngdle-art@1.0.0 test
+> node --test tests/*.test.mjs
+
+TAP version 13
+# Subtest: A03 exact reference counts for all 31 independently implemented patterns
+ok 1 - A03 exact reference counts for all 31 independently implemented patterns
+  ---
+  duration_ms: 0.762333
+  type: 'test'
+  ...
+# Subtest: A03 complete score index has exactly one entry per supported integer and exact cumulative distribution
+ok 2 - A03 complete score index has exactly one entry per supported integer and exact cumulative distribution
+  ---
+  duration_ms: 8.371375
+  type: 'test'
+  ...
+# Subtest: A03 reference samples and independently checked mathematical edge cases
+ok 3 - A03 reference samples and independently checked mathematical edge cases
+  ---
+  duration_ms: 0.797375
+  type: 'test'
+  ...
+# Subtest: A03 runtime score agrees with precomputed data on boundaries and deterministic sample
+ok 4 - A03 runtime score agrees with precomputed data on boundaries and deterministic sample
+  ---
+  duration_ms: 17.546167
+  type: 'test'
+  ...
+# Subtest: A02 strict numeric validation covers invalid, boundary and leading-zero input
+ok 5 - A02 strict numeric validation covers invalid, boundary and leading-zero input
+  ---
+  duration_ms: 0.368833
+  type: 'test'
+  ...
+# Subtest: A04 rejection sampling discards out-of-range entropy instead of introducing modulo bias
+ok 6 - A04 rejection sampling discards out-of-range entropy instead of introducing modulo bias
+  ---
+  duration_ms: 2.889583
+  type: 'test'
+  ...
+# Subtest: A06 deterministic daily types and grade for draft/hunt/quiz
+ok 7 - A06 deterministic daily types and grade for draft/hunt/quiz
+  ---
+  duration_ms: 0.634584
+  type: 'test'
+  ...
+# Subtest: A07 UTC date, same-day streak idempotency, gaps and corrupted attempts
+ok 8 - A07 UTC date, same-day streak idempotency, gaps and corrupted attempts
+  ---
+  duration_ms: 0.797542
+  type: 'test'
+  ...
+# Subtest: A10 exhaustive one-digit neighborhood yields genuine best edit without leading zeros
+ok 9 - A10 exhaustive one-digit neighborhood yields genuine best edit without leading zeros
+  ---
+  duration_ms: 1.424416
+  type: 'test'
+  ...
+# Subtest: A11 deterministic specimen is in range and changes across days
+ok 10 - A11 deterministic specimen is in range and changes across days
+  ---
+  duration_ms: 0.312584
+  type: 'test'
+  ...
+1..10
+# tests 10
+# suites 0
+# pass 10
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 73.585958

@@ -1,0 +1,845 @@
+{
+  "label": "original",
+  "url": "https://rngdle.net/",
+  "capturedAt": "2026-09-26T06:24:00.162Z",
+  "console": {
+    "errors": [],
+    "warnings": [],
+    "pageErrors": []
+  },
+  "captures": [
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "screenshot": "screenshots/original-1440.png",
+      "signals": {
+        "href": "https://rngdle.net/",
+        "title": "RNGdle – Number Rarity Calculator, Infinite Rolls & Daily Challenges",
+        "lang": "en",
+        "bodyTextChars": 3858,
+        "scrollHeight": 4476,
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "h1": [
+          "How Rare Is Your Number?"
+        ],
+        "headings": [
+          {
+            "tag": "h1",
+            "text": "How Rare Is Your Number?"
+          },
+          {
+            "tag": "h2",
+            "text": "Seven rarity tiers, grounded in real frequency"
+          },
+          {
+            "tag": "h2",
+            "text": "A complete number rarity platform"
+          },
+          {
+            "tag": "h3",
+            "text": "Rarity Calculator"
+          },
+          {
+            "tag": "h3",
+            "text": "Unlimited Rolls"
+          },
+          {
+            "tag": "h3",
+            "text": "Daily Challenges"
+          },
+          {
+            "tag": "h3",
+            "text": "Number Compare"
+          },
+          {
+            "tag": "h3",
+            "text": "Pattern Atlas"
+          },
+          {
+            "tag": "h3",
+            "text": "Number Sandbox"
+          }
+        ],
+        "metaDescription": "Analyze any number, estimate its rarity, discover hidden patterns, run unlimited simulations, and compete in daily number challenges.",
+        "counts": {
+          "links": 50,
+          "images": 0,
+          "video": 0,
+          "canvas": 0,
+          "sections": 8,
+          "forms": 0,
+          "buttons": 3,
+          "inputs": 1,
+          "interactive": 61,
+          "scripts": 9,
+          "stylesheets": 1
+        },
+        "frameworks": {
+          "react": false,
+          "next": false,
+          "vue": false,
+          "nuxt": false,
+          "svelte": false,
+          "astro": false,
+          "three": false,
+          "gsap": false,
+          "lenis": false
+        },
+        "scripts": [
+          "https://pagead2.googlesyndication.com/pagead/managed/js/adsense/m202609210101/reactive_library.js",
+          "https://pagead2.googlesyndication.com/pagead/managed/js/adsense/m202609210101/show_ads_impl.js",
+          "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2712527503244975",
+          "https://fundingchoicesmessages.google.com/i/ca-pub-2712527503244975?href=https%3A%2F%2Frngdle.net&ers=2",
+          "https://fundingchoicesmessages.google.com/f/AGSKWxU0ch7hekdcdPKN3glLw4_DrQJsfRm-KwnEmznXUbZaMIHNNBizNZgX08hUHUqAejVE9XBSyduc9Npz7fF1qbYtbgcQmDeWWsRQmt_UYXu9sTJ1lXhjUvsTjdckH8lO7dNZAbDGmA==?fccs=W251bGwsbnVsbCxudWxsLG51bGwsbnVsbCxudWxsLFsxNzkwNDAzODE0LDkwMDAwMDBdLG51bGwsbnVsbCxudWxsLFtudWxsLFs3XV0sImh0dHBzOi8vcm5nZGxlLm5ldC8iLG51bGwsW1s4LCJpRklKQVoxZmN4YyJdLFs5LCJ6aC1DTiJdLFsxOCwiW1tbbnVsbCwzMjQxXV1dIl0sWzM1LCIxNzkwNDAzODEzIl0sWzE5LCIyIl0sWzE3LCJbMF0iXSxbMjQsIiJdLFsyOSwidHJ1ZSJdXV0",
+          "https://fundingchoicesmessages.google.com/f/AGSKWxW-HfxWnHpGXyqvnyIQGHnVo_7QnxilmQD4_vuJOkVFAIoWJTRRoWK4Sc-VZX4ZxncWKTdx_JvyNDUhJvqgTdu3oRLN8NKJ8GHdMNjROFDPdqvqUfOYS4u3mWyzpN9VJREAACx0sw==?fccs=W251bGwsbnVsbCxudWxsLG51bGwsbnVsbCxudWxsLFsxNzkwNDAzODE0LDE5NjAwMDAwMF0sbnVsbCxudWxsLG51bGwsW251bGwsWzcsOV0sbnVsbCwyLG51bGwsInpoLUNOIl0sImh0dHBzOi8vcm5nZGxlLm5ldC8iLG51bGwsW1s4LCJpRklKQVoxZmN4YyJdLFs5LCJ6aC1DTiJdLFsxOCwiW1tbbnVsbCwzMjQxXV1dIl0sWzM1LCIxNzkwNDAzODEzIl0sWzE5LCIyIl0sWzE3LCJbMF0iXSxbMjQsIiJdLFsyOSwidHJ1ZSJdXV0",
+          "https://fundingchoicesmessages.google.com/f/AGSKWxUT1AyPAW5yvUpe--uvceCFA8rZCChfaLpfSd2YiafX6PZJEHvnsl67fjRh5kMVOhIO9swXpsHDCalwRiBvsCX5mj7KtHc0RJxgEhIyjpLd5GWCz1tAImOHIvdyuF2QuWDEYV2TjQ==?fccs=W251bGwsbnVsbCxudWxsLG51bGwsbnVsbCxudWxsLFsxNzkwNDAzODE1LDI3NTAwMDAwMF0sbnVsbCxudWxsLG51bGwsW251bGwsWzcsOSw2XSxudWxsLDIsbnVsbCwiemgtQ04iLG51bGwsbnVsbCxudWxsLG51bGwsbnVsbCwxXSwiaHR0cHM6Ly9ybmdkbGUubmV0LyIsbnVsbCxbWzgsImlGSUpBWjFmY3hjIl0sWzksInpoLUNOIl0sWzE4LCJbW1tudWxsLDMyNDFdXV0iXSxbMzUsIjE3OTA0MDM4MTMiXSxbMTksIjIiXSxbMTcsIlswXSJdLFsyNCwiIl0sWzI5LCJ0cnVlIl1dXQ",
+          "https://static.cloudflareinsights.com/beacon.min.js",
+          "https://static.cloudflareinsights.com/beacon.min.js/v31edd6df95cf4e85bb4c19e7a9bdbcba1788362987495"
+        ],
+        "stylesheets": [
+          "https://rngdle.net/_astro/_slug_.DUSZiZ-m.css"
+        ],
+        "sections": [
+          {
+            "tag": "header",
+            "id": "",
+            "className": "sticky top-0 z-40 border-b border-[color:var(--color-lab-line)] bg-[color:var(--color-lab-bg)]/85 backdrop-blur",
+            "text": "λ RNGDLE.NET The Number Rarity Lab Analyze Infinite Daily Compare Explore Sandbox Atlas Guides Menu Analyze Infinite Daily Compare Explore Sandbox Atlas Guides",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1440,
+              "height": 69
+            },
+            "style": {
+              "display": "block",
+              "position": "sticky",
+              "backgroundColor": "oklab(0.130397 -0.0000611097 -0.0192351 / 0.85)",
+              "color": "rgb(232, 238, 252)",
+              "fontFamily": "ui-sans-serif, system-ui, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+              "fontSize": "16px"
+            }
+          },
+          {
+            "tag": "nav",
+            "id": "",
+            "className": "mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3",
+            "text": "λ RNGDLE.NET The Number Rarity Lab Analyze Infinite Daily Compare Explore Sandbox Atlas Guides Menu Analyze Infinite Daily Compare Explore Sandbox Atlas Guides",
+            "rect": {
+              "x": 144,
+              "y": 0,
+              "width": 1152,
+              "height": 68
+            },
+            "style": {
+              "display": "flex",
+              "position": "static",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(232, 238, 252)",
+              "fontFamily": "ui-sans-serif, system-ui, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+              "fontSize": "16px"
+            }
+          },
+          {
+            "tag": "main",
+            "id": "",
+            "className": "mx-auto w-full flex-1 px-4 py-10 max-w-6xl",
+            "text": "The Number Rarity Lab How Rare Is Your Number? Enter any number from 0 to 1,000,000 to uncover its mathematical traits, pattern rarity, and global percentile. Play Unlimited Analyze a Number Try the Sandbox Best & worst numbers astro-island",
+            "rect": {
+              "x": 144,
+              "y": 69,
+              "width": 1152,
+              "height": 3343
+            },
+            "style": {
+              "display": "block",
+              "position": "static",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(232, 238, 252)",
+              "fontFamily": "ui-sans-serif, system-ui, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+              "fontSize": "16px"
+            }
+          },
+          {
+            "tag": "section",
+            "id": "",
+            "className": "mx-auto max-w-4xl text-center",
+            "text": "The Number Rarity Lab How Rare Is Your Number? Enter any number from 0 to 1,000,000 to uncover its mathematical traits, pattern rarity, and global percentile. Play Unlimited Analyze a Number Try the Sandbox Best & worst numbers",
+            "rect": {
+              "x": 272,
+              "y": 109,
+              "width": 896,
+              "height": 306
+            },
+            "style": {
+              "display": "block",
+              "position": "static",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(232, 238, 252)",
+              "fontFamily": "ui-sans-serif, system-ui, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+              "fontSize": "16px"
+            }
+          },
+          {
+            "tag": "section",
+            "id": "calculator",
+            "className": "mx-auto mt-8 max-w-3xl scroll-mt-24",
+            "text": "astro-island,astro-slot,astro-static-slot{display:contents}(()=>{var e=async t=>{await(await t())()};(self.Astro||(self.Astro={})).load=e;window.dispatchEvent(new Event(\"astro:load\"));})();(()=>{var A=Object.defineProperty;var g=(i,o,a)=>o ",
+            "rect": {
+              "x": 336,
+              "y": 447,
+              "width": 768,
+              "height": 1927
+            },
+            "style": {
+              "display": "block",
+              "position": "static",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(232, 238, 252)",
+              "fontFamily": "ui-sans-serif, system-ui, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+              "fontSize": "16px"
+            }
+          },
+          {
+            "tag": "section",
+            "id": "",
+            "className": "mx-auto mt-20 max-w-4xl",
+            "text": "Seven rarity tiers, grounded in real frequency Tiers come from where a number's score lands across the full distribution — not from arbitrary bonuses. 1 Standard Bottom 50% 2 Notable Top 50% 3 Distinct Top 25% 4 Rare Top 10% 5 Exceptional T",
+            "rect": {
+              "x": 272,
+              "y": 2454,
+              "width": 896,
+              "height": 488
+            },
+            "style": {
+              "display": "block",
+              "position": "static",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(232, 238, 252)",
+              "fontFamily": "ui-sans-serif, system-ui, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+              "fontSize": "16px"
+            }
+          },
+          {
+            "tag": "section",
+            "id": "",
+            "className": "mx-auto mt-20 max-w-5xl",
+            "text": "A complete number rarity platform Rarity Calculator Break any number down into digit DNA, patterns, math properties and an exact global percentile. Unlimited Rolls Roll once or use Turbo, save your best finds and pick up where you left off.",
+            "rect": {
+              "x": 208,
+              "y": 3022,
+              "width": 1024,
+              "height": 350
+            },
+            "style": {
+              "display": "block",
+              "position": "static",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(232, 238, 252)",
+              "fontFamily": "ui-sans-serif, system-ui, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+              "fontSize": "16px"
+            }
+          },
+          {
+            "tag": "footer",
+            "id": "",
+            "className": "mt-24 border-t border-[color:var(--color-lab-line)] bg-[color:var(--color-lab-bg)]/60",
+            "text": "RNGDLE.NET RNGdle.net is an independent number-analysis and browser-game website. Every rarity score is computed from a complete analysis of all 1,000,001 supported numbers. Tools Rarity Calculator Unlimited Rolls Compare Numbers Daily Chal",
+            "rect": {
+              "x": 0,
+              "y": 3508,
+              "width": 1440,
+              "height": 368
+            },
+            "style": {
+              "display": "block",
+              "position": "static",
+              "backgroundColor": "oklab(0.130397 -0.0000611097 -0.0192351 / 0.6)",
+              "color": "rgb(232, 238, 252)",
+              "fontFamily": "ui-sans-serif, system-ui, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+              "fontSize": "16px"
+            }
+          }
+        ],
+        "cssVariables": [],
+        "fonts": [],
+        "images": [],
+        "canvases": []
+      }
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "screenshot": "screenshots/original-768.png",
+      "signals": {
+        "href": "https://rngdle.net/",
+        "title": "RNGdle – Number Rarity Calculator, Infinite Rolls & Daily Challenges",
+        "lang": "en",
+        "bodyTextChars": 3961,
+        "scrollHeight": 5004,
+        "viewport": {
+          "width": 768,
+          "height": 900
+        },
+        "h1": [
+          "How Rare Is Your Number?"
+        ],
+        "headings": [
+          {
+            "tag": "h1",
+            "text": "How Rare Is Your Number?"
+          },
+          {
+            "tag": "h2",
+            "text": "Seven rarity tiers, grounded in real frequency"
+          },
+          {
+            "tag": "h2",
+            "text": "A complete number rarity platform"
+          },
+          {
+            "tag": "h3",
+            "text": "Rarity Calculator"
+          },
+          {
+            "tag": "h3",
+            "text": "Unlimited Rolls"
+          },
+          {
+            "tag": "h3",
+            "text": "Daily Challenges"
+          },
+          {
+            "tag": "h3",
+            "text": "Number Compare"
+          },
+          {
+            "tag": "h3",
+            "text": "Pattern Atlas"
+          },
+          {
+            "tag": "h3",
+            "text": "Number Sandbox"
+          }
+        ],
+        "metaDescription": "Analyze any number, estimate its rarity, discover hidden patterns, run unlimited simulations, and compete in daily number challenges.",
+        "counts": {
+          "links": 52,
+          "images": 0,
+          "video": 0,
+          "canvas": 0,
+          "sections": 8,
+          "forms": 0,
+          "buttons": 3,
+          "inputs": 1,
+          "interactive": 68,
+          "scripts": 8,
+          "stylesheets": 3
+        },
+        "frameworks": {
+          "react": false,
+          "next": false,
+          "vue": false,
+          "nuxt": false,
+          "svelte": false,
+          "astro": false,
+          "three": false,
+          "gsap": false,
+          "lenis": false
+        },
+        "scripts": [
+          "https://pagead2.googlesyndication.com/pagead/managed/js/adsense/m202609210101/show_ads_impl.js",
+          "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2712527503244975",
+          "https://fundingchoicesmessages.google.com/i/ca-pub-2712527503244975?href=https%3A%2F%2Frngdle.net&ers=2",
+          "https://fundingchoicesmessages.google.com/f/AGSKWxWGrV4j5FDvE71kjXhG5uQylHSYZopiIzPt5iCzzBvd6bHfLpzfA51upgQPs7qOwA4yTsDyJfeVfr1SS5859hc4Ws6FvjKtHGgXsOo7s0cB99yIcbfCE96HsHOGZ7p9DdWurrzBLw==?fccs=W251bGwsbnVsbCxudWxsLG51bGwsbnVsbCxudWxsLFsxNzkwNDAzODIzLDYzODAwMDAwMF0sbnVsbCxudWxsLG51bGwsW251bGwsWzddXSwiaHR0cHM6Ly9ybmdkbGUubmV0LyIsbnVsbCxbWzgsImlGSUpBWjFmY3hjIl0sWzksInpoLUNOIl0sWzE4LCJbW1tudWxsLDI1MTddXV0iXSxbMzUsIjE3OTA0MDM4MjMiXSxbMTksIjIiXSxbMTcsIlswXSJdLFsyNCwiIl0sWzI5LCJ0cnVlIl1dXQ",
+          "https://fundingchoicesmessages.google.com/f/AGSKWxWJ6BuZcNajg7R-1dLxR-eHB7Ijt1Q909bw9K5vHM3T2NAOPcZuRJLwAL9lEftZGnBk2aEHIZOTu0Z6SV_AZkrlGy3wvQvXTHM30lly92ucWbJVNZlv1V1O_huA03c4UTYL9dTasQ==?fccs=W251bGwsbnVsbCxudWxsLG51bGwsbnVsbCxudWxsLFsxNzkwNDAzODIzLDkwNjAwMDAwMF0sbnVsbCxudWxsLG51bGwsW251bGwsWzcsOV0sbnVsbCwyLG51bGwsInpoLUNOIl0sImh0dHBzOi8vcm5nZGxlLm5ldC8iLG51bGwsW1s4LCJpRklKQVoxZmN4YyJdLFs5LCJ6aC1DTiJdLFsxOCwiW1tbbnVsbCwyNTE3XV1dIl0sWzM1LCIxNzkwNDAzODIzIl0sWzE5LCIyIl0sWzE3LCJbMF0iXSxbMjQsIiJdLFsyOSwidHJ1ZSJdXV0",
+          "https://fundingchoicesmessages.google.com/f/AGSKWxVT_ZiWlPcUDgAu15oPLpBW2qm4NStu2mdgXs91OvxDddGp_uFM53_6OTUDSteb0Yq_ECrC9SRNdbOfANNRkrnopIlkNHDLvEM0ZfBFKmNPyxD_ZXz_aqjNYWQTWHgQ8zpYGTbzyg==?fccs=W251bGwsbnVsbCxudWxsLG51bGwsbnVsbCxudWxsLFsxNzkwNDAzODI0LDk2MTAwMDAwMF0sbnVsbCxudWxsLG51bGwsW251bGwsWzcsOSw2XSxudWxsLDIsbnVsbCwiemgtQ04iLG51bGwsbnVsbCxudWxsLG51bGwsbnVsbCwxXSwiaHR0cHM6Ly9ybmdkbGUubmV0LyIsbnVsbCxbWzgsImlGSUpBWjFmY3hjIl0sWzksInpoLUNOIl0sWzE4LCJbW1tudWxsLDI1MTddXV0iXSxbMzUsIjE3OTA0MDM4MjMiXSxbMTksIjIiXSxbMTcsIlswXSJdLFsyNCwiIl0sWzI5LCJ0cnVlIl1dXQ",
+          "https://static.cloudflareinsights.com/beacon.min.js",
+          "https://static.cloudflareinsights.com/beacon.min.js/v31edd6df95cf4e85bb4c19e7a9bdbcba1788362987495"
+        ],
+        "stylesheets": [
+          "https://rngdle.net/_astro/_slug_.DUSZiZ-m.css",
+          "https://fonts.googleapis.com/css?family=Google%20Sans%3A400",
+          "https://fonts.googleapis.com/css?family=Google%20Sans%3A700"
+        ],
+        "sections": [
+          {
+            "tag": "header",
+            "id": "",
+            "className": "sticky top-0 z-40 border-b border-[color:var(--color-lab-line)] bg-[color:var(--color-lab-bg)]/85 backdrop-blur",
+            "text": "λ RNGDLE.NET The Number Rarity Lab Analyze Infinite Daily Compare Explore Sandbox Atlas Guides Menu Analyze Infinite Daily Compare Explore Sandbox Atlas Guides",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 768,
+              "height": 69
+            },
+            "style": {
+              "display": "block",
+              "position": "sticky",
+              "backgroundColor": "oklab(0.130397 -0.0000611097 -0.0192351 / 0.85)",
+              "color": "rgb(232, 238, 252)",
+              "fontFamily": "ui-sans-serif, system-ui, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+              "fontSize": "16px"
+            }
+          },
+          {
+            "tag": "nav",
+            "id": "",
+            "className": "mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3",
+            "text": "λ RNGDLE.NET The Number Rarity Lab Analyze Infinite Daily Compare Explore Sandbox Atlas Guides Menu Analyze Infinite Daily Compare Explore Sandbox Atlas Guides",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 768,
+              "height": 68
+            },
+            "style": {
+              "display": "flex",
+              "position": "static",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(232, 238, 252)",
+              "fontFamily": "ui-sans-serif, system-ui, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+              "fontSize": "16px"
+            }
+          },
+          {
+            "tag": "main",
+            "id": "",
+            "className": "mx-auto w-full flex-1 px-4 py-10 max-w-6xl",
+            "text": "The Number Rarity Lab Number rarity checker How Rare Is Your Number? Enter any number from 0 to 1,000,000 to uncover its mathematical traits, pattern rarity, and global percentile. Play Unlimited Analyze a Number Try the Sandbox Best & wors",
+            "rect": {
+              "x": 0,
+              "y": 69,
+              "width": 768,
+              "height": 4147
+            },
+            "style": {
+              "display": "block",
+              "position": "static",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(232, 238, 252)",
+              "fontFamily": "ui-sans-serif, system-ui, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+              "fontSize": "16px"
+            }
+          },
+          {
+            "tag": "section",
+            "id": "",
+            "className": "mx-auto max-w-4xl text-center",
+            "text": "The Number Rarity Lab Number rarity checker How Rare Is Your Number? Enter any number from 0 to 1,000,000 to uncover its mathematical traits, pattern rarity, and global percentile. Play Unlimited Analyze a Number Try the Sandbox Best & wors",
+            "rect": {
+              "x": 16,
+              "y": 109,
+              "width": 736,
+              "height": 306
+            },
+            "style": {
+              "display": "block",
+              "position": "static",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(232, 238, 252)",
+              "fontFamily": "ui-sans-serif, system-ui, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+              "fontSize": "16px"
+            }
+          },
+          {
+            "tag": "section",
+            "id": "calculator",
+            "className": "mx-auto mt-8 max-w-3xl scroll-mt-24",
+            "text": "astro-island,astro-slot,astro-static-slot{display:contents}(()=>{var e=async t=>{await(await t())()};(self.Astro||(self.Astro={})).load=e;window.dispatchEvent(new Event(\"astro:load\"));})();(()=>{var A=Object.defineProperty;var g=(i,o,a)=>o ",
+            "rect": {
+              "x": 16,
+              "y": 447,
+              "width": 736,
+              "height": 1943
+            },
+            "style": {
+              "display": "block",
+              "position": "static",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(232, 238, 252)",
+              "fontFamily": "ui-sans-serif, system-ui, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+              "fontSize": "16px"
+            }
+          },
+          {
+            "tag": "section",
+            "id": "",
+            "className": "mx-auto mt-20 max-w-4xl",
+            "text": "Seven rarity tiers, grounded in real frequency Tiers come from where a number's score lands across the full distribution — not from arbitrary bonuses. 1 Standard Bottom 50% 2 Notable Top 50% 3 Distinct Top 25% 4 Rare Top 10% 5 Exceptional T",
+            "rect": {
+              "x": 16,
+              "y": 2470,
+              "width": 736,
+              "height": 512
+            },
+            "style": {
+              "display": "block",
+              "position": "static",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(232, 238, 252)",
+              "fontFamily": "ui-sans-serif, system-ui, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+              "fontSize": "16px"
+            }
+          },
+          {
+            "tag": "section",
+            "id": "",
+            "className": "mx-auto mt-20 max-w-5xl",
+            "text": "Discover moreTry Statistical SoftwareCommission Custom PrintsPersonalized number reportsA complete number rarity platform Rarity Calculator Break any number down into digit DNA, patterns, math properties and an exact global percentile. Unli",
+            "rect": {
+              "x": 16,
+              "y": 3062,
+              "width": 736,
+              "height": 1104
+            },
+            "style": {
+              "display": "block",
+              "position": "static",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(232, 238, 252)",
+              "fontFamily": "ui-sans-serif, system-ui, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+              "fontSize": "16px"
+            }
+          },
+          {
+            "tag": "footer",
+            "id": "",
+            "className": "mt-24 border-t border-[color:var(--color-lab-line)] bg-[color:var(--color-lab-bg)]/60",
+            "text": "RNGDLE.NET RNGdle.net is an independent number-analysis and browser-game website. Every rarity score is computed from a complete analysis of all 1,000,001 supported numbers. Tools Rarity Calculator Unlimited Rolls Compare Numbers Daily Chal",
+            "rect": {
+              "x": 0,
+              "y": 4312,
+              "width": 768,
+              "height": 392
+            },
+            "style": {
+              "display": "block",
+              "position": "static",
+              "backgroundColor": "oklab(0.130397 -0.0000611097 -0.0192351 / 0.6)",
+              "color": "rgb(232, 238, 252)",
+              "fontFamily": "ui-sans-serif, system-ui, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+              "fontSize": "16px"
+            }
+          }
+        ],
+        "cssVariables": [],
+        "fonts": [
+          "Google Sans",
+          "Google Sans",
+          "Google Sans",
+          "Google Sans",
+          "Google Sans",
+          "Google Sans",
+          "Google Sans",
+          "Google Sans",
+          "Google Sans",
+          "Google Sans",
+          "Google Sans",
+          "Google Sans",
+          "Google Sans",
+          "Google Sans",
+          "Google Sans",
+          "Google Sans",
+          "Google Sans",
+          "Google Sans",
+          "Google Sans",
+          "Google Sans",
+          "Google Sans",
+          "Google Sans",
+          "Google Sans",
+          "Google Sans",
+          "Google Sans",
+          "Google Sans",
+          "Google Sans",
+          "Google Sans",
+          "Google Sans",
+          "Google Sans",
+          "Google Sans",
+          "Google Sans",
+          "Google Sans",
+          "Google Sans",
+          "Google Sans",
+          "Google Sans",
+          "Google Sans",
+          "Google Sans",
+          "Google Sans",
+          "Google Sans"
+        ],
+        "images": [],
+        "canvases": []
+      }
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "screenshot": "screenshots/original-390.png",
+      "signals": {
+        "href": "https://rngdle.net/",
+        "title": "RNGdle – Number Rarity Calculator, Infinite Rolls & Daily Challenges",
+        "lang": "en",
+        "bodyTextChars": 3890,
+        "scrollHeight": 7840,
+        "viewport": {
+          "width": 390,
+          "height": 900
+        },
+        "h1": [
+          "How Rare Is Your Number?"
+        ],
+        "headings": [
+          {
+            "tag": "h1",
+            "text": "How Rare Is Your Number?"
+          },
+          {
+            "tag": "h2",
+            "text": "Seven rarity tiers, grounded in real frequency"
+          },
+          {
+            "tag": "h2",
+            "text": "A complete number rarity platform"
+          },
+          {
+            "tag": "h3",
+            "text": "Rarity Calculator"
+          },
+          {
+            "tag": "h3",
+            "text": "Unlimited Rolls"
+          },
+          {
+            "tag": "h3",
+            "text": "Daily Challenges"
+          },
+          {
+            "tag": "h3",
+            "text": "Number Compare"
+          },
+          {
+            "tag": "h3",
+            "text": "Pattern Atlas"
+          },
+          {
+            "tag": "h3",
+            "text": "Number Sandbox"
+          }
+        ],
+        "metaDescription": "Analyze any number, estimate its rarity, discover hidden patterns, run unlimited simulations, and compete in daily number challenges.",
+        "counts": {
+          "links": 52,
+          "images": 0,
+          "video": 0,
+          "canvas": 0,
+          "sections": 8,
+          "forms": 0,
+          "buttons": 3,
+          "inputs": 1,
+          "interactive": 62,
+          "scripts": 8,
+          "stylesheets": 1
+        },
+        "frameworks": {
+          "react": false,
+          "next": false,
+          "vue": false,
+          "nuxt": false,
+          "svelte": false,
+          "astro": false,
+          "three": false,
+          "gsap": false,
+          "lenis": false
+        },
+        "scripts": [
+          "https://pagead2.googlesyndication.com/pagead/managed/js/adsense/m202609210101/show_ads_impl.js",
+          "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2712527503244975",
+          "https://fundingchoicesmessages.google.com/i/ca-pub-2712527503244975?href=https%3A%2F%2Frngdle.net&ers=2",
+          "https://fundingchoicesmessages.google.com/f/AGSKWxWa2AvhN9MRyLCvSVmM69BYzpBBwCMhZn_Hhshmy54ef6ampizSiFbpnNt9iQvxDPd0Y1fp92Z9bTddexNpZxr5JpcvZbyIiVa0NzQYL5nKxF8ePtJJiaMCPkBfyoMnTqk1zjyyoA==?fccs=W251bGwsbnVsbCxudWxsLG51bGwsbnVsbCxudWxsLFsxNzkwNDAzODM0LDE0MDAwMDAwMF0sbnVsbCxudWxsLG51bGwsW251bGwsWzddXSwiaHR0cHM6Ly9ybmdkbGUubmV0LyIsbnVsbCxbWzgsImlGSUpBWjFmY3hjIl0sWzksInpoLUNOIl0sWzE4LCJbW1tudWxsLDI2ODFdXV0iXSxbMzUsIjE3OTA0MDM4MzQiXSxbMTksIjIiXSxbMTcsIlswXSJdLFsyNCwiIl0sWzI5LCJ0cnVlIl1dXQ",
+          "https://fundingchoicesmessages.google.com/f/AGSKWxXHw3uUu8E8WhvaOz32263mOlHYF2I4jrEcezjyI-gm4aHVh1sRPV9qSKxC9t8tOis18mqvPrB-E9QkKeXWDU51z-0qi-DdIXQqSuIU_XH-tNwFdklUGIDADDhsIhBjJuFs9WrzMg==?fccs=W251bGwsbnVsbCxudWxsLG51bGwsbnVsbCxudWxsLFsxNzkwNDAzODM0LDM5MTAwMDAwMF0sbnVsbCxudWxsLG51bGwsW251bGwsWzcsOV0sbnVsbCwyLG51bGwsInpoLUNOIl0sImh0dHBzOi8vcm5nZGxlLm5ldC8iLG51bGwsW1s4LCJpRklKQVoxZmN4YyJdLFs5LCJ6aC1DTiJdLFsxOCwiW1tbbnVsbCwyNjgxXV1dIl0sWzM1LCIxNzkwNDAzODM0Il0sWzE5LCIyIl0sWzE3LCJbMF0iXSxbMjQsIiJdLFsyOSwidHJ1ZSJdXV0",
+          "https://fundingchoicesmessages.google.com/f/AGSKWxWbLtS4bbyiYl1zCB0cWv18U_7xWLiuUkwH_Fb6WtbEzPIlk_8gFyqfcA3nFrLvm1vUX7EqEyKYbb0KenoeaR5QF8b-OUQW2g2-DJpkwXSKGWF9Jh9KAoVsOT3GZyB4vbR-Aj7qeg==?fccs=W251bGwsbnVsbCxudWxsLG51bGwsbnVsbCxudWxsLFsxNzkwNDAzODM1LDQ0NzAwMDAwMF0sbnVsbCxudWxsLG51bGwsW251bGwsWzcsOSw2XSxudWxsLDIsbnVsbCwiemgtQ04iLG51bGwsbnVsbCxudWxsLG51bGwsbnVsbCwxXSwiaHR0cHM6Ly9ybmdkbGUubmV0LyIsbnVsbCxbWzgsImlGSUpBWjFmY3hjIl0sWzksInpoLUNOIl0sWzE4LCJbW1tudWxsLDI2ODFdXV0iXSxbMzUsIjE3OTA0MDM4MzQiXSxbMTksIjIiXSxbMTcsIlswXSJdLFsyNCwiIl0sWzI5LCJ0cnVlIl1dXQ",
+          "https://static.cloudflareinsights.com/beacon.min.js",
+          "https://static.cloudflareinsights.com/beacon.min.js/v31edd6df95cf4e85bb4c19e7a9bdbcba1788362987495"
+        ],
+        "stylesheets": [
+          "https://rngdle.net/_astro/_slug_.DUSZiZ-m.css"
+        ],
+        "sections": [
+          {
+            "tag": "header",
+            "id": "",
+            "className": "sticky top-0 z-40 border-b border-[color:var(--color-lab-line)] bg-[color:var(--color-lab-bg)]/85 backdrop-blur",
+            "text": "λ RNGDLE.NET The Number Rarity Lab Analyze Infinite Daily Compare Explore Sandbox Atlas Guides Menu Analyze Infinite Daily Compare Explore Sandbox Atlas Guides",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 390,
+              "height": 69
+            },
+            "style": {
+              "display": "block",
+              "position": "sticky",
+              "backgroundColor": "oklab(0.130397 -0.0000611097 -0.0192351 / 0.85)",
+              "color": "rgb(232, 238, 252)",
+              "fontFamily": "ui-sans-serif, system-ui, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+              "fontSize": "16px"
+            }
+          },
+          {
+            "tag": "nav",
+            "id": "",
+            "className": "mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3",
+            "text": "λ RNGDLE.NET The Number Rarity Lab Analyze Infinite Daily Compare Explore Sandbox Atlas Guides Menu Analyze Infinite Daily Compare Explore Sandbox Atlas Guides",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 390,
+              "height": 68
+            },
+            "style": {
+              "display": "flex",
+              "position": "static",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(232, 238, 252)",
+              "fontFamily": "ui-sans-serif, system-ui, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+              "fontSize": "16px"
+            }
+          },
+          {
+            "tag": "main",
+            "id": "",
+            "className": "mx-auto w-full flex-1 px-4 py-10 max-w-6xl",
+            "text": "The Number Rarity Lab Number rarity checker How Rare Is Your Number? Enter any number from 0 to 1,000,000 to uncover its mathematical traits, pattern rarity, and global percentile. Play Unlimited Analyze a Number Try the Sandbox Best & wors",
+            "rect": {
+              "x": 0,
+              "y": 69,
+              "width": 390,
+              "height": 6273
+            },
+            "style": {
+              "display": "block",
+              "position": "static",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(232, 238, 252)",
+              "fontFamily": "ui-sans-serif, system-ui, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+              "fontSize": "16px"
+            }
+          },
+          {
+            "tag": "section",
+            "id": "",
+            "className": "mx-auto max-w-4xl text-center",
+            "text": "The Number Rarity Lab Number rarity checker How Rare Is Your Number? Enter any number from 0 to 1,000,000 to uncover its mathematical traits, pattern rarity, and global percentile. Play Unlimited Analyze a Number Try the Sandbox Best & wors",
+            "rect": {
+              "x": 16,
+              "y": 109,
+              "width": 358,
+              "height": 366
+            },
+            "style": {
+              "display": "block",
+              "position": "static",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(232, 238, 252)",
+              "fontFamily": "ui-sans-serif, system-ui, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+              "fontSize": "16px"
+            }
+          },
+          {
+            "tag": "section",
+            "id": "calculator",
+            "className": "mx-auto mt-8 max-w-3xl scroll-mt-24",
+            "text": "astro-island,astro-slot,astro-static-slot{display:contents}(()=>{var e=async t=>{await(await t())()};(self.Astro||(self.Astro={})).load=e;window.dispatchEvent(new Event(\"astro:load\"));})();(()=>{var A=Object.defineProperty;var g=(i,o,a)=>o ",
+            "rect": {
+              "x": 16,
+              "y": 507,
+              "width": 358,
+              "height": 3279
+            },
+            "style": {
+              "display": "block",
+              "position": "static",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(232, 238, 252)",
+              "fontFamily": "ui-sans-serif, system-ui, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+              "fontSize": "16px"
+            }
+          },
+          {
+            "tag": "section",
+            "id": "",
+            "className": "mx-auto mt-20 max-w-4xl",
+            "text": "Seven rarity tiers, grounded in real frequency Tiers come from where a number's score lands across the full distribution — not from arbitrary bonuses. 1 Standard Bottom 50% 2 Notable Top 50% 3 Distinct Top 25% 4 Rare Top 10% 5 Exceptional T",
+            "rect": {
+              "x": 16,
+              "y": 3866,
+              "width": 358,
+              "height": 568
+            },
+            "style": {
+              "display": "block",
+              "position": "static",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(232, 238, 252)",
+              "fontFamily": "ui-sans-serif, system-ui, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+              "fontSize": "16px"
+            }
+          },
+          {
+            "tag": "section",
+            "id": "",
+            "className": "mx-auto mt-20 max-w-5xl",
+            "text": "A complete number rarity platform Rarity Calculator Break any number down into digit DNA, patterns, math properties and an exact global percentile. Unlimited Rolls Roll once or use Turbo, save your best finds and pick up where you left off.",
+            "rect": {
+              "x": 16,
+              "y": 4514,
+              "width": 358,
+              "height": 1778
+            },
+            "style": {
+              "display": "block",
+              "position": "static",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(232, 238, 252)",
+              "fontFamily": "ui-sans-serif, system-ui, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+              "fontSize": "16px"
+            }
+          },
+          {
+            "tag": "footer",
+            "id": "",
+            "className": "mt-24 border-t border-[color:var(--color-lab-line)] bg-[color:var(--color-lab-bg)]/60",
+            "text": "RNGDLE.NET RNGdle.net is an independent number-analysis and browser-game website. Every rarity score is computed from a complete analysis of all 1,000,001 supported numbers. Tools Rarity Calculator Unlimited Rolls Compare Numbers Daily Chal",
+            "rect": {
+              "x": 0,
+              "y": 6438,
+              "width": 390,
+              "height": 992
+            },
+            "style": {
+              "display": "block",
+              "position": "static",
+              "backgroundColor": "oklab(0.130397 -0.0000611097 -0.0192351 / 0.6)",
+              "color": "rgb(232, 238, 252)",
+              "fontFamily": "ui-sans-serif, system-ui, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+              "fontSize": "16px"
+            }
+          }
+        ],
+        "cssVariables": [],
+        "fonts": [],
+        "images": [],
+        "canvases": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+# RNGDLE.ART
+
+A monochrome number rarity lab with light/dark themes and English (US), Simplified Chinese, Japanese, Korean, German and French interfaces.
+
+## Develop
+
+Requires Node.js 22 or later.
+
+```sh
+npm ci
+npm run dev
+```
+
+The site runs at `http://127.0.0.1:5173`. Locale routes use `/en`, `/zh`, `/ja`, `/ko`, `/de`, `/fr`; the root detects browser language and remembers a manual preference.
+
+## Build and verify
+
+```sh
+npm run build
+npm test
+node scripts/serve-production.mjs
+# In another terminal (Chrome installed locally):
+BASE_URL=http://127.0.0.1:4173 npm run test:browser
+```
+
+CI installs Playwright Chromium and runs the browser suite headlessly. Local acceptance was also run in real headed Chrome from the Codex environment. The tests use isolated profiles, never the user's browsing data. `PLAN.md` contains the agreed acceptance matrix; `VERIFICATION.md` records actual outcomes and limitations.
+
+## Features
+
+- Analyze integers 0–1,000,000, with 31 named patterns, digit statistics, factorization, rarity scores and exact percentiles.
+- Unlimited single/batch/turbo rolls, target stops, saved numbers, personal best and local session state.
+- Deterministic UTC daily draft, pattern hunt and quiz, saved attempts, practice and streaks.
+- Number comparisons, exact full-range pattern explorer in a Web Worker, keyboard digit sandbox and best one-digit edit.
+- Pattern atlas stamped only by daily specimens; guides, methodology and score rankings.
+- Shareable number URLs and downloadable PNG cards.
+- 282 prerendered localized pages, canonical/alternate URLs, sitemap and robots.
+
+## Architecture
+
+`src/engine.mjs` defines the mathematics. `scripts/build-data.mjs` enumerates the entire range and generates independently calculated counts, a 2 MB score index and a 4 MB pattern index. Main page analysis is immediate; larger indices load only for games/exploration. No private upstream APIs are used.
+
+`src/core.tsx` owns preferences and storage, `src/games.mjs` pure game rules, and the page files consume the same shared engine. `scripts/ssr.tsx` renders static content at build time; React then attaches the interactive application. Vercel serves `dist` as static files with clean URLs and a real 404 page.
+
+The app intentionally stores progress only in this browser. Clearing storage or switching devices starts fresh. There is no account system, shared global leaderboard, or cross-device sync. Anonymous competitor data is never fabricated.
+
+## Provenance
+
+The requested [Web Clone skill](https://github.com/Jane-xiaoer/claude-skill-web-clone) informed reconnaissance and verification. Its MIT-licensed utilities and license are in `scripts/vendor/web-clone`. Application code, wording and monochrome styling are independently authored. Reference evidence is documented in `NOTES.md` and `TEARDOWN.md`; original site's bundles and tracking scripts are not shipped. RNGDLE.ART is independent of RNGdle.net and similarly named games.
+
+## Deployment
+
+Repository: `git@github.com:cuilinhao/rngdle-code.git`, branch `main`.
+
+```sh
+npx vercel --prod
+```
+
+Vercel configuration is in `vercel.json`. Domain target: `rngdle.art`; DNS stays at Namecheap. No secrets are required by the application. Vercel CLI credentials and `.vercel` metadata are not committed. See `DEPLOYMENT.md` for the actual deployed URL, commit and DNS status.

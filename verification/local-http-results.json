@@ -1,0 +1,1466 @@
+{
+  "base": "http://127.0.0.1:4173",
+  "checkedAt": "2026-09-26T07:07:43.858Z",
+  "passed": 291,
+  "failed": [],
+  "results": [
+    {
+      "path": "/assets/index-C3ksoc9k.css",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/assets/index-DDNt32ex.js",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/data/patterns.bin",
+      "status": 200,
+      "bytes": 4000004,
+      "pass": true
+    },
+    {
+      "path": "/data/scores.bin",
+      "status": 200,
+      "bytes": 2000002,
+      "pass": true
+    },
+    {
+      "path": "/data/stats.json",
+      "status": 200,
+      "bytes": 19354,
+      "pass": true
+    },
+    {
+      "path": "/de",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/de/about",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/de/badges",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/de/compare",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/de/contact",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/de/daily",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/de/ep",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/de/explore",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/de/guides",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/de/infinite",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/de/leaderboard",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/de/methodology",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/de/patterns",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/de/patterns/abab",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/de/patterns/abcabc",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/de/patterns/ascending",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/de/patterns/ascRun",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/de/patterns/binaryOnes",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/de/patterns/binaryPal",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/de/patterns/cube",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/de/patterns/descending",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/de/patterns/descRun",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/de/patterns/divisible",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/de/patterns/factorial",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/de/patterns/fibonacci",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/de/patterns/five",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/de/patterns/happy",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/de/patterns/harshad",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/de/patterns/hexRepeat",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/de/patterns/pairs",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/de/patterns/palindrome",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/de/patterns/parity",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/de/patterns/power2",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/de/patterns/prime",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/de/patterns/quad",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/de/patterns/repdigit",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/de/patterns/repeat",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/de/patterns/run",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/de/patterns/semiprime",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/de/patterns/square",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/de/patterns/triangular",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/de/patterns/triple",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/de/patterns/twoDigits",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/de/patterns/zigzag",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/de/privacy",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/de/sandbox",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/de/terms",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/en",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/en/about",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/en/badges",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/en/compare",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/en/contact",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/en/daily",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/en/ep",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/en/explore",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/en/guides",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/en/infinite",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/en/leaderboard",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/en/methodology",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/en/not-a-route",
+      "status": 404,
+      "pass": true
+    },
+    {
+      "path": "/en/patterns",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/en/patterns/abab",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/en/patterns/abcabc",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/en/patterns/ascending",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/en/patterns/ascRun",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/en/patterns/binaryOnes",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/en/patterns/binaryPal",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/en/patterns/cube",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/en/patterns/descending",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/en/patterns/descRun",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/en/patterns/divisible",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/en/patterns/factorial",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/en/patterns/fibonacci",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/en/patterns/five",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/en/patterns/happy",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/en/patterns/harshad",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/en/patterns/hexRepeat",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/en/patterns/pairs",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/en/patterns/palindrome",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/en/patterns/parity",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/en/patterns/power2",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/en/patterns/prime",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/en/patterns/quad",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/en/patterns/repdigit",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/en/patterns/repeat",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/en/patterns/run",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/en/patterns/semiprime",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/en/patterns/square",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/en/patterns/triangular",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/en/patterns/triple",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/en/patterns/twoDigits",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/en/patterns/zigzag",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/en/privacy",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/en/sandbox",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/en/terms",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/favicon.svg",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/fr",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/fr/about",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/fr/badges",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/fr/compare",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/fr/contact",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/fr/daily",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/fr/ep",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/fr/explore",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/fr/guides",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/fr/infinite",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/fr/leaderboard",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/fr/methodology",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/fr/patterns",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/fr/patterns/abab",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/fr/patterns/abcabc",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/fr/patterns/ascending",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/fr/patterns/ascRun",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/fr/patterns/binaryOnes",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/fr/patterns/binaryPal",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/fr/patterns/cube",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/fr/patterns/descending",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/fr/patterns/descRun",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/fr/patterns/divisible",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/fr/patterns/factorial",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/fr/patterns/fibonacci",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/fr/patterns/five",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/fr/patterns/happy",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/fr/patterns/harshad",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/fr/patterns/hexRepeat",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/fr/patterns/pairs",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/fr/patterns/palindrome",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/fr/patterns/parity",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/fr/patterns/power2",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/fr/patterns/prime",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/fr/patterns/quad",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/fr/patterns/repdigit",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/fr/patterns/repeat",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/fr/patterns/run",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/fr/patterns/semiprime",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/fr/patterns/square",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/fr/patterns/triangular",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/fr/patterns/triple",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/fr/patterns/twoDigits",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/fr/patterns/zigzag",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/fr/privacy",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/fr/sandbox",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/fr/terms",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/ja",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/ja/about",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/ja/badges",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/ja/compare",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/ja/contact",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/ja/daily",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/ja/ep",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/ja/explore",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/ja/guides",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/ja/infinite",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/ja/leaderboard",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/ja/methodology",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/ja/patterns",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/ja/patterns/abab",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/ja/patterns/abcabc",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/ja/patterns/ascending",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/ja/patterns/ascRun",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/ja/patterns/binaryOnes",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/ja/patterns/binaryPal",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/ja/patterns/cube",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/ja/patterns/descending",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/ja/patterns/descRun",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/ja/patterns/divisible",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/ja/patterns/factorial",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/ja/patterns/fibonacci",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/ja/patterns/five",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/ja/patterns/happy",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/ja/patterns/harshad",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/ja/patterns/hexRepeat",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/ja/patterns/pairs",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/ja/patterns/palindrome",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/ja/patterns/parity",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/ja/patterns/power2",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/ja/patterns/prime",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/ja/patterns/quad",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/ja/patterns/repdigit",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/ja/patterns/repeat",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/ja/patterns/run",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/ja/patterns/semiprime",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/ja/patterns/square",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/ja/patterns/triangular",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/ja/patterns/triple",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/ja/patterns/twoDigits",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/ja/patterns/zigzag",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/ja/privacy",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/ja/sandbox",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/ja/terms",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/ko",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/ko/about",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/ko/badges",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/ko/compare",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/ko/contact",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/ko/daily",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/ko/ep",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/ko/explore",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/ko/guides",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/ko/infinite",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/ko/leaderboard",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/ko/methodology",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/ko/patterns",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/ko/patterns/abab",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/ko/patterns/abcabc",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/ko/patterns/ascending",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/ko/patterns/ascRun",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/ko/patterns/binaryOnes",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/ko/patterns/binaryPal",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/ko/patterns/cube",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/ko/patterns/descending",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/ko/patterns/descRun",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/ko/patterns/divisible",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/ko/patterns/factorial",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/ko/patterns/fibonacci",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/ko/patterns/five",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/ko/patterns/happy",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/ko/patterns/harshad",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/ko/patterns/hexRepeat",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/ko/patterns/pairs",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/ko/patterns/palindrome",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/ko/patterns/parity",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/ko/patterns/power2",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/ko/patterns/prime",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/ko/patterns/quad",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/ko/patterns/repdigit",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/ko/patterns/repeat",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/ko/patterns/run",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/ko/patterns/semiprime",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/ko/patterns/square",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/ko/patterns/triangular",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/ko/patterns/triple",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/ko/patterns/twoDigits",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/ko/patterns/zigzag",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/ko/privacy",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/ko/sandbox",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/ko/terms",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/robots.txt",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/sitemap.xml",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/zh",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/zh/about",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/zh/badges",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/zh/compare",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/zh/contact",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/zh/daily",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/zh/ep",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/zh/explore",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/zh/guides",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/zh/infinite",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/zh/leaderboard",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/zh/methodology",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/zh/patterns",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/zh/patterns/abab",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/zh/patterns/abcabc",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/zh/patterns/ascending",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/zh/patterns/ascRun",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/zh/patterns/binaryOnes",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/zh/patterns/binaryPal",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/zh/patterns/cube",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/zh/patterns/descending",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/zh/patterns/descRun",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/zh/patterns/divisible",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/zh/patterns/factorial",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/zh/patterns/fibonacci",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/zh/patterns/five",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/zh/patterns/happy",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/zh/patterns/harshad",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/zh/patterns/hexRepeat",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/zh/patterns/pairs",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/zh/patterns/palindrome",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/zh/patterns/parity",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/zh/patterns/power2",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/zh/patterns/prime",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/zh/patterns/quad",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/zh/patterns/repdigit",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/zh/patterns/repeat",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/zh/patterns/run",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/zh/patterns/semiprime",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/zh/patterns/square",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/zh/patterns/triangular",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/zh/patterns/triple",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/zh/patterns/twoDigits",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/zh/patterns/zigzag",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/zh/privacy",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/zh/sandbox",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/zh/terms",
+      "status": 200,
+      "pass": true
+    }
+  ]
+}
