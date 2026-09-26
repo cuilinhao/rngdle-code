@@ -1,10 +1,11 @@
 {
-  "environment": "Codex local Chromium; production build at http://127.0.0.1:4197",
-  "baseCommit": "188643d",
+  "environment": "Codex local Chromium; merged production build at http://127.0.0.1:4197",
+  "baseCommit": "5a649a1",
+  "applicationCommit": "cd93e8b",
   "stats": {
-    "startTime": "2026-09-26T11:13:59.750Z",
-    "duration": 12691.05,
-    "expected": 39,
+    "startTime": "2026-09-26T11:30:46.129Z",
+    "duration": 36759.030000000006,
+    "expected": 59,
     "skipped": 0,
     "unexpected": 0,
     "flaky": 0
@@ -19,7 +20,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 1692,
+          "durationMs": 1886,
           "errors": []
         }
       ]
@@ -32,7 +33,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 1645,
+          "durationMs": 1898,
           "errors": []
         }
       ]
@@ -45,7 +46,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 1645,
+          "durationMs": 1830,
           "errors": []
         }
       ]
@@ -58,7 +59,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 1375,
+          "durationMs": 1734,
           "errors": []
         }
       ]
@@ -71,7 +72,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 1363,
+          "durationMs": 1805,
           "errors": []
         }
       ]
@@ -84,7 +85,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 1420,
+          "durationMs": 1846,
           "errors": []
         }
       ]
@@ -97,7 +98,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 1637,
+          "durationMs": 1858,
           "errors": []
         }
       ]
@@ -110,7 +111,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 801,
+          "durationMs": 871,
           "errors": []
         }
       ]
@@ -123,7 +124,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 1535,
+          "durationMs": 1629,
           "errors": []
         }
       ]
@@ -136,7 +137,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 683,
+          "durationMs": 706,
           "errors": []
         }
       ]
@@ -149,7 +150,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 443,
+          "durationMs": 479,
           "errors": []
         }
       ]
@@ -162,7 +163,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 503,
+          "durationMs": 497,
           "errors": []
         }
       ]
@@ -175,7 +176,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 736,
+          "durationMs": 723,
           "errors": []
         }
       ]
@@ -188,7 +189,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 242,
+          "durationMs": 233,
           "errors": []
         }
       ]
@@ -201,7 +202,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 744,
+          "durationMs": 782,
           "errors": []
         }
       ]
@@ -214,7 +215,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 503,
+          "durationMs": 529,
           "errors": []
         }
       ]
@@ -227,7 +228,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 383,
+          "durationMs": 405,
           "errors": []
         }
       ]
@@ -240,7 +241,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 433,
+          "durationMs": 478,
           "errors": []
         }
       ]
@@ -253,7 +254,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 1838,
+          "durationMs": 1819,
           "errors": []
         }
       ]
@@ -266,7 +267,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 369,
+          "durationMs": 2469,
           "errors": []
         }
       ]
@@ -279,7 +280,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 993,
+          "durationMs": 912,
           "errors": []
         }
       ]
@@ -292,7 +293,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 979,
+          "durationMs": 898,
           "errors": []
         }
       ]
@@ -305,7 +306,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 925,
+          "durationMs": 949,
           "errors": []
         }
       ]
@@ -318,7 +319,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 902,
+          "durationMs": 1060,
           "errors": []
         }
       ]
@@ -331,7 +332,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 949,
+          "durationMs": 1107,
           "errors": []
         }
       ]
@@ -344,7 +345,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 904,
+          "durationMs": 1039,
           "errors": []
         }
       ]
@@ -357,7 +358,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 370,
+          "durationMs": 394,
           "errors": []
         }
       ]
@@ -370,7 +371,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 387,
+          "durationMs": 413,
           "errors": []
         }
       ]
@@ -383,7 +384,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 277,
+          "durationMs": 357,
           "errors": []
         }
       ]
@@ -396,7 +397,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 233,
+          "durationMs": 336,
           "errors": []
         }
       ]
@@ -409,7 +410,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 420,
+          "durationMs": 437,
           "errors": []
         }
       ]
@@ -422,7 +423,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 401,
+          "durationMs": 440,
           "errors": []
         }
       ]
@@ -435,7 +436,267 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 794,
+          "durationMs": 791,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "share-tree-resilience.spec.ts",
+      "title": "rapidly reversing the animation finishes on a scannable QR",
+      "ok": true,
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 4994,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "share-tree-resilience.spec.ts",
+      "title": "closing during animation and reopening repeatedly leaves a working scene without page errors",
+      "ok": true,
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 8937,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "share-tree-resilience.spec.ts",
+      "title": "the tree chunk is lazy and a failed chunk request leaves a scannable fallback",
+      "ok": true,
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 468,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "share-tree-resilience.spec.ts",
+      "title": "losing the real WebGL context during animation exposes the fallback QR",
+      "ok": true,
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2727,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "share-tree-resilience.spec.ts",
+      "title": "all six locales expose a scannable QR and reachable copy and download on a 320px short screen",
+      "ok": true,
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 11775,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "share-tree-resilience.spec.ts",
+      "title": "enabling reduced motion during the animation settles on the requested scannable QR",
+      "ok": true,
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2774,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "share-tree.spec.ts",
+      "title": "download waits for the lazy tree and the saved PNG contains the tree",
+      "ok": true,
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1714,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "share-tree.spec.ts",
+      "title": "changing season never downloads the previous tree while its new image decodes",
+      "ok": true,
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2238,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "share-tree.spec.ts",
+      "title": "share tree animates to a QR that opens this result, and back to a tree",
+      "ok": true,
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 4586,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "share-tree.spec.ts",
+      "title": "mobile reduced motion keeps the QR, controls and localized result usable",
+      "ok": true,
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1852,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "share-tree.spec.ts",
+      "title": "without WebGL a scannable result card and download are still available",
+      "ok": true,
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 368,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "share-tree.spec.ts",
+      "title": "tree interaction still works when only the WebGL snapshot export fails",
+      "ok": true,
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 3510,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "share-tree.spec.ts",
+      "title": "a failed lazy tree request still offers a scannable fallback download",
+      "ok": true,
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 300,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "share-tree.spec.ts",
+      "title": "share card fits at 320px in en",
+      "ok": true,
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1672,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "share-tree.spec.ts",
+      "title": "share card fits at 320px in zh",
+      "ok": true,
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1746,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "share-tree.spec.ts",
+      "title": "share card fits at 320px in ja",
+      "ok": true,
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1733,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "share-tree.spec.ts",
+      "title": "share card fits at 320px in ko",
+      "ok": true,
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1612,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "share-tree.spec.ts",
+      "title": "share card fits at 320px in de",
+      "ok": true,
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1631,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "share-tree.spec.ts",
+      "title": "share card fits at 320px in fr",
+      "ok": true,
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1990,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "share-tree.spec.ts",
+      "title": "changing locale with history while the dialog is open rebuilds a working QR scene",
+      "ok": true,
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 4419,
           "errors": []
         }
       ]
@@ -448,7 +709,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 904,
+          "durationMs": 1054,
           "errors": []
         }
       ]
@@ -461,7 +722,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 1732,
+          "durationMs": 1813,
           "errors": []
         }
       ]
@@ -474,7 +735,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 1720,
+          "durationMs": 1681,
           "errors": []
         }
       ]
@@ -487,20 +748,20 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 1804,
+          "durationMs": 1447,
           "errors": []
         }
       ]
     },
     {
       "file": "theme.spec.ts",
-      "title": "A14 rendered share PNG has actual dimensions, distinct border and readable number/labels",
+      "title": "A14 rendered share PNG has actual dimensions and readable number/labels",
       "ok": true,
       "status": "expected",
       "results": [
         {
           "status": "passed",
-          "durationMs": 784,
+          "durationMs": 3146,
           "errors": []
         }
       ]
@@ -513,7 +774,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 408,
+          "durationMs": 1443,
           "errors": []
         }
       ]
