@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import {
   ArrowUpRight,
   Copy,
@@ -8,6 +8,11 @@ import {
   Bookmark,
   Check,
   Trash2,
+  QrCode,
+  Trees,
+  Flower2,
+  Sun,
+  Leaf,
 } from "lucide-react";
 import { analyze, parseNumber, randomNumber, TOTAL } from "./engine.mjs";
 import {
@@ -19,7 +24,8 @@ import {
   recordRecent,
 } from "./core";
 import { tierKeys } from "./i18n";
-import { drawShareCard } from "./share-card.mjs";
+import { drawTreeShareCard } from "./share-card.mjs";
+import { createShareQr, drawShareQr } from "./share-qr.mjs";
 export function Badge({ tier }: { tier: number }) {
   const { t } = useApp();
   return (
@@ -460,30 +466,72 @@ export function ShareDialog({
 }) {
   const { t, fmt, locale, notify } = useApp(),
     ref = useRef<HTMLDialogElement>(null),
-    [image, setImage] = useState("");
+    [renderedCard, setRenderedCard] = useState<{ key: string; source: string | null; image: string } | null>(null),
+    [snapshot, setSnapshot] = useState<{ key: string; image: string | null } | null>(null),
+    [treeReady, setTreeReady] = useState(false),
+    [view, setView] = useState<"tree" | "qr">("tree"),
+    [season, setSeason] = useState<"spring" | "summer" | "autumn">("summer"),
+    [failed, setFailed] = useState(false),
+    [Tree, setTree] = useState<typeof import("./ShareTree").default | null>(null);
   const url = new URL("/" + locale + "?n=" + n, location.origin).href;
+  const exportKey = url + "|" + season;
+  const currentSnapshot = snapshot?.key === exportKey ? snapshot : null;
+  const canExport = failed || currentSnapshot !== null;
+  const treeImage = failed ? null : currentSnapshot?.image ?? null;
+  // A prior season or an in-flight snapshot must never remain downloadable.
+  const image = canExport && renderedCard?.key === exportKey && renderedCard.source === treeImage
+    ? renderedCard.image : "";
   const a = analyze(n, stats);
+  const handleCapture = useCallback((image: string | null, capturedSeason: "spring" | "summer" | "autumn") => {
+    setSnapshot({ key: url + "|" + capturedSeason, image });
+  }, [url]);
+  const handleTreeError = useCallback(() => setFailed(true), []);
+  const handleTreeReady = useCallback(() => setTreeReady(true), []);
   useEffect(() => {
     const previous = document.activeElement as HTMLElement;
     ref.current?.showModal();
-    const c = document.createElement("canvas");
-    c.width = 1200;
-    c.height = 630;
-    const x = c.getContext("2d")!;
-    drawShareCard(x, {
-      number: fmt(n),
-      score: fmt(a.score),
-      percent: t("top", { p: fmt(a.percent, a.percent < 0.01 ? 4 : 3) }),
-      label: t("lab"),
-      subtitle: t(tierKeys[a.tier]),
-      scoreLabel: t("score"),
-      percentLabel: t("percentile"),
-    });
-    setImage(c.toDataURL("image/png"));
-    return () => previous?.focus();
-  }, [n, locale]);
+    let active = true;
+    import("./ShareTree").then((module) => {
+      if (active) setTree(() => module.default);
+    }).catch(() => { if (active) setFailed(true); });
+    return () => { active = false; previous?.focus(); };
+  }, []);
+  useEffect(() => {
+    if (!canExport) return;
+    let active = true;
+    async function renderCard() {
+      await document.fonts.ready;
+      let tree: HTMLImageElement | undefined;
+      if (treeImage) {
+        const decoded = new Image();
+        decoded.src = treeImage;
+        try { await decoded.decode(); tree = decoded; } catch { /* QR export remains available. */ }
+      }
+      const c = document.createElement("canvas");
+      c.width = 1200;
+      c.height = 630;
+      drawTreeShareCard(c.getContext("2d")!, {
+        number: fmt(n),
+        score: fmt(a.score),
+        percent: t("top", { p: fmt(a.percent, a.percent < 0.01 ? 4 : 3) }),
+        label: t("lab"),
+        subtitle: t(tierKeys[a.tier]),
+        scoreLabel: t("score"),
+        percentLabel: t("percentile"),
+        qrLabel: t("scanResult"),
+        url,
+        treeImage: tree,
+      });
+      if (active) setRenderedCard({ key: exportKey, source: treeImage, image: c.toDataURL("image/png") });
+    }
+    void renderCard();
+    return () => { active = false; };
+  }, [n, locale, treeImage, url, exportKey, canExport]);
+  const toggleLabel = t(view === "tree" ? "showQr" : "showTree");
   return (
     <dialog
+      className="tree-share-dialog"
+      aria-labelledby="share-dialog-title"
       ref={ref}
       onCancel={onClose}
       onClick={(e) => {
@@ -491,54 +539,84 @@ export function ShareDialog({
       }}
     >
       <div className="dialog-head">
-        <h2>{t("shareCard")}</h2>
-        <button
-          className="icon-button"
-          onClick={onClose}
-          aria-label={t("close")}
-        >
-          <X />
+        <div>
+          <p className="share-eyebrow">RNGDLE.ART <span>/</span> {t("share")}</p>
+          <h2 id="share-dialog-title">{t("shareTreeTitle")}</h2>
+        </div>
+        <button className="icon-button" onClick={onClose} aria-label={t("close")}>
+          <X size={20} />
         </button>
       </div>
-      {image && (
-        <img
-          className="share-preview"
-          src={image}
-          alt={t("number") + " " + fmt(n)}
-        />
-      )}
-      <p className="muted small">{t("copyManual")}</p>
-      <input
-        aria-label={t("copy")}
-        readOnly
-        value={url}
-        onFocus={(e) => e.target.select()}
-      />
-      <div className="actions">
-        <button
-          onClick={async () => {
+      <div className="tree-share-card">
+        <div className="share-result">
+          <p className="share-result-label">{t("lab")}</p>
+          <div className="share-number">{fmt(n)}</div>
+          <span className="share-tier"><span aria-hidden="true">✦</span> {t(tierKeys[a.tier])}</span>
+          <p className="share-story">{t("shareTreeStory")}</p>
+          <div className="share-metrics">
+            <div><span>{t("score")}</span><strong>{fmt(a.score)}</strong></div>
+            <div><span>{t("percentile")}</span><strong>{t("top", { p: fmt(a.percent, a.percent < 0.01 ? 4 : 3) })}</strong></div>
+          </div>
+        </div>
+        <div className="share-art">
+          <div className="share-tree-viewport">
+            {failed ? (
+              <ShareQrFallback url={url} label={t("scanResult")} />
+            ) : (
+              <>
+                {Tree ? (
+                  <Tree key={url} url={url} view={view} season={season} onCapture={handleCapture} onReady={handleTreeReady} onError={handleTreeError} />
+                ) : <div className="share-tree-loading" role="status">{t("growingTree")}</div>}
+                <button
+                  className="share-tree-toggle"
+                  aria-label={toggleLabel}
+                  disabled={!treeReady}
+                  onClick={() => setView(view === "tree" ? "qr" : "tree")}
+                >
+                  <span>{view === "tree" ? <QrCode size={16} /> : <Trees size={16} />}{toggleLabel}</span>
+                </button>
+              </>
+            )}
+          </div>
+          {!failed && <div className="share-seasons" role="group" aria-label={t("treeSeason")}>
+            {(["spring", "summer", "autumn"] as const).map((value, index) => {
+              const Icon = [Flower2, Sun, Leaf][index];
+              return <button key={value} aria-pressed={season === value} onClick={() => setSeason(value)}>
+                <Icon size={17} />{t(value)}
+              </button>;
+            })}
+          </div>}
+          <p className="share-art-caption" aria-live="polite">{t(failed || view === "qr" ? "scanResult" : "treeHint")}</p>
+        </div>
+      </div>
+      <div className="share-footer">
+        <label className="share-link-label" htmlFor="share-result-url">{t("copyManual")}</label>
+        <div className="share-link-row">
+          <input id="share-result-url" aria-label={t("copy")} readOnly value={url} onFocus={(e) => e.target.select()} />
+          <button onClick={async () => {
             try {
               await navigator.clipboard.writeText(url);
               notify(t("copied"));
             } catch {
+              ref.current?.querySelector("input")?.focus();
               ref.current?.querySelector("input")?.select();
             }
-          }}
-        >
-          <Copy size={16} />
-          {t("copy")}
-        </button>
-        <a
-          className="button primary"
-          href={image}
-          download={"rngdle-art-" + n + ".png"}
-        >
-          <Download size={16} />
-          {t("download")}
-        </a>
+          }}><Copy size={16} />{t("copy")}</button>
+          {image && <a className="button primary" href={image} download={"rngdle-art-" + n + ".png"}>
+            <Download size={16} />{t("download")}
+          </a>}
+        </div>
       </div>
     </dialog>
   );
+}
+function ShareQrFallback({ url, label }: { url: string; label: string }) {
+  const ref = useRef<HTMLCanvasElement>(null);
+  useEffect(() => {
+    const canvas = ref.current;
+    if (canvas) drawShareQr(canvas.getContext("2d")!, createShareQr(url), 0, 0, 400);
+  }, [url]);
+  return <canvas className="share-fallback" ref={ref} width={400} height={400} role="img" aria-label={label} />;
 }
 export function TierTable() {
   const { t } = useApp();

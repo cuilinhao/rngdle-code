@@ -1,0 +1,19 @@
+
+Running 3 tests using 3 workers
+
+(node:44910) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+(node:44909) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+(node:44911) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[1/3] tests/browser/seo.spec.ts:77:1 › new SEO pages remain readable on mobile and without JavaScript
+[2/3] tests/browser/seo.spec.ts:5:1 › SEO survives client navigation and language changes
+[3/3] tests/browser/seo.spec.ts:46:1 › daily archive loads deterministic answer and its metadata through navigation
+  3 passed (1.5s)

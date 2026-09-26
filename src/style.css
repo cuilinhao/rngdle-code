@@ -873,6 +873,305 @@ dialog::backdrop {
 dialog > .actions {
   margin-top: 20px;
 }
+.tree-share-dialog {
+  --panel: #f6f1e7;
+  --panel-2: #ece4d5;
+  --fg: #39382d;
+  --muted: #716b5c;
+  --line: #ddd6c7;
+  --strong: #78552f;
+  --on-strong: #fffaf0;
+  --strong-hover: #624322;
+  color-scheme: light;
+  max-width: 940px;
+  padding: 28px 32px;
+  border-radius: 24px;
+  border-color: #e4ddcf;
+  box-shadow: 0 28px 100px #0e1d1550;
+}
+.tree-share-dialog::backdrop {
+  background: #182a218c;
+  backdrop-filter: blur(9px);
+}
+.tree-share-dialog .dialog-head {
+  align-items: flex-start;
+  margin-bottom: 0;
+}
+.tree-share-dialog .dialog-head h2 {
+  margin-top: 8px;
+  font-size: clamp(1.1rem, 2vw, 1.4rem);
+  font-weight: 550;
+  letter-spacing: -0.025em;
+}
+.tree-share-dialog .icon-button {
+  border-radius: 50%;
+  min-width: 38px;
+  min-height: 38px;
+  padding: 8px;
+}
+.share-eyebrow {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.625rem;
+  font-weight: 650;
+  letter-spacing: 0.13em;
+}
+.share-eyebrow span {
+  margin: 0 8px;
+  color: #b0a590;
+}
+.tree-share-card {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 0 10px;
+}
+.share-result {
+  padding: 12px 0 26px;
+  min-width: 0;
+}
+.share-result-label {
+  margin: 0 0 14px;
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+.share-number {
+  color: #284b32;
+  font-size: clamp(2.4rem, 5.4vw, 3.65rem);
+  font-weight: 600;
+  letter-spacing: -0.065em;
+  line-height: 1.12;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.share-tier {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 18px;
+  padding: 5px 11px;
+  border-radius: 30px;
+  background: #e4e9d6;
+  color: #38523a;
+  font-size: 0.6875rem;
+}
+.share-tier > span {
+  color: #64823e;
+}
+.share-story {
+  margin: 22px 0 30px;
+  max-width: 270px;
+  font-size: 0.8125rem;
+  color: var(--muted);
+  line-height: 1.8;
+}
+.share-metrics {
+  display: grid;
+  grid-template-columns: 0.7fr 1.3fr;
+  gap: 18px;
+  padding-top: 22px;
+  border-top: 1px solid var(--line);
+}
+.share-metrics span {
+  display: block;
+  color: var(--muted);
+  font-size: 0.6875rem;
+  margin-bottom: 7px;
+}
+.share-metrics strong {
+  display: block;
+  font-size: clamp(1.125rem, 2.4vw, 1.5rem);
+  font-weight: 550;
+  color: #284b32;
+  overflow-wrap: anywhere;
+}
+.share-art {
+  min-width: 0;
+}
+.share-tree-viewport {
+  position: relative;
+  isolation: isolate;
+}
+.share-tree,
+.share-tree-loading {
+  width: 100%;
+  aspect-ratio: 1;
+}
+.share-tree canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.share-tree-loading {
+  display: grid;
+  place-items: center;
+  color: var(--muted);
+  font-size: 0.8125rem;
+}
+.share-tree-toggle {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  padding: 0 0 6px;
+  border: 0;
+  border-radius: 16px;
+  background: transparent;
+  align-items: flex-end;
+  transform: none;
+}
+.share-tree-toggle:hover,
+.share-tree-toggle:active {
+  background: transparent;
+  transform: none;
+}
+.share-tree-toggle > span {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 15px;
+  border: 1px solid #ddd6c7;
+  border-radius: 30px;
+  background: #fbf8eff0;
+  color: #5f594b;
+  font-size: 0.75rem;
+  font-weight: 450;
+  box-shadow: 0 3px 12px #413e2810;
+}
+.share-tree-toggle:hover > span {
+  background: #fffcf6;
+  border-color: #a3957f;
+}
+.share-seasons {
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+  margin: 14px auto 0;
+}
+.share-seasons button {
+  min-height: 36px;
+  padding: 8px 13px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  color: var(--muted);
+  font-size: 0.75rem;
+  font-weight: 450;
+}
+.share-seasons button[aria-pressed="true"] {
+  background: #e9dfcb;
+  color: #54492e;
+}
+.share-art-caption {
+  margin: 13px 0 3px;
+  color: var(--muted);
+  text-align: center;
+  font-size: 0.6875rem;
+  line-height: 1.6;
+}
+.share-fallback {
+  display: block;
+  max-width: 100%;
+  width: 340px;
+  height: auto;
+  margin: 24px auto;
+}
+.share-footer {
+  border-top: 1px solid var(--line);
+  padding-top: 20px;
+  margin-top: 10px;
+}
+.share-link-label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 0.6875rem;
+  color: var(--muted);
+}
+.share-link-row {
+  display: flex;
+  gap: 9px;
+}
+.share-link-row input {
+  width: 0;
+  flex: 1;
+  min-width: 0;
+  background: #fffcf5;
+  font-size: 0.75rem;
+  border-radius: 10px;
+}
+.share-link-row .button,
+.share-link-row button {
+  flex-shrink: 0;
+  border-radius: 10px;
+  font-size: 0.75rem;
+}
+.tree-share-dialog :focus-visible {
+  outline: 2px solid #53733e;
+  outline-offset: 3px;
+}
+@media (max-width: 640px) {
+  .tree-share-dialog {
+    padding: 22px 20px;
+    border-radius: 20px;
+    max-height: 92dvh;
+  }
+  .tree-share-card {
+    grid-template-columns: 1fr;
+    gap: 0;
+    padding-top: 24px;
+  }
+  .share-result {
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 10px;
+    align-items: center;
+  }
+  .share-result-label,
+  .share-story {
+    display: none;
+  }
+  .share-number {
+    font-size: clamp(1.8rem, 9vw, 2.6rem);
+  }
+  .share-tier {
+    margin: 0;
+  }
+  .share-metrics {
+    grid-column: 1 / -1;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 12px;
+    margin-top: 4px;
+    gap: 10px;
+  }
+  .share-metrics span {
+    font-size: 0.625rem;
+    margin-bottom: 2px;
+  }
+  .share-metrics strong {
+    font-size: 1.125rem;
+  }
+  .share-seasons {
+    margin-top: 8px;
+  }
+  .share-seasons button {
+    flex: 1;
+    padding-inline: 8px;
+  }
+  .share-footer {
+    padding-top: 14px;
+  }
+  .share-link-row {
+    flex-wrap: wrap;
+  }
+  .share-link-row input {
+    width: 100%;
+    flex-basis: 100%;
+  }
+  .share-link-row button,
+  .share-link-row .button {
+    flex: 1;
+  }
+}
 .roll-board {
   text-align: center;
   padding: 25px 28px;

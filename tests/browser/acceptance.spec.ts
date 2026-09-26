@@ -436,8 +436,8 @@ test("A14 share link clipboard, real image download and focus restoration", asyn
   });
   await button.click();
   await expect(page.getByRole("dialog")).toBeVisible();
-  await expect(page.locator(".share-preview")).toHaveAttribute(
-    "src",
+  await expect(page.getByRole("link", { name: "Download card", exact: true })).toHaveAttribute(
+    "href",
     /^data:image\/png;base64,/,
   );
   await page.getByRole("button", { name: "Copy link", exact: true }).click();

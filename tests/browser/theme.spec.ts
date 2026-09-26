@@ -96,15 +96,16 @@ for (const width of [1440, 768, 390]) {
   });
 }
 
-test('A14 rendered share PNG has actual dimensions, distinct border and readable number/labels', async ({ page }, info) => {
+test('A14 rendered share PNG has actual dimensions and readable number/labels', async ({ page }, info) => {
   await page.goto('/en?n=12321');
   for (const value of ['dark', 'light'] as const) {
     await theme(page, value);
     await page.getByRole('button', { name: 'Create share card', exact: true }).click();
-    const preview = page.locator('.share-preview');
+    const preview = page.getByRole('link', { name: 'Download card', exact: true });
     await expect(preview).toBeVisible();
     const image = await preview.evaluate(async element => {
-      const img = element as HTMLImageElement;
+      const img = new Image();
+      img.src = (element as HTMLAnchorElement).href;
       await img.decode();
       const canvas = document.createElement('canvas');
       canvas.width = img.naturalWidth; canvas.height = img.naturalHeight;
@@ -125,15 +126,14 @@ test('A14 rendered share PNG has actual dimensions, distinct border and readable
         for (let i = 0; i < data.length; i += 4) if (contrast([data[i], data[i + 1], data[i + 2]]) >= minimum) count++;
         return count;
       };
-      return { width: img.naturalWidth, height: img.naturalHeight, background, border: pixel(32, 50), numberInk: ink(70, 150, 1050, 140, 3), labelInk: ink(70, 410, 1040, 40, 4.5), titleInk: ink(70, 70, 1050, 40, 4.5) };
+      return { width: img.naturalWidth, height: img.naturalHeight, background, numberInk: ink(48, 150, 550, 140, 3), labelInk: ink(50, 380, 540, 50, 4.5), titleInk: ink(50, 40, 540, 70, 4.5) };
     });
     expect(image.width).toBe(1200);
     expect(image.height).toBe(630);
-    expect(image.border).not.toEqual(image.background);
     expect(image.numberInk).toBeGreaterThan(500);
     expect(image.labelInk).toBeGreaterThan(100);
     expect(image.titleInk).toBeGreaterThan(100);
-    await info.attach(`share-${value}`, { body: await preview.screenshot({ animations: 'disabled' }), contentType: 'image/png' });
+    await info.attach(`share-${value}`, { body: Buffer.from((await preview.getAttribute('href'))!.split(',')[1], 'base64'), contentType: 'image/png' });
     await page.keyboard.press('Escape');
     await expect(page.getByRole('dialog')).toHaveCount(0);
   }

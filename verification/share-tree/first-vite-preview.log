@@ -1,0 +1,103 @@
+
+Running 50 tests using 3 workers
+
+(node:43966) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+(node:43965) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+(node:43967) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[1/50] tests/browser/acceptance.spec.ts:44:3 › A01 A12 A16 A17 all primary routes, metadata and reload: zh
+[2/50] tests/browser/acceptance.spec.ts:44:3 › A01 A12 A16 A17 all primary routes, metadata and reload: ja
+[3/50] tests/browser/acceptance.spec.ts:44:3 › A01 A12 A16 A17 all primary routes, metadata and reload: en
+[4/50] tests/browser/acceptance.spec.ts:44:3 › A01 A12 A16 A17 all primary routes, metadata and reload: ko
+[5/50] tests/browser/acceptance.spec.ts:44:3 › A01 A12 A16 A17 all primary routes, metadata and reload: de
+[6/50] tests/browser/acceptance.spec.ts:44:3 › A01 A12 A16 A17 all primary routes, metadata and reload: fr
+[7/50] tests/browser/acceptance.spec.ts:74:1 › A01 A11 every pattern detail has an accessible exact count and live example
+[8/50] tests/browser/acceptance.spec.ts:89:1 › A02 A03 number validation and reference sample
+[9/50] tests/browser/acceptance.spec.ts:113:1 › A04 A05 single, batch, turbo target, stop, save and new session
+[10/50] tests/browser/acceptance.spec.ts:159:1 › A04 reveal controls, simulated page-hidden event and navigation pause
+[11/50] tests/browser/acceptance.spec.ts:198:3 › A06 A07 daily draft: resume, complete, practice, locked result
+[12/50] tests/browser/acceptance.spec.ts:198:3 › A06 A07 daily hunt: resume, complete, practice, locked result
+[13/50] tests/browser/acceptance.spec.ts:198:3 › A06 A07 daily quiz: resume, complete, practice, locked result
+[14/50] tests/browser/acceptance.spec.ts:265:1 › A07 hunt timeout settles after elapsed time and UTC midnight changes challenge
+[15/50] tests/browser/acceptance.spec.ts:284:1 › A08 comparison, random battle and independent quiz
+[16/50] tests/browser/acceptance.spec.ts:308:1 › A09 full-range explorer exact count, no matches, filters and random result
+[17/50] tests/browser/acceptance.spec.ts:335:1 › A10 sandbox keyboard, length, reset and best edit
+[18/50] tests/browser/acceptance.spec.ts:372:1 › A11 atlas is only stamped by daily specimens and survives reload
+[19/50] tests/browser/acceptance.spec.ts:401:1 › A12 A13 English default, saved selection, theme persistence and route preservation
+[20/50] tests/browser/acceptance.spec.ts:426:1 › A14 share link clipboard, real image download and focus restoration
+[21/50] tests/browser/acceptance.spec.ts:455:3 › A15 mobile and tablet responsive routes: en
+[22/50] tests/browser/acceptance.spec.ts:455:3 › A15 mobile and tablet responsive routes: zh
+[23/50] tests/browser/acceptance.spec.ts:455:3 › A15 mobile and tablet responsive routes: ja
+[24/50] tests/browser/acceptance.spec.ts:455:3 › A15 mobile and tablet responsive routes: ko
+[25/50] tests/browser/acceptance.spec.ts:455:3 › A15 mobile and tablet responsive routes: de
+[26/50] tests/browser/acceptance.spec.ts:455:3 › A15 mobile and tablet responsive routes: fr
+[27/50] tests/browser/acceptance.spec.ts:491:1 › A15 keyboard navigation, mobile menu and reduced motion
+[28/50] tests/browser/acceptance.spec.ts:517:1 › A16 graceful corrupt storage and data-load failure retry
+[29/50] tests/browser/acceptance.spec.ts:539:1 › A01 404 renders a real recovery route
+[30/50] tests/browser/acceptance.spec.ts:554:1 › A03 tiny nonzero probabilities never display as zero
+[31/50] tests/browser/seo.spec.ts:5:1 › SEO survives client navigation and language changes
+[32/50] tests/browser/seo.spec.ts:46:1 › daily archive loads deterministic answer and its metadata through navigation
+[33/50] tests/browser/seo.spec.ts:77:1 › new SEO pages remain readable on mobile and without JavaScript
+  1) tests/browser/seo.spec.ts:46:1 › daily archive loads deterministic answer and its metadata through navigation 
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: 404
+    Received: 200
+
+      68 |   await expect(page.locator("h1")).toContainText("RNGDLE Daily Answer");
+      69 |   const response = await page.goto("/en/daily/answer/2099-01-01");
+    > 70 |   expect(response?.status()).toBe(404);
+         |                              ^
+      71 |   await expect(page.locator("meta[name=robots]")).toHaveAttribute(
+      72 |     "content",
+      73 |     "noindex,follow",
+        at /Users/pgy/.codex/worktrees/share-tree-release/rngdle-code/tests/browser/seo.spec.ts:70:30
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    verification/raw/share-local/seo-daily-archive-loads-de-7659e-metadata-through-navigation/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: verification/raw/share-local/seo-daily-archive-loads-de-7659e-metadata-through-navigation/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    verification/raw/share-local/seo-daily-archive-loads-de-7659e-metadata-through-navigation/trace.zip
+    Usage:
+
+        npx playwright show-trace verification/raw/share-local/seo-daily-archive-loads-de-7659e-metadata-through-navigation/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+[34/50] tests/browser/share-tree.spec.ts:14:1 › share tree animates to a QR that opens this result, and back to a tree
+(node:44038) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[35/50] tests/browser/share-tree.spec.ts:55:1 › without WebGL a scannable result card and download are still available
+[36/50] tests/browser/share-tree.spec.ts:38:1 › mobile reduced motion keeps the QR, controls and localized result usable
+[37/50] tests/browser/share-tree.spec.ts:71:1 › tree interaction still works when only the WebGL snapshot export fails
+[38/50] tests/browser/share-tree.spec.ts:89:3 › share card fits at 320px in en
+[39/50] tests/browser/share-tree.spec.ts:89:3 › share card fits at 320px in zh
+[40/50] tests/browser/share-tree.spec.ts:89:3 › share card fits at 320px in ja
+[41/50] tests/browser/share-tree.spec.ts:89:3 › share card fits at 320px in ko
+[42/50] tests/browser/share-tree.spec.ts:89:3 › share card fits at 320px in de
+[43/50] tests/browser/share-tree.spec.ts:89:3 › share card fits at 320px in fr
+[44/50] tests/browser/share-tree.spec.ts:101:1 › changing locale with history while the dialog is open rebuilds a working QR scene
+[45/50] tests/browser/theme.spec.ts:47:1 › A13 actual text contrast, button hover, validation and every tier in both themes
+[46/50] tests/browser/theme.spec.ts:71:3 › A13 A15 theme switch preserves geometry and both themes fit at 1440px
+[47/50] tests/browser/theme.spec.ts:71:3 › A13 A15 theme switch preserves geometry and both themes fit at 768px
+[48/50] tests/browser/theme.spec.ts:71:3 › A13 A15 theme switch preserves geometry and both themes fit at 390px
+[49/50] tests/browser/theme.spec.ts:99:1 › A14 rendered share PNG has actual dimensions and readable number/labels
+[50/50] tests/browser/theme.spec.ts:142:1 › A14 blocked clipboard retains a selected manual-copy link
+  1 failed
+    tests/browser/seo.spec.ts:46:1 › daily archive loads deterministic answer and its metadata through navigation 
+  49 passed (22.4s)
