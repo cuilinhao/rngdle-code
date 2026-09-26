@@ -1,0 +1,11 @@
+
+Running 2 tests using 2 workers
+
+(node:55370) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:55371) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 tests/browser/ads-layout.spec.ts:4:3 › ad slots fit a 320px viewport with a reserved scrollbar gutter (307ms)
+  ✓  2 tests/browser/ads-layout.spec.ts:4:3 › ad slots fit a 390px viewport with a reserved scrollbar gutter (307ms)
+
+  2 passed (670ms)

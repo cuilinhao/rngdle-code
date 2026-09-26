@@ -1,0 +1,782 @@
+{
+  "date": "2026-09-26T11:52:45.785Z",
+  "mode": "production",
+  "site": "https://rngdle.art",
+  "passed": true,
+  "pages": [
+    {
+      "url": "https://rngdle.art/en",
+      "status": 200,
+      "pass": true,
+      "finalUrl": "https://rngdle.art/en",
+      "slots": 3,
+      "placements": [
+        {
+          "name": "top",
+          "count": 1
+        },
+        {
+          "name": "rectangle",
+          "count": 1
+        },
+        {
+          "name": "native",
+          "count": 1
+        }
+      ],
+      "adsterra": false,
+      "canonical": [
+        "https://rngdle.art/en"
+      ],
+      "sha256": "e49812d70928d1cdefe45e40ba9627892db3c0008a1abcf040327dd815810c86",
+      "localSha256": "e49812d70928d1cdefe45e40ba9627892db3c0008a1abcf040327dd815810c86",
+      "checks": {
+        "http": true,
+        "finalDomain": true,
+        "slotCount": true,
+        "placements": true,
+        "labels": true,
+        "privacyDisclosure": true,
+        "canonical": true,
+        "assetReferences": true,
+        "htmlMatchesLocalDist": true
+      },
+      "assets": [
+        "/assets/index-3XsvwC-H.css",
+        "/assets/index-DRSskd0V.js"
+      ]
+    },
+    {
+      "url": "https://rngdle.art/en/privacy",
+      "status": 200,
+      "pass": true,
+      "finalUrl": "https://rngdle.art/en/privacy",
+      "slots": 0,
+      "placements": [
+        {
+          "name": "top",
+          "count": 0
+        },
+        {
+          "name": "rectangle",
+          "count": 0
+        },
+        {
+          "name": "native",
+          "count": 0
+        }
+      ],
+      "adsterra": true,
+      "canonical": [
+        "https://rngdle.art/en/privacy"
+      ],
+      "sha256": "c5d8f6f09da14efb85a69fd8aee89852b9badffdd783bfeb9057432fff3995e6",
+      "localSha256": "c5d8f6f09da14efb85a69fd8aee89852b9badffdd783bfeb9057432fff3995e6",
+      "checks": {
+        "http": true,
+        "finalDomain": true,
+        "slotCount": true,
+        "placements": true,
+        "labels": true,
+        "privacyDisclosure": true,
+        "canonical": true,
+        "assetReferences": true,
+        "htmlMatchesLocalDist": true
+      },
+      "assets": [
+        "/assets/index-3XsvwC-H.css",
+        "/assets/index-DRSskd0V.js"
+      ]
+    },
+    {
+      "url": "https://rngdle.art/en/infinite",
+      "status": 200,
+      "pass": true,
+      "finalUrl": "https://rngdle.art/en/infinite",
+      "slots": 0,
+      "placements": [
+        {
+          "name": "top",
+          "count": 0
+        },
+        {
+          "name": "rectangle",
+          "count": 0
+        },
+        {
+          "name": "native",
+          "count": 0
+        }
+      ],
+      "adsterra": false,
+      "canonical": [
+        "https://rngdle.art/en/infinite"
+      ],
+      "sha256": "4c553c0c762dfc986e1cc07c8e492093d181a9f75d6520548d8cb4b624063b46",
+      "localSha256": "4c553c0c762dfc986e1cc07c8e492093d181a9f75d6520548d8cb4b624063b46",
+      "checks": {
+        "http": true,
+        "finalDomain": true,
+        "slotCount": true,
+        "placements": true,
+        "labels": true,
+        "privacyDisclosure": true,
+        "canonical": true,
+        "assetReferences": true,
+        "htmlMatchesLocalDist": true
+      },
+      "assets": [
+        "/assets/index-3XsvwC-H.css",
+        "/assets/index-DRSskd0V.js"
+      ]
+    },
+    {
+      "url": "https://rngdle.art/zh",
+      "status": 200,
+      "pass": true,
+      "finalUrl": "https://rngdle.art/zh",
+      "slots": 3,
+      "placements": [
+        {
+          "name": "top",
+          "count": 1
+        },
+        {
+          "name": "rectangle",
+          "count": 1
+        },
+        {
+          "name": "native",
+          "count": 1
+        }
+      ],
+      "adsterra": false,
+      "canonical": [
+        "https://rngdle.art/zh"
+      ],
+      "sha256": "05a8f005d82cd5ce260a764333e59ef88f07168dc791931e6a21f47bb11418bd",
+      "localSha256": "05a8f005d82cd5ce260a764333e59ef88f07168dc791931e6a21f47bb11418bd",
+      "checks": {
+        "http": true,
+        "finalDomain": true,
+        "slotCount": true,
+        "placements": true,
+        "labels": true,
+        "privacyDisclosure": true,
+        "canonical": true,
+        "assetReferences": true,
+        "htmlMatchesLocalDist": true
+      },
+      "assets": [
+        "/assets/index-3XsvwC-H.css",
+        "/assets/index-DRSskd0V.js"
+      ]
+    },
+    {
+      "url": "https://rngdle.art/zh/privacy",
+      "status": 200,
+      "pass": true,
+      "finalUrl": "https://rngdle.art/zh/privacy",
+      "slots": 0,
+      "placements": [
+        {
+          "name": "top",
+          "count": 0
+        },
+        {
+          "name": "rectangle",
+          "count": 0
+        },
+        {
+          "name": "native",
+          "count": 0
+        }
+      ],
+      "adsterra": true,
+      "canonical": [
+        "https://rngdle.art/zh/privacy"
+      ],
+      "sha256": "6951c537a8ed58561897c2a8f995578b669a3138fdf1f781b716feb35f9a7de7",
+      "localSha256": "6951c537a8ed58561897c2a8f995578b669a3138fdf1f781b716feb35f9a7de7",
+      "checks": {
+        "http": true,
+        "finalDomain": true,
+        "slotCount": true,
+        "placements": true,
+        "labels": true,
+        "privacyDisclosure": true,
+        "canonical": true,
+        "assetReferences": true,
+        "htmlMatchesLocalDist": true
+      },
+      "assets": [
+        "/assets/index-3XsvwC-H.css",
+        "/assets/index-DRSskd0V.js"
+      ]
+    },
+    {
+      "url": "https://rngdle.art/zh/infinite",
+      "status": 200,
+      "pass": true,
+      "finalUrl": "https://rngdle.art/zh/infinite",
+      "slots": 0,
+      "placements": [
+        {
+          "name": "top",
+          "count": 0
+        },
+        {
+          "name": "rectangle",
+          "count": 0
+        },
+        {
+          "name": "native",
+          "count": 0
+        }
+      ],
+      "adsterra": false,
+      "canonical": [
+        "https://rngdle.art/zh/infinite"
+      ],
+      "sha256": "e1c11a5e6e53590f43104b876f002a6a6141bc19a95f061c14c3ca5499efa3e4",
+      "localSha256": "e1c11a5e6e53590f43104b876f002a6a6141bc19a95f061c14c3ca5499efa3e4",
+      "checks": {
+        "http": true,
+        "finalDomain": true,
+        "slotCount": true,
+        "placements": true,
+        "labels": true,
+        "privacyDisclosure": true,
+        "canonical": true,
+        "assetReferences": true,
+        "htmlMatchesLocalDist": true
+      },
+      "assets": [
+        "/assets/index-3XsvwC-H.css",
+        "/assets/index-DRSskd0V.js"
+      ]
+    },
+    {
+      "url": "https://rngdle.art/ja",
+      "status": 200,
+      "pass": true,
+      "finalUrl": "https://rngdle.art/ja",
+      "slots": 3,
+      "placements": [
+        {
+          "name": "top",
+          "count": 1
+        },
+        {
+          "name": "rectangle",
+          "count": 1
+        },
+        {
+          "name": "native",
+          "count": 1
+        }
+      ],
+      "adsterra": false,
+      "canonical": [
+        "https://rngdle.art/ja"
+      ],
+      "sha256": "7298eff6a36210f9c60b2fff3f6899170dca7ad35401a9dd9442063b5f26d40d",
+      "localSha256": "7298eff6a36210f9c60b2fff3f6899170dca7ad35401a9dd9442063b5f26d40d",
+      "checks": {
+        "http": true,
+        "finalDomain": true,
+        "slotCount": true,
+        "placements": true,
+        "labels": true,
+        "privacyDisclosure": true,
+        "canonical": true,
+        "assetReferences": true,
+        "htmlMatchesLocalDist": true
+      },
+      "assets": [
+        "/assets/index-3XsvwC-H.css",
+        "/assets/index-DRSskd0V.js"
+      ]
+    },
+    {
+      "url": "https://rngdle.art/ja/privacy",
+      "status": 200,
+      "pass": true,
+      "finalUrl": "https://rngdle.art/ja/privacy",
+      "slots": 0,
+      "placements": [
+        {
+          "name": "top",
+          "count": 0
+        },
+        {
+          "name": "rectangle",
+          "count": 0
+        },
+        {
+          "name": "native",
+          "count": 0
+        }
+      ],
+      "adsterra": true,
+      "canonical": [
+        "https://rngdle.art/ja/privacy"
+      ],
+      "sha256": "aa9d141ac214031aff14c128f837b534e8f606ef6d046503ec084502c25a4f7d",
+      "localSha256": "aa9d141ac214031aff14c128f837b534e8f606ef6d046503ec084502c25a4f7d",
+      "checks": {
+        "http": true,
+        "finalDomain": true,
+        "slotCount": true,
+        "placements": true,
+        "labels": true,
+        "privacyDisclosure": true,
+        "canonical": true,
+        "assetReferences": true,
+        "htmlMatchesLocalDist": true
+      },
+      "assets": [
+        "/assets/index-3XsvwC-H.css",
+        "/assets/index-DRSskd0V.js"
+      ]
+    },
+    {
+      "url": "https://rngdle.art/ja/infinite",
+      "status": 200,
+      "pass": true,
+      "finalUrl": "https://rngdle.art/ja/infinite",
+      "slots": 0,
+      "placements": [
+        {
+          "name": "top",
+          "count": 0
+        },
+        {
+          "name": "rectangle",
+          "count": 0
+        },
+        {
+          "name": "native",
+          "count": 0
+        }
+      ],
+      "adsterra": false,
+      "canonical": [
+        "https://rngdle.art/ja/infinite"
+      ],
+      "sha256": "00d3372e9cb00063544ecfa40cfcc6e1959cb9822014e33c128263708b914e38",
+      "localSha256": "00d3372e9cb00063544ecfa40cfcc6e1959cb9822014e33c128263708b914e38",
+      "checks": {
+        "http": true,
+        "finalDomain": true,
+        "slotCount": true,
+        "placements": true,
+        "labels": true,
+        "privacyDisclosure": true,
+        "canonical": true,
+        "assetReferences": true,
+        "htmlMatchesLocalDist": true
+      },
+      "assets": [
+        "/assets/index-3XsvwC-H.css",
+        "/assets/index-DRSskd0V.js"
+      ]
+    },
+    {
+      "url": "https://rngdle.art/ko",
+      "status": 200,
+      "pass": true,
+      "finalUrl": "https://rngdle.art/ko",
+      "slots": 3,
+      "placements": [
+        {
+          "name": "top",
+          "count": 1
+        },
+        {
+          "name": "rectangle",
+          "count": 1
+        },
+        {
+          "name": "native",
+          "count": 1
+        }
+      ],
+      "adsterra": false,
+      "canonical": [
+        "https://rngdle.art/ko"
+      ],
+      "sha256": "b936d779566ecb53f8be76d006c16378f6a91bf736bc8acc4c9f83dbdfb7ceff",
+      "localSha256": "b936d779566ecb53f8be76d006c16378f6a91bf736bc8acc4c9f83dbdfb7ceff",
+      "checks": {
+        "http": true,
+        "finalDomain": true,
+        "slotCount": true,
+        "placements": true,
+        "labels": true,
+        "privacyDisclosure": true,
+        "canonical": true,
+        "assetReferences": true,
+        "htmlMatchesLocalDist": true
+      },
+      "assets": [
+        "/assets/index-3XsvwC-H.css",
+        "/assets/index-DRSskd0V.js"
+      ]
+    },
+    {
+      "url": "https://rngdle.art/ko/privacy",
+      "status": 200,
+      "pass": true,
+      "finalUrl": "https://rngdle.art/ko/privacy",
+      "slots": 0,
+      "placements": [
+        {
+          "name": "top",
+          "count": 0
+        },
+        {
+          "name": "rectangle",
+          "count": 0
+        },
+        {
+          "name": "native",
+          "count": 0
+        }
+      ],
+      "adsterra": true,
+      "canonical": [
+        "https://rngdle.art/ko/privacy"
+      ],
+      "sha256": "c2eef7154d4dc249b64369919cf0046c4ab29f9bfa6c93fee63b43384ead536d",
+      "localSha256": "c2eef7154d4dc249b64369919cf0046c4ab29f9bfa6c93fee63b43384ead536d",
+      "checks": {
+        "http": true,
+        "finalDomain": true,
+        "slotCount": true,
+        "placements": true,
+        "labels": true,
+        "privacyDisclosure": true,
+        "canonical": true,
+        "assetReferences": true,
+        "htmlMatchesLocalDist": true
+      },
+      "assets": [
+        "/assets/index-3XsvwC-H.css",
+        "/assets/index-DRSskd0V.js"
+      ]
+    },
+    {
+      "url": "https://rngdle.art/ko/infinite",
+      "status": 200,
+      "pass": true,
+      "finalUrl": "https://rngdle.art/ko/infinite",
+      "slots": 0,
+      "placements": [
+        {
+          "name": "top",
+          "count": 0
+        },
+        {
+          "name": "rectangle",
+          "count": 0
+        },
+        {
+          "name": "native",
+          "count": 0
+        }
+      ],
+      "adsterra": false,
+      "canonical": [
+        "https://rngdle.art/ko/infinite"
+      ],
+      "sha256": "61ce1e8180b19a402e5620ce7abae9d4dd6a963a7f8d54794efccda3f3c07917",
+      "localSha256": "61ce1e8180b19a402e5620ce7abae9d4dd6a963a7f8d54794efccda3f3c07917",
+      "checks": {
+        "http": true,
+        "finalDomain": true,
+        "slotCount": true,
+        "placements": true,
+        "labels": true,
+        "privacyDisclosure": true,
+        "canonical": true,
+        "assetReferences": true,
+        "htmlMatchesLocalDist": true
+      },
+      "assets": [
+        "/assets/index-3XsvwC-H.css",
+        "/assets/index-DRSskd0V.js"
+      ]
+    },
+    {
+      "url": "https://rngdle.art/de",
+      "status": 200,
+      "pass": true,
+      "finalUrl": "https://rngdle.art/de",
+      "slots": 3,
+      "placements": [
+        {
+          "name": "top",
+          "count": 1
+        },
+        {
+          "name": "rectangle",
+          "count": 1
+        },
+        {
+          "name": "native",
+          "count": 1
+        }
+      ],
+      "adsterra": false,
+      "canonical": [
+        "https://rngdle.art/de"
+      ],
+      "sha256": "0e58ed1682ff75711f7b9bb57f02344fe57d924e57d61d735e2d81e97e4bf5fe",
+      "localSha256": "0e58ed1682ff75711f7b9bb57f02344fe57d924e57d61d735e2d81e97e4bf5fe",
+      "checks": {
+        "http": true,
+        "finalDomain": true,
+        "slotCount": true,
+        "placements": true,
+        "labels": true,
+        "privacyDisclosure": true,
+        "canonical": true,
+        "assetReferences": true,
+        "htmlMatchesLocalDist": true
+      },
+      "assets": [
+        "/assets/index-3XsvwC-H.css",
+        "/assets/index-DRSskd0V.js"
+      ]
+    },
+    {
+      "url": "https://rngdle.art/de/privacy",
+      "status": 200,
+      "pass": true,
+      "finalUrl": "https://rngdle.art/de/privacy",
+      "slots": 0,
+      "placements": [
+        {
+          "name": "top",
+          "count": 0
+        },
+        {
+          "name": "rectangle",
+          "count": 0
+        },
+        {
+          "name": "native",
+          "count": 0
+        }
+      ],
+      "adsterra": true,
+      "canonical": [
+        "https://rngdle.art/de/privacy"
+      ],
+      "sha256": "bf396dd595c9d25896bf2468801bfe9797cab0a470ee5caa57a7953b32c2c87a",
+      "localSha256": "bf396dd595c9d25896bf2468801bfe9797cab0a470ee5caa57a7953b32c2c87a",
+      "checks": {
+        "http": true,
+        "finalDomain": true,
+        "slotCount": true,
+        "placements": true,
+        "labels": true,
+        "privacyDisclosure": true,
+        "canonical": true,
+        "assetReferences": true,
+        "htmlMatchesLocalDist": true
+      },
+      "assets": [
+        "/assets/index-3XsvwC-H.css",
+        "/assets/index-DRSskd0V.js"
+      ]
+    },
+    {
+      "url": "https://rngdle.art/de/infinite",
+      "status": 200,
+      "pass": true,
+      "finalUrl": "https://rngdle.art/de/infinite",
+      "slots": 0,
+      "placements": [
+        {
+          "name": "top",
+          "count": 0
+        },
+        {
+          "name": "rectangle",
+          "count": 0
+        },
+        {
+          "name": "native",
+          "count": 0
+        }
+      ],
+      "adsterra": false,
+      "canonical": [
+        "https://rngdle.art/de/infinite"
+      ],
+      "sha256": "eb7370c0f231563791c95cfd3b0cc4faea78217020bbac802cddf78c5f43fb47",
+      "localSha256": "eb7370c0f231563791c95cfd3b0cc4faea78217020bbac802cddf78c5f43fb47",
+      "checks": {
+        "http": true,
+        "finalDomain": true,
+        "slotCount": true,
+        "placements": true,
+        "labels": true,
+        "privacyDisclosure": true,
+        "canonical": true,
+        "assetReferences": true,
+        "htmlMatchesLocalDist": true
+      },
+      "assets": [
+        "/assets/index-3XsvwC-H.css",
+        "/assets/index-DRSskd0V.js"
+      ]
+    },
+    {
+      "url": "https://rngdle.art/fr",
+      "status": 200,
+      "pass": true,
+      "finalUrl": "https://rngdle.art/fr",
+      "slots": 3,
+      "placements": [
+        {
+          "name": "top",
+          "count": 1
+        },
+        {
+          "name": "rectangle",
+          "count": 1
+        },
+        {
+          "name": "native",
+          "count": 1
+        }
+      ],
+      "adsterra": false,
+      "canonical": [
+        "https://rngdle.art/fr"
+      ],
+      "sha256": "b62f1422644b8626aee76c204e6c995f8ec7e495a45409fb6ae8724a2987aa59",
+      "localSha256": "b62f1422644b8626aee76c204e6c995f8ec7e495a45409fb6ae8724a2987aa59",
+      "checks": {
+        "http": true,
+        "finalDomain": true,
+        "slotCount": true,
+        "placements": true,
+        "labels": true,
+        "privacyDisclosure": true,
+        "canonical": true,
+        "assetReferences": true,
+        "htmlMatchesLocalDist": true
+      },
+      "assets": [
+        "/assets/index-3XsvwC-H.css",
+        "/assets/index-DRSskd0V.js"
+      ]
+    },
+    {
+      "url": "https://rngdle.art/fr/privacy",
+      "status": 200,
+      "pass": true,
+      "finalUrl": "https://rngdle.art/fr/privacy",
+      "slots": 0,
+      "placements": [
+        {
+          "name": "top",
+          "count": 0
+        },
+        {
+          "name": "rectangle",
+          "count": 0
+        },
+        {
+          "name": "native",
+          "count": 0
+        }
+      ],
+      "adsterra": true,
+      "canonical": [
+        "https://rngdle.art/fr/privacy"
+      ],
+      "sha256": "3557a954b5d67de51d522e80855f0b4b45a8d5eb914e8d4af993e5ebb5bf8f92",
+      "localSha256": "3557a954b5d67de51d522e80855f0b4b45a8d5eb914e8d4af993e5ebb5bf8f92",
+      "checks": {
+        "http": true,
+        "finalDomain": true,
+        "slotCount": true,
+        "placements": true,
+        "labels": true,
+        "privacyDisclosure": true,
+        "canonical": true,
+        "assetReferences": true,
+        "htmlMatchesLocalDist": true
+      },
+      "assets": [
+        "/assets/index-3XsvwC-H.css",
+        "/assets/index-DRSskd0V.js"
+      ]
+    },
+    {
+      "url": "https://rngdle.art/fr/infinite",
+      "status": 200,
+      "pass": true,
+      "finalUrl": "https://rngdle.art/fr/infinite",
+      "slots": 0,
+      "placements": [
+        {
+          "name": "top",
+          "count": 0
+        },
+        {
+          "name": "rectangle",
+          "count": 0
+        },
+        {
+          "name": "native",
+          "count": 0
+        }
+      ],
+      "adsterra": false,
+      "canonical": [
+        "https://rngdle.art/fr/infinite"
+      ],
+      "sha256": "115fc1d7ac81f89391d367e026e11aed1fa9016e580d99da0f231a361ddd2784",
+      "localSha256": "115fc1d7ac81f89391d367e026e11aed1fa9016e580d99da0f231a361ddd2784",
+      "checks": {
+        "http": true,
+        "finalDomain": true,
+        "slotCount": true,
+        "placements": true,
+        "labels": true,
+        "privacyDisclosure": true,
+        "canonical": true,
+        "assetReferences": true,
+        "htmlMatchesLocalDist": true
+      },
+      "assets": [
+        "/assets/index-3XsvwC-H.css",
+        "/assets/index-DRSskd0V.js"
+      ]
+    }
+  ],
+  "assets": [
+    {
+      "url": "https://rngdle.art/assets/index-3XsvwC-H.css",
+      "pass": true,
+      "status": 200,
+      "sha256": "2290fb4bb3ac9ddfc94f0c2c41e0285cf97a202d3ce10f1804d33d28e0641751",
+      "localSha256": "2290fb4bb3ac9ddfc94f0c2c41e0285cf97a202d3ce10f1804d33d28e0641751"
+    },
+    {
+      "url": "https://rngdle.art/assets/index-DRSskd0V.js",
+      "pass": true,
+      "status": 200,
+      "sha256": "5d67729a77249de741bdc3000cfe1d655af1870ad6283b446ec5bec7be430c90",
+      "localSha256": "5d67729a77249de741bdc3000cfe1d655af1870ad6283b446ec5bec7be430c90"
+    }
+  ],
+  "productCommit": "53898ef377d984ffa65e746cdeca580e9522a789",
+  "deploymentId": "dpl_GEoih7LF6Wns5gs1j1ti93XEsXZz"
+}

@@ -12,8 +12,10 @@
 
 `src/Ads.tsx` 在客户端且广告位进入视口附近时挂载脚本。`src/ads-runtime.mjs` 只允许 production 构建在 `rngdle.art` 与 `www.rngdle.art` 加载广告；localhost 与 Vercel 预览域名仅显示预留空间。数字输入和主题切换不会自动刷新广告。离开首页会清理广告容器，返回首页会重新挂载。
 
-两个 Banner 按顺序加载，防止共用 `window.atOptions` 导致尺寸或 Key 混淆；使用供应商提供的 `format: iframe`，不另行包裹外层 iframe。Native Banner 使用后台指定的容器 ID，脚本在页面生命周期内加载一次，保留供应商自己的 SPA 导航监听；切换语言时保留首页和广告容器。所有位置有独立广告标签并预留空间，固定尺寸广告在 320px 手机视口保留完整宽度。广告不覆盖数字输入、抽取或导航按钮。
+两个 Banner 按顺序加载，防止共用 `window.atOptions` 导致尺寸或 Key 混淆；使用供应商提供的 `format: iframe`，不另行包裹外层 iframe。Native Banner 使用后台指定的容器 ID，脚本在页面生命周期内加载一次，保留供应商自己的 SPA 导航监听；切换语言时保留首页和广告容器。所有位置有独立广告标签并预留空间，小于340px的窗口将顶部320px广告等比显示为300px，以容纳经典滚动条并保留完整内容。广告不覆盖数字输入、抽取或导航按钮。
 
 验证包括 Node 单元测试、TypeScript、生产构建、静态 SEO 检查和页面检查。后台 Active 仅代表单元启用，不代表已经产生展示或收入；实际填充还取决于投放地区、可用广告及浏览器拦截情况。不要点击自己的广告或反复刷新来制造展示。
 
 本地及线上发布验证按 [广告发布验收清单](../verification/ads-release-checklist.md) 逐项记录；后台开通和第一轮集成记录见 [初始验收记录](../verification/advertising-acceptance.md)。
+
+2026-09-26 已发布到 main 和 Vercel。应用及布局验收通过，但独立 Chromium 与稳定 Chrome 的实际供应商请求返回403，三个位置未显示素材；真实展示未通过验收，详见发布清单。

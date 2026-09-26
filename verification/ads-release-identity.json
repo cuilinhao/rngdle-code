@@ -1,0 +1,21 @@
+{
+  "productCommit": "53898ef377d984ffa65e746cdeca580e9522a789",
+  "repository": "https://github.com/cuilinhao/rngdle-code",
+  "branch": "main",
+  "deployment": {
+    "id": "dpl_GEoih7LF6Wns5gs1j1ti93XEsXZz",
+    "url": "https://rngdle-m3h3lbm7l-linhaos-projects.vercel.app",
+    "state": "READY",
+    "target": "production",
+    "aliases": [
+      "https://rngdle.art",
+      "https://www.rngdle.art"
+    ]
+  },
+  "ci": {
+    "runId": 36240040287,
+    "url": "https://github.com/cuilinhao/rngdle-code/actions/runs/36240040287",
+    "conclusion": "success"
+  },
+  "realAdFill": "NOT_PASSED_supplier_HTTP_403"
+}

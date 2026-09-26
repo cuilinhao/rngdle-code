@@ -1,0 +1,72 @@
+{
+  "started": "2026-09-26T11:49:41.710Z",
+  "environment": "Installed stable Chrome, headed, new isolated Playwright context",
+  "navigationCount": 1,
+  "uaOverride": false,
+  "persistentProfile": false,
+  "responses": [
+    {
+      "url": "https://www.highrevenueformat.com/94acbb97e647008551663f9c3ba5f0c6/invoke.js",
+      "status": 403,
+      "resourceType": "script"
+    }
+  ],
+  "failures": [
+    {
+      "url": "https://www.highrevenueformat.com/94acbb97e647008551663f9c3ba5f0c6/invoke.js",
+      "error": "net::ERR_ABORTED"
+    }
+  ],
+  "pageErrors": [],
+  "visitedSlots": [
+    "top"
+  ],
+  "screenshot": "ads-stable-browser-diagnostic.png",
+  "version": "154.0.8037.57",
+  "mainStatus": 200,
+  "actualUA": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36",
+  "stoppedAfter403": true,
+  "dom": {
+    "url": "https://rngdle.art/en",
+    "slots": [
+      {
+        "placement": "ad-slot ad-slot--top",
+        "label": "Advertisement",
+        "width": 1120,
+        "height": 74.1171875,
+        "text": "Advertisement",
+        "scripts": [
+          "https://www.highrevenueformat.com/94acbb97e647008551663f9c3ba5f0c6/invoke.js"
+        ],
+        "frames": [],
+        "imageCount": 0,
+        "linkCount": 0
+      },
+      {
+        "placement": "ad-slot ad-slot--rectangle",
+        "label": "Advertisement",
+        "width": 1120,
+        "height": 274.1171875,
+        "text": "Advertisement",
+        "scripts": [],
+        "frames": [],
+        "imageCount": 0,
+        "linkCount": 0
+      },
+      {
+        "placement": "ad-slot ad-slot--native",
+        "label": "Advertisement",
+        "width": 1120,
+        "height": 304.1171875,
+        "text": "Advertisement",
+        "scripts": [],
+        "frames": [],
+        "imageCount": 0,
+        "linkCount": 0
+      }
+    ],
+    "nativeScripts": []
+  },
+  "outcome": "Supplier still returns 403 in installed stable Chrome; stopped without retry or workaround",
+  "finished": "2026-09-26T11:49:45.418Z"
+}

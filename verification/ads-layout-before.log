@@ -1,0 +1,44 @@
+
+Running 2 tests using 2 workers
+
+(node:55230) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:55231) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  2 tests/browser/ads-layout.spec.ts:4:3 › ad slots fit a 390px viewport with a reserved scrollbar gutter (350ms)
+  ✘  1 tests/browser/ads-layout.spec.ts:4:3 › ad slots fit a 320px viewport with a reserved scrollbar gutter (361ms)
+
+
+  1) tests/browser/ads-layout.spec.ts:4:3 › ad slots fit a 320px viewport with a reserved scrollbar gutter 
+
+    Error: expect(received).toBeGreaterThanOrEqual(expected)
+
+    Expected: >= 0
+    Received:    -7.5
+
+      18 |     expect(geometry.scrollWidth).toBeLessThanOrEqual(geometry.viewport);
+      19 |     for (const box of geometry.boxes) {
+    > 20 |       expect(box.left).toBeGreaterThanOrEqual(0);
+         |                        ^
+      21 |       expect(box.right).toBeLessThanOrEqual(geometry.viewport);
+      22 |     }
+      23 |   });
+        at /Users/pgy/.codex/worktrees/adsterra-release/rngdle-code/tests/browser/ads-layout.spec.ts:20:24
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/ads-layout-ad-slots-fit-a--ebf0b-a-reserved-scrollbar-gutter/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/ads-layout-ad-slots-fit-a--ebf0b-a-reserved-scrollbar-gutter/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/ads-layout-ad-slots-fit-a--ebf0b-a-reserved-scrollbar-gutter/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/ads-layout-ad-slots-fit-a--ebf0b-a-reserved-scrollbar-gutter/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    tests/browser/ads-layout.spec.ts:4:3 › ad slots fit a 320px viewport with a reserved scrollbar gutter 
+  1 passed (816ms)

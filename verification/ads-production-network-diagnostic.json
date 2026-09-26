@@ -1,0 +1,74 @@
+{
+  "requests": [
+    {
+      "url": "https://www.highrevenueformat.com/94acbb97e647008551663f9c3ba5f0c6/invoke.js",
+      "status": 403,
+      "headers": {
+        "connection": "keep-alive",
+        "content-length": "0",
+        "content-type": "application/javascript",
+        "date": "Sat, 26 Sep 2026 11:45:58 GMT",
+        "host": "www.highrevenueformat.com",
+        "server": "nginx/1.28.2",
+        "accept-ch": "Sec-Ch-Ua-Model,Device-Stock-Ua,X-Operamini-Phone-Ua,X-Ucbrowser-Device-Ua,User-Agent,Sec-Ch-Ua-Platform-Version,Sec-Ch-Ua,Sec-Ch-Ua-Platformuser-Agent,Sec-Ch-Ua-Platform,Sec-Ch-Ua-Mobile,X-Device-User-Agent,Sec-Ch-Ua-Full-Version-List,Sec-Ch-Ua-Full-Version",
+        "access-control-allow-origin": "*",
+        "vary": "Accept-Encoding",
+        "x-envoy-upstream-service-time": "20"
+      },
+      "request": {
+        "referer": "https://rngdle.art/",
+        "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36"
+      },
+      "body": ""
+    }
+  ],
+  "layout": [
+    {
+      "width": 320,
+      "clientWidth": 305,
+      "scrollWidth": 312,
+      "slots": [
+        {
+          "width": 320,
+          "left": -7.5,
+          "right": 312.5
+        },
+        {
+          "width": 300,
+          "left": 2.5,
+          "right": 302.5
+        },
+        {
+          "width": 269,
+          "left": 18,
+          "right": 287
+        }
+      ],
+      "noHorizontalOverflow": true
+    },
+    {
+      "width": 390,
+      "clientWidth": 375,
+      "scrollWidth": 375,
+      "slots": [
+        {
+          "width": 320,
+          "left": 27.5,
+          "right": 347.5
+        },
+        {
+          "width": 300,
+          "left": 37.5,
+          "right": 337.5
+        },
+        {
+          "width": 339,
+          "left": 18,
+          "right": 357
+        }
+      ],
+      "noHorizontalOverflow": true
+    }
+  ],
+  "created": "2026-09-26T11:45:56.627Z"
+}

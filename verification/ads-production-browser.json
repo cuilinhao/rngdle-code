@@ -1,0 +1,689 @@
+{
+  "environment": "Codex launched standalone Chromium, headed, fresh isolated context (IAB public navigation timed out)",
+  "sha": "15e2934215ac488fc631613dfc9c64a1498d5b37",
+  "started": "2026-09-26T11:42:55.129Z",
+  "checks": [
+    {
+      "name": "AD02 desktop exactly three slots",
+      "status": "PASS",
+      "evidence": {
+        "url": "https://rngdle.art/en",
+        "width": 1440,
+        "scrollWidth": 1425,
+        "slots": [
+          {
+            "type": "ad-slot ad-slot--top",
+            "label": "Advertisement",
+            "width": 1120,
+            "height": 74.1171875,
+            "frames": [],
+            "images": [],
+            "links": 0,
+            "text": "Advertisement"
+          },
+          {
+            "type": "ad-slot ad-slot--rectangle",
+            "label": "Advertisement",
+            "width": 1120,
+            "height": 274.1171875,
+            "frames": [],
+            "images": [],
+            "links": 0,
+            "text": "Advertisement"
+          },
+          {
+            "type": "ad-slot ad-slot--native",
+            "label": "Advertisement",
+            "width": 1120,
+            "height": 304.1171875,
+            "frames": [],
+            "images": [],
+            "links": 0,
+            "text": "Advertisement"
+          }
+        ],
+        "scripts": []
+      }
+    },
+    {
+      "name": "AD08 top script loads before lower slots",
+      "status": "FAIL",
+      "error": "expect(locator).toHaveCount(expected) failed\n\nLocator:  locator('.ad-slot--top iframe')\nExpected: 1\nReceived: 0\nTimeout:  15000ms\n\nCall log:\n  - Expect \"toHaveCount\" locator('.ad-slot--top iframe') with timeout 15000ms\n  - waiting for locator('.ad-slot--top iframe')\n    34 × locator resolved to 0 elements\n       - unexpected value \"0\"\n"
+    },
+    {
+      "name": "AD14 top visible creative structure",
+      "status": "FAIL",
+      "error": "expect(received).toBeGreaterThan(expected)\n\nExpected: > 0\nReceived:   0\n\nCall Log:\n- Timeout 20000ms exceeded while waiting on the predicate"
+    },
+    {
+      "name": "AD14 rectangle visible creative structure",
+      "status": "FAIL",
+      "error": "expect(received).toBeGreaterThan(expected)\n\nExpected: > 0\nReceived:   0\n\nCall Log:\n- Timeout 20000ms exceeded while waiting on the predicate"
+    },
+    {
+      "name": "AD14 native visible creative structure",
+      "status": "FAIL",
+      "error": "expect(received).toBeGreaterThan(expected)\n\nExpected: > 0\nReceived:   0\n\nCall Log:\n- Timeout 20000ms exceeded while waiting on the predicate"
+    },
+    {
+      "name": "AD01 AD08 exactly three configured scripts",
+      "status": "FAIL",
+      "error": "expect(received).toBe(expected) // Object.is equality\n\nExpected: 3\nReceived: 2"
+    },
+    {
+      "name": "AD02 AD06 locale zh",
+      "status": "PASS",
+      "evidence": {
+        "url": "https://rngdle.art/zh",
+        "width": 1440,
+        "scrollWidth": 1425,
+        "slots": [
+          {
+            "type": "ad-slot ad-slot--top",
+            "label": "广告",
+            "width": 1120,
+            "height": 74.1171875,
+            "frames": [],
+            "images": [],
+            "links": 0,
+            "text": "广告"
+          },
+          {
+            "type": "ad-slot ad-slot--rectangle",
+            "label": "广告",
+            "width": 1120,
+            "height": 274.1171875,
+            "frames": [],
+            "images": [],
+            "links": 0,
+            "text": "广告"
+          },
+          {
+            "type": "ad-slot ad-slot--native",
+            "label": "广告",
+            "width": 1120,
+            "height": 304.1171875,
+            "frames": [],
+            "images": [],
+            "links": 0,
+            "text": "广告"
+          }
+        ],
+        "scripts": [
+          "https://www.highrevenueformat.com/94acbb97e647008551663f9c3ba5f0c6/invoke.js",
+          "https://www.highrevenueformat.com/f607cb178a1601c4c12680757d48e794/invoke.js"
+        ]
+      }
+    },
+    {
+      "name": "AD02 AD06 locale ja",
+      "status": "PASS",
+      "evidence": {
+        "url": "https://rngdle.art/ja",
+        "width": 1440,
+        "scrollWidth": 1425,
+        "slots": [
+          {
+            "type": "ad-slot ad-slot--top",
+            "label": "広告",
+            "width": 1120,
+            "height": 74.1171875,
+            "frames": [],
+            "images": [],
+            "links": 0,
+            "text": "広告"
+          },
+          {
+            "type": "ad-slot ad-slot--rectangle",
+            "label": "広告",
+            "width": 1120,
+            "height": 274.1171875,
+            "frames": [],
+            "images": [],
+            "links": 0,
+            "text": "広告"
+          },
+          {
+            "type": "ad-slot ad-slot--native",
+            "label": "広告",
+            "width": 1120,
+            "height": 304.1171875,
+            "frames": [],
+            "images": [],
+            "links": 0,
+            "text": "広告"
+          }
+        ],
+        "scripts": [
+          "https://www.highrevenueformat.com/94acbb97e647008551663f9c3ba5f0c6/invoke.js",
+          "https://www.highrevenueformat.com/f607cb178a1601c4c12680757d48e794/invoke.js"
+        ]
+      }
+    },
+    {
+      "name": "AD02 AD06 locale ko",
+      "status": "PASS",
+      "evidence": {
+        "url": "https://rngdle.art/ko",
+        "width": 1440,
+        "scrollWidth": 1425,
+        "slots": [
+          {
+            "type": "ad-slot ad-slot--top",
+            "label": "광고",
+            "width": 1120,
+            "height": 74.1171875,
+            "frames": [],
+            "images": [],
+            "links": 0,
+            "text": "광고"
+          },
+          {
+            "type": "ad-slot ad-slot--rectangle",
+            "label": "광고",
+            "width": 1120,
+            "height": 274.1171875,
+            "frames": [],
+            "images": [],
+            "links": 0,
+            "text": "광고"
+          },
+          {
+            "type": "ad-slot ad-slot--native",
+            "label": "광고",
+            "width": 1120,
+            "height": 304.1171875,
+            "frames": [],
+            "images": [],
+            "links": 0,
+            "text": "광고"
+          }
+        ],
+        "scripts": [
+          "https://www.highrevenueformat.com/94acbb97e647008551663f9c3ba5f0c6/invoke.js",
+          "https://www.highrevenueformat.com/f607cb178a1601c4c12680757d48e794/invoke.js"
+        ]
+      }
+    },
+    {
+      "name": "AD02 AD06 locale de",
+      "status": "PASS",
+      "evidence": {
+        "url": "https://rngdle.art/de",
+        "width": 1440,
+        "scrollWidth": 1425,
+        "slots": [
+          {
+            "type": "ad-slot ad-slot--top",
+            "label": "Werbung",
+            "width": 1120,
+            "height": 74.1171875,
+            "frames": [],
+            "images": [],
+            "links": 0,
+            "text": "Werbung"
+          },
+          {
+            "type": "ad-slot ad-slot--rectangle",
+            "label": "Werbung",
+            "width": 1120,
+            "height": 274.1171875,
+            "frames": [],
+            "images": [],
+            "links": 0,
+            "text": "Werbung"
+          },
+          {
+            "type": "ad-slot ad-slot--native",
+            "label": "Werbung",
+            "width": 1120,
+            "height": 304.1171875,
+            "frames": [],
+            "images": [],
+            "links": 0,
+            "text": "Werbung"
+          }
+        ],
+        "scripts": [
+          "https://www.highrevenueformat.com/94acbb97e647008551663f9c3ba5f0c6/invoke.js",
+          "https://www.highrevenueformat.com/f607cb178a1601c4c12680757d48e794/invoke.js"
+        ]
+      }
+    },
+    {
+      "name": "AD02 AD06 locale fr",
+      "status": "PASS",
+      "evidence": {
+        "url": "https://rngdle.art/fr",
+        "width": 1440,
+        "scrollWidth": 1425,
+        "slots": [
+          {
+            "type": "ad-slot ad-slot--top",
+            "label": "Publicité",
+            "width": 1120,
+            "height": 74.1171875,
+            "frames": [],
+            "images": [],
+            "links": 0,
+            "text": "Publicité"
+          },
+          {
+            "type": "ad-slot ad-slot--rectangle",
+            "label": "Publicité",
+            "width": 1120,
+            "height": 274.1171875,
+            "frames": [],
+            "images": [],
+            "links": 0,
+            "text": "Publicité"
+          },
+          {
+            "type": "ad-slot ad-slot--native",
+            "label": "Publicité",
+            "width": 1120,
+            "height": 304.1171875,
+            "frames": [],
+            "images": [],
+            "links": 0,
+            "text": "Publicité"
+          }
+        ],
+        "scripts": [
+          "https://www.highrevenueformat.com/94acbb97e647008551663f9c3ba5f0c6/invoke.js",
+          "https://www.highrevenueformat.com/f607cb178a1601c4c12680757d48e794/invoke.js"
+        ]
+      }
+    },
+    {
+      "name": "AD02 AD06 locale en",
+      "status": "PASS",
+      "evidence": {
+        "url": "https://rngdle.art/en",
+        "width": 1440,
+        "scrollWidth": 1425,
+        "slots": [
+          {
+            "type": "ad-slot ad-slot--top",
+            "label": "Advertisement",
+            "width": 1120,
+            "height": 74.1171875,
+            "frames": [],
+            "images": [],
+            "links": 0,
+            "text": "Advertisement"
+          },
+          {
+            "type": "ad-slot ad-slot--rectangle",
+            "label": "Advertisement",
+            "width": 1120,
+            "height": 274.1171875,
+            "frames": [],
+            "images": [],
+            "links": 0,
+            "text": "Advertisement"
+          },
+          {
+            "type": "ad-slot ad-slot--native",
+            "label": "Advertisement",
+            "width": 1120,
+            "height": 304.1171875,
+            "frames": [],
+            "images": [],
+            "links": 0,
+            "text": "Advertisement"
+          }
+        ],
+        "scripts": [
+          "https://www.highrevenueformat.com/94acbb97e647008551663f9c3ba5f0c6/invoke.js",
+          "https://www.highrevenueformat.com/f607cb178a1601c4c12680757d48e794/invoke.js"
+        ]
+      }
+    },
+    {
+      "name": "AD06 theme without duplicate scripts",
+      "status": "FAIL",
+      "error": "expect(received).toBe(expected) // Object.is equality\n\nExpected: 3\nReceived: 2"
+    },
+    {
+      "name": "AD05 number 0",
+      "status": "PASS",
+      "evidence": {
+        "url": "https://rngdle.art/en?n=0",
+        "score": "1,450"
+      }
+    },
+    {
+      "name": "AD05 number 1000000",
+      "status": "PASS",
+      "evidence": {
+        "url": "https://rngdle.art/en?n=1000000",
+        "score": "1,015"
+      }
+    },
+    {
+      "name": "AD05 number 777777",
+      "status": "PASS",
+      "evidence": {
+        "url": "https://rngdle.art/en?n=777777",
+        "score": "715"
+      }
+    },
+    {
+      "name": "AD05 reject out of range",
+      "status": "PASS",
+      "evidence": {
+        "url": "https://rngdle.art/en?n=777777",
+        "message": []
+      }
+    },
+    {
+      "name": "AD04 mobile 320",
+      "status": "FAIL",
+      "error": "expect(received).toBe(expected) // Object.is equality\n\nExpected: 320\nReceived: 312"
+    },
+    {
+      "name": "AD04 mobile 390",
+      "status": "FAIL",
+      "error": "expect(received).toBe(expected) // Object.is equality\n\nExpected: 390\nReceived: 375"
+    },
+    {
+      "name": "AD03 AD07 leave and return",
+      "status": "FAIL",
+      "error": "expect(received).toBeGreaterThan(expected)\n\nExpected: > 0\nReceived:   0\n\nCall Log:\n- Timeout 20000ms exceeded while waiting on the predicate"
+    },
+    {
+      "name": "AD07 forward and back",
+      "status": "PASS",
+      "evidence": {
+        "url": "https://rngdle.art/en?n=777777",
+        "width": 390,
+        "scrollWidth": 375,
+        "slots": [
+          {
+            "type": "ad-slot ad-slot--top",
+            "label": "Advertisement",
+            "width": 339,
+            "height": 74.1171875,
+            "frames": [],
+            "images": [],
+            "links": 0,
+            "text": "Advertisement"
+          },
+          {
+            "type": "ad-slot ad-slot--rectangle",
+            "label": "Advertisement",
+            "width": 339,
+            "height": 274.1171875,
+            "frames": [],
+            "images": [],
+            "links": 0,
+            "text": "Advertisement"
+          },
+          {
+            "type": "ad-slot ad-slot--native",
+            "label": "Advertisement",
+            "width": 339,
+            "height": 304.1171875,
+            "frames": [],
+            "images": [],
+            "links": 0,
+            "text": "Advertisement"
+          }
+        ],
+        "scripts": [
+          "https://pl31520216.profitableratecpmnetwork.com/2fa98dc65174516569957aa123f3650b/invoke.js"
+        ]
+      }
+    },
+    {
+      "name": "AD11 privacy en",
+      "status": "PASS",
+      "evidence": {
+        "url": "https://rngdle.art/en/privacy"
+      }
+    },
+    {
+      "name": "AD11 privacy zh",
+      "status": "PASS",
+      "evidence": {
+        "url": "https://rngdle.art/zh/privacy"
+      }
+    },
+    {
+      "name": "AD11 privacy ja",
+      "status": "PASS",
+      "evidence": {
+        "url": "https://rngdle.art/ja/privacy"
+      }
+    },
+    {
+      "name": "AD11 privacy ko",
+      "status": "PASS",
+      "evidence": {
+        "url": "https://rngdle.art/ko/privacy"
+      }
+    },
+    {
+      "name": "AD11 privacy de",
+      "status": "PASS",
+      "evidence": {
+        "url": "https://rngdle.art/de/privacy"
+      }
+    },
+    {
+      "name": "AD11 privacy fr",
+      "status": "PASS",
+      "evidence": {
+        "url": "https://rngdle.art/fr/privacy"
+      }
+    },
+    {
+      "name": "AD12 no application runtime exceptions",
+      "status": "PASS",
+      "evidence": {
+        "pageErrors": [],
+        "consoleErrors": [
+          {
+            "text": "Failed to load resource: the server responded with a status of 403 (Forbidden)",
+            "location": {
+              "url": "https://www.highrevenueformat.com/94acbb97e647008551663f9c3ba5f0c6/invoke.js",
+              "line": 0,
+              "column": 0,
+              "lineNumber": 0,
+              "columnNumber": 0
+            }
+          },
+          {
+            "text": "Failed to load resource: the server responded with a status of 403 (Forbidden)",
+            "location": {
+              "url": "https://www.highrevenueformat.com/f607cb178a1601c4c12680757d48e794/invoke.js",
+              "line": 0,
+              "column": 0,
+              "lineNumber": 0,
+              "columnNumber": 0
+            }
+          },
+          {
+            "text": "Failed to load resource: the server responded with a status of 403 (Forbidden)",
+            "location": {
+              "url": "https://pl31520216.profitableratecpmnetwork.com/2fa98dc65174516569957aa123f3650b/invoke.js",
+              "line": 0,
+              "column": 0,
+              "lineNumber": 0,
+              "columnNumber": 0
+            }
+          },
+          {
+            "text": "Failed to load resource: the server responded with a status of 403 (Forbidden)",
+            "location": {
+              "url": "https://www.highrevenueformat.com/94acbb97e647008551663f9c3ba5f0c6/invoke.js",
+              "line": 0,
+              "column": 0,
+              "lineNumber": 0,
+              "columnNumber": 0
+            }
+          },
+          {
+            "text": "Failed to load resource: the server responded with a status of 403 (Forbidden)",
+            "location": {
+              "url": "https://pl31520216.profitableratecpmnetwork.com/2fa98dc65174516569957aa123f3650b/invoke.js",
+              "line": 0,
+              "column": 0,
+              "lineNumber": 0,
+              "columnNumber": 0
+            }
+          },
+          {
+            "text": "Failed to load resource: the server responded with a status of 403 (Forbidden)",
+            "location": {
+              "url": "https://pl31520216.profitableratecpmnetwork.com/2fa98dc65174516569957aa123f3650b/invoke.js",
+              "line": 0,
+              "column": 0,
+              "lineNumber": 0,
+              "columnNumber": 0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "AD10 blocked ads preserve calculator and navigation",
+      "status": "PASS",
+      "evidence": {
+        "blockedRequests": [
+          "https://www.highrevenueformat.com/94acbb97e647008551663f9c3ba5f0c6/invoke.js"
+        ],
+        "url": "https://rngdle.art/en/infinite"
+      }
+    }
+  ],
+  "scripts": [
+    {
+      "url": "https://www.highrevenueformat.com/94acbb97e647008551663f9c3ba5f0c6/invoke.js",
+      "status": 403
+    },
+    {
+      "url": "https://www.highrevenueformat.com/f607cb178a1601c4c12680757d48e794/invoke.js",
+      "status": 403
+    },
+    {
+      "url": "https://pl31520216.profitableratecpmnetwork.com/2fa98dc65174516569957aa123f3650b/invoke.js",
+      "status": 403
+    },
+    {
+      "url": "https://www.highrevenueformat.com/94acbb97e647008551663f9c3ba5f0c6/invoke.js",
+      "status": 403
+    },
+    {
+      "url": "https://pl31520216.profitableratecpmnetwork.com/2fa98dc65174516569957aa123f3650b/invoke.js",
+      "status": 403
+    },
+    {
+      "url": "https://pl31520216.profitableratecpmnetwork.com/2fa98dc65174516569957aa123f3650b/invoke.js",
+      "status": 403
+    }
+  ],
+  "pageErrors": [],
+  "consoleErrors": [
+    {
+      "text": "Failed to load resource: the server responded with a status of 403 (Forbidden)",
+      "location": {
+        "url": "https://www.highrevenueformat.com/94acbb97e647008551663f9c3ba5f0c6/invoke.js",
+        "line": 0,
+        "column": 0,
+        "lineNumber": 0,
+        "columnNumber": 0
+      }
+    },
+    {
+      "text": "Failed to load resource: the server responded with a status of 403 (Forbidden)",
+      "location": {
+        "url": "https://www.highrevenueformat.com/f607cb178a1601c4c12680757d48e794/invoke.js",
+        "line": 0,
+        "column": 0,
+        "lineNumber": 0,
+        "columnNumber": 0
+      }
+    },
+    {
+      "text": "Failed to load resource: the server responded with a status of 403 (Forbidden)",
+      "location": {
+        "url": "https://pl31520216.profitableratecpmnetwork.com/2fa98dc65174516569957aa123f3650b/invoke.js",
+        "line": 0,
+        "column": 0,
+        "lineNumber": 0,
+        "columnNumber": 0
+      }
+    },
+    {
+      "text": "Failed to load resource: the server responded with a status of 403 (Forbidden)",
+      "location": {
+        "url": "https://www.highrevenueformat.com/94acbb97e647008551663f9c3ba5f0c6/invoke.js",
+        "line": 0,
+        "column": 0,
+        "lineNumber": 0,
+        "columnNumber": 0
+      }
+    },
+    {
+      "text": "Failed to load resource: the server responded with a status of 403 (Forbidden)",
+      "location": {
+        "url": "https://pl31520216.profitableratecpmnetwork.com/2fa98dc65174516569957aa123f3650b/invoke.js",
+        "line": 0,
+        "column": 0,
+        "lineNumber": 0,
+        "columnNumber": 0
+      }
+    },
+    {
+      "text": "Failed to load resource: the server responded with a status of 403 (Forbidden)",
+      "location": {
+        "url": "https://pl31520216.profitableratecpmnetwork.com/2fa98dc65174516569957aa123f3650b/invoke.js",
+        "line": 0,
+        "column": 0,
+        "lineNumber": 0,
+        "columnNumber": 0
+      }
+    }
+  ],
+  "requestsFailed": [
+    {
+      "url": "https://www.google-analytics.com/g/collect",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://www.highrevenueformat.com/94acbb97e647008551663f9c3ba5f0c6/invoke.js",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://www.highrevenueformat.com/f607cb178a1601c4c12680757d48e794/invoke.js",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://pl31520216.profitableratecpmnetwork.com/2fa98dc65174516569957aa123f3650b/invoke.js",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://www.google-analytics.com/g/collect",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://www.highrevenueformat.com/94acbb97e647008551663f9c3ba5f0c6/invoke.js",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://pl31520216.profitableratecpmnetwork.com/2fa98dc65174516569957aa123f3650b/invoke.js",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://www.google-analytics.com/g/collect",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://pl31520216.profitableratecpmnetwork.com/2fa98dc65174516569957aa123f3650b/invoke.js",
+      "error": "net::ERR_ABORTED"
+    }
+  ],
+  "finished": "2026-09-26T11:44:34.832Z"
+}
