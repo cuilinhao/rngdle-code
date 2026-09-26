@@ -1,0 +1,192 @@
+{
+  "checkedAt": "2026-09-26T11:00:29.393Z",
+  "localExpectedCommit": "c13184b1122f22e181ee4f49670f9312d9293224",
+  "pass": true,
+  "checks": {
+    "ciSucceeded": true,
+    "ciMatchesExpectedCommit": true,
+    "jobsSucceeded": true,
+    "deploymentReady": true,
+    "deploymentMatchesExpectedCommit": true,
+    "mainBranch": true,
+    "productionAliasesPresent": true
+  },
+  "evidenceSources": [
+    "https://api.github.com/repos/cuilinhao/rngdle-code/actions/runs/36237344680",
+    "https://api.github.com/repos/cuilinhao/rngdle-code/actions/runs/36237344680/jobs",
+    "Vercel authenticated GET /v13/deployments/dpl_8vuJWLD8N1WcW4zQ7ocFV1Z7yHDV"
+  ],
+  "workflow": {
+    "id": 36237344680,
+    "name": "Verify",
+    "url": "https://github.com/cuilinhao/rngdle-code/actions/runs/36237344680",
+    "event": "push",
+    "status": "completed",
+    "conclusion": "success",
+    "headSha": "c13184b1122f22e181ee4f49670f9312d9293224",
+    "createdAt": "2026-09-26T10:57:38Z",
+    "updatedAt": "2026-09-26T10:58:52Z",
+    "jobs": [
+      {
+        "id": 108391420252,
+        "name": "verify",
+        "status": "completed",
+        "conclusion": "success",
+        "startedAt": "2026-09-26T10:57:41Z",
+        "completedAt": "2026-09-26T10:58:51Z",
+        "steps": [
+          {
+            "number": 1,
+            "name": "Set up job",
+            "status": "completed",
+            "conclusion": "success",
+            "startedAt": "2026-09-26T10:57:41Z",
+            "completedAt": "2026-09-26T10:57:42Z"
+          },
+          {
+            "number": 2,
+            "name": "Run actions/checkout@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "startedAt": "2026-09-26T10:57:42Z",
+            "completedAt": "2026-09-26T10:57:43Z"
+          },
+          {
+            "number": 3,
+            "name": "Run actions/setup-node@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "startedAt": "2026-09-26T10:57:43Z",
+            "completedAt": "2026-09-26T10:57:44Z"
+          },
+          {
+            "number": 4,
+            "name": "Run npm ci --registry=https://registry.npmjs.org",
+            "status": "completed",
+            "conclusion": "success",
+            "startedAt": "2026-09-26T10:57:44Z",
+            "completedAt": "2026-09-26T10:57:46Z"
+          },
+          {
+            "number": 5,
+            "name": "Run npm run build",
+            "status": "completed",
+            "conclusion": "success",
+            "startedAt": "2026-09-26T10:57:46Z",
+            "completedAt": "2026-09-26T10:57:51Z"
+          },
+          {
+            "number": 6,
+            "name": "Run npm test",
+            "status": "completed",
+            "conclusion": "success",
+            "startedAt": "2026-09-26T10:57:51Z",
+            "completedAt": "2026-09-26T10:57:52Z"
+          },
+          {
+            "number": 7,
+            "name": "Run npm run test:seo",
+            "status": "completed",
+            "conclusion": "success",
+            "startedAt": "2026-09-26T10:57:52Z",
+            "completedAt": "2026-09-26T10:57:52Z"
+          },
+          {
+            "number": 8,
+            "name": "Run npx playwright install --with-deps chromium",
+            "status": "completed",
+            "conclusion": "success",
+            "startedAt": "2026-09-26T10:57:52Z",
+            "completedAt": "2026-09-26T10:58:08Z"
+          },
+          {
+            "number": 9,
+            "name": "Run node scripts/serve-production.mjs &",
+            "status": "completed",
+            "conclusion": "success",
+            "startedAt": "2026-09-26T10:58:08Z",
+            "completedAt": "2026-09-26T10:58:13Z"
+          },
+          {
+            "number": 10,
+            "name": "Run npm run test:browser",
+            "status": "completed",
+            "conclusion": "success",
+            "startedAt": "2026-09-26T10:58:13Z",
+            "completedAt": "2026-09-26T10:58:47Z"
+          },
+          {
+            "number": 11,
+            "name": "Run actions/upload-artifact@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "startedAt": "2026-09-26T10:58:47Z",
+            "completedAt": "2026-09-26T10:58:49Z"
+          },
+          {
+            "number": 21,
+            "name": "Post Run actions/setup-node@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "startedAt": "2026-09-26T10:58:49Z",
+            "completedAt": "2026-09-26T10:58:49Z"
+          },
+          {
+            "number": 22,
+            "name": "Post Run actions/checkout@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "startedAt": "2026-09-26T10:58:49Z",
+            "completedAt": "2026-09-26T10:58:49Z"
+          },
+          {
+            "number": 23,
+            "name": "Complete job",
+            "status": "completed",
+            "conclusion": "success",
+            "startedAt": "2026-09-26T10:58:49Z",
+            "completedAt": "2026-09-26T10:58:49Z"
+          }
+        ]
+      }
+    ]
+  },
+  "deployment": {
+    "id": "dpl_8vuJWLD8N1WcW4zQ7ocFV1Z7yHDV",
+    "url": "https://rngdle-3iltbw3fn-linhaos-projects.vercel.app",
+    "target": "production",
+    "readyState": "READY",
+    "createdAt": "2026-09-26T10:57:38.770Z",
+    "readyAt": "2026-09-26T10:57:52.577Z",
+    "gitSha": "c13184b1122f22e181ee4f49670f9312d9293224",
+    "gitRef": "main",
+    "aliases": [
+      "rngdle.art",
+      "www.rngdle.art",
+      "rngdle-art.vercel.app",
+      "rngdle-art-linhaos-projects.vercel.app",
+      "rngdle-art-git-main-linhaos-projects.vercel.app"
+    ]
+  },
+  "notes": [
+    "Only whitelisted public deployment and workflow evidence is recorded.",
+    "CI and deployment were already successful at the first check; no repeated polling was needed.",
+    "The HTTP audit for this revision is saved separately as release-date-fix-production-http.json."
+  ],
+  "httpAudit": {
+    "report": "release-date-fix-production-http.json",
+    "nodeVersion": "22.23.3",
+    "transport": "curl",
+    "base": "https://rngdle.art",
+    "localExpectedCommit": "c13184b1122f22e181ee4f49670f9312d9293224",
+    "checkedAt": "2026-09-26T11:01:45.848Z",
+    "passed": 319,
+    "failed": 0,
+    "checkSummary": {
+      "passed": 4234,
+      "failed": 0
+    },
+    "networkRetries": 0,
+    "warnings": 0
+  }
+}

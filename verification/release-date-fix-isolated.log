@@ -1,0 +1,148 @@
+
+added 75 packages, and audited 76 packages in 3s
+
+11 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+
+> rngdle-art@1.0.0 build
+> npm run data && npm run data:seo && tsc -b && vite build && vite build --ssr scripts/ssr.tsx --outDir .prerender --emptyOutDir && node scripts/prerender.mjs
+
+
+> rngdle-art@1.0.0 data
+> node scripts/build-data.mjs
+
+Exact distribution is current.
+
+> rngdle-art@1.0.0 data:seo
+> node scripts/build-seo-data.mjs && node scripts/build-social-images.mjs
+
+SEO data: 100 full-range rankings, 1 archived days (0 new).
+Generated 2 social cards at 1200 × 630.
+vite v6.4.3 building for production...
+transforming...
+✓ 1600 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/assets/explorer.worker-CXZZpE-J.js    0.31 kB
+dist/index.html                            0.63 kB │ gzip:   0.42 kB
+dist/assets/index-C2QzypXL.css            29.39 kB │ gzip:   6.86 kB
+dist/assets/index-BkKjz4Oz.js            496.20 kB │ gzip: 166.98 kB
+✓ built in 776ms
+vite v6.4.3 building SSR bundle for production...
+transforming...
+✓ 20 modules transformed.
+rendering chunks...
+.prerender/ssr.js  319.13 kB
+✓ built in 145ms
+Prerendered 288 pages; sitemap includes 100 English/Chinese URLs.
+
+> rngdle-art@1.0.0 test:seo
+> node --test tests/seo/*.test.mjs
+
+TAP version 13
+# Subtest: initial HTML has requested home keyword, image, and application schema
+ok 1 - initial HTML has requested home keyword, image, and application schema
+  ---
+  duration_ms: 0.646917
+  type: 'test'
+  ...
+# Subtest: only en and zh are indexed and alternate links never advertise noindex languages
+ok 2 - only en and zh are indexed and alternate links never advertise noindex languages
+  ---
+  duration_ms: 0.48725
+  type: 'test'
+  ...
+# Subtest: all pattern pages have specific FAQ matching visible copy and exact count
+ok 3 - all pattern pages have specific FAQ matching visible copy and exact count
+  ---
+  duration_ms: 11.276166
+  type: 'test'
+  ...
+# Subtest: full range ranking, dataset, daily pages and links are present without JavaScript
+ok 4 - full range ranking, dataset, daily pages and links are present without JavaScript
+  ---
+  duration_ms: 1.139667
+  type: 'test'
+  ...
+# Subtest: all English pattern explanations meet the requested depth and invalid routes stay noindex
+ok 5 - all English pattern explanations meet the requested depth and invalid routes stay noindex
+  ---
+  duration_ms: 61.802167
+  type: 'test'
+  ...
+# Subtest: all FAQ graphs match visible content and social images have actual 1200 by 630 pixels
+ok 6 - all FAQ graphs match visible content and social images have actual 1200 by 630 pixels
+  ---
+  duration_ms: 31.763542
+  type: 'test'
+  ...
+# Subtest: article publication dates retain real release timestamps and visible timezone-aware times
+ok 7 - article publication dates retain real release timestamps and visible timezone-aware times
+  ---
+  duration_ms: 10.741583
+  type: 'test'
+  ...
+1..7
+# tests 7
+# suites 0
+# pass 7
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 203.475
+npm error code EUSAGE
+npm error
+npm error Run a command from a local or remote npm package
+npm error
+npm error Usage:
+npm error npm exec -- <pkg>[@<version>] [args...]
+npm error npm exec --package=<pkg>[@<version>] -- <cmd> [args...]
+npm error npm exec -c '<cmd> [args...]'
+npm error npm exec --package=foo -c '<cmd> [args...]'
+npm error
+npm error Options:
+npm error [--package <package-spec> [--package <package-spec> ...]] [-c|--call <call>]
+npm error [-w|--workspace <workspace-name> [-w|--workspace <workspace-name> ...]]
+npm error [--workspaces] [--include-workspace-root]
+npm error
+npm error   --package
+npm error     The package or packages to install for [`npm exec`](/commands/npm-exec)
+npm error
+npm error   -c|--call
+npm error     Optional companion option for `npm exec`, `npx` that allows for
+npm error
+npm error   -w|--workspace
+npm error     Enable running a command in the context of the configured workspaces of the
+npm error
+npm error   --workspaces
+npm error     Set to true to run the command in the context of **all** configured
+npm error
+npm error   --include-workspace-root
+npm error     Include the workspace root when workspaces are enabled for a command.
+npm error
+npm error
+npm error alias: x
+npm error
+npm error Run "npm help exec" for more info
+npm error A complete log of this run can be found in: /Users/pgy/.npm/_logs/2026-09-26T10_56_19_370Z-debug-0.log
+
+> rngdle-art@1.0.0 test:browser
+> playwright test tests/browser/seo.spec.ts
+
+
+Running 3 tests using 3 workers
+
+(node:34349) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:34348) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:34350) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 tests/browser/seo.spec.ts:46:1 › daily archive loads deterministic answer and its metadata through navigation (2.3s)
+  ✓  2 tests/browser/seo.spec.ts:5:1 › SEO survives client navigation and language changes (2.6s)
+  ✓  3 tests/browser/seo.spec.ts:77:1 › new SEO pages remain readable on mobile and without JavaScript (3.2s)
+
+  3 passed (4.8s)

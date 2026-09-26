@@ -68,7 +68,9 @@ BASE_URL=http://127.0.0.1:4173 npm run test:browser
 
 文档中要求用户后续推进的站外文章分发与新 GitHub 推荐目录，不作为本次站内代码工作的自动发布动作。
 
-## 本次实际验收记录（2026-09-26）
+## 早期本地验收记录（历史；2026-09-26 上线前）
+
+以下是合并绿色主题与生产发布之前的过程记录，保留供追溯；当前结论以末尾的本次上线记录和最终报告为准。
 
 - 分支：`codex/seo-geo`，实现保留在本地工作区，未部署生产。
 - Node 22.23.3：完整构建通过，生成 288 个 HTML，sitemap 收录候选 100 个，仅 en / zh。
@@ -80,3 +82,31 @@ BASE_URL=http://127.0.0.1:4173 npm run test:browser
 - GitHub CLI 当前未登录，未设置或核实远程 Deploy Hook secret；未执行部署或 GSC URL Inspection。
 
 日志：`verification/seo-build-tests.log`、`verification/seo-browser.log`、`verification/seo-http-results.json`。
+
+## 本次实际上线与验收记录（2026-09-26）
+
+- 应用已合入并推送 `main`：`134ff99db40726757a191d6d83000a642391eaa6`，包含 SEO / GEO、每日答案归档及绿色主题。
+- Node 22 完整构建与 TypeScript 检查通过；引擎/数据单测 **31/31**，静态 SEO **6/6**。本地与正式域名真实 Chrome 各 **39/39**，生产测试 0 失败、0 跳过、0 flaky。
+- 当前生成 **288 个 HTML、100 个 sitemap URL**；仅 en / zh 可索引，其余四语言仍可访问并标记 `noindex,follow`。
+- 最新本地 HTTP **318/318 项、4233/4233 条断言**；正式域名 HTTP **319/319 项、4234/4234 条断言**，均 0 失败、0 警告、0 网络重试。线上额外执行部署内容等待检查，因此比本地多一项、一条断言。每页 HTML、JS/CSS、引擎数据及每日快照均按构建或 Git 提交核对 SHA256。
+- 首次正式部署 `dpl_C25KmJPHbS1XATt8Pvd4ws87ESeE` 已确认为 `production / READY`，Git SHA 与上述提交一致；随后由每日 Hook 创建的 `dpl_FNF83Zm1ZgqP66XzhaszPMBkA71d` 也已 `READY`，同一 SHA，并关联 `rngdle.art` 与 `www.rngdle.art`。
+- 通过林豪浏览器的已登录界面创建绑定 `main` 的 `RNGDLE Daily Answers` Deploy Hook，并成功添加 GitHub 仓库 secret `VERCEL_DEPLOY_HOOK`。文档与验收记录不保存 Hook 密钥 URL。
+- 每日自动发布已配置为 **UTC 00:05（北京时间 08:05）**。首次手动运行 [Publish daily answers #36236434586](https://github.com/cuilinhao/rngdle-code/actions/runs/36236434586) 已成功，全部 **16 个步骤**通过，包含构建、测试、快照保存检查、main 一致性检查、请求部署、生产内容验收和附件上传。该记录证明手动完整链路已运行，不声称已经实际等到下一次 cron 时点；调度及构建仍可能排队。
+- 本次已重新提交 `https://rngdle.art/sitemap.xml`，GSC 界面确认 **成功、已发现 100 个网页**。早期的 282 是旧版本记录，不是当前 sitemap 数量；“已发现”不等于已经收录。
+- 五个指定 URL 已逐项完成 Inspection 和索引请求；Google 富媒体初测发现的两条日期警告已修复，复测 3 项有效内容且无警告。具体结果及未实际收录的边界见下文。
+
+完整逐项结论见[本次发布最终报告](../verification/release-acceptance.md)。原始证据：[构建与测试](../verification/release-local-build.log)、[本地 Chrome](../verification/release-local-browser.log)、[生产 Chrome](../verification/release-production-browser-results.json)、[本地 HTTP](../verification/release-local-http.json)、[生产 HTTP](../verification/release-production-http.json)、[首次部署身份](../verification/release-vercel-deployment.json)、[每日工作流及 Hook 部署](../verification/release-daily-workflow.json)。
+
+## Google 实测修复与最终应用版本
+
+最终应用提交为 `c13184b1122f22e181ee4f49670f9312d9293224`。Google Rich Results 初测发现 Article 的 `datePublished` 只有日期，产生“无效日期时间/缺时区”两条非严重警告；已改用有 Vercel 首次生产记录依据的 UTC 发布时间，正文 `<time>` 与 JSON-LD 共用来源，历史每日快照保持原样。
+
+- 在隔离工作区复验构建、7/7 静态 SEO、本地有界面 Chrome 3/3；正式域名有界面 Chrome 增量 3/3。此前完整 39/39 业务回归对应 `134ff99`，本次没有把增量测试冒充再次完整回归。
+- 修复后的本地 HTTP 318/318、4233/4233 条断言；生产 HTTP 319/319、4234/4234 条断言，均 0 失败、0 警告、0 重试。
+- [GitHub Verify 36237344680](https://github.com/cuilinhao/rngdle-code/actions/runs/36237344680) 成功；Vercel `dpl_8vuJWLD8N1WcW4zQ7ocFV1Z7yHDV` 于 `2026-09-26T10:57:52.577Z` 达到生产 READY，Git SHA 及正式域名别名均已核实。
+- 林豪浏览器中的 [Google 富媒体复测](https://search.google.com/test/rich-results/result?id=eHeXVCRPTyWUDuHrSiuzHw) 于北京时间 19:00:02 成功：Article、Breadcrumb、Carousel 共 3 项有效内容，日期警告消失，无工具报告的错误或非严重问题。
+- 首页、methodology、palindrome、harshad、repdigit 五个 URL 均已完成 URL Inspection，并分别显示“已请求编入索引”。检查时五页均尚未收录，请求接收不代表已收录、获得排名或 AI 引用。
+
+本次新增应用代码已推送 GitHub `main`；后续只含验收文件的提交不改变应用内容。
+
+最终证据：[隔离构建与浏览器](../verification/release-date-fix-isolated.log)、[生产浏览器](../verification/release-date-fix-production-browser.log)、[生产 HTTP](../verification/release-date-fix-production-http.json)、[Google UI 记录](../verification/release-google-checks.json)。

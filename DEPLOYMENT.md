@@ -49,3 +49,32 @@ Search Console confirmed that https://rngdle.art/sitemap.xml was successfully pr
 - Application commit: `a568b313b23d352413a2ca9bb17905b288f55174`. Vercel reports a successful production deployment at https://vercel.com/linhaos-projects/rngdle-art/2on7Xn8V3R4YiJj4YpGwBahsSkMW ; GitHub CI passed at https://github.com/cuilinhao/rngdle-code/actions/runs/36233055794 .
 - Production HTTP checks confirmed the deployed JavaScript contains the correct measurement ID, all six privacy pages describe GA4, the sitemap contains 282 URLs, and robots.txt points to that sitemap.
 - A production page load and SPA navigation were exercised in Chrome. Receipt in GA4 Realtime was not yet confirmed at handoff; concurrent use of Chrome interrupted the final network/report verification. Do not treat the deployment checks as proof that Google has processed events.
+
+## SEO / GEO 与绿色主题上线 — 2026-09-26
+
+本节记录最新应用版本。上面的应用提交、30 项浏览器测试及 282 个 sitemap URL 等结果属于更早版本，保留为部署历史；最新逐项结论见 [release-acceptance.md](verification/release-acceptance.md)。
+
+- 应用 `main` 提交：`134ff99db40726757a191d6d83000a642391eaa6`，已完成 SEO / GEO、每日答案归档与绿色主题合并。
+- 完整构建、TypeScript、31/31 引擎/数据单测、6/6 静态 SEO 测试通过；本地及正式域名真实 Chrome 各 39/39 通过，生产 0 失败、0 跳过、0 flaky。
+- 当前为 288 个预渲染 HTML，sitemap 仅包含 en / zh 的 100 个 URL。最新本地 HTTP 318/318 项、4233/4233 条断言；生产 HTTP 319/319 项、4234/4234 条断言，均通过且无警告、无网络重试。生产比本地多一次部署内容等待检查。
+- 首次应用部署：`dpl_C25KmJPHbS1XATt8Pvd4ws87ESeE`，[`rngdle-i5b5j9axw-linhaos-projects.vercel.app`](https://rngdle-i5b5j9axw-linhaos-projects.vercel.app)，`production / READY`；Vercel 返回的 Git SHA 与上述完整提交一致。
+- 已通过林豪浏览器界面创建绑定 `main` 的 `RNGDLE Daily Answers` Deploy Hook，并成功添加 GitHub 仓库 secret `VERCEL_DEPLOY_HOOK`；Hook 密钥 URL 不写入仓库或报告。
+- `.github/workflows/daily-answers.yml` 已配置每天 **UTC 00:05（北京时间 08:05）**自动发布。首次手动运行 [36236434586](https://github.com/cuilinhao/rngdle-code/actions/runs/36236434586) 已完成，16 个实际步骤全部成功，并上传 `daily-answer-verification` 附件。计划任务可能排队；手动通过不代表已实际观察到下一次定时运行。
+- 此次工作流创建的 Hook 部署为 `dpl_FNF83Zm1ZgqP66XzhaszPMBkA71d`，[`rngdle-4hgwz1yu6-linhaos-projects.vercel.app`](https://rngdle-4hgwz1yu6-linhaos-projects.vercel.app)，于 `2026-09-26T10:39:57.733Z` 达到 `production / READY`。Git SHA 与 `main` 的上述提交一致，别名包含 `rngdle.art` 和 `www.rngdle.art`。
+- GSC 本次重新提交 sitemap 后，界面显示**成功、已发现 100 个网页**，取代早期 282 的当前状态。五个 URL Inspection / 请求编入索引和 Rich Results Test 的实际结果见最终报告，不从部署或 HTTP 通过推断 Google 收录与富结果状态。
+
+证据：[本地 HTTP](verification/release-local-http.json)、[生产 HTTP](verification/release-production-http.json)、[生产浏览器](verification/release-production-browser-results.json)、[首次部署身份](verification/release-vercel-deployment.json)、[每日工作流与 Hook 部署](verification/release-daily-workflow.json)。
+
+## Google 实测修复与最终应用版本
+
+最终应用提交为 `c13184b1122f22e181ee4f49670f9312d9293224`。Google Rich Results 初测发现 Article 的 `datePublished` 只有日期，产生“无效日期时间/缺时区”两条非严重警告；已改用有 Vercel 首次生产记录依据的 UTC 发布时间，正文 `<time>` 与 JSON-LD 共用来源，历史每日快照保持原样。
+
+- 在隔离工作区复验构建、7/7 静态 SEO、本地有界面 Chrome 3/3；正式域名有界面 Chrome 增量 3/3。此前完整 39/39 业务回归对应 `134ff99`，本次没有把增量测试冒充再次完整回归。
+- 修复后的本地 HTTP 318/318、4233/4233 条断言；生产 HTTP 319/319、4234/4234 条断言，均 0 失败、0 警告、0 重试。
+- [GitHub Verify 36237344680](https://github.com/cuilinhao/rngdle-code/actions/runs/36237344680) 成功；Vercel `dpl_8vuJWLD8N1WcW4zQ7ocFV1Z7yHDV` 于 `2026-09-26T10:57:52.577Z` 达到生产 READY，Git SHA 及正式域名别名均已核实。
+- 林豪浏览器中的 [Google 富媒体复测](https://search.google.com/test/rich-results/result?id=eHeXVCRPTyWUDuHrSiuzHw) 于北京时间 19:00:02 成功：Article、Breadcrumb、Carousel 共 3 项有效内容，日期警告消失，无工具报告的错误或非严重问题。
+- 首页、methodology、palindrome、harshad、repdigit 五个 URL 均已完成 URL Inspection，并分别显示“已请求编入索引”。检查时五页均尚未收录，请求接收不代表已收录、获得排名或 AI 引用。
+
+本次新增应用代码已推送 GitHub `main`；后续只含验收文件的提交不改变应用内容。
+
+最终证据：[部署身份](verification/release-date-fix-deployment.json)、[生产 HTTP](verification/release-date-fix-production-http.json)、[Google UI 记录](verification/release-google-checks.json)、[逐项验收](verification/release-acceptance.md)。

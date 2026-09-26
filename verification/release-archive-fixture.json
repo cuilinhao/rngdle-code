@@ -1,5 +1,5 @@
 {
-  "verifiedAt": "2026-09-26T10:23:21.313Z",
+  "verifiedAt": "2026-09-26T10:40:14.033Z",
   "node": "v22.23.3",
   "fixtureOnly": true,
   "fixtureDates": {
@@ -34,6 +34,11 @@
       "id": "F05",
       "status": "pass",
       "detail": "Production SEO source, manifest, and existing daily snapshot bytes are unchanged by this isolated fixture."
+    },
+    {
+      "id": "F06",
+      "status": "pass",
+      "detail": "Real headless Chromium clicks passed in English and Chinese: page 1 → page 2 → reload → page 1; middle-date previous/next; latest/oldest boundaries; no page exceptions. Synthetic dates and isolated fixed browser clock only."
     }
   ],
   "sourceHashes": {
@@ -45,12 +50,83 @@
     "public/data/seo.json": "f7bd3172f1827521c9a633c0bd3f4b6214cfa724ab69a5bcc4d2e860802f6e40",
     "public/data/daily/2026-09-26.json": "b8dd60bf9b4cff0f3aa9bf196f9697cd7761944d35539e72eec27cab33f43e9a"
   },
-  "ssrBuildLog": "vite v6.4.3 building SSR bundle for production...\ntransforming...\n✓ 20 modules transformed.\nrendering chunks...\n.prerender/ssr.js  320.43 kB\n✓ built in 213ms",
+  "clientBuildLog": "vite v6.4.3 building for production...\ntransforming...\n✓ 1600 modules transformed.\nrendering chunks...\ncomputing gzip size...\ndist/assets/explorer.worker-CXZZpE-J.js    0.31 kB\ndist/index.html                            0.63 kB │ gzip:   0.42 kB\ndist/assets/index-C2QzypXL.css            29.39 kB │ gzip:   6.86 kB\ndist/assets/index-BqBXbfbS.js            497.40 kB │ gzip: 167.20 kB\n✓ built in 802ms",
+  "ssrBuildLog": "vite v6.4.3 building SSR bundle for production...\ntransforming...\n✓ 20 modules transformed.\nrendering chunks...\n.prerender/ssr.js  320.43 kB\n✓ built in 156ms",
   "fixtureOutput": {
     "htmlPages": 350,
     "indexableUrls": 162,
     "archivePagesPerLocale": 2,
     "datedHtmlPages": 62
+  },
+  "browser": {
+    "engine": "Chromium",
+    "version": "153.0.8010.12",
+    "headless": true,
+    "initiatedBy": "Codex via Playwright in an isolated browser context",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "productionSiteVisited": false,
+    "simulatedClock": "2026-10-26T12:00:00.000Z",
+    "scenarios": [
+      {
+        "locale": "en",
+        "scenario": "Archive page 1 → page 2 → reload → page 1",
+        "status": "pass",
+        "rows": [
+          30,
+          1,
+          1,
+          30
+        ]
+      },
+      {
+        "locale": "en",
+        "scenario": "Middle date October 11 → previous October 10 → next October 11 → next October 12",
+        "status": "pass"
+      },
+      {
+        "locale": "en",
+        "scenario": "Latest date omits future link; oldest date omits prelaunch link and retains next day",
+        "status": "pass"
+      },
+      {
+        "locale": "en",
+        "scenario": "No page exceptions during click flows",
+        "status": "pass"
+      },
+      {
+        "locale": "zh",
+        "scenario": "Archive page 1 → page 2 → reload → page 1",
+        "status": "pass",
+        "rows": [
+          30,
+          1,
+          1,
+          30
+        ]
+      },
+      {
+        "locale": "zh",
+        "scenario": "Middle date October 11 → previous October 10 → next October 11 → next October 12",
+        "status": "pass"
+      },
+      {
+        "locale": "zh",
+        "scenario": "Latest date omits future link; oldest date omits prelaunch link and retains next day",
+        "status": "pass"
+      },
+      {
+        "locale": "zh",
+        "scenario": "No page exceptions during click flows",
+        "status": "pass"
+      }
+    ],
+    "cleanup": {
+      "browserClosed": true,
+      "httpServerClosed": true
+    }
   },
   "status": "pass",
   "tempFixtureDeleted": true

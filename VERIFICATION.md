@@ -1,5 +1,22 @@
 # RNGDLE.ART 验收记录
 
+## 最新发布验收指引（2026-09-26）
+
+完整功能回归对应 `134ff99db40726757a191d6d83000a642391eaa6`；随后依据 Google 实测修复 Article 日期，最终应用提交 `c13184b1122f22e181ee4f49670f9312d9293224` 已推送 `main` 并部署。SEO / GEO、每日归档与绿色主题的完整逐项结果，以 [本次发布最终报告](verification/release-acceptance.md) 为准。
+
+- 完整构建通过；规则/数据单测 **31/31**、静态 SEO **6/6**；本地与正式域名真实 Chrome 各 **39/39**。
+- 最新本地 HTTP **318/318 项、4233/4233 条断言**；生产 HTTP **319/319 项、4234/4234 条断言**，均无失败、无警告、无网络重试。生产多一项部署内容等待检查。
+- 目前共有 **288 个预渲染 HTML、100 个 en / zh sitemap URL**；GSC 本次重新提交已显示**成功、已发现 100 个网页**。
+- 首次生产部署及后续每日 Hook 部署均为 `READY`，Git SHA 匹配。每日 **UTC 00:05（北京时间 08:05）**自动发布已配置；[首次手动工作流 36236434586](https://github.com/cuilinhao/rngdle-code/actions/runs/36236434586) 的 **16 个步骤全部成功**。
+- 日期修复增量：隔离构建、7/7 静态 SEO、本地与生产真实 Chrome 各 3/3；全量 HTTP 结果同上，见 [修复后生产 HTTP](verification/release-date-fix-production-http.json)。
+- GSC 五个 URL 均确认“已请求编入索引”，检查时尚未实际收录；Google 富媒体复测 3 项有效、两条日期警告消失，详见 [Google UI 记录](verification/release-google-checks.json)。
+
+本次证据：[构建与测试](verification/release-local-build.log)、[本地 Chrome](verification/release-local-browser.log)、[生产 Chrome](verification/release-production-browser-results.json)、[本地 HTTP](verification/release-local-http.json)、[生产 HTTP](verification/release-production-http.json)、[部署身份](verification/release-vercel-deployment.json)、[每日自动发布验证](verification/release-daily-workflow.json)。
+
+## 以下为早期版本历史记录（保留原文）
+
+从本标题至文末均为本次 SEO / GEO 与绿色主题合并上线前的验收过程。原有 10 项规则测试、30 项浏览器测试、291 项 HTTP 检查、282 个 URL、黑白主题以及旧 GSC 处理状态等，均不作为当前版本的验收结论；最新结果与边界以上方报告和证据为准。
+
 验证日期：2026-09-26。环境：Codex 工作环境、Node.js 22、真实 Chrome（独立测试配置），另在 Codex 内置浏览器手动核对中文输入及明暗主题。
 
 ## 本地结果

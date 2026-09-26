@@ -1,0 +1,206 @@
+{
+  "checkedAt": "2026-09-26T10:41:32.345Z",
+  "pass": true,
+  "checks": {
+    "workflowSucceeded": true,
+    "allJobsSucceeded": true,
+    "allStepsSucceeded": true,
+    "verificationArtifactUploaded": true,
+    "deploymentReady": true,
+    "deploymentUsesWorkflowCommit": true,
+    "createdByExpectedHook": true,
+    "deploymentCreatedAfterWorkflow": true,
+    "productionAliasesPresent": true
+  },
+  "evidenceSources": [
+    "https://api.github.com/repos/cuilinhao/rngdle-code/actions/runs/36236434586",
+    "https://api.github.com/repos/cuilinhao/rngdle-code/actions/runs/36236434586/jobs",
+    "https://api.github.com/repos/cuilinhao/rngdle-code/actions/runs/36236434586/artifacts",
+    "Vercel authenticated GET /v13/deployments/dpl_FNF83Zm1ZgqP66XzhaszPMBkA71d"
+  ],
+  "workflow": {
+    "id": 36236434586,
+    "name": "Publish daily answers",
+    "url": "https://github.com/cuilinhao/rngdle-code/actions/runs/36236434586",
+    "status": "completed",
+    "conclusion": "success",
+    "event": "workflow_dispatch",
+    "headSha": "134ff99db40726757a191d6d83000a642391eaa6",
+    "createdAt": "2026-09-26T10:39:12Z",
+    "updatedAt": "2026-09-26T10:39:47Z",
+    "jobs": [
+      {
+        "id": 108388947893,
+        "name": "publish",
+        "status": "completed",
+        "conclusion": "success",
+        "startedAt": "2026-09-26T10:39:16Z",
+        "completedAt": "2026-09-26T10:39:46Z",
+        "steps": [
+          {
+            "number": 1,
+            "name": "Set up job",
+            "status": "completed",
+            "conclusion": "success",
+            "startedAt": "2026-09-26T10:39:16Z",
+            "completedAt": "2026-09-26T10:39:17Z"
+          },
+          {
+            "number": 2,
+            "name": "Run actions/checkout@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "startedAt": "2026-09-26T10:39:17Z",
+            "completedAt": "2026-09-26T10:39:18Z"
+          },
+          {
+            "number": 3,
+            "name": "Run actions/setup-node@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "startedAt": "2026-09-26T10:39:18Z",
+            "completedAt": "2026-09-26T10:39:19Z"
+          },
+          {
+            "number": 4,
+            "name": "Check deployment configuration",
+            "status": "completed",
+            "conclusion": "success",
+            "startedAt": "2026-09-26T10:39:19Z",
+            "completedAt": "2026-09-26T10:39:19Z"
+          },
+          {
+            "number": 5,
+            "name": "Run npm ci --registry=https://registry.npmjs.org",
+            "status": "completed",
+            "conclusion": "success",
+            "startedAt": "2026-09-26T10:39:19Z",
+            "completedAt": "2026-09-26T10:39:24Z"
+          },
+          {
+            "number": 6,
+            "name": "Run npm run build",
+            "status": "completed",
+            "conclusion": "success",
+            "startedAt": "2026-09-26T10:39:24Z",
+            "completedAt": "2026-09-26T10:39:32Z"
+          },
+          {
+            "number": 7,
+            "name": "Run npm test",
+            "status": "completed",
+            "conclusion": "success",
+            "startedAt": "2026-09-26T10:39:32Z",
+            "completedAt": "2026-09-26T10:39:33Z"
+          },
+          {
+            "number": 8,
+            "name": "Run npm run test:seo",
+            "status": "completed",
+            "conclusion": "success",
+            "startedAt": "2026-09-26T10:39:33Z",
+            "completedAt": "2026-09-26T10:39:34Z"
+          },
+          {
+            "number": 9,
+            "name": "Preserve immutable daily snapshots",
+            "status": "completed",
+            "conclusion": "success",
+            "startedAt": "2026-09-26T10:39:34Z",
+            "completedAt": "2026-09-26T10:39:34Z"
+          },
+          {
+            "number": 10,
+            "name": "Ensure main still matches the verified revision",
+            "status": "completed",
+            "conclusion": "success",
+            "startedAt": "2026-09-26T10:39:34Z",
+            "completedAt": "2026-09-26T10:39:34Z"
+          },
+          {
+            "number": 11,
+            "name": "Request production rebuild",
+            "status": "completed",
+            "conclusion": "success",
+            "startedAt": "2026-09-26T10:39:34Z",
+            "completedAt": "2026-09-26T10:39:39Z"
+          },
+          {
+            "number": 12,
+            "name": "Verify published production content",
+            "status": "completed",
+            "conclusion": "success",
+            "startedAt": "2026-09-26T10:39:39Z",
+            "completedAt": "2026-09-26T10:39:43Z"
+          },
+          {
+            "number": 13,
+            "name": "Run actions/upload-artifact@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "startedAt": "2026-09-26T10:39:43Z",
+            "completedAt": "2026-09-26T10:39:44Z"
+          },
+          {
+            "number": 25,
+            "name": "Post Run actions/setup-node@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "startedAt": "2026-09-26T10:39:44Z",
+            "completedAt": "2026-09-26T10:39:44Z"
+          },
+          {
+            "number": 26,
+            "name": "Post Run actions/checkout@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "startedAt": "2026-09-26T10:39:44Z",
+            "completedAt": "2026-09-26T10:39:44Z"
+          },
+          {
+            "number": 27,
+            "name": "Complete job",
+            "status": "completed",
+            "conclusion": "success",
+            "startedAt": "2026-09-26T10:39:44Z",
+            "completedAt": "2026-09-26T10:39:44Z"
+          }
+        ]
+      }
+    ],
+    "artifacts": [
+      {
+        "id": 10903524811,
+        "name": "daily-answer-verification",
+        "bytes": 73014,
+        "expired": false,
+        "createdAt": "2026-09-26T10:39:44Z",
+        "expiresAt": "2026-12-25T10:39:13Z"
+      }
+    ]
+  },
+  "deployment": {
+    "id": "dpl_FNF83Zm1ZgqP66XzhaszPMBkA71d",
+    "url": "https://rngdle-4hgwz1yu6-linhaos-projects.vercel.app",
+    "target": "production",
+    "readyState": "READY",
+    "createdAt": "2026-09-26T10:39:39.986Z",
+    "readyAt": "2026-09-26T10:39:57.733Z",
+    "gitSha": "134ff99db40726757a191d6d83000a642391eaa6",
+    "gitRef": "main",
+    "hookName": "RNGDLE Daily Answers",
+    "hookRef": "main",
+    "aliases": [
+      "rngdle.art",
+      "www.rngdle.art",
+      "rngdle-art.vercel.app",
+      "rngdle-art-linhaos-projects.vercel.app",
+      "rngdle-art-git-main-linhaos-projects.vercel.app"
+    ]
+  },
+  "notes": [
+    "The first read already found the workflow completed; no repeated polling was needed.",
+    "Same-day unchanged production content can satisfy the content gate immediately; the Hook-created deployment was independently verified READY afterward.",
+    "Only whitelisted deployment fields are saved; no Hook URL, Hook identifier, credential, environment value, or full metadata object is recorded."
+  ]
+}

@@ -1,0 +1,533 @@
+Article publication date fix verification
+Started: 2026-09-26T10:51:47.761Z
+Node: v22.23.3
+RED: new regression failed before implementation: en/guides datePublished needs a time and timezone (actual 2026-09-26).
+Provenance: Vercel production READY dpl_QCY7AYVzJG38uEiUumEHZa7gyL3H / c723bd6 at 2026-09-26T07:10:12.639Z; dpl_C25KmJPHbS1XATt8Pvd4ws87ESeE / 134ff99 at 2026-09-26T10:32:57.784Z, verified with authenticated GET /v13/deployments/{id}.
+
+$ npm run build
+
+> rngdle-art@1.0.0 build
+> npm run data && npm run data:seo && tsc -b && vite build && vite build --ssr scripts/ssr.tsx --outDir .prerender --emptyOutDir && node scripts/prerender.mjs
+
+
+> rngdle-art@1.0.0 data
+> node scripts/build-data.mjs
+
+Exact distribution is current.
+
+> rngdle-art@1.0.0 data:seo
+> node scripts/build-seo-data.mjs && node scripts/build-social-images.mjs
+
+SEO data: 100 full-range rankings, 1 archived days (0 new).
+Generated 2 social cards at 1200 × 630.
+vite v6.4.3 building for production...
+transforming...
+✓ 1600 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/assets/explorer.worker-CXZZpE-J.js    0.31 kB
+dist/index.html                            0.63 kB │ gzip:   0.42 kB
+dist/assets/index-C2QzypXL.css            29.39 kB │ gzip:   6.86 kB
+dist/assets/index-C-g0z24I.js            496.19 kB │ gzip: 166.98 kB
+✓ built in 812ms
+vite v6.4.3 building SSR bundle for production...
+transforming...
+✓ 20 modules transformed.
+rendering chunks...
+.prerender/ssr.js  319.11 kB
+✓ built in 154ms
+Prerendered 288 pages; sitemap includes 100 English/Chinese URLs.
+
+Exit: 0
+
+$ npm test
+
+> rngdle-art@1.0.0 test
+> node --test tests/*.test.mjs
+
+TAP version 13
+# Subtest: production page view sends the current title and strips query/hash from location and referrer
+ok 1 - production page view sends the current title and strips query/hash from location and referrer
+  ---
+  duration_ms: 1.712166
+  type: 'test'
+  ...
+# Subtest: same-path renders and number/hash edits do not add page views or reload GA
+ok 2 - same-path renders and number/hash edits do not add page views or reload GA
+  ---
+  duration_ms: 0.411458
+  type: 'test'
+  ...
+# Subtest: SPA navigation, language changes and revisits each use the preceding virtual page as referrer
+ok 3 - SPA navigation, language changes and revisits each use the preceding virtual page as referrer
+  ---
+  duration_ms: 0.36525
+  type: 'test'
+  ...
+# Subtest: development build does not initialize analytics or send events
+ok 4 - development build does not initialize analytics or send events
+  ---
+  duration_ms: 0.2715
+  type: 'test'
+  ...
+# Subtest: localhost does not initialize analytics or send events
+ok 5 - localhost does not initialize analytics or send events
+  ---
+  duration_ms: 0.385375
+  type: 'test'
+  ...
+# Subtest: local production preview does not initialize analytics or send events
+ok 6 - local production preview does not initialize analytics or send events
+  ---
+  duration_ms: 0.323166
+  type: 'test'
+  ...
+# Subtest: Vercel preview does not initialize analytics or send events
+ok 7 - Vercel preview does not initialize analytics or send events
+  ---
+  duration_ms: 0.632917
+  type: 'test'
+  ...
+# Subtest: lookalike host does not initialize analytics or send events
+ok 8 - lookalike host does not initialize analytics or send events
+  ---
+  duration_ms: 0.47675
+  type: 'test'
+  ...
+# Subtest: non-HTTPS origin does not initialize analytics or send events
+ok 9 - non-HTTPS origin does not initialize analytics or send events
+  ---
+  duration_ms: 0.525667
+  type: 'test'
+  ...
+# Subtest: missing measurement ID does not initialize analytics or send events
+ok 10 - missing measurement ID does not initialize analytics or send events
+  ---
+  duration_ms: 0.581458
+  type: 'test'
+  ...
+# Subtest: malformed measurement ID does not initialize analytics or send events
+ok 11 - malformed measurement ID does not initialize analytics or send events
+  ---
+  duration_ms: 0.203875
+  type: 'test'
+  ...
+# Subtest: www production host is tracked and malformed referrers are omitted
+ok 12 - www production host is tracked and malformed referrers are omitted
+  ---
+  duration_ms: 0.249708
+  type: 'test'
+  ...
+# Subtest: server-side rendering without browser globals does not initialize analytics
+ok 13 - server-side rendering without browser globals does not initialize analytics
+  ---
+  duration_ms: 0.210666
+  type: 'test'
+  ...
+# Subtest: A03 exact reference counts for all 31 independently implemented patterns
+ok 14 - A03 exact reference counts for all 31 independently implemented patterns
+  ---
+  duration_ms: 0.531417
+  type: 'test'
+  ...
+# Subtest: A03 complete score index has exactly one entry per supported integer and exact cumulative distribution
+ok 15 - A03 complete score index has exactly one entry per supported integer and exact cumulative distribution
+  ---
+  duration_ms: 9.629583
+  type: 'test'
+  ...
+# Subtest: A03 reference samples and independently checked mathematical edge cases
+ok 16 - A03 reference samples and independently checked mathematical edge cases
+  ---
+  duration_ms: 0.790167
+  type: 'test'
+  ...
+# Subtest: A03 runtime score agrees with precomputed data on boundaries and deterministic sample
+ok 17 - A03 runtime score agrees with precomputed data on boundaries and deterministic sample
+  ---
+  duration_ms: 17.145042
+  type: 'test'
+  ...
+# Subtest: A02 strict numeric validation covers invalid, boundary and leading-zero input
+ok 18 - A02 strict numeric validation covers invalid, boundary and leading-zero input
+  ---
+  duration_ms: 0.353083
+  type: 'test'
+  ...
+# Subtest: A04 rejection sampling discards out-of-range entropy instead of introducing modulo bias
+ok 19 - A04 rejection sampling discards out-of-range entropy instead of introducing modulo bias
+  ---
+  duration_ms: 2.322667
+  type: 'test'
+  ...
+# Subtest: A06 deterministic daily types and grade for draft/hunt/quiz
+ok 20 - A06 deterministic daily types and grade for draft/hunt/quiz
+  ---
+  duration_ms: 0.424167
+  type: 'test'
+  ...
+# Subtest: A07 UTC date, same-day streak idempotency, gaps and corrupted attempts
+ok 21 - A07 UTC date, same-day streak idempotency, gaps and corrupted attempts
+  ---
+  duration_ms: 0.714042
+  type: 'test'
+  ...
+# Subtest: A10 exhaustive one-digit neighborhood yields genuine best edit without leading zeros
+ok 22 - A10 exhaustive one-digit neighborhood yields genuine best edit without leading zeros
+  ---
+  duration_ms: 1.205208
+  type: 'test'
+  ...
+# Subtest: A11 deterministic specimen is in range and changes across days
+ok 23 - A11 deterministic specimen is in range and changes across days
+  ---
+  duration_ms: 0.281416
+  type: 'test'
+  ...
+# Subtest: SEO archive accepts only actual published UTC calendar days
+ok 24 - SEO archive accepts only actual published UTC calendar days
+  ---
+  duration_ms: 2.113875
+  type: 'test'
+  ...
+# Subtest: SEO historical rebuild keeps later published dates while excluding future or invalid snapshots
+ok 25 - SEO historical rebuild keeps later published dates while excluding future or invalid snapshots
+  ---
+  duration_ms: 0.147208
+  type: 'test'
+  ...
+# Subtest: SEO same-day snapshots fail safely when the live engine changes their game answers
+ok 26 - SEO same-day snapshots fail safely when the live engine changes their game answers
+  ---
+  duration_ms: 4.948458
+  type: 'test'
+  ...
+# Subtest: SEO engine upgrades preserve published history and skip unknown historical seeds
+ok 27 - SEO engine upgrades preserve published history and skip unknown historical seeds
+  ---
+  duration_ms: 0.323375
+  type: 'test'
+  ...
+# Subtest: SEO archive pagination keeps all 31 dates reachable without duplicating page boundaries
+ok 28 - SEO archive pagination keeps all 31 dates reachable without duplicating page boundaries
+  ---
+  duration_ms: 0.238709
+  type: 'test'
+  ...
+# Subtest: SEO daily answers reproduce actual rotating and forced-mode games including grading
+ok 29 - SEO daily answers reproduce actual rotating and forced-mode games including grading
+  ---
+  duration_ms: 4.690041
+  type: 'test'
+  ...
+# Subtest: SEO ranking includes zero and small integers and finds each pattern leader over the full range
+ok 30 - SEO ranking includes zero and small integers and finds each pattern leader over the full range
+  ---
+  duration_ms: 268.493125
+  type: 'test'
+  ...
+# Subtest: SEO generator preserves historical answer bytes and rejects future dates
+ok 31 - SEO generator preserves historical answer bytes and rejects future dates
+  ---
+  duration_ms: 271.102458
+  type: 'test'
+  ...
+1..31
+# tests 31
+# suites 0
+# pass 31
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 593.058375
+
+Exit: 0
+
+$ npm run test:seo
+
+> rngdle-art@1.0.0 test:seo
+> node --test tests/seo/*.test.mjs
+
+TAP version 13
+# Subtest: initial HTML has requested home keyword, image, and application schema
+ok 1 - initial HTML has requested home keyword, image, and application schema
+  ---
+  duration_ms: 0.622125
+  type: 'test'
+  ...
+# Subtest: only en and zh are indexed and alternate links never advertise noindex languages
+ok 2 - only en and zh are indexed and alternate links never advertise noindex languages
+  ---
+  duration_ms: 0.489709
+  type: 'test'
+  ...
+# Subtest: all pattern pages have specific FAQ matching visible copy and exact count
+ok 3 - all pattern pages have specific FAQ matching visible copy and exact count
+  ---
+  duration_ms: 11.291417
+  type: 'test'
+  ...
+# Subtest: full range ranking, dataset, daily pages and links are present without JavaScript
+ok 4 - full range ranking, dataset, daily pages and links are present without JavaScript
+  ---
+  duration_ms: 1.046167
+  type: 'test'
+  ...
+# Subtest: all English pattern explanations meet the requested depth and invalid routes stay noindex
+ok 5 - all English pattern explanations meet the requested depth and invalid routes stay noindex
+  ---
+  duration_ms: 60.906166
+  type: 'test'
+  ...
+# Subtest: all FAQ graphs match visible content and social images have actual 1200 by 630 pixels
+ok 6 - all FAQ graphs match visible content and social images have actual 1200 by 630 pixels
+  ---
+  duration_ms: 35.549291
+  type: 'test'
+  ...
+# Subtest: article publication dates retain real release timestamps and visible timezone-aware times
+ok 7 - article publication dates retain real release timestamps and visible timezone-aware times
+  ---
+  duration_ms: 8.343292
+  type: 'test'
+  ...
+1..7
+# tests 7
+# suites 0
+# pass 7
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 201.952542
+
+Exit: 0
+
+$ CI=true BASE_URL=http://127.0.0.1:4173 npx playwright test tests/browser/seo.spec.ts
+
+Running 3 tests using 3 workers
+
+  ✘  2 tests/browser/seo.spec.ts:72:1 › new SEO pages remain readable on mobile and without JavaScript (294ms)
+  ✘  3 tests/browser/seo.spec.ts:41:1 › daily archive loads deterministic answer and its metadata through navigation (297ms)
+  ✘  1 tests/browser/seo.spec.ts:5:1 › SEO survives client navigation and language changes (293ms)
+
+
+  1) tests/browser/seo.spec.ts:5:1 › SEO survives client navigation and language changes ───────────
+
+    Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:4173/en
+    Call log:
+      - navigating to "http://127.0.0.1:4173/en", waiting until "load"
+
+
+       6 |   page,
+       7 | }) => {
+    >  8 |   await page.goto("/en");
+         |              ^
+       9 |   await expect(page.locator("main[data-ready=true]")).toBeVisible();
+      10 |   await expect(page.locator("h1")).toHaveText(
+      11 |     "RNGDLE Number Rarity Calculator",
+        at /Users/pgy/Desktop/rngdle-code/tests/browser/seo.spec.ts:8:14
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/seo-SEO-survives-client-navigation-and-language-changes/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/seo-SEO-survives-client-navigation-and-language-changes/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/seo-SEO-survives-client-navigation-and-language-changes/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/seo-SEO-survives-client-navigation-and-language-changes/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) tests/browser/seo.spec.ts:41:1 › daily archive loads deterministic answer and its metadata through navigation
+
+    Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:4173/en/daily/answer
+    Call log:
+      - navigating to "http://127.0.0.1:4173/en/daily/answer", waiting until "load"
+
+
+      42 |   page,
+      43 | }) => {
+    > 44 |   await page.goto("/en/daily/answer");
+         |              ^
+      45 |   await expect(page.locator("main[data-ready=true]")).toBeVisible();
+      46 |   await page
+      47 |     .locator(`a[href="/en/daily/answer/${seo.latestDay}"]`)
+        at /Users/pgy/Desktop/rngdle-code/tests/browser/seo.spec.ts:44:14
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/seo-daily-archive-loads-de-7659e-metadata-through-navigation/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/seo-daily-archive-loads-de-7659e-metadata-through-navigation/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/seo-daily-archive-loads-de-7659e-metadata-through-navigation/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/seo-daily-archive-loads-de-7659e-metadata-through-navigation/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3) tests/browser/seo.spec.ts:72:1 › new SEO pages remain readable on mobile and without JavaScript
+
+    Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:4173/en/rarest-numbers
+    Call log:
+      - navigating to "http://127.0.0.1:4173/en/rarest-numbers", waiting until "load"
+
+
+      82 |       `daily/answer/${seo.latestDay}`,
+      83 |     ]) {
+    > 84 |       await page.goto(`/${locale}/${route}`);
+         |                  ^
+      85 |       await expect(page.locator("main[data-ready=true]")).toBeVisible();
+      86 |       expect(
+      87 |         await page.evaluate(
+        at /Users/pgy/Desktop/rngdle-code/tests/browser/seo.spec.ts:84:18
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/seo-new-SEO-pages-remain-r-753df-bile-and-without-JavaScript/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/seo-new-SEO-pages-remain-r-753df-bile-and-without-JavaScript/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/seo-new-SEO-pages-remain-r-753df-bile-and-without-JavaScript/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/seo-new-SEO-pages-remain-r-753df-bile-and-without-JavaScript/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3 failed
+    tests/browser/seo.spec.ts:5:1 › SEO survives client navigation and language changes ────────────
+    tests/browser/seo.spec.ts:41:1 › daily archive loads deterministic answer and its metadata through navigation
+    tests/browser/seo.spec.ts:72:1 › new SEO pages remain readable on mobile and without JavaScript
+(node:32522) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:32520) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:32521) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+Exit: 1
+
+Review refinement: visible article bylines show UTC to the minute; datetime attributes retain full verified timestamps. Browser attempt above failed because port 4173 was not running; production preview started before retry.
+
+$ npm run build
+
+> rngdle-art@1.0.0 build
+> npm run data && npm run data:seo && tsc -b && vite build && vite build --ssr scripts/ssr.tsx --outDir .prerender --emptyOutDir && node scripts/prerender.mjs
+
+
+> rngdle-art@1.0.0 data
+> node scripts/build-data.mjs
+
+Exact distribution is current.
+
+> rngdle-art@1.0.0 data:seo
+> node scripts/build-seo-data.mjs && node scripts/build-social-images.mjs
+
+SEO data: 100 full-range rankings, 1 archived days (0 new).
+Generated 2 social cards at 1200 × 630.
+vite v6.4.3 building for production...
+transforming...
+✓ 1600 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/assets/explorer.worker-CXZZpE-J.js    0.31 kB
+dist/index.html                            0.63 kB │ gzip:   0.42 kB
+dist/assets/index-C2QzypXL.css            29.39 kB │ gzip:   6.86 kB
+dist/assets/index-BkKjz4Oz.js            496.20 kB │ gzip: 166.98 kB
+✓ built in 840ms
+vite v6.4.3 building SSR bundle for production...
+transforming...
+✓ 20 modules transformed.
+rendering chunks...
+.prerender/ssr.js  319.13 kB
+✓ built in 151ms
+Prerendered 288 pages; sitemap includes 100 English/Chinese URLs.
+
+Exit: 0
+
+$ npm run test:seo
+
+> rngdle-art@1.0.0 test:seo
+> node --test tests/seo/*.test.mjs
+
+TAP version 13
+# Subtest: initial HTML has requested home keyword, image, and application schema
+ok 1 - initial HTML has requested home keyword, image, and application schema
+  ---
+  duration_ms: 0.925541
+  type: 'test'
+  ...
+# Subtest: only en and zh are indexed and alternate links never advertise noindex languages
+ok 2 - only en and zh are indexed and alternate links never advertise noindex languages
+  ---
+  duration_ms: 0.545292
+  type: 'test'
+  ...
+# Subtest: all pattern pages have specific FAQ matching visible copy and exact count
+ok 3 - all pattern pages have specific FAQ matching visible copy and exact count
+  ---
+  duration_ms: 13.14075
+  type: 'test'
+  ...
+# Subtest: full range ranking, dataset, daily pages and links are present without JavaScript
+ok 4 - full range ranking, dataset, daily pages and links are present without JavaScript
+  ---
+  duration_ms: 1.283541
+  type: 'test'
+  ...
+# Subtest: all English pattern explanations meet the requested depth and invalid routes stay noindex
+ok 5 - all English pattern explanations meet the requested depth and invalid routes stay noindex
+  ---
+  duration_ms: 71.749917
+  type: 'test'
+  ...
+# Subtest: all FAQ graphs match visible content and social images have actual 1200 by 630 pixels
+ok 6 - all FAQ graphs match visible content and social images have actual 1200 by 630 pixels
+  ---
+  duration_ms: 44.521208
+  type: 'test'
+  ...
+# Subtest: article publication dates retain real release timestamps and visible timezone-aware times
+ok 7 - article publication dates retain real release timestamps and visible timezone-aware times
+  ---
+  duration_ms: 17.237209
+  type: 'test'
+  ...
+1..7
+# tests 7
+# suites 0
+# pass 7
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 253.475417
+
+Exit: 0
+
+$ CI=true BASE_URL=http://127.0.0.1:4173 npx playwright test tests/browser/seo.spec.ts
+
+Running 3 tests using 3 workers
+
+  ✓  2 tests/browser/seo.spec.ts:46:1 › daily archive loads deterministic answer and its metadata through navigation (705ms)
+  ✓  1 tests/browser/seo.spec.ts:5:1 › SEO survives client navigation and language changes (815ms)
+  ✓  3 tests/browser/seo.spec.ts:77:1 › new SEO pages remain readable on mobile and without JavaScript (1.2s)
+
+  3 passed (1.8s)
+(node:33321) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:33319) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:33324) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+Exit: 0

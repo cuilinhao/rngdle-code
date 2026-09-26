@@ -1,0 +1,20 @@
+HTTP pages: 60/288
+HTTP pages: 120/288
+HTTP pages: 180/288
+HTTP pages: 240/288
+HTTP pages: 288/288
+{
+  "base": "http://127.0.0.1:4184",
+  "transport": "fetch",
+  "routeCount": 288,
+  "indexedCount": 100,
+  "passed": 318,
+  "failed": [],
+  "checkSummary": {
+    "passed": 4233,
+    "failed": 0
+  },
+  "warnings": [],
+  "networkRetries": 0,
+  "report": "/Users/pgy/.codex/worktrees/seo-release-final/rngdle-code/verification/release-local-http.json"
+}

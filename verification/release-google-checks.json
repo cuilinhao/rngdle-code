@@ -1,0 +1,89 @@
+{
+  "date": "2026-09-26",
+  "method": "Codex cua_repl native Chrome UI in the user-requested 林豪 profile; observations transcribed from accessibility results",
+  "sitemap": {
+    "url": "https://rngdle.art/sitemap.xml",
+    "property": "sc-domain:rngdle.art",
+    "submission": "已成功提交站点地图",
+    "processingStatus": "成功",
+    "discoveredPages": 100,
+    "lastReadDate": "2026-09-26",
+    "indexedPagesClaimed": false
+  },
+  "urlInspections": [
+    {
+      "url": "https://rngdle.art/en",
+      "beforeRequest": "已发现 - 尚未编入索引",
+      "requestResult": "已请求编入索引",
+      "confirmation": "已将网址添加到优先抓取队列中"
+    },
+    {
+      "url": "https://rngdle.art/en/methodology",
+      "beforeRequest": "已发现 - 尚未编入索引",
+      "requestResult": "已请求编入索引",
+      "confirmation": "已将网址添加到优先抓取队列中"
+    },
+    {
+      "url": "https://rngdle.art/en/patterns/palindrome",
+      "requestResult": "已请求编入索引",
+      "beforeRequest": "Google 无法识别此网址",
+      "confirmation": "已将网址添加到优先抓取队列中"
+    },
+    {
+      "url": "https://rngdle.art/en/patterns/harshad",
+      "requestResult": "已请求编入索引",
+      "beforeRequest": "已发现 - 尚未编入索引",
+      "confirmation": "已将网址添加到优先抓取队列中"
+    },
+    {
+      "url": "https://rngdle.art/en/patterns/repdigit",
+      "requestResult": "已请求编入索引",
+      "beforeRequest": "已发现 - 尚未编入索引",
+      "confirmation": "已将网址添加到优先抓取队列中"
+    }
+  ],
+  "richResults": {
+    "testedUrl": "https://rngdle.art/en/rarest-numbers",
+    "initialResultUrl": "https://search.google.com/test/rich-results/result?id=_vC3oHLQJn2qiIMB3rBEdw",
+    "crawlTimeDisplayed": "2026年9月26日 18:47:20",
+    "timeZone": "Asia/Shanghai",
+    "validItems": 3,
+    "types": [
+      "Article",
+      "BreadcrumbList",
+      "Carousel"
+    ],
+    "nonCriticalWarnings": [
+      "datePublished invalid datetime value",
+      "datePublished missing timezone"
+    ],
+    "observedDatePublished": "2026-09-26",
+    "fixAndRetest": "pass",
+    "finalResult": {
+      "url": "https://search.google.com/test/rich-results/result?id=eHeXVCRPTyWUDuHrSiuzHw",
+      "crawlTimeDisplayed": "2026年9月26日 19:00:02",
+      "applicationCommit": "c13184b1122f22e181ee4f49670f9312d9293224",
+      "validItems": 3,
+      "types": [
+        "Article",
+        "BreadcrumbList",
+        "Carousel"
+      ],
+      "criticalErrors": 0,
+      "nonCriticalWarnings": 0,
+      "articleDetail": "检测到了 1 项有效内容；原有 2 个非严重问题已不再显示"
+    }
+  },
+  "boundaries": [
+    "Accepted indexing requests do not establish indexing, ranking, or AI citation.",
+    "Google tool results are external UI observations; local/production HTTP checks do not substitute for them."
+  ],
+  "manualBrowserSupplement": {
+    "url": "http://127.0.0.1:4183/zh/infinite",
+    "browserProfile": "林豪",
+    "beforeSwitch": "停止 / 抽取次数 840",
+    "afterReturn": "开始自动抽取 / 抽取次数 1,840",
+    "result": "pass",
+    "scope": "local production preview; real native Chrome tab switch, not a synthetic visibility event"
+  }
+}
