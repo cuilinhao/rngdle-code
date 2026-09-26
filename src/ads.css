@@ -44,3 +44,11 @@
     margin-inline: -18px;
   }
 }
+
+@media (max-width: 339px) {
+  /* Keep the whole 320px creative visible when a classic scrollbar leaves
+     only 305px of layout space in a 320px window. Zoom scales its layout too. */
+  .ad-slot--top .ad-slot__content {
+    zoom: 0.9375;
+  }
+}
