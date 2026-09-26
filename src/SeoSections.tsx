@@ -1,8 +1,32 @@
 import type { ReactNode } from "react";
 import { A, useApp } from "./core";
 import { MAX, TOTAL, patterns } from "./engine.mjs";
-import { homeContent, seoData, type FaqItem } from "./seo-content";
+import {
+  homeContent,
+  seoData,
+  articleDates,
+  articleInfo,
+  type FaqItem,
+} from "./seo-content";
 import { locales } from "./i18n";
+
+export function ArticleByline({ route }: { route: string }) {
+  const { locale } = useApp();
+  const dates = articleDates(route);
+  const timestamp = (value: string) => (
+    <time dateTime={value}>{value.slice(0, 16).replace("T", " ")} UTC</time>
+  );
+  return (
+    <p className="small muted">
+      {locale === "zh" ? "发布日期：" : "Published: "}
+      {timestamp(dates.datePublished)} ·{" "}
+      {locale === "zh" ? "更新日期：" : "Updated: "}
+      {timestamp(dates.dateModified)}
+      <br />
+      {articleInfo(locale)}
+    </p>
+  );
+}
 
 export function RarestLink({
   children,

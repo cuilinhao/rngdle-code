@@ -152,3 +152,43 @@ test("all FAQ graphs match visible content and social images have actual 1200 by
     assert.equal(png.readUInt32BE(20), 630);
   }
 });
+
+test("article publication dates retain real release timestamps and visible timezone-aware times", () => {
+  const manifest = JSON.parse(
+    readFileSync("verification/prerender.json", "utf8"),
+  );
+  const timestamp =
+    /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d+)?(?:Z|[+-]\d{2}:\d{2})$/;
+  for (const url of manifest.htmlPages) {
+    const path = url.replace("https://rngdle.art/", "");
+    const source = html(path);
+    const body = source.split("<body>")[1];
+    const article = graph(source).find((node) => node["@type"] === "Article");
+    if (!article) continue;
+    for (const key of ["datePublished", "dateModified"]) {
+      assert.match(
+        article[key], timestamp, `${path}: ${key} needs a time and timezone`,
+      );
+      assert.ok(
+        Number.isFinite(Date.parse(article[key])), `${path}: invalid ${key}`,
+      );
+      assert.ok(
+        body.includes(`<time dateTime="${article[key]}">`) ||
+          body.includes(`<time datetime="${article[key]}">`),
+        `${path}: ${key} must match a visible time element`,
+      );
+      assert.ok(
+        decode(body).includes(article[key].slice(0, 16).replace("T", " ")),
+        `${path}: ${key} must be visibly displayed`,
+      );
+    }
+    assert.ok(
+      Date.parse(article.dateModified) >= Date.parse(article.datePublished),
+      `${path}: modified time cannot precede publication`,
+    );
+    if (path.endsWith("/rarest-numbers"))
+      assert.equal(article.datePublished, "2026-09-26T10:32:57.784Z");
+    else if (/\/(guides|badges|ep|leaderboard)$/.test(path))
+      assert.equal(article.datePublished, "2026-09-26T07:10:12.639Z");
+  }
+});

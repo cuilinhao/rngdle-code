@@ -8,6 +8,7 @@ import {
   patternContent,
   methodologyContent,
   rarestContent,
+  articleDates,
 } from "./seo-content";
 import { dailyContent, archiveContent } from "./daily-content";
 
@@ -241,8 +242,9 @@ export function pageSeo(locale: Locale, route: string, daily?: any) {
         value: stats.counts[p.id],
       })),
     });
+  const dates = articleDates(route);
   if (["guides", "badges", "ep", "leaderboard"].includes(route))
-    graph.push(article("2026-09-26", seo.dateModified));
+    graph.push(article(dates.datePublished, dates.dateModified));
   if (route === "about")
     graph.push({
       "@type": "AboutPage",
@@ -253,7 +255,7 @@ export function pageSeo(locale: Locale, route: string, daily?: any) {
   if (day && valid && daily?.date === day)
     graph.push(article(daily.datePublished, daily.dateModified));
   if (route === "rarest-numbers" && valid) {
-    graph.push(article("2026-09-26", seo.dateModified));
+    graph.push(article(dates.datePublished, dates.dateModified));
     graph.push({
       "@type": "ItemList",
       name: content.h1,

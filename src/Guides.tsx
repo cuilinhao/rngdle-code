@@ -3,8 +3,8 @@ import { A, PageHead, useApp, stats } from "./core";
 import { messages } from "./i18n";
 import { TierTable } from "./components";
 import { patterns, TOTAL } from "./engine.mjs";
-import { Faq, RarestLink } from "./SeoSections";
-import { methodologyContent, articleInfo } from "./seo-content";
+import { Faq, RarestLink, ArticleByline } from "./SeoSections";
+import { methodologyContent } from "./seo-content";
 const copy: Record<string, string[]> = {
   method1: [
     "We examine every integer from 0 through 1,000,000, written without leading zeros. For each pattern, its probability is its exact match count divided by 1,000,001.",
@@ -115,7 +115,7 @@ const copy: Record<string, string[]> = {
 Object.assign(messages, copy);
 export const guideRoutes = ["methodology", "badges", "ep", "leaderboard"];
 export function Guides() {
-  const { t, locale } = useApp();
+  const { t } = useApp();
   return (
     <>
       <PageHead
@@ -123,10 +123,7 @@ export function Guides() {
         title={t("guidesTitle")}
         description={t("guidesIntro")}
       />
-      <p className="small muted">
-        {locale === "zh" ? "发布日期：2026-09-26。" : "Published: 2026-09-26."}{" "}
-        {articleInfo(locale)}
-      </p>
+      <ArticleByline route="guides" />
       <div className="guide-grid">
         {guideRoutes.map((path, i) => (
           <A to={"/" + path} key={path} className="panel guide-card">
@@ -164,12 +161,7 @@ export function Article({ name }: { name: string }) {
         description={content?.summary}
       />
       <article className="article narrow panel seo-sections">
-        <p className="small muted">
-          {locale === "zh"
-            ? "发布日期：2026-09-26。"
-            : "Published: 2026-09-26."}{" "}
-          {articleInfo(locale)}
-        </p>
+        <ArticleByline route={name} />
         {name === "methodology" ? (
           <>
             <ol className="method-steps">

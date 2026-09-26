@@ -34,6 +34,21 @@ export const seoData = seoDataFile as {
 };
 const stats = statsData as any;
 const year = seoData.dateModified.slice(0, 4);
+// First production READY times, verified via Vercel GET /v13/deployments/{id}.
+// Guides: dpl_QCY7AYVzJG38uEiUumEHZa7gyL3H (c723bd6).
+// SEO revision and new ranking: dpl_C25KmJPHbS1XATt8Pvd4ws87ESeE (134ff99).
+const guidesPublishedAt = "2026-09-26T07:10:12.639Z";
+const seoPublishedAt = "2026-09-26T10:32:57.784Z";
+export function articleDates(route: string) {
+  return {
+    datePublished:
+      route === "rarest-numbers" ? seoPublishedAt : guidesPublishedAt,
+    dateModified:
+      Date.parse(seoData.dateModified) > Date.parse(seoPublishedAt)
+        ? seoData.dateModified
+        : seoPublishedAt,
+  };
+}
 export const contentNumber = (locale: Locale, n: number, digits = 0) =>
   new Intl.NumberFormat(htmlLangs[locales.indexOf(locale)], {
     maximumFractionDigits: digits,

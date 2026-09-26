@@ -23,6 +23,11 @@ test("SEO survives client navigation and language changes", async ({
   expect(
     nodes.find((x: any) => x["@type"] === "ItemList").itemListElement,
   ).toHaveLength(100);
+  const article = nodes.find((x: any) => x["@type"] === "Article");
+  expect(article.datePublished).toBe("2026-09-26T10:32:57.784Z");
+  await expect(
+    page.locator(`time[datetime="${article.datePublished}"]`).first(),
+  ).toHaveText("2026-09-26 10:32 UTC");
   await page.getByLabel("Language", { exact: true }).selectOption("zh");
   await expect(page.locator("h1")).not.toContainText("Rarest Numbers");
   await expect(page.locator("meta[name=robots]")).toHaveAttribute(

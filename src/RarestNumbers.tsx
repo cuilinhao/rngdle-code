@@ -1,8 +1,8 @@
 import { A, PageHead, useApp } from "./core";
 import { patterns, MAX } from "./engine.mjs";
 import { NumberForm } from "./components";
-import { Faq } from "./SeoSections";
-import { rarestContent, seoData, articleInfo } from "./seo-content";
+import { Faq, ArticleByline } from "./SeoSections";
+import { rarestContent, seoData } from "./seo-content";
 
 export function RarestNumbers() {
   const { locale, t, fmt, navigate } = useApp();
@@ -16,7 +16,7 @@ export function RarestNumbers() {
         description={content.summary}
       />
       <article className="article panel seo-sections">
-        <p className="small muted">{articleInfo(locale)}</p>
+        <ArticleByline route="rarest-numbers" />
         <section>
           <h2>{zh ? "最稀有的 100 个数字" : "The 100 rarest numbers"}</h2>
           <p>{content.paragraphs[0]}</p>
