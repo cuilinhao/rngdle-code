@@ -42,6 +42,7 @@ import {
   TierTable,
 } from "./components";
 import { parseNumber } from "./engine.mjs";
+import { trackPageView } from "./analytics.mjs";
 import Infinite from "./Infinite";
 import Daily from "./Daily";
 import { Compare, Sandbox, Explore, Atlas, NotFound } from "./Tools";
@@ -374,6 +375,7 @@ function App() {
       tag.href = "https://rngdle.art/" + language + (route ? "/" + route : "");
       document.head.append(tag);
     }
+    trackPageView(import.meta.env.PROD);
   }, [url, locale, route]);
   useEffect(() => {
     if (!toast) return;

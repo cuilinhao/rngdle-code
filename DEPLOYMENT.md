@@ -35,3 +35,14 @@ Application commit `e1190976978267b001005dfe2c647fa631cc4f5b` defaults first-tim
 The user-selected Google account owns the verified Domain property `sc-domain:rngdle.art`. A Google site-verification TXT was added at Namecheap with host `@` and Automatic TTL; retain that record for continued verification. Existing web and mail DNS records were retained.
 
 Search Console confirmed that https://rngdle.art/sitemap.xml was successfully processed on 2026-09-26 with 282 discovered pages. This confirms sitemap processing, not indexing of every page. Console: https://search.google.com/search-console/sitemaps?resource_id=sc-domain%3Arngdle.art .
+
+## GA4 setup — 2026-09-26
+
+- GA4 property: `rngdle.art` (`556025125`), in the existing Analytics account `359267652`.
+- Web stream: `RNGDLE.ART Web` (`15848589477`), URL `https://rngdle.art`.
+- Public measurement ID: `G-FN1KFQ0VMX`.
+- Reporting time zone: China time (UTC+08:00); currency: CNY.
+- Enhanced measurement was disabled and the saved data-stream details confirmed it is off. The app manages page views manually; keep automatic history, form and search measurement disabled.
+- Analytics console: https://analytics.google.com/analytics/web/#/a359267652p556025125/reports/intelligenthome .
+- GSC was rechecked in the live console: sitemap status remains **Success**, with **282 discovered pages**. DNS still contains the Google verification TXT record, and the production robots file points to the sitemap.
+- Validation before deployment: Node `22.23.3` production build succeeded; all 23 unit tests (including 13 GA4 cases) and all 30 Chromium browser acceptance tests passed. The build regenerated 282 localized pages.

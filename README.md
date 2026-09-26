@@ -56,3 +56,11 @@ npx vercel --prod
 ```
 
 Vercel configuration is in `vercel.json`. Domain target: `rngdle.art`; DNS stays at Namecheap. No secrets are required by the application. Vercel CLI credentials and `.vercel` metadata are not committed. See `DEPLOYMENT.md` for the actual deployed URL, commit and DNS status.
+
+## Analytics and Search Console
+
+GA4 uses the public measurement ID `G-FN1KFQ0VMX`, configured in `src/analytics.mjs`. It runs only in production builds served from `rngdle.art` or `www.rngdle.art`; localhost and Vercel preview hosts do not send analytics. Each new page path sends one `page_view` after the localized title is updated, including language changes and browser back/forward navigation. Editing a number or changing the theme does not send another page view. Reported page URLs and referrers exclude query strings and fragments.
+
+Keep **Enhanced measurement disabled** for the `RNGDLE.ART Web` stream: page views are sent by the app with `send_page_view: false`, and enabling automatic history tracking would double-count navigation. See [Google's manual pageview guidance](https://developers.google.com/analytics/devguides/collection/ga4/views). Form and site-search collection are also disabled. Google signals and ad personalization are disabled in the client configuration. The privacy page describes GA4 usage in all six languages.
+
+The existing Search Console Domain property `sc-domain:rngdle.art` is verified through a DNS TXT record at Namecheap. Keep that record; no HTML verification tag is needed. The sitemap is generated during every build at `https://rngdle.art/sitemap.xml` and referenced by `robots.txt`.
