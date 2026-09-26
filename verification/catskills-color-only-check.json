@@ -1,0 +1,6 @@
+{
+  "passed": true,
+  "baseline": "9707d799f0526c0715d8cc025df754a7b625775d",
+  "cssItems": 1465,
+  "scope": "CSS structure/non-color declarations and other product-file content unchanged after color normalization"
+}

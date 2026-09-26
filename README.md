@@ -1,6 +1,6 @@
 # RNGDLE.ART
 
-A monochrome number rarity lab with light/dark themes and English (US), Simplified Chinese, Japanese, Korean, German and French interfaces.
+A number rarity lab with Catskills-inspired pale-leaf and forest light/dark themes and English (US), Simplified Chinese, Japanese, Korean, German and French interfaces.
 
 ## Develop
 
@@ -45,7 +45,7 @@ The app intentionally stores progress only in this browser. Clearing storage or 
 
 ## Provenance
 
-The requested [Web Clone skill](https://github.com/Jane-xiaoer/claude-skill-web-clone) informed reconnaissance and verification. Its MIT-licensed utilities and license are in `scripts/vendor/web-clone`. Application code, wording and monochrome styling are independently authored. Reference evidence is documented in `NOTES.md` and `TEARDOWN.md`; original site's bundles and tracking scripts are not shipped. RNGDLE.ART is independent of RNGdle.net and similarly named games.
+The requested [Web Clone skill](https://github.com/Jane-xiaoer/claude-skill-web-clone) informed reconnaissance and verification. Its MIT-licensed utilities and license are in `scripts/vendor/web-clone`. Application code, wording and layout are independently authored. The current theme colors reference [Catskills](https://catskills-showcase.pages.dev/); its assets, fonts and layout are not copied. Reference evidence is documented in `NOTES.md` and `TEARDOWN.md`; original site's bundles and tracking scripts are not shipped. RNGDLE.ART is independent of RNGdle.net and similarly named games.
 
 ## Deployment
 

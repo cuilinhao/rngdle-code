@@ -1,0 +1,47 @@
+
+> rngdle-art@1.0.0 test:browser
+> playwright test tests/browser/theme.spec.ts --grep actual text contrast --workers=1
+
+
+Running 1 test using 1 worker
+
+(node:14604) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 tests/browser/theme.spec.ts:47:1 › A13 actual text contrast, button hover, validation and every tier in both themes (677ms)
+
+
+  1) tests/browser/theme.spec.ts:47:1 › A13 actual text contrast, button hover, validation and every tier in both themes 
+
+    Error: Text contrast: ✳ The number rarity lab
+
+    expect(received).toBeGreaterThanOrEqual(expected)
+
+    Expected: >= 4.5
+    Received:    4.3174635715986724
+
+      35 |     return { ratio: (values[1] + 0.05) / (values[0] + 0.05), minimum: size >= 24 || (size >= 18.66 && weight >= 700) ? 3 : 4.5, text: element.textContent };
+      36 |   });
+    > 37 |   expect(result.ratio, `Text contrast: ${result.text}`).toBeGreaterThanOrEqual(result.minimum);
+         |                                                         ^
+      38 | }
+      39 |
+      40 | async function geometry(page: Page) {
+        at readable (/private/var/folders/5c/b5hyppjs61d9v0f2_byz8hrh0000gn/T/rngdle-catskills-release-8e3kqf63/tests/browser/theme.spec.ts:37:57)
+        at /private/var/folders/5c/b5hyppjs61d9v0f2_byz8hrh0000gn/T/rngdle-catskills-release-8e3kqf63/tests/browser/theme.spec.ts:53:65
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/theme-A13-actual-text-cont-fba7e-d-every-tier-in-both-themes/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/theme-A13-actual-text-cont-fba7e-d-every-tier-in-both-themes/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/theme-A13-actual-text-cont-fba7e-d-every-tier-in-both-themes/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/theme-A13-actual-text-cont-fba7e-d-every-tier-in-both-themes/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    tests/browser/theme.spec.ts:47:1 › A13 actual text contrast, button hover, validation and every tier in both themes 

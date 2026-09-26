@@ -304,7 +304,7 @@ function App() {
     document.documentElement.dataset.theme = theme;
     document
       .querySelector('meta[name="theme-color"]')
-      ?.setAttribute("content", theme === "dark" ? "#111111" : "#fafafa");
+      ?.setAttribute("content", theme === "dark" ? "#223a28" : "#eaefd1");
   }, [theme]);
   useEffect(() => {
     const key = route.split("/")[0] || "analyze";
