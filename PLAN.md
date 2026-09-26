@@ -43,3 +43,7 @@ Statuses: Pass / Fail / Not verified. Browser and test outputs will be retained 
 ## Known scope boundaries
 
 Local collections and daily results are device-specific, as on the reference. A public global leaderboard requires a separate persistent service and is not represented by fictional players or mock rankings. No account or payment flows are required. Initial implementation focuses on the accepted main site features; any unresolved difference must be listed in the final report.
+
+## Theme update — 2026-09-26
+
+The current update replaces only the original monochrome colors with a Catskills-inspired pale-leaf, forest and olive palette. Layout, typography, geometry, game rules and the default/saved theme behavior remain unchanged. A13 now covers readable color states in both themes; theme-specific contrast, geometry and rendered share-card checks are in `tests/browser/theme.spec.ts`. The acceptance results above are historical; the release must be checked again locally and in production.
