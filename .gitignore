@@ -15,3 +15,7 @@ playwright-report/
 RECON/screenshots/
 RECON/routes/screenshots/
 verification/browser-results.json
+
+# Rebuilt deterministically from the engine and archived daily snapshots.
+public/og/
+.vercel

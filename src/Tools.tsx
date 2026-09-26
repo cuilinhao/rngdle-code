@@ -30,6 +30,8 @@ import {
 } from "./engine.mjs";
 import { NumberForm, Result, ScoreSummary, Traits, Badge } from "./components";
 import Daily, { Specimen } from "./Daily";
+import { Faq, RarestLink } from "./SeoSections";
+import { patternContent, seoData, articleInfo } from "./seo-content";
 export function Compare() {
   const { t, fmt } = useApp(),
     params = new URLSearchParams(location.search),
@@ -500,22 +502,30 @@ export function Explore() {
   );
 }
 export function Atlas({ id }: { id?: string }) {
-  const { t, fmt } = useApp(),
+  const { t, fmt, locale } = useApp(),
     [filter, setFilter] = useState("all"),
     [atlas] = useStored<Record<string, number>>("atlas", {});
   const selected = patterns.find((p) => p.id === id);
   if (id && !selected) return <NotFound />;
+  const content = selected ? patternContent(locale, selected.id) : null;
+  const zh = locale === "zh";
   return (
     <>
       <PageHead
         eyebrow={t("patterns")}
-        title={selected ? t("p_" + selected.id) : t("atlasTitle")}
-        description={selected ? t("d_" + selected.id) : t("atlasIntro")}
+        title={content ? content.h1 : t("atlasTitle")}
+        description={content ? content.summary : t("atlasIntro")}
       />
       <div className={selected ? "narrow" : ""}>
         {selected ? (
           <>
-            <div className="panel pattern-detail">
+            <article className="panel pattern-detail article seo-sections">
+              <p className="small muted">{articleInfo(locale)}</p>
+              {content?.alternateName && (
+                <p className="small muted">
+                  {zh ? "别名" : "Also known as"}: {content.alternateName}
+                </p>
+              )}
               <div className="metrics">
                 <div>
                   <span>{t("matches", { n: "" })}</span>
@@ -528,23 +538,66 @@ export function Atlas({ id }: { id?: string }) {
                   </strong>
                 </div>
               </div>
-              <p>{t(selected.group)}</p>
-              <h2>{t("examples")}</h2>
-              <div className="number-grid">
-                {stats.examples[selected.id].map((n: number) => (
-                  <A key={n} to={"/?n=" + n} className="number-chip">
-                    {fmt(n)}
-                  </A>
+              <p className="small muted">{t(selected.group)}</p>
+              <section>
+                <h2>
+                  {zh ? "规则、数量与稀有度" : "Rule, exact count and rarity"}
+                </h2>
+                {content?.paragraphs.map((paragraph, index) => (
+                  <p key={index}>{paragraph}</p>
                 ))}
-              </div>
-              <A
-                className="button primary"
-                to={"/explore?pattern=" + selected.id}
-              >
-                {t("explore")}
-                <ArrowUpRight size={16} />
-              </A>
-            </div>
+              </section>
+              <section>
+                <h2>
+                  {selected.id === "repdigit"
+                    ? zh
+                      ? "完整重复数字数列表"
+                      : "Complete list of repdigits"
+                    : t("examples")}
+                </h2>
+                <div className="number-grid">
+                  {(selected.id === "repdigit"
+                    ? seoData.repdigits
+                    : stats.examples[selected.id]
+                  ).map((n: number) => (
+                    <A key={n} to={"/?n=" + n} className="number-chip">
+                      {fmt(n)}
+                    </A>
+                  ))}
+                </div>
+                <A
+                  className="button primary"
+                  to={"/explore?pattern=" + selected.id}
+                >
+                  {t("explore")}
+                  <ArrowUpRight size={16} />
+                </A>
+              </section>
+              <section>
+                <h2>
+                  {zh ? "此模式的最高分代表" : "The highest-scoring match"}
+                </h2>
+                <p>{content?.faqs[2].answer}</p>
+                <div className="actions">
+                  <A
+                    to={"/?n=" + seoData.patternLeaders[selected.id].n}
+                    className="button"
+                  >
+                    {t("analyze")} {fmt(seoData.patternLeaders[selected.id].n)}
+                  </A>
+                  <RarestLink>
+                    {zh
+                      ? "查看全范围稀有数字榜单"
+                      : "View the full-range rarest-numbers ranking"}{" "}
+                    →
+                  </RarestLink>
+                  <A to="/methodology" className="text-link">
+                    {t("methodology")} →
+                  </A>
+                </div>
+              </section>
+              {content && <Faq items={content.faqs} />}
+            </article>
             <A to="/patterns" className="text-link">
               ← {t("patterns")}
             </A>
@@ -560,7 +613,7 @@ export function Atlas({ id }: { id?: string }) {
                       patterns.some((p) => p.id === key),
                     ).length
                   }
-                  <span className="muted"> / 31</span>
+                  <span className="muted"> / {patterns.length}</span>
                 </h2>
                 <p className="small muted">{t("atlasNote")}</p>
               </div>

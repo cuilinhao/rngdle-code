@@ -1,0 +1,59 @@
+name: Publish daily answers
+on:
+  schedule:
+    - cron: '5 0 * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: publish-daily-answers
+  cancel-in-progress: false
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - name: Check deployment configuration
+        env:
+          DEPLOY_HOOK: ${{ secrets.VERCEL_DEPLOY_HOOK }}
+        run: test -n "$DEPLOY_HOOK" || { echo 'Configure the VERCEL_DEPLOY_HOOK repository secret for the main production branch.'; exit 1; }
+      - run: npm ci --registry=https://registry.npmjs.org
+      - run: npm run build
+      - run: npm test
+      - run: npm run test:seo
+      - name: Preserve immutable daily snapshots
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add public/data/seo.json public/data/daily verification/prerender.json
+          if ! git diff --cached --quiet; then
+            git commit -m "更新每日答案快照与归档索引"
+            # A concurrent main update must fail the push rather than publish untested rebased code.
+            git push origin HEAD:main
+          fi
+      - name: Ensure main still matches the verified revision
+        run: |
+          git fetch origin main
+          test "$(git rev-parse HEAD)" = "$(git rev-parse origin/main)" || { echo 'main changed during verification; rerun this workflow.'; exit 1; }
+      - name: Request production rebuild
+        env:
+          DEPLOY_HOOK: ${{ secrets.VERCEL_DEPLOY_HOOK }}
+        run: curl --fail --silent --show-error --request POST "$DEPLOY_HOOK" --output /dev/null
+      - name: Verify published production content
+        env:
+          BASE_URL: https://rngdle.art
+          DEPLOY_WAIT_SECONDS: 300
+        run: node scripts/verify-deployment.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: daily-answer-verification
+          path: |
+            verification/prerender.json
+            verification/release-production-http.json

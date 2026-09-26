@@ -3,6 +3,8 @@ import { A, PageHead, useApp, stats } from "./core";
 import { messages } from "./i18n";
 import { TierTable } from "./components";
 import { patterns, TOTAL } from "./engine.mjs";
+import { Faq, RarestLink } from "./SeoSections";
+import { methodologyContent, articleInfo } from "./seo-content";
 const copy: Record<string, string[]> = {
   method1: [
     "We examine every integer from 0 through 1,000,000, written without leading zeros. For each pattern, its probability is its exact match count divided by 1,000,001.",
@@ -29,8 +31,8 @@ const copy: Record<string, string[]> = {
     "Dans chaque famille, les contributions décroissantes sont pondérées par 1, 0,35, 0,15, 0,07 et 0,03. Les suivantes n’ajoutent rien. Le total est multiplié par 20, puis arrondi une seule fois.",
   ],
   method4: [
-    "The percentile counts all numbers whose score is at least this high. Ties are included. Short numbers often rank highly because they are scarce within this fixed range; the highest and lowest boards therefore start at 1,000.",
-    "百分位统计分数大于或等于当前值的全部数字，包含并列。短数字在固定范围中较少，因此常获高分；最高与最低分榜从 1,000 开始。",
+    "Top % is the percentage of all integers whose score is at least this high, including ties. Smaller percentages mean higher rarity rankings. Short numbers often score highly because they are scarce in this fixed range; these highest and lowest boards therefore start at 1,000.",
+    "Top % 统计分数大于或等于当前值的整数在全范围中的比例，包含并列，比例越小排名越靠前。短数字在固定范围内较少，常获高分；这里的最高与最低分榜从 1,000 开始。",
     "パーセンタイルは同点以上の数字をすべて数えます。短い数字はこの範囲で少ないため高得点になりやすく、ランキングは1,000以上を対象にします。",
     "백분위는 동점을 포함해 이 점수 이상인 모든 숫자를 셉니다. 짧은 숫자는 범위 안에서 드물어 높은 점수를 얻기 쉬우므로 순위는 1,000부터 시작합니다.",
     "Das Perzentil zählt alle Zahlen mit mindestens diesem Wert, einschließlich Gleichständen. Kurze Zahlen sind im festen Bereich selten und oft hoch bewertet; die Ranglisten beginnen deshalb bei 1.000.",
@@ -53,12 +55,12 @@ const copy: Record<string, string[]> = {
     "Ce site mesure les motifs mathématiques par leur information. Son score ne se confond pas avec les points d’entropie (EP) d’autres jeux. Chaque nombre reste équiprobable à chaque tirage ; le passé ne change pas le suivant.",
   ],
   aboutText: [
-    "RNGDLE.ART is an independent number laboratory and browser game, inspired by the idea of discovering surprising patterns in ordinary numbers. It is not affiliated with RNGdle.net or other similarly named games. Everything you calculate runs on your device.",
-    "RNGDLE.ART 是独立的数字实验室和浏览器游戏，灵感来自普通数字中令人意外的规律。本站与 RNGdle.net 及其他同名游戏无关联。所有分析计算在你的设备上运行。",
-    "RNGDLE.ARTは、身近な数字の意外なパターンを楽しむ独立したラボ兼ブラウザーゲームです。RNGdle.netや同名のゲームとは関係ありません。分析は端末上で行います。",
-    "RNGDLE.ART는 평범한 숫자 속의 놀라운 패턴을 탐구하는 독립적인 연구실이자 브라우저 게임입니다. RNGdle.net 및 유사한 이름의 게임과 관련이 없습니다. 분석은 기기에서 실행됩니다.",
-    "RNGDLE.ART ist ein unabhängiges Zahlenlabor und Browserspiel für überraschende Muster in gewöhnlichen Zahlen. Es ist nicht mit RNGdle.net oder ähnlich benannten Spielen verbunden. Berechnungen laufen auf deinem Gerät.",
-    "RNGDLE.ART est un laboratoire et jeu indépendant consacré aux motifs surprenants des nombres. Il n’est affilié ni à RNGdle.net ni aux jeux de nom similaire. Les calculs s’effectuent sur votre appareil.",
+    "RNGDLE.ART is an independent number laboratory and browser game, inspired by the idea of discovering surprising patterns in ordinary numbers. It is not affiliated with rngdle.com or other similarly named games. Everything you calculate runs on your device.",
+    "RNGDLE.ART 是独立的数字实验室和浏览器游戏，灵感来自普通数字中令人意外的规律。本站与 rngdle.com 及其他同名游戏无关联。所有分析计算在你的设备上运行。",
+    "RNGDLE.ARTは、身近な数字の意外なパターンを楽しむ独立したラボ兼ブラウザーゲームです。rngdle.comや同名のゲームとは関係ありません。分析は端末上で行います。",
+    "RNGDLE.ART는 평범한 숫자 속의 놀라운 패턴을 탐구하는 독립적인 연구실이자 브라우저 게임입니다. rngdle.com 및 유사한 이름의 게임과 관련이 없습니다. 분석은 기기에서 실행됩니다.",
+    "RNGDLE.ART ist ein unabhängiges Zahlenlabor und Browserspiel für überraschende Muster in gewöhnlichen Zahlen. Es ist nicht mit rngdle.com oder ähnlich benannten Spielen verbunden. Berechnungen laufen auf deinem Gerät.",
+    "RNGDLE.ART est un laboratoire et jeu indépendant consacré aux motifs surprenants des nombres. Il n’est affilié ni à rngdle.com ni aux jeux de nom similaire. Les calculs s’effectuent sur votre appareil.",
   ],
   privacyText: [
     "Language, theme, collections and game progress are stored in your browser’s local storage. Clearing site data removes them. We use Google Analytics 4 to understand page usage. Google may collect page visits, device and browser information, and cookie identifiers, and may store analytics cookies. We do not send your saved numbers or game progress to Google Analytics. Page addresses sent for analytics omit query parameters and fragments. Advertising personalization is disabled. Hosting providers may process standard request logs to deliver the site. Sharing a link includes the selected number and language.",
@@ -113,7 +115,7 @@ const copy: Record<string, string[]> = {
 Object.assign(messages, copy);
 export const guideRoutes = ["methodology", "badges", "ep", "leaderboard"];
 export function Guides() {
-  const { t } = useApp();
+  const { t, locale } = useApp();
   return (
     <>
       <PageHead
@@ -121,6 +123,10 @@ export function Guides() {
         title={t("guidesTitle")}
         description={t("guidesIntro")}
       />
+      <p className="small muted">
+        {locale === "zh" ? "发布日期：2026-09-26。" : "Published: 2026-09-26."}{" "}
+        {articleInfo(locale)}
+      </p>
       <div className="guide-grid">
         {guideRoutes.map((path, i) => (
           <A to={"/" + path} key={path} className="panel guide-card">
@@ -148,24 +154,40 @@ export function Guides() {
   );
 }
 export function Article({ name }: { name: string }) {
-  const { t, fmt } = useApp();
+  const { t, fmt, locale } = useApp();
+  const content = name === "methodology" ? methodologyContent(locale) : null;
   return (
     <>
-      <PageHead eyebrow={t("guides")} title={t(name)} />
-      <article className="article narrow panel">
+      <PageHead
+        eyebrow={t("guides")}
+        title={content ? content.h1 : t(name)}
+        description={content?.summary}
+      />
+      <article className="article narrow panel seo-sections">
+        <p className="small muted">
+          {locale === "zh"
+            ? "发布日期：2026-09-26。"
+            : "Published: 2026-09-26."}{" "}
+          {articleInfo(locale)}
+        </p>
         {name === "methodology" ? (
           <>
             <ol className="method-steps">
-              {[1, 2, 3, 4].map((i) => (
-                <li key={i}>
-                  <span className="mono">0{i}</span>
-                  <p>{t("method" + i)}</p>
+              {content!.paragraphs.map((paragraph, index) => (
+                <li key={index}>
+                  <span className="mono">0{index + 1}</span>
+                  <p>{paragraph}</p>
                 </li>
               ))}
             </ol>
             <p className="small muted">
               {t("engineVersion", { v: stats.version })}
             </p>
+            <h2>
+              {locale === "zh"
+                ? `${patterns.length} 种模式的精确统计`
+                : `Exact statistics for all ${patterns.length} patterns`}
+            </h2>
             <div className="table-scroll">
               <table>
                 <thead>
@@ -188,6 +210,18 @@ export function Article({ name }: { name: string }) {
                 </tbody>
               </table>
             </div>
+            <div className="actions">
+              <RarestLink>
+                {locale === "zh"
+                  ? "全范围稀有数字榜单"
+                  : "Full-range rarest-numbers ranking"}{" "}
+                →
+              </RarestLink>
+              <A to="/leaderboard" className="text-link">
+                {t("leaderboard")} →
+              </A>
+            </div>
+            <Faq items={content!.faqs} />
           </>
         ) : name === "badges" ? (
           <>
@@ -197,6 +231,14 @@ export function Article({ name }: { name: string }) {
         ) : name === "leaderboard" ? (
           <>
             <p>{t("method4")}</p>
+            <p>
+              <RarestLink>
+                {locale === "zh"
+                  ? "查看包含 0 与一位数的完整范围前 100 名"
+                  : "View the full-range top 100, including zero and single-digit numbers"}{" "}
+                →
+              </RarestLink>
+            </p>
             <div className="two-col">
               {["highest", "lowest"].map((key, i) => (
                 <section key={key}>

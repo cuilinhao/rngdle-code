@@ -48,6 +48,12 @@ import Daily from "./Daily";
 import { Compare, Sandbox, Explore, Atlas, NotFound } from "./Tools";
 import { Guides, Article } from "./Guides";
 import "./style.css";
+import "./seo.css";
+import { HomeSeoSections } from "./SeoSections";
+import { homeContent } from "./seo-content";
+import { RarestNumbers } from "./RarestNumbers";
+import { DailyAnswer, DailyArchive } from "./DailyAnswers";
+import { applySeo, dailyDate, isKnownRoute, indexLocales } from "./seo";
 export const routes = [
   "",
   "infinite",
@@ -93,7 +99,8 @@ function initialLocation() {
 }
 const initialLocale = initialLocation();
 function Home() {
-  const { t } = useApp(),
+  const { t, locale } = useApp(),
+    content = homeContent(locale),
     q = new URLSearchParams(location.search),
     [n, setN] = useState(parseNumber(q.get("n") ?? "142857") ?? 142857);
   useEffect(() => {
@@ -111,7 +118,11 @@ function Home() {
   }
   return (
     <>
-      <PageHead eyebrow={t("lab")} title={t("hero")} description={t("intro")} />
+      <PageHead
+        eyebrow={t("lab")}
+        title={content.h1}
+        description={content.summary}
+      />
       <div className="hero-links">
         <A to="/infinite" className="button primary">
           {t("play")}
@@ -130,6 +141,7 @@ function Home() {
         <Result n={n} />
         <TierTable />
       </div>
+      <HomeSeoSections />
       <div className="section-heading feature-heading">
         <h2>{t("tools")}</h2>
         <span className="small muted">RNGDLE.ART</span>
@@ -228,7 +240,7 @@ function Header({
   );
 }
 function Footer() {
-  const { t } = useApp();
+  const { t, locale } = useApp();
   return (
     <footer>
       <div className="footer-inner">
@@ -260,6 +272,16 @@ function Footer() {
           </div>
         ))}
       </div>
+      {indexLocales.includes(locale) && (
+        <div className="footer-bottom">
+          <A to="/rarest-numbers">
+            {locale === "zh" ? "最稀有数字榜单" : "Rarest numbers"}
+          </A>
+          <A to="/daily/answer">
+            {locale === "zh" ? "每日答案归档" : "Daily answers archive"}
+          </A>
+        </div>
+      )}
       <div className="footer-bottom">
         <span>© {new Date().getFullYear()} RNGDLE.ART</span>
         <span>{t("exactNote")}</span>
@@ -273,6 +295,15 @@ function App() {
     [theme, setThemeState] = useState(() => readStorage("theme", "dark")),
     [toast, setToast] = useState(""),
     [shared, setShared] = useState<number | null>(null);
+  const [dailyData, setDailyData] = useState<any>(() => {
+    try {
+      return JSON.parse(
+        document.getElementById("daily-data")?.textContent || "null",
+      );
+    } catch {
+      return null;
+    }
+  });
   const route = location.pathname.split("/").slice(2).filter(Boolean).join("/");
   function navigate(to: string) {
     const next = "/" + locale + (to === "/" ? "" : to);
@@ -283,7 +314,12 @@ function App() {
   function setLocale(l: Locale) {
     setLocaleState(l);
     writeStorage("language", l);
-    const next = "/" + l + (route ? "/" + route : "") + location.search;
+    const translatedRoute = isKnownRoute(l, route) ? route : "";
+    const next =
+      "/" +
+      l +
+      (translatedRoute ? "/" + translatedRoute : "") +
+      location.search;
     history.replaceState(null, "", next);
     setUrl(next);
   }
@@ -304,79 +340,12 @@ function App() {
     document.documentElement.dataset.theme = theme;
     document
       .querySelector('meta[name="theme-color"]')
-      ?.setAttribute("content", theme === "dark" ? "#111111" : "#fafafa");
+      ?.setAttribute("content", theme === "dark" ? "#223a28" : "#eaefd1");
   }, [theme]);
   useEffect(() => {
-    const key = route.split("/")[0] || "analyze";
-    document.documentElement.lang = htmlLangs[locales.indexOf(locale)];
-    const patternId = route.startsWith("patterns/") ? route.slice(9) : "";
-    document.title =
-      (patternId && messages["p_" + patternId]
-        ? translate(locale, "p_" + patternId)
-        : routes.includes(key) || key === "analyze"
-          ? translate(locale, key)
-          : translate(locale, "notFound")) + " — RNGDLE.ART";
-    const descriptions: Record<string, string> = {
-      analyze: "intro",
-      infinite: "rollIntro",
-      daily: "dailyIntro",
-      compare: "compareIntro",
-      explore: "exploreIntro",
-      sandbox: "sandboxIntro",
-      patterns: "atlasIntro",
-      guides: "guidesIntro",
-      methodology: "method1",
-      ep: "epText",
-      about: "aboutText",
-      privacy: "privacyText",
-      terms: "termsText",
-      contact: "contactText",
-    };
-    const description = translate(
-      locale,
-      patternId && messages["d_" + patternId]
-        ? "d_" + patternId
-        : descriptions[key] || "exactNote",
-    );
-    document
-      .querySelector('meta[name="description"]')
-      ?.setAttribute("content", description);
-    let canonical = document.querySelector(
-      'link[rel="canonical"]',
-    ) as HTMLLinkElement | null;
-    if (!canonical) {
-      canonical = document.createElement("link");
-      canonical.rel = "canonical";
-      document.head.append(canonical);
-    }
-    canonical.href =
-      "https://rngdle.art/" + locale + (route ? "/" + route : "");
-    for (const [property, content] of Object.entries({
-      "og:title": document.title,
-      "og:description": description,
-      "og:url": canonical.href,
-      "og:type": "website",
-    })) {
-      let tag = document.querySelector(`meta[property="${property}"]`);
-      if (!tag) {
-        tag = document.createElement("meta");
-        tag.setAttribute("property", property);
-        document.head.append(tag);
-      }
-      tag.setAttribute("content", content);
-    }
-    document
-      .querySelectorAll('link[rel="alternate"]')
-      .forEach((tag) => tag.remove());
-    for (const [index, language] of locales.entries()) {
-      const tag = document.createElement("link");
-      tag.rel = "alternate";
-      tag.hreflang = htmlLangs[index];
-      tag.href = "https://rngdle.art/" + language + (route ? "/" + route : "");
-      document.head.append(tag);
-    }
+    applySeo(locale, route, dailyData);
     trackPageView(import.meta.env.PROD);
-  }, [url, locale, route]);
+  }, [url, locale, route, dailyData]);
   useEffect(() => {
     if (!toast) return;
     const timer = setTimeout(() => setToast(""), 5000);
@@ -384,6 +353,19 @@ function App() {
   }, [toast]);
   let page: React.ReactNode;
   if (!route) page = <Home key={url} />;
+  else if (!isKnownRoute(locale, route)) page = <NotFound />;
+  else if (route === "rarest-numbers") page = <RarestNumbers />;
+  else if (dailyDate(route))
+    page = (
+      <DailyAnswer
+        key={route}
+        day={dailyDate(route)!}
+        data={dailyData?.date === dailyDate(route) ? dailyData : undefined}
+        onData={setDailyData}
+      />
+    );
+  else if (route === "daily/answer" || route.startsWith("daily/answer/page/"))
+    page = <DailyArchive page={Number(route.split("/").at(-1)) || 1} />;
   else if (route === "infinite") page = <Infinite />;
   else if (route === "daily") page = <Daily />;
   else if (route === "compare") page = <Compare key={url} />;

@@ -1,15 +1,15 @@
 import { messages } from "./i18n";
 const names: Record<string, string[]> = {
   repdigit: [
-    "Identical digits",
-    "所有数位相同",
+    "Repdigit number",
+    "重复数字数",
     "全桁が同じ",
     "모든 자릿수가 같음",
     "Gleiche Ziffern",
     "Chiffres identiques",
   ],
   five: [
-    "Five of a kind",
+    "At least five repeated digits",
     "至少五个相同数字",
     "同じ数字が5個以上",
     "같은 숫자 다섯 개 이상",
@@ -17,7 +17,7 @@ const names: Record<string, string[]> = {
     "Au moins cinq chiffres identiques",
   ],
   quad: [
-    "Four of a kind",
+    "Exactly four repeated digits",
     "四个相同数字",
     "同じ数字が4個",
     "같은 숫자 네 개",
@@ -25,7 +25,7 @@ const names: Record<string, string[]> = {
     "Quatre chiffres identiques",
   ],
   triple: [
-    "Three of a kind",
+    "Exactly three repeated digits",
     "三个相同数字",
     "同じ数字が3個",
     "같은 숫자 세 개",
@@ -33,15 +33,15 @@ const names: Record<string, string[]> = {
     "Trois chiffres identiques",
   ],
   pairs: [
-    "Double pair",
-    "双对子",
+    "Multiple digit pairs",
+    "多组数位对子",
     "2組以上のペア",
     "두 쌍 이상",
     "Doppelpaar",
     "Double paire",
   ],
   repeat: [
-    "One repeated digit",
+    "Exactly one digit pair",
     "一个重复数字",
     "ひとつのペア",
     "한 쌍의 반복 숫자",
@@ -49,7 +49,7 @@ const names: Record<string, string[]> = {
     "Un chiffre répété",
   ],
   run: [
-    "Adjacent digit run",
+    "Consecutive repeated digits",
     "连续重复数字",
     "同じ数字の連続",
     "같은 숫자 연속",
@@ -57,7 +57,7 @@ const names: Record<string, string[]> = {
     "Suite de chiffres identiques",
   ],
   twoDigits: [
-    "Two-digit alphabet",
+    "Exactly two distinct digits",
     "仅两种数字",
     "2種類の数字だけ",
     "두 종류의 숫자만 사용",
@@ -65,7 +65,7 @@ const names: Record<string, string[]> = {
     "Deux chiffres distincts",
   ],
   palindrome: [
-    "Palindrome",
+    "Palindrome number",
     "回文数",
     "回文数",
     "회문수",
@@ -73,7 +73,7 @@ const names: Record<string, string[]> = {
     "Palindrome",
   ],
   ascending: [
-    "Ascending sequence",
+    "Consecutive ascending digits",
     "连续递增",
     "連続する昇順",
     "연속 오름차순",
@@ -81,7 +81,7 @@ const names: Record<string, string[]> = {
     "Suite croissante",
   ],
   descending: [
-    "Descending sequence",
+    "Consecutive descending digits",
     "连续递减",
     "連続する降順",
     "연속 내림차순",
@@ -210,8 +210,8 @@ const names: Record<string, string[]> = {
     "Factorielle",
   ],
   divisible: [
-    "Highly divisible",
-    "多约数",
+    "At least 100 positive divisors",
+    "至少 100 个正约数",
     "約数が多い",
     "약수가 많은 수",
     "Viele Teiler",
@@ -226,8 +226,8 @@ const names: Record<string, string[]> = {
     "Palindrome binaire",
   ],
   binaryOnes: [
-    "Binary repunit",
-    "二进制全一",
+    "Mersenne number (binary repunit)",
+    "梅森数（二进制全一）",
     "2進数がすべて1",
     "이진수의 모든 자리가 1",
     "Binär nur Einsen",

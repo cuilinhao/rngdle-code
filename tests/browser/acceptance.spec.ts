@@ -53,7 +53,7 @@ for (const [index, locale] of locales.entries())
       expect(response?.ok()).toBeTruthy();
       await expect(page.locator("h1")).toBeVisible();
       await expect(page.locator("html")).toHaveAttribute("lang", langs[index]);
-      await expect(page).toHaveTitle(/RNGDLE.ART/);
+      await expect(page).toHaveTitle(/RNGDLE/);
       expect(await page.locator("main").innerText()).not.toMatch(
         /undefined|Missing translation|NaN/,
       );
@@ -408,7 +408,7 @@ test("A12 A13 English default, saved selection, theme persistence and route pres
     await p.goto((process.env.BASE_URL || "http://127.0.0.1:5173") + "/?n=142857#main");
     await expect(p).toHaveURL(/\/en\?n=142857#main$/);
     await expect(p.locator("html")).toHaveAttribute("lang", "en-US");
-    await expect(p.getByRole("heading", {level: 1})).toContainText("How rare");
+    await expect(p.getByRole("heading", {level: 1})).toContainText("RNGDLE Number Rarity Calculator");
     await context.close();
   }
   await page.goto("/en/sandbox?n=142857");
@@ -565,7 +565,7 @@ test("A03 tiny nonzero probabilities never display as zero", async ({
     page
       .locator(".trait")
       .filter({
-        has: page.getByRole("heading", { name: "Binary repunit", exact: true }),
+        has: page.getByRole("heading", { name: "Mersenne number (binary repunit)", exact: true }),
       }),
   ).toContainText("1 in 55,556");
 });

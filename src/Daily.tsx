@@ -75,7 +75,7 @@ export default function Daily({
 }: {
   standalone?: boolean;
 }) {
-  const { t } = useApp(),
+  const { t, locale } = useApp(),
     { scores, error, retry } = useScores(),
     now = useNow(),
     day = utcDay(now);
@@ -89,6 +89,15 @@ export default function Daily({
         />
       )}
       <div className="narrow">
+        {!standalone && (locale === "en" || locale === "zh") && (
+          <p className="center">
+            <A to="/daily/answer">
+              {locale === "zh"
+                ? "查看每日答案与归档（含剧透）"
+                : "Daily answers and archive (spoilers)"}
+            </A>
+          </p>
+        )}
         {!scores ? (
           <LoadState error={error} retry={retry} />
         ) : (

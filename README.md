@@ -33,7 +33,8 @@ CI installs Playwright Chromium and runs the browser suite headlessly. Local acc
 - Number comparisons, exact full-range pattern explorer in a Web Worker, keyboard digit sandbox and best one-digit edit.
 - Pattern atlas stamped only by daily specimens; guides, methodology and score rankings.
 - Shareable number URLs and downloadable PNG cards.
-- 282 prerendered localized pages, canonical/alternate URLs, sitemap and robots.
+- Prerendered pages with canonical/alternate URLs, JSON-LD, social cards, sitemap and robots; only English and Chinese are indexed.
+- Full-range rarest-number ranking and permanent daily answer snapshots with a crawlable archive.
 
 ## Architecture
 
@@ -45,7 +46,7 @@ The app intentionally stores progress only in this browser. Clearing storage or 
 
 ## Provenance
 
-The requested [Web Clone skill](https://github.com/Jane-xiaoer/claude-skill-web-clone) informed reconnaissance and verification. Its MIT-licensed utilities and license are in `scripts/vendor/web-clone`. Application code, wording and monochrome styling are independently authored. Reference evidence is documented in `NOTES.md` and `TEARDOWN.md`; original site's bundles and tracking scripts are not shipped. RNGDLE.ART is independent of RNGdle.net and similarly named games.
+The requested [Web Clone skill](https://github.com/Jane-xiaoer/claude-skill-web-clone) informed reconnaissance and verification. Its MIT-licensed utilities and license are in `scripts/vendor/web-clone`. Application code, wording and monochrome styling are independently authored. Reference evidence is documented in `NOTES.md` and `TEARDOWN.md`; original site's bundles and tracking scripts are not shipped. RNGDLE.ART is independent of rngdle.com and similarly named games.
 
 ## Deployment
 
@@ -64,3 +65,7 @@ GA4 uses the public measurement ID `G-FN1KFQ0VMX`, configured in `src/analytics.
 Keep **Enhanced measurement disabled** for the `RNGDLE.ART Web` stream: page views are sent by the app with `send_page_view: false`, and enabling automatic history tracking would double-count navigation. See [Google's manual pageview guidance](https://developers.google.com/analytics/devguides/collection/ga4/views). Form and site-search collection are also disabled. Google signals and ad personalization are disabled in the client configuration. The privacy page describes GA4 usage in all six languages.
 
 The existing Search Console Domain property `sc-domain:rngdle.art` is verified through a DNS TXT record at Namecheap. Keep that record; no HTML verification tag is needed. The sitemap is generated during every build at `https://rngdle.art/sitemap.xml` and referenced by `robots.txt`.
+
+## SEO and daily publishing
+
+`docs/SEO-GEO.md` documents the content models, indexing policy, verification commands and activation steps for the UTC daily publishing workflow. `npm run test:seo` checks the built HTML, FAQ/schema parity, complete ranking, image dimensions and internal links. Scheduled publication needs the workflow on main and the `VERCEL_DEPLOY_HOOK` repository secret.

@@ -1,0 +1,57 @@
+{
+  "verifiedAt": "2026-09-26T10:23:21.313Z",
+  "node": "v22.23.3",
+  "fixtureOnly": true,
+  "fixtureDates": {
+    "first": "2026-09-26",
+    "last": "2026-10-26",
+    "count": 31
+  },
+  "simulatedClock": "2026-10-26T12:00:00.000Z",
+  "method": "Isolated temporary source copy; generated synthetic future-date snapshots with the unchanged engine, built the SSR bundle, and ran the real prerender script under an isolated fixed clock. No fixture dates were added to production.",
+  "checks": [
+    {
+      "id": "F01",
+      "status": "pass",
+      "detail": "archivePage returns 30 and 1 rows, no overlap or missing dates, with correct previous/next page boundaries."
+    },
+    {
+      "id": "F02",
+      "status": "pass",
+      "detail": "English and Chinese SSR archives render exact 30/1 date split, crawlable reciprocal page links, unique page-2 H1/canonical, month groups, and indexable metadata."
+    },
+    {
+      "id": "F03",
+      "status": "pass",
+      "detail": "Every one of the 31 dates in both languages has correct previous/next published-day links; oldest/latest boundaries omit unavailable neighbors and historical pages link to the latest answer."
+    },
+    {
+      "id": "F04",
+      "status": "pass",
+      "detail": "Real prerender creates both page-2 HTML files and all 62 dated HTML files; sitemap contains all of them and excludes nonexistent page 3."
+    },
+    {
+      "id": "F05",
+      "status": "pass",
+      "detail": "Production SEO source, manifest, and existing daily snapshot bytes are unchanged by this isolated fixture."
+    }
+  ],
+  "sourceHashes": {
+    "src/seo-data.mjs": "04cccfde4d63c8ec158b07de3a6401a431a9b3cbf224b96cb5eb5929411d4ea3",
+    "src/seo.ts": "9ff4e68e31b52531f08e73d6f1e3bf18542f9b7e11a8f549a3516825ce10ec18",
+    "src/DailyAnswers.tsx": "f0ac21dafd0294f83fb076fa8efc9bef4dfdbcb9561d9c55e5dc7cd0477e6bbd",
+    "scripts/ssr.tsx": "b5fcb7f023ac0a37fefacb68b90b9dd75ad5de4f12a99ca14ce4011bc0b6c6a3",
+    "scripts/prerender.mjs": "1525ab70071717506e651e2e6a7a709283279be5445c88b3c6d2a255d08bd38e",
+    "public/data/seo.json": "f7bd3172f1827521c9a633c0bd3f4b6214cfa724ab69a5bcc4d2e860802f6e40",
+    "public/data/daily/2026-09-26.json": "b8dd60bf9b4cff0f3aa9bf196f9697cd7761944d35539e72eec27cab33f43e9a"
+  },
+  "ssrBuildLog": "vite v6.4.3 building SSR bundle for production...\ntransforming...\n✓ 20 modules transformed.\nrendering chunks...\n.prerender/ssr.js  320.43 kB\n✓ built in 213ms",
+  "fixtureOutput": {
+    "htmlPages": 350,
+    "indexableUrls": 162,
+    "archivePagesPerLocale": 2,
+    "datedHtmlPages": 62
+  },
+  "status": "pass",
+  "tempFixtureDeleted": true
+}

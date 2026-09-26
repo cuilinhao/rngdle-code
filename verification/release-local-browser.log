@@ -1,0 +1,48 @@
+
+> rngdle-art@1.0.0 test:browser
+> playwright test
+
+
+Running 33 tests using 3 workers
+
+(node:12612) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:12610) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:12611) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 tests/browser/acceptance.spec.ts:44:3 › A01 A12 A16 A17 all primary routes, metadata and reload: ja (5.0s)
+  ✓   2 tests/browser/acceptance.spec.ts:44:3 › A01 A12 A16 A17 all primary routes, metadata and reload: en (5.0s)
+  ✓   3 tests/browser/acceptance.spec.ts:44:3 › A01 A12 A16 A17 all primary routes, metadata and reload: zh (5.0s)
+  ✓   5 tests/browser/acceptance.spec.ts:44:3 › A01 A12 A16 A17 all primary routes, metadata and reload: de (3.1s)
+  ✓   4 tests/browser/acceptance.spec.ts:44:3 › A01 A12 A16 A17 all primary routes, metadata and reload: ko (3.1s)
+  ✓   6 tests/browser/acceptance.spec.ts:44:3 › A01 A12 A16 A17 all primary routes, metadata and reload: fr (3.4s)
+  ✓   8 tests/browser/acceptance.spec.ts:89:1 › A02 A03 number validation and reference sample (2.9s)
+  ✓   9 tests/browser/acceptance.spec.ts:113:1 › A04 A05 single, batch, turbo target, stop, save and new session (3.2s)
+  ✓  10 tests/browser/acceptance.spec.ts:159:1 › A04 reveal controls, simulated page-hidden event and navigation pause (1.7s)
+  ✓  11 tests/browser/acceptance.spec.ts:198:3 › A06 A07 daily draft: resume, complete, practice, locked result (1.6s)
+  ✓   7 tests/browser/acceptance.spec.ts:74:1 › A01 A11 every pattern detail has an accessible exact count and live example (5.7s)
+  ✓  12 tests/browser/acceptance.spec.ts:198:3 › A06 A07 daily hunt: resume, complete, practice, locked result (2.1s)
+  ✓  14 tests/browser/acceptance.spec.ts:265:1 › A07 hunt timeout settles after elapsed time and UTC midnight changes challenge (1.3s)
+  ✓  13 tests/browser/acceptance.spec.ts:198:3 › A06 A07 daily quiz: resume, complete, practice, locked result (2.3s)
+  ✓  16 tests/browser/acceptance.spec.ts:308:1 › A09 full-range explorer exact count, no matches, filters and random result (1.5s)
+  ✓  15 tests/browser/acceptance.spec.ts:284:1 › A08 comparison, random battle and independent quiz (1.7s)
+  ✓  17 tests/browser/acceptance.spec.ts:335:1 › A10 sandbox keyboard, length, reset and best edit (1.2s)
+  ✓  20 tests/browser/acceptance.spec.ts:426:1 › A14 share link clipboard, real image download and focus restoration (2.9s)
+  ✓  18 tests/browser/acceptance.spec.ts:372:1 › A11 atlas is only stamped by daily specimens and survives reload (3.3s)
+  ✓  21 tests/browser/acceptance.spec.ts:455:3 › A15 mobile and tablet responsive routes: en (3.2s)
+  ✓  22 tests/browser/acceptance.spec.ts:455:3 › A15 mobile and tablet responsive routes: zh (3.1s)
+  ✓  23 tests/browser/acceptance.spec.ts:455:3 › A15 mobile and tablet responsive routes: ja (2.5s)
+  ✓  19 tests/browser/acceptance.spec.ts:401:1 › A12 A13 English default, saved selection, theme persistence and route preservation (8.9s)
+  ✓  24 tests/browser/acceptance.spec.ts:455:3 › A15 mobile and tablet responsive routes: ko (2.4s)
+  ✓  27 tests/browser/acceptance.spec.ts:491:1 › A15 keyboard navigation, mobile menu and reduced motion (2.0s)
+  ✓  28 tests/browser/acceptance.spec.ts:517:1 › A16 graceful corrupt storage and data-load failure retry (1.2s)
+  ✓  25 tests/browser/acceptance.spec.ts:455:3 › A15 mobile and tablet responsive routes: de (3.9s)
+  ✓  26 tests/browser/acceptance.spec.ts:455:3 › A15 mobile and tablet responsive routes: fr (3.9s)
+  ✓  29 tests/browser/acceptance.spec.ts:539:1 › A01 404 renders a real recovery route (800ms)
+  ✓  30 tests/browser/acceptance.spec.ts:554:1 › A03 tiny nonzero probabilities never display as zero (948ms)
+  ✓  31 tests/browser/seo.spec.ts:5:1 › SEO survives client navigation and language changes (1.2s)
+  ✓  32 tests/browser/seo.spec.ts:41:1 › daily archive loads deterministic answer and its metadata through navigation (1.1s)
+  ✓  33 tests/browser/seo.spec.ts:72:1 › new SEO pages remain readable on mobile and without JavaScript (1.6s)
+
+  33 passed (33.7s)

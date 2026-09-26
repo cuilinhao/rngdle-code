@@ -1,5 +1,6 @@
 {
-  "count": 282,
+  "count": 288,
+  "indexedCount": 100,
   "locales": [
     "en",
     "zh",
@@ -7,6 +8,10 @@
     "ko",
     "de",
     "fr"
+  ],
+  "indexLocales": [
+    "en",
+    "zh"
   ],
   "translationKeys": 266,
   "htmlPages": [
@@ -57,6 +62,9 @@
     "https://rngdle.art/en/patterns/binaryPal",
     "https://rngdle.art/en/patterns/binaryOnes",
     "https://rngdle.art/en/patterns/hexRepeat",
+    "https://rngdle.art/en/rarest-numbers",
+    "https://rngdle.art/en/daily/answer",
+    "https://rngdle.art/en/daily/answer/2026-09-26",
     "https://rngdle.art/zh",
     "https://rngdle.art/zh/infinite",
     "https://rngdle.art/zh/daily",
@@ -104,6 +112,9 @@
     "https://rngdle.art/zh/patterns/binaryPal",
     "https://rngdle.art/zh/patterns/binaryOnes",
     "https://rngdle.art/zh/patterns/hexRepeat",
+    "https://rngdle.art/zh/rarest-numbers",
+    "https://rngdle.art/zh/daily/answer",
+    "https://rngdle.art/zh/daily/answer/2026-09-26",
     "https://rngdle.art/ja",
     "https://rngdle.art/ja/infinite",
     "https://rngdle.art/ja/daily",

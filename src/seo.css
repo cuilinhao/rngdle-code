@@ -1,0 +1,53 @@
+.seo-sections {
+  margin-top: 2rem;
+}
+.seo-sections section + section,
+.daily-answer section + section {
+  margin-top: 2rem;
+}
+.seo-summary {
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+.answer-navigation {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-block: 2rem;
+}
+.archive-list {
+  padding-left: 1.2rem;
+}
+.archive-list li {
+  margin-block: 0.9rem;
+}
+.daily-answer tr[data-winner] {
+  background: var(--surface-2, rgba(109, 145, 10, 0.1));
+}
+.daily-answer,
+.daily-archive {
+  max-width: 1040px;
+  margin-inline: auto;
+}
+.daily-answer caption {
+  text-align: left;
+  font-weight: 600;
+  margin-block: 0.5rem;
+}
+.daily-answer th,
+.daily-answer td {
+  vertical-align: top;
+}
+.daily-archive .button {
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+@media (max-width: 600px) {
+  .daily-answer,
+  .daily-archive {
+    padding: 1rem;
+  }
+  .daily-answer table {
+    min-width: 580px;
+  }
+}

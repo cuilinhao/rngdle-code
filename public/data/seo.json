@@ -1,0 +1,1601 @@
+{
+  "schemaVersion": 1,
+  "dataBuilderHash": "bb9af44c0ba54baff23154dcff66e1dcb8d614bb2bdac25602d7b3ab79e49c79",
+  "version": "art-1.0.0",
+  "sourceHash": "07fdaed095b128b7c59cc6e7f8056b790d5f9ced737060f04c1395cbfd51ccfa",
+  "dateModified": "2026-09-26T10:08:35.758Z",
+  "rankings": [
+    {
+      "n": 3,
+      "score": 1677,
+      "percent": 0.0000999999000001,
+      "patterns": [
+        "harshad",
+        "prime",
+        "fibonacci",
+        "triangular",
+        "binaryPal",
+        "binaryOnes"
+      ]
+    },
+    {
+      "n": 1,
+      "score": 1504,
+      "percent": 0.0001999998000002,
+      "patterns": [
+        "harshad",
+        "happy",
+        "square",
+        "cube",
+        "power2",
+        "fibonacci",
+        "triangular",
+        "factorial"
+      ]
+    },
+    {
+      "n": 0,
+      "score": 1450,
+      "percent": 0.0002999997000003,
+      "patterns": [
+        "square",
+        "cube",
+        "fibonacci",
+        "triangular"
+      ]
+    },
+    {
+      "n": 2,
+      "score": 1444,
+      "percent": 0.0003999996000004,
+      "patterns": [
+        "harshad",
+        "prime",
+        "power2",
+        "fibonacci",
+        "factorial"
+      ]
+    },
+    {
+      "n": 5,
+      "score": 1384,
+      "percent": 0.0004999995000005,
+      "patterns": [
+        "harshad",
+        "prime",
+        "fibonacci",
+        "binaryPal"
+      ]
+    },
+    {
+      "n": 55,
+      "score": 1377,
+      "percent": 0.0005999994000006,
+      "patterns": [
+        "repdigit",
+        "palindrome",
+        "semiprime",
+        "fibonacci",
+        "triangular"
+      ]
+    },
+    {
+      "n": 7,
+      "score": 1305,
+      "percent": 0.0006999993000007,
+      "patterns": [
+        "harshad",
+        "happy",
+        "prime",
+        "binaryPal",
+        "binaryOnes"
+      ]
+    },
+    {
+      "n": 8,
+      "score": 1288,
+      "percent": 0.0007999992000008,
+      "patterns": [
+        "harshad",
+        "cube",
+        "power2",
+        "fibonacci"
+      ]
+    },
+    {
+      "n": 4,
+      "score": 1287,
+      "percent": 0.0008999991000009,
+      "patterns": [
+        "harshad",
+        "semiprime",
+        "square",
+        "power2"
+      ]
+    },
+    {
+      "n": 21,
+      "score": 1283,
+      "percent": 0.000999999000001,
+      "patterns": [
+        "harshad",
+        "semiprime",
+        "fibonacci",
+        "triangular",
+        "binaryPal"
+      ]
+    },
+    {
+      "n": 33,
+      "score": 1282,
+      "percent": 0.0010999989000011,
+      "patterns": [
+        "repdigit",
+        "palindrome",
+        "semiprime",
+        "binaryPal"
+      ]
+    },
+    {
+      "n": 6,
+      "score": 1269,
+      "percent": 0.0011999988000012,
+      "patterns": [
+        "harshad",
+        "semiprime",
+        "triangular",
+        "factorial"
+      ]
+    },
+    {
+      "n": 15,
+      "score": 1229,
+      "percent": 0.0012999987000013,
+      "patterns": [
+        "semiprime",
+        "triangular",
+        "binaryPal",
+        "binaryOnes"
+      ]
+    },
+    {
+      "n": 34,
+      "score": 1227,
+      "percent": 0.0013999986000014,
+      "patterns": [
+        "semiprime",
+        "fibonacci",
+        "hexRepeat"
+      ]
+    },
+    {
+      "n": 3003,
+      "score": 1225,
+      "percent": 0.0014999985000015,
+      "patterns": [
+        "pairs",
+        "twoDigits",
+        "palindrome",
+        "triangular",
+        "hexRepeat"
+      ]
+    },
+    {
+      "n": 11,
+      "score": 1220,
+      "percent": 0.0015999984000016,
+      "patterns": [
+        "repdigit",
+        "palindrome",
+        "prime"
+      ]
+    },
+    {
+      "n": 9,
+      "score": 1213,
+      "percent": 0.0016999983000017,
+      "patterns": [
+        "harshad",
+        "semiprime",
+        "square",
+        "binaryPal"
+      ]
+    },
+    {
+      "n": 66,
+      "score": 1173,
+      "percent": 0.0017999982000018,
+      "patterns": [
+        "repdigit",
+        "palindrome",
+        "triangular"
+      ]
+    },
+    {
+      "n": 31,
+      "score": 1154,
+      "percent": 0.0018999981000019,
+      "patterns": [
+        "happy",
+        "prime",
+        "binaryPal",
+        "binaryOnes"
+      ]
+    },
+    {
+      "n": 22,
+      "score": 1140,
+      "percent": 0.001999998000002,
+      "patterns": [
+        "repdigit",
+        "palindrome",
+        "semiprime"
+      ]
+    },
+    {
+      "n": 99,
+      "score": 1121,
+      "percent": 0.0021999978000022,
+      "patterns": [
+        "repdigit",
+        "palindrome",
+        "binaryPal"
+      ]
+    },
+    {
+      "n": 111,
+      "score": 1121,
+      "percent": 0.0021999978000022,
+      "patterns": [
+        "repdigit",
+        "palindrome",
+        "harshad",
+        "semiprime"
+      ]
+    },
+    {
+      "n": 666,
+      "score": 1088,
+      "percent": 0.0022999977000023,
+      "patterns": [
+        "repdigit",
+        "palindrome",
+        "harshad",
+        "triangular"
+      ]
+    },
+    {
+      "n": 210,
+      "score": 1076,
+      "percent": 0.0023999976000024,
+      "patterns": [
+        "descending",
+        "harshad",
+        "triangular"
+      ]
+    },
+    {
+      "n": 27,
+      "score": 1072,
+      "percent": 0.0024999975000025,
+      "patterns": [
+        "harshad",
+        "cube",
+        "binaryPal"
+      ]
+    },
+    {
+      "n": 44,
+      "score": 1048,
+      "percent": 0.0025999974000026,
+      "patterns": [
+        "repdigit",
+        "palindrome",
+        "happy"
+      ]
+    },
+    {
+      "n": 51,
+      "score": 1034,
+      "percent": 0.0026999973000027,
+      "patterns": [
+        "semiprime",
+        "binaryPal",
+        "hexRepeat"
+      ]
+    },
+    {
+      "n": 17,
+      "score": 1033,
+      "percent": 0.0027999972000028,
+      "patterns": [
+        "prime",
+        "binaryPal",
+        "hexRepeat"
+      ]
+    },
+    {
+      "n": 13,
+      "score": 1029,
+      "percent": 0.0028999971000029,
+      "patterns": [
+        "happy",
+        "prime",
+        "fibonacci"
+      ]
+    },
+    {
+      "n": 64,
+      "score": 1027,
+      "percent": 0.002999997000003,
+      "patterns": [
+        "square",
+        "cube",
+        "power2"
+      ]
+    },
+    {
+      "n": 313,
+      "score": 1023,
+      "percent": 0.0030999969000031,
+      "patterns": [
+        "repeat",
+        "palindrome",
+        "happy",
+        "prime",
+        "binaryPal"
+      ]
+    },
+    {
+      "n": 121,
+      "score": 1019,
+      "percent": 0.0031999968000032,
+      "patterns": [
+        "repeat",
+        "palindrome",
+        "semiprime",
+        "square"
+      ]
+    },
+    {
+      "n": 511,
+      "score": 1018,
+      "percent": 0.0032999967000033,
+      "patterns": [
+        "repeat",
+        "harshad",
+        "semiprime",
+        "binaryPal",
+        "binaryOnes"
+      ]
+    },
+    {
+      "n": 5050,
+      "score": 1017,
+      "percent": 0.0033999966000034,
+      "patterns": [
+        "pairs",
+        "twoDigits",
+        "abab",
+        "parity",
+        "zigzag",
+        "harshad",
+        "triangular"
+      ]
+    },
+    {
+      "n": 222,
+      "score": 1015,
+      "percent": 0.0035999964000036,
+      "patterns": [
+        "repdigit",
+        "palindrome",
+        "harshad"
+      ]
+    },
+    {
+      "n": 1000000,
+      "score": 1015,
+      "percent": 0.0035999964000036,
+      "patterns": [
+        "five",
+        "run",
+        "twoDigits",
+        "harshad",
+        "happy",
+        "square",
+        "cube"
+      ]
+    },
+    {
+      "n": 16,
+      "score": 1012,
+      "percent": 0.0038999961000039,
+      "patterns": [
+        "square",
+        "power2"
+      ]
+    },
+    {
+      "n": 77,
+      "score": 1012,
+      "percent": 0.0038999961000039,
+      "patterns": [
+        "repdigit",
+        "palindrome",
+        "semiprime"
+      ]
+    },
+    {
+      "n": 153,
+      "score": 1012,
+      "percent": 0.0038999961000039,
+      "patterns": [
+        "harshad",
+        "triangular",
+        "binaryPal",
+        "hexRepeat"
+      ]
+    },
+    {
+      "n": 69696,
+      "score": 1011,
+      "percent": 0.003999996000004,
+      "patterns": [
+        "triple",
+        "twoDigits",
+        "palindrome",
+        "abab",
+        "parity",
+        "zigzag",
+        "harshad",
+        "square"
+      ]
+    },
+    {
+      "n": 1111,
+      "score": 1007,
+      "percent": 0.0040999959000041,
+      "patterns": [
+        "repdigit",
+        "palindrome",
+        "semiprime"
+      ]
+    },
+    {
+      "n": 1000,
+      "score": 1006,
+      "percent": 0.0041999958000042,
+      "patterns": [
+        "triple",
+        "run",
+        "twoDigits",
+        "harshad",
+        "happy",
+        "cube"
+      ]
+    },
+    {
+      "n": 24,
+      "score": 1005,
+      "percent": 0.0043999956000044,
+      "patterns": [
+        "harshad",
+        "factorial"
+      ]
+    },
+    {
+      "n": 63,
+      "score": 1005,
+      "percent": 0.0043999956000044,
+      "patterns": [
+        "harshad",
+        "binaryPal",
+        "binaryOnes"
+      ]
+    },
+    {
+      "n": 10,
+      "score": 1004,
+      "percent": 0.0044999955000045,
+      "patterns": [
+        "harshad",
+        "happy",
+        "semiprime",
+        "triangular"
+      ]
+    },
+    {
+      "n": 45,
+      "score": 996,
+      "percent": 0.0045999954000046,
+      "patterns": [
+        "harshad",
+        "triangular",
+        "binaryPal"
+      ]
+    },
+    {
+      "n": 32,
+      "score": 995,
+      "percent": 0.0046999953000047,
+      "patterns": [
+        "happy",
+        "power2"
+      ]
+    },
+    {
+      "n": 1331,
+      "score": 991,
+      "percent": 0.0048999951000049,
+      "patterns": [
+        "pairs",
+        "twoDigits",
+        "palindrome",
+        "cube"
+      ]
+    },
+    {
+      "n": 828828,
+      "score": 991,
+      "percent": 0.0048999951000049,
+      "patterns": [
+        "quad",
+        "twoDigits",
+        "palindrome",
+        "abcabc",
+        "harshad",
+        "triangular",
+        "divisible"
+      ]
+    },
+    {
+      "n": 10101,
+      "score": 988,
+      "percent": 0.004999995000005,
+      "patterns": [
+        "triple",
+        "twoDigits",
+        "palindrome",
+        "abab",
+        "parity",
+        "zigzag",
+        "harshad"
+      ]
+    },
+    {
+      "n": 120,
+      "score": 983,
+      "percent": 0.0050999949000051,
+      "patterns": [
+        "harshad",
+        "triangular",
+        "factorial"
+      ]
+    },
+    {
+      "n": 343,
+      "score": 978,
+      "percent": 0.0051999948000052,
+      "patterns": [
+        "repeat",
+        "palindrome",
+        "cube"
+      ]
+    },
+    {
+      "n": 333,
+      "score": 973,
+      "percent": 0.0052999947000053,
+      "patterns": [
+        "repdigit",
+        "palindrome",
+        "harshad"
+      ]
+    },
+    {
+      "n": 1010,
+      "score": 971,
+      "percent": 0.0053999946000054,
+      "patterns": [
+        "pairs",
+        "twoDigits",
+        "abab",
+        "parity",
+        "zigzag",
+        "harshad"
+      ]
+    },
+    {
+      "n": 987,
+      "score": 967,
+      "percent": 0.0054999945000055,
+      "patterns": [
+        "descending",
+        "fibonacci"
+      ]
+    },
+    {
+      "n": 999999,
+      "score": 966,
+      "percent": 0.0055999944000056,
+      "patterns": [
+        "repdigit",
+        "palindrome"
+      ]
+    },
+    {
+      "n": 4095,
+      "score": 959,
+      "percent": 0.0056999943000057,
+      "patterns": [
+        "zigzag",
+        "triangular",
+        "binaryPal",
+        "binaryOnes",
+        "hexRepeat"
+      ]
+    },
+    {
+      "n": 888888,
+      "score": 958,
+      "percent": 0.0057999942000058,
+      "patterns": [
+        "repdigit",
+        "palindrome",
+        "divisible"
+      ]
+    },
+    {
+      "n": 696696,
+      "score": 954,
+      "percent": 0.0058999941000059,
+      "patterns": [
+        "quad",
+        "twoDigits",
+        "palindrome",
+        "abcabc",
+        "harshad",
+        "divisible"
+      ]
+    },
+    {
+      "n": 88,
+      "score": 953,
+      "percent": 0.0060999939000061,
+      "patterns": [
+        "repdigit",
+        "palindrome"
+      ]
+    },
+    {
+      "n": 255,
+      "score": 953,
+      "percent": 0.0060999939000061,
+      "patterns": [
+        "repeat",
+        "binaryPal",
+        "binaryOnes",
+        "hexRepeat"
+      ]
+    },
+    {
+      "n": 85,
+      "score": 951,
+      "percent": 0.0062999937000063,
+      "patterns": [
+        "semiprime",
+        "binaryPal",
+        "hexRepeat"
+      ]
+    },
+    {
+      "n": 5151,
+      "score": 951,
+      "percent": 0.0062999937000063,
+      "patterns": [
+        "pairs",
+        "twoDigits",
+        "abab",
+        "zigzag",
+        "triangular"
+      ]
+    },
+    {
+      "n": 73737,
+      "score": 947,
+      "percent": 0.0063999936000064,
+      "patterns": [
+        "triple",
+        "twoDigits",
+        "palindrome",
+        "abab",
+        "zigzag",
+        "harshad",
+        "binaryPal"
+      ]
+    },
+    {
+      "n": 444,
+      "score": 941,
+      "percent": 0.0064999935000065,
+      "patterns": [
+        "repdigit",
+        "palindrome",
+        "harshad"
+      ]
+    },
+    {
+      "n": 100,
+      "score": 939,
+      "percent": 0.0066999933000067,
+      "patterns": [
+        "repeat",
+        "harshad",
+        "happy",
+        "square"
+      ]
+    },
+    {
+      "n": 144,
+      "score": 939,
+      "percent": 0.0066999933000067,
+      "patterns": [
+        "repeat",
+        "harshad",
+        "square",
+        "fibonacci"
+      ]
+    },
+    {
+      "n": 171,
+      "score": 937,
+      "percent": 0.0067999932000068,
+      "patterns": [
+        "repeat",
+        "palindrome",
+        "harshad",
+        "triangular"
+      ]
+    },
+    {
+      "n": 221,
+      "score": 931,
+      "percent": 0.0068999931000068996,
+      "patterns": [
+        "repeat",
+        "semiprime",
+        "hexRepeat"
+      ]
+    },
+    {
+      "n": 101,
+      "score": 929,
+      "percent": 0.006999993000007,
+      "patterns": [
+        "repeat",
+        "palindrome",
+        "prime"
+      ]
+    },
+    {
+      "n": 989989,
+      "score": 924,
+      "percent": 0.0070999929000071,
+      "patterns": [
+        "quad",
+        "twoDigits",
+        "palindrome",
+        "abcabc"
+      ]
+    },
+    {
+      "n": 555,
+      "score": 917,
+      "percent": 0.0071999928000072,
+      "patterns": [
+        "repdigit",
+        "palindrome",
+        "harshad"
+      ]
+    },
+    {
+      "n": 136,
+      "score": 914,
+      "percent": 0.0072999927000073,
+      "patterns": [
+        "triangular",
+        "hexRepeat"
+      ]
+    },
+    {
+      "n": 252252,
+      "score": 912,
+      "percent": 0.0073999926000074,
+      "patterns": [
+        "quad",
+        "twoDigits",
+        "palindrome",
+        "abcabc",
+        "harshad",
+        "divisible"
+      ]
+    },
+    {
+      "n": 119,
+      "score": 911,
+      "percent": 0.0074999925000075,
+      "patterns": [
+        "repeat",
+        "semiprime",
+        "binaryPal",
+        "hexRepeat"
+      ]
+    },
+    {
+      "n": 20202,
+      "score": 905,
+      "percent": 0.0075999924000076,
+      "patterns": [
+        "triple",
+        "twoDigits",
+        "palindrome",
+        "abab",
+        "zigzag",
+        "harshad"
+      ]
+    },
+    {
+      "n": 585585,
+      "score": 898,
+      "percent": 0.0076999923000077,
+      "patterns": [
+        "quad",
+        "twoDigits",
+        "palindrome",
+        "abcabc",
+        "binaryPal"
+      ]
+    },
+    {
+      "n": 2020,
+      "score": 897,
+      "percent": 0.0078999921000079,
+      "patterns": [
+        "pairs",
+        "twoDigits",
+        "abab",
+        "zigzag",
+        "harshad"
+      ]
+    },
+    {
+      "n": 4321,
+      "score": 897,
+      "percent": 0.0078999921000079,
+      "patterns": [
+        "descending",
+        "parity",
+        "semiprime",
+        "binaryPal"
+      ]
+    },
+    {
+      "n": 512,
+      "score": 896,
+      "percent": 0.007999992000008,
+      "patterns": [
+        "harshad",
+        "cube",
+        "power2"
+      ]
+    },
+    {
+      "n": 127,
+      "score": 895,
+      "percent": 0.0081999918000082,
+      "patterns": [
+        "prime",
+        "binaryPal",
+        "binaryOnes"
+      ]
+    },
+    {
+      "n": 2222,
+      "score": 895,
+      "percent": 0.0081999918000082,
+      "patterns": [
+        "repdigit",
+        "palindrome"
+      ]
+    },
+    {
+      "n": 32323,
+      "score": 894,
+      "percent": 0.0082999917000083,
+      "patterns": [
+        "triple",
+        "twoDigits",
+        "palindrome",
+        "abab",
+        "parity",
+        "zigzag",
+        "prime"
+      ]
+    },
+    {
+      "n": 36,
+      "score": 893,
+      "percent": 0.0083999916000084,
+      "patterns": [
+        "harshad",
+        "square",
+        "triangular"
+      ]
+    },
+    {
+      "n": 717,
+      "score": 892,
+      "percent": 0.0084999915000085,
+      "patterns": [
+        "repeat",
+        "palindrome",
+        "semiprime",
+        "binaryPal"
+      ]
+    },
+    {
+      "n": 1212,
+      "score": 890,
+      "percent": 0.0085999914000086,
+      "patterns": [
+        "pairs",
+        "twoDigits",
+        "abab",
+        "parity",
+        "zigzag",
+        "harshad",
+        "happy"
+      ]
+    },
+    {
+      "n": 888,
+      "score": 888,
+      "percent": 0.0087999912000088,
+      "patterns": [
+        "repdigit",
+        "palindrome",
+        "harshad",
+        "happy"
+      ]
+    },
+    {
+      "n": 12121,
+      "score": 888,
+      "percent": 0.0087999912000088,
+      "patterns": [
+        "triple",
+        "twoDigits",
+        "palindrome",
+        "abab",
+        "parity",
+        "zigzag"
+      ]
+    },
+    {
+      "n": 777,
+      "score": 887,
+      "percent": 0.0088999911000089,
+      "patterns": [
+        "repdigit",
+        "palindrome",
+        "harshad"
+      ]
+    },
+    {
+      "n": 30303,
+      "score": 885,
+      "percent": 0.008999991000009,
+      "patterns": [
+        "triple",
+        "twoDigits",
+        "palindrome",
+        "abab",
+        "parity",
+        "zigzag",
+        "harshad"
+      ]
+    },
+    {
+      "n": 233,
+      "score": 884,
+      "percent": 0.0092999907000093,
+      "patterns": [
+        "repeat",
+        "prime",
+        "fibonacci"
+      ]
+    },
+    {
+      "n": 14141,
+      "score": 884,
+      "percent": 0.0092999907000093,
+      "patterns": [
+        "triple",
+        "twoDigits",
+        "palindrome",
+        "abab",
+        "parity",
+        "zigzag",
+        "semiprime"
+      ]
+    },
+    {
+      "n": 98989,
+      "score": 884,
+      "percent": 0.0092999907000093,
+      "patterns": [
+        "triple",
+        "twoDigits",
+        "palindrome",
+        "abab",
+        "parity",
+        "zigzag",
+        "semiprime"
+      ]
+    },
+    {
+      "n": 3030,
+      "score": 882,
+      "percent": 0.0093999906000094,
+      "patterns": [
+        "pairs",
+        "twoDigits",
+        "abab",
+        "parity",
+        "zigzag",
+        "harshad"
+      ]
+    },
+    {
+      "n": 2121,
+      "score": 878,
+      "percent": 0.0094999905000095,
+      "patterns": [
+        "pairs",
+        "twoDigits",
+        "abab",
+        "parity",
+        "zigzag",
+        "happy"
+      ]
+    },
+    {
+      "n": 999,
+      "score": 877,
+      "percent": 0.0095999904000096,
+      "patterns": [
+        "repdigit",
+        "palindrome",
+        "harshad"
+      ]
+    },
+    {
+      "n": 21212,
+      "score": 874,
+      "percent": 0.0096999903000097,
+      "patterns": [
+        "triple",
+        "twoDigits",
+        "palindrome",
+        "abab",
+        "parity",
+        "zigzag"
+      ]
+    },
+    {
+      "n": 101101,
+      "score": 872,
+      "percent": 0.00999999000001,
+      "patterns": [
+        "quad",
+        "twoDigits",
+        "palindrome",
+        "abcabc"
+      ]
+    },
+    {
+      "n": 898898,
+      "score": 872,
+      "percent": 0.00999999000001,
+      "patterns": [
+        "quad",
+        "twoDigits",
+        "palindrome",
+        "abcabc"
+      ]
+    },
+    {
+      "n": 979979,
+      "score": 872,
+      "percent": 0.00999999000001,
+      "patterns": [
+        "quad",
+        "twoDigits",
+        "palindrome",
+        "abcabc"
+      ]
+    }
+  ],
+  "patternLeaders": {
+    "repdigit": {
+      "n": 55,
+      "score": 1377,
+      "percent": 0.0005999994000006,
+      "patterns": [
+        "repdigit",
+        "palindrome",
+        "semiprime",
+        "fibonacci",
+        "triangular"
+      ]
+    },
+    "five": {
+      "n": 1000000,
+      "score": 1015,
+      "percent": 0.0035999964000036,
+      "patterns": [
+        "five",
+        "run",
+        "twoDigits",
+        "harshad",
+        "happy",
+        "square",
+        "cube"
+      ]
+    },
+    "quad": {
+      "n": 828828,
+      "score": 991,
+      "percent": 0.0048999951000049,
+      "patterns": [
+        "quad",
+        "twoDigits",
+        "palindrome",
+        "abcabc",
+        "harshad",
+        "triangular",
+        "divisible"
+      ]
+    },
+    "triple": {
+      "n": 69696,
+      "score": 1011,
+      "percent": 0.003999996000004,
+      "patterns": [
+        "triple",
+        "twoDigits",
+        "palindrome",
+        "abab",
+        "parity",
+        "zigzag",
+        "harshad",
+        "square"
+      ]
+    },
+    "pairs": {
+      "n": 3003,
+      "score": 1225,
+      "percent": 0.0014999985000015,
+      "patterns": [
+        "pairs",
+        "twoDigits",
+        "palindrome",
+        "triangular",
+        "hexRepeat"
+      ]
+    },
+    "repeat": {
+      "n": 313,
+      "score": 1023,
+      "percent": 0.0030999969000031,
+      "patterns": [
+        "repeat",
+        "palindrome",
+        "happy",
+        "prime",
+        "binaryPal"
+      ]
+    },
+    "run": {
+      "n": 1000000,
+      "score": 1015,
+      "percent": 0.0035999964000036,
+      "patterns": [
+        "five",
+        "run",
+        "twoDigits",
+        "harshad",
+        "happy",
+        "square",
+        "cube"
+      ]
+    },
+    "twoDigits": {
+      "n": 3003,
+      "score": 1225,
+      "percent": 0.0014999985000015,
+      "patterns": [
+        "pairs",
+        "twoDigits",
+        "palindrome",
+        "triangular",
+        "hexRepeat"
+      ]
+    },
+    "palindrome": {
+      "n": 55,
+      "score": 1377,
+      "percent": 0.0005999994000006,
+      "patterns": [
+        "repdigit",
+        "palindrome",
+        "semiprime",
+        "fibonacci",
+        "triangular"
+      ]
+    },
+    "ascending": {
+      "n": 123,
+      "score": 852,
+      "percent": 0.0118999881000119,
+      "patterns": [
+        "ascending",
+        "semiprime"
+      ]
+    },
+    "descending": {
+      "n": 210,
+      "score": 1076,
+      "percent": 0.0023999976000024,
+      "patterns": [
+        "descending",
+        "harshad",
+        "triangular"
+      ]
+    },
+    "ascRun": {
+      "n": 12321,
+      "score": 831,
+      "percent": 0.014999985000015,
+      "patterns": [
+        "pairs",
+        "palindrome",
+        "ascRun",
+        "descRun",
+        "parity",
+        "harshad",
+        "happy",
+        "square"
+      ]
+    },
+    "descRun": {
+      "n": 12321,
+      "score": 831,
+      "percent": 0.014999985000015,
+      "patterns": [
+        "pairs",
+        "palindrome",
+        "ascRun",
+        "descRun",
+        "parity",
+        "harshad",
+        "happy",
+        "square"
+      ]
+    },
+    "abab": {
+      "n": 5050,
+      "score": 1017,
+      "percent": 0.0033999966000034,
+      "patterns": [
+        "pairs",
+        "twoDigits",
+        "abab",
+        "parity",
+        "zigzag",
+        "harshad",
+        "triangular"
+      ]
+    },
+    "abcabc": {
+      "n": 828828,
+      "score": 991,
+      "percent": 0.0048999951000049,
+      "patterns": [
+        "quad",
+        "twoDigits",
+        "palindrome",
+        "abcabc",
+        "harshad",
+        "triangular",
+        "divisible"
+      ]
+    },
+    "parity": {
+      "n": 5050,
+      "score": 1017,
+      "percent": 0.0033999966000034,
+      "patterns": [
+        "pairs",
+        "twoDigits",
+        "abab",
+        "parity",
+        "zigzag",
+        "harshad",
+        "triangular"
+      ]
+    },
+    "zigzag": {
+      "n": 5050,
+      "score": 1017,
+      "percent": 0.0033999966000034,
+      "patterns": [
+        "pairs",
+        "twoDigits",
+        "abab",
+        "parity",
+        "zigzag",
+        "harshad",
+        "triangular"
+      ]
+    },
+    "harshad": {
+      "n": 3,
+      "score": 1677,
+      "percent": 0.0000999999000001,
+      "patterns": [
+        "harshad",
+        "prime",
+        "fibonacci",
+        "triangular",
+        "binaryPal",
+        "binaryOnes"
+      ]
+    },
+    "happy": {
+      "n": 1,
+      "score": 1504,
+      "percent": 0.0001999998000002,
+      "patterns": [
+        "harshad",
+        "happy",
+        "square",
+        "cube",
+        "power2",
+        "fibonacci",
+        "triangular",
+        "factorial"
+      ]
+    },
+    "prime": {
+      "n": 3,
+      "score": 1677,
+      "percent": 0.0000999999000001,
+      "patterns": [
+        "harshad",
+        "prime",
+        "fibonacci",
+        "triangular",
+        "binaryPal",
+        "binaryOnes"
+      ]
+    },
+    "semiprime": {
+      "n": 55,
+      "score": 1377,
+      "percent": 0.0005999994000006,
+      "patterns": [
+        "repdigit",
+        "palindrome",
+        "semiprime",
+        "fibonacci",
+        "triangular"
+      ]
+    },
+    "square": {
+      "n": 1,
+      "score": 1504,
+      "percent": 0.0001999998000002,
+      "patterns": [
+        "harshad",
+        "happy",
+        "square",
+        "cube",
+        "power2",
+        "fibonacci",
+        "triangular",
+        "factorial"
+      ]
+    },
+    "cube": {
+      "n": 1,
+      "score": 1504,
+      "percent": 0.0001999998000002,
+      "patterns": [
+        "harshad",
+        "happy",
+        "square",
+        "cube",
+        "power2",
+        "fibonacci",
+        "triangular",
+        "factorial"
+      ]
+    },
+    "power2": {
+      "n": 1,
+      "score": 1504,
+      "percent": 0.0001999998000002,
+      "patterns": [
+        "harshad",
+        "happy",
+        "square",
+        "cube",
+        "power2",
+        "fibonacci",
+        "triangular",
+        "factorial"
+      ]
+    },
+    "fibonacci": {
+      "n": 3,
+      "score": 1677,
+      "percent": 0.0000999999000001,
+      "patterns": [
+        "harshad",
+        "prime",
+        "fibonacci",
+        "triangular",
+        "binaryPal",
+        "binaryOnes"
+      ]
+    },
+    "triangular": {
+      "n": 3,
+      "score": 1677,
+      "percent": 0.0000999999000001,
+      "patterns": [
+        "harshad",
+        "prime",
+        "fibonacci",
+        "triangular",
+        "binaryPal",
+        "binaryOnes"
+      ]
+    },
+    "factorial": {
+      "n": 1,
+      "score": 1504,
+      "percent": 0.0001999998000002,
+      "patterns": [
+        "harshad",
+        "happy",
+        "square",
+        "cube",
+        "power2",
+        "fibonacci",
+        "triangular",
+        "factorial"
+      ]
+    },
+    "divisible": {
+      "n": 828828,
+      "score": 991,
+      "percent": 0.0048999951000049,
+      "patterns": [
+        "quad",
+        "twoDigits",
+        "palindrome",
+        "abcabc",
+        "harshad",
+        "triangular",
+        "divisible"
+      ]
+    },
+    "binaryPal": {
+      "n": 3,
+      "score": 1677,
+      "percent": 0.0000999999000001,
+      "patterns": [
+        "harshad",
+        "prime",
+        "fibonacci",
+        "triangular",
+        "binaryPal",
+        "binaryOnes"
+      ]
+    },
+    "binaryOnes": {
+      "n": 3,
+      "score": 1677,
+      "percent": 0.0000999999000001,
+      "patterns": [
+        "harshad",
+        "prime",
+        "fibonacci",
+        "triangular",
+        "binaryPal",
+        "binaryOnes"
+      ]
+    },
+    "hexRepeat": {
+      "n": 34,
+      "score": 1227,
+      "percent": 0.0013999986000014,
+      "patterns": [
+        "semiprime",
+        "fibonacci",
+        "hexRepeat"
+      ]
+    }
+  },
+  "repdigits": [
+    11,
+    22,
+    33,
+    44,
+    55,
+    66,
+    77,
+    88,
+    99,
+    111,
+    222,
+    333,
+    444,
+    555,
+    666,
+    777,
+    888,
+    999,
+    1111,
+    2222,
+    3333,
+    4444,
+    5555,
+    6666,
+    7777,
+    8888,
+    9999,
+    11111,
+    22222,
+    33333,
+    44444,
+    55555,
+    66666,
+    77777,
+    88888,
+    99999,
+    111111,
+    222222,
+    333333,
+    444444,
+    555555,
+    666666,
+    777777,
+    888888,
+    999999
+  ],
+  "dailyDates": [
+    "2026-09-26"
+  ],
+  "dailySummaries": [
+    {
+      "date": "2026-09-26",
+      "n": 473823,
+      "score": 197
+    }
+  ],
+  "latestDay": "2026-09-26"
+}

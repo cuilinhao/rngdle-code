@@ -1,0 +1,1193 @@
+{
+  "count": 296,
+  "failed": 0,
+  "results": [
+    {
+      "url": "http://127.0.0.1:4183/en",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/en/infinite",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/en/daily",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/en/compare",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/en/explore",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/en/sandbox",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/en/patterns",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/en/guides",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/en/methodology",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/en/badges",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/en/ep",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/en/leaderboard",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/en/about",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/en/privacy",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/en/terms",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/en/contact",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/en/patterns/repdigit",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/en/patterns/five",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/en/patterns/quad",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/en/patterns/triple",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/en/patterns/pairs",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/en/patterns/repeat",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/en/patterns/run",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/en/patterns/twoDigits",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/en/patterns/palindrome",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/en/patterns/ascending",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/en/patterns/descending",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/en/patterns/ascRun",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/en/patterns/descRun",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/en/patterns/abab",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/en/patterns/abcabc",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/en/patterns/parity",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/en/patterns/zigzag",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/en/patterns/harshad",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/en/patterns/happy",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/en/patterns/prime",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/en/patterns/semiprime",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/en/patterns/square",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/en/patterns/cube",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/en/patterns/power2",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/en/patterns/fibonacci",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/en/patterns/triangular",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/en/patterns/factorial",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/en/patterns/divisible",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/en/patterns/binaryPal",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/en/patterns/binaryOnes",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/en/patterns/hexRepeat",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/en/rarest-numbers",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/en/daily/answer",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/en/daily/answer/2026-09-26",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/zh",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/zh/infinite",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/zh/daily",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/zh/compare",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/zh/explore",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/zh/sandbox",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/zh/patterns",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/zh/guides",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/zh/methodology",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/zh/badges",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/zh/ep",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/zh/leaderboard",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/zh/about",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/zh/privacy",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/zh/terms",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/zh/contact",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/zh/patterns/repdigit",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/zh/patterns/five",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/zh/patterns/quad",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/zh/patterns/triple",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/zh/patterns/pairs",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/zh/patterns/repeat",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/zh/patterns/run",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/zh/patterns/twoDigits",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/zh/patterns/palindrome",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/zh/patterns/ascending",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/zh/patterns/descending",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/zh/patterns/ascRun",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/zh/patterns/descRun",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/zh/patterns/abab",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/zh/patterns/abcabc",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/zh/patterns/parity",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/zh/patterns/zigzag",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/zh/patterns/harshad",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/zh/patterns/happy",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/zh/patterns/prime",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/zh/patterns/semiprime",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/zh/patterns/square",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/zh/patterns/cube",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/zh/patterns/power2",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/zh/patterns/fibonacci",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/zh/patterns/triangular",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/zh/patterns/factorial",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/zh/patterns/divisible",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/zh/patterns/binaryPal",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/zh/patterns/binaryOnes",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/zh/patterns/hexRepeat",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/zh/rarest-numbers",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/zh/daily/answer",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/zh/daily/answer/2026-09-26",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/ja",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/ja/infinite",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/ja/daily",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/ja/compare",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/ja/explore",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/ja/sandbox",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/ja/patterns",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/ja/guides",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/ja/methodology",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/ja/badges",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/ja/ep",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/ja/leaderboard",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/ja/about",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/ja/privacy",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/ja/terms",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/ja/contact",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/ja/patterns/repdigit",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/ja/patterns/five",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/ja/patterns/quad",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/ja/patterns/triple",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/ja/patterns/pairs",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/ja/patterns/repeat",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/ja/patterns/run",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/ja/patterns/twoDigits",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/ja/patterns/palindrome",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/ja/patterns/ascending",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/ja/patterns/descending",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/ja/patterns/ascRun",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/ja/patterns/descRun",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/ja/patterns/abab",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/ja/patterns/abcabc",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/ja/patterns/parity",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/ja/patterns/zigzag",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/ja/patterns/harshad",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/ja/patterns/happy",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/ja/patterns/prime",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/ja/patterns/semiprime",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/ja/patterns/square",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/ja/patterns/cube",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/ja/patterns/power2",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/ja/patterns/fibonacci",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/ja/patterns/triangular",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/ja/patterns/factorial",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/ja/patterns/divisible",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/ja/patterns/binaryPal",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/ja/patterns/binaryOnes",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/ja/patterns/hexRepeat",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/ko",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/ko/infinite",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/ko/daily",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/ko/compare",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/ko/explore",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/ko/sandbox",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/ko/patterns",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/ko/guides",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/ko/methodology",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/ko/badges",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/ko/ep",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/ko/leaderboard",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/ko/about",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/ko/privacy",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/ko/terms",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/ko/contact",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/ko/patterns/repdigit",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/ko/patterns/five",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/ko/patterns/quad",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/ko/patterns/triple",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/ko/patterns/pairs",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/ko/patterns/repeat",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/ko/patterns/run",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/ko/patterns/twoDigits",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/ko/patterns/palindrome",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/ko/patterns/ascending",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/ko/patterns/descending",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/ko/patterns/ascRun",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/ko/patterns/descRun",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/ko/patterns/abab",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/ko/patterns/abcabc",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/ko/patterns/parity",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/ko/patterns/zigzag",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/ko/patterns/harshad",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/ko/patterns/happy",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/ko/patterns/prime",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/ko/patterns/semiprime",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/ko/patterns/square",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/ko/patterns/cube",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/ko/patterns/power2",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/ko/patterns/fibonacci",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/ko/patterns/triangular",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/ko/patterns/factorial",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/ko/patterns/divisible",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/ko/patterns/binaryPal",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/ko/patterns/binaryOnes",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/ko/patterns/hexRepeat",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/de",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/de/infinite",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/de/daily",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/de/compare",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/de/explore",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/de/sandbox",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/de/patterns",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/de/guides",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/de/methodology",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/de/badges",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/de/ep",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/de/leaderboard",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/de/about",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/de/privacy",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/de/terms",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/de/contact",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/de/patterns/repdigit",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/de/patterns/five",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/de/patterns/quad",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/de/patterns/triple",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/de/patterns/pairs",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/de/patterns/repeat",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/de/patterns/run",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/de/patterns/twoDigits",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/de/patterns/palindrome",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/de/patterns/ascending",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/de/patterns/descending",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/de/patterns/ascRun",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/de/patterns/descRun",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/de/patterns/abab",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/de/patterns/abcabc",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/de/patterns/parity",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/de/patterns/zigzag",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/de/patterns/harshad",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/de/patterns/happy",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/de/patterns/prime",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/de/patterns/semiprime",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/de/patterns/square",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/de/patterns/cube",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/de/patterns/power2",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/de/patterns/fibonacci",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/de/patterns/triangular",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/de/patterns/factorial",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/de/patterns/divisible",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/de/patterns/binaryPal",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/de/patterns/binaryOnes",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/de/patterns/hexRepeat",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/fr",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/fr/infinite",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/fr/daily",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/fr/compare",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/fr/explore",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/fr/sandbox",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/fr/patterns",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/fr/guides",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/fr/methodology",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/fr/badges",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/fr/ep",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/fr/leaderboard",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/fr/about",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/fr/privacy",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/fr/terms",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/fr/contact",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/fr/patterns/repdigit",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/fr/patterns/five",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/fr/patterns/quad",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/fr/patterns/triple",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/fr/patterns/pairs",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/fr/patterns/repeat",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/fr/patterns/run",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/fr/patterns/twoDigits",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/fr/patterns/palindrome",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/fr/patterns/ascending",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/fr/patterns/descending",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/fr/patterns/ascRun",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/fr/patterns/descRun",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/fr/patterns/abab",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/fr/patterns/abcabc",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/fr/patterns/parity",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/fr/patterns/zigzag",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/fr/patterns/harshad",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/fr/patterns/happy",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/fr/patterns/prime",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/fr/patterns/semiprime",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/fr/patterns/square",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/fr/patterns/cube",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/fr/patterns/power2",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/fr/patterns/fibonacci",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/fr/patterns/triangular",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/fr/patterns/factorial",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/fr/patterns/divisible",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/fr/patterns/binaryPal",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/fr/patterns/binaryOnes",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/fr/patterns/hexRepeat",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/sitemap.xml",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/robots.txt",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/llms.txt",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/og/default.png",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4183/og/daily-2026-09-26.png",
+      "status": 200
+    },
+    {
+      "url": "/en/daily/answer/2099-01-01",
+      "status": 404,
+      "expected": 404
+    },
+    {
+      "url": "/en/daily/answer/2026-02-30",
+      "status": 404,
+      "expected": 404
+    },
+    {
+      "url": "/en/daily/answer/page/9999",
+      "status": 404,
+      "expected": 404
+    }
+  ]
+}

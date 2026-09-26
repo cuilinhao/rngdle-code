@@ -19,6 +19,7 @@ import {
   recordRecent,
 } from "./core";
 import { tierKeys } from "./i18n";
+import { drawShareCard } from "./share-card.mjs";
 export function Badge({ tier }: { tier: number }) {
   const { t } = useApp();
   return (
@@ -469,30 +470,15 @@ export function ShareDialog({
     c.width = 1200;
     c.height = 630;
     const x = c.getContext("2d")!;
-    x.fillStyle = "#101010";
-    x.fillRect(0, 0, 1200, 630);
-    x.strokeStyle = "#333";
-    x.strokeRect(32, 32, 1136, 566);
-    x.fillStyle = "#999";
-    x.font = "24px system-ui";
-    x.fillText("RNGDLE.ART  /  " + t("lab"), 72, 98);
-    x.fillStyle = "#fff";
-    x.font = "bold 128px system-ui";
-    x.fillText(fmt(n), 72, 280);
-    x.font = "28px system-ui";
-    x.fillText(t(tierKeys[a.tier]), 78, 342);
-    x.font = "22px system-ui";
-    x.fillStyle = "#aaa";
-    x.fillText(t("score"), 78, 442);
-    x.fillText(t("percentile"), 540, 442);
-    x.fillStyle = "#fff";
-    x.font = "bold 48px system-ui";
-    x.fillText(fmt(a.score), 78, 506);
-    x.fillText(
-      t("top", { p: fmt(a.percent, a.percent < 0.01 ? 4 : 3) }),
-      540,
-      506,
-    );
+    drawShareCard(x, {
+      number: fmt(n),
+      score: fmt(a.score),
+      percent: t("top", { p: fmt(a.percent, a.percent < 0.01 ? 4 : 3) }),
+      label: t("lab"),
+      subtitle: t(tierKeys[a.tier]),
+      scoreLabel: t("score"),
+      percentLabel: t("percentile"),
+    });
     setImage(c.toDataURL("image/png"));
     return () => previous?.focus();
   }, [n, locale]);
