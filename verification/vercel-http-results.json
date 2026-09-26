@@ -1,9 +1,30 @@
 {
-  "base": "http://127.0.0.1:4173",
-  "checkedAt": "2026-09-26T07:23:45.396Z",
+  "base": "https://rngdle-art.vercel.app",
+  "checkedAt": "2026-09-26T07:20:20.063Z",
   "passed": 291,
   "failed": [],
-  "networkRetries": [],
+  "networkRetries": [
+    {
+      "url": "https://rngdle-art.vercel.app/en/compare",
+      "attempt": 1,
+      "error": "Command failed: curl --silent --show-error --location --max-time 30 --write-out \n%{http_code} https://rngdle-art.vercel.app/en/compare\ncurl: (35) LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to rngdle-art.vercel.app:443 \n"
+    },
+    {
+      "url": "https://rngdle-art.vercel.app/ko/patterns/harshad",
+      "attempt": 1,
+      "error": "Command failed: curl --silent --show-error --location --max-time 30 --write-out \n%{http_code} https://rngdle-art.vercel.app/ko/patterns/harshad\ncurl: (35) LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to rngdle-art.vercel.app:443 \n"
+    },
+    {
+      "url": "https://rngdle-art.vercel.app/ko/patterns/triangular",
+      "attempt": 1,
+      "error": "Command failed: curl --silent --show-error --location --max-time 30 --write-out \n%{http_code} https://rngdle-art.vercel.app/ko/patterns/triangular\ncurl: (35) LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to rngdle-art.vercel.app:443 \n"
+    },
+    {
+      "url": "https://rngdle-art.vercel.app/fr/patterns/divisible",
+      "attempt": 1,
+      "error": "Command failed: curl --silent --show-error --location --max-time 30 --write-out \n%{http_code} https://rngdle-art.vercel.app/fr/patterns/divisible\ncurl: (35) LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to rngdle-art.vercel.app:443 \n"
+    }
+  ],
   "results": [
     {
       "path": "/assets/index-C3ksoc9k.css",

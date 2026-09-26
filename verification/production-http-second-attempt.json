@@ -1,9 +1,29 @@
 {
-  "base": "http://127.0.0.1:4173",
-  "checkedAt": "2026-09-26T07:23:45.396Z",
-  "passed": 291,
-  "failed": [],
-  "networkRetries": [],
+  "base": "https://rngdle-art.vercel.app",
+  "checkedAt": "2026-09-26T07:19:01.721Z",
+  "passed": 287,
+  "failed": [
+    {
+      "path": "/en/patterns/cube",
+      "pass": false,
+      "error": "Command failed: curl --silent --show-error --location --max-time 30 --write-out \n%{http_code} https://rngdle-art.vercel.app/en/patterns/cube\ncurl: (35) LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to rngdle-art.vercel.app:443 \n"
+    },
+    {
+      "path": "/ko/patterns/run",
+      "pass": false,
+      "error": "Command failed: curl --silent --show-error --location --max-time 30 --write-out \n%{http_code} https://rngdle-art.vercel.app/ko/patterns/run\ncurl: (35) LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to rngdle-art.vercel.app:443 \n"
+    },
+    {
+      "path": "/de/patterns/palindrome",
+      "pass": false,
+      "error": "Command failed: curl --silent --show-error --location --max-time 30 --write-out \n%{http_code} https://rngdle-art.vercel.app/de/patterns/palindrome\ncurl: (35) LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to rngdle-art.vercel.app:443 \n"
+    },
+    {
+      "path": "/fr/patterns/binaryPal",
+      "pass": false,
+      "error": "Command failed: curl --silent --show-error --location --max-time 30 --write-out \n%{http_code} https://rngdle-art.vercel.app/fr/patterns/binaryPal\ncurl: (35) LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to rngdle-art.vercel.app:443 \n"
+    }
+  ],
   "results": [
     {
       "path": "/assets/index-C3ksoc9k.css",
@@ -185,8 +205,8 @@
     },
     {
       "path": "/de/patterns/palindrome",
-      "status": 200,
-      "pass": true
+      "pass": false,
+      "error": "Command failed: curl --silent --show-error --location --max-time 30 --write-out \n%{http_code} https://rngdle-art.vercel.app/de/patterns/palindrome\ncurl: (35) LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to rngdle-art.vercel.app:443 \n"
     },
     {
       "path": "/de/patterns/parity",
@@ -370,8 +390,8 @@
     },
     {
       "path": "/en/patterns/cube",
-      "status": 200,
-      "pass": true
+      "pass": false,
+      "error": "Command failed: curl --silent --show-error --location --max-time 30 --write-out \n%{http_code} https://rngdle-art.vercel.app/en/patterns/cube\ncurl: (35) LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to rngdle-art.vercel.app:443 \n"
     },
     {
       "path": "/en/patterns/descending",
@@ -605,8 +625,8 @@
     },
     {
       "path": "/fr/patterns/binaryPal",
-      "status": 200,
-      "pass": true
+      "pass": false,
+      "error": "Command failed: curl --silent --show-error --location --max-time 30 --write-out \n%{http_code} https://rngdle-art.vercel.app/fr/patterns/binaryPal\ncurl: (35) LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to rngdle-art.vercel.app:443 \n"
     },
     {
       "path": "/fr/patterns/cube",
@@ -1170,8 +1190,8 @@
     },
     {
       "path": "/ko/patterns/run",
-      "status": 200,
-      "pass": true
+      "pass": false,
+      "error": "Command failed: curl --silent --show-error --location --max-time 30 --write-out \n%{http_code} https://rngdle-art.vercel.app/ko/patterns/run\ncurl: (35) LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to rngdle-art.vercel.app:443 \n"
     },
     {
       "path": "/ko/patterns/semiprime",

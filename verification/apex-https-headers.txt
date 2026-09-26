@@ -1,0 +1,21 @@
+HTTP/1.1 200 Connection established
+
+HTTP/2 200
+accept-ranges: bytes
+access-control-allow-origin: *
+age: 219
+cache-control: public, max-age=0, must-revalidate
+content-disposition: inline; filename="zh"
+content-type: text/html; charset=utf-8
+date: Sat, 26 Sep 2026 07:28:18 GMT
+etag: "fcd5ed254141b63b2cc55c76066bb0bc"
+last-modified: Sat, 26 Sep 2026 07:24:39 GMT
+permissions-policy: camera=(), microphone=(), geolocation=()
+referrer-policy: strict-origin-when-cross-origin
+server: Vercel
+strict-transport-security: max-age=63072000
+x-content-type-options: nosniff
+x-frame-options: DENY
+x-vercel-cache: HIT
+x-vercel-id: hnd1::kmv7m-1790407698888-f0b21688d7ee
+content-length: 12137

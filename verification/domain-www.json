@@ -1,0 +1,75 @@
+{
+  "status": "ok",
+  "reason": "configured_correctly",
+  "message": "www.rngdle.art has a valid configuration and is verified for project rngdle-art.",
+  "domain": "www.rngdle.art",
+  "domainStatus": "configured-correctly",
+  "configurationStatus": "configured-correctly",
+  "ok": true,
+  "issues": [],
+  "misconfigured": false,
+  "configuredBy": "CNAME",
+  "serviceType": "external",
+  "ipStatus": "no-change",
+  "dnssecEnabled": null,
+  "acceptedChallenges": [
+    "http-01"
+  ],
+  "current": {
+    "nameservers": [
+      "dns2.registrar-servers.com",
+      "dns1.registrar-servers.com"
+    ],
+    "cnames": [
+      "ca491a073f28d8ac.vercel-dns-016.com."
+    ],
+    "aValues": [
+      "216.150.1.1",
+      "216.150.16.1"
+    ]
+  },
+  "recommended": {
+    "ipv4": [
+      {
+        "rank": 1,
+        "value": [
+          "216.150.1.1",
+          "216.150.16.1"
+        ]
+      },
+      {
+        "rank": 2,
+        "value": [
+          "76.76.21.21"
+        ]
+      }
+    ],
+    "cname": [
+      {
+        "rank": 1,
+        "value": "ca491a073f28d8ac.vercel-dns-016.com."
+      },
+      {
+        "rank": 2,
+        "value": "cname.vercel-dns.com."
+      }
+    ],
+    "records": [
+      {
+        "type": "CNAME",
+        "name": "www",
+        "value": "ca491a073f28d8ac.vercel-dns-016.com."
+      }
+    ],
+    "nameservers": []
+  },
+  "conflicts": [],
+  "domainOwnership": "current-scope",
+  "project": {
+    "idOrName": "rngdle-art",
+    "attached": true,
+    "verified": true,
+    "verification": [],
+    "verificationError": null
+  }
+}

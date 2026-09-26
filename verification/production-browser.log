@@ -1,0 +1,45 @@
+
+> rngdle-art@1.0.0 test:browser
+> playwright test
+
+
+Running 30 tests using 3 workers
+
+(node:50993) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:50991) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:50992) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 tests/browser/acceptance.spec.ts:44:3 › A01 A12 A16 A17 all primary routes, metadata and reload: ja (9.5s)
+  ✓   3 tests/browser/acceptance.spec.ts:44:3 › A01 A12 A16 A17 all primary routes, metadata and reload: en (9.5s)
+  ✓   2 tests/browser/acceptance.spec.ts:44:3 › A01 A12 A16 A17 all primary routes, metadata and reload: zh (9.6s)
+  ✓   4 tests/browser/acceptance.spec.ts:44:3 › A01 A12 A16 A17 all primary routes, metadata and reload: ko (8.0s)
+  ✓   6 tests/browser/acceptance.spec.ts:44:3 › A01 A12 A16 A17 all primary routes, metadata and reload: fr (8.6s)
+  ✓   5 tests/browser/acceptance.spec.ts:44:3 › A01 A12 A16 A17 all primary routes, metadata and reload: de (8.6s)
+  ✓   8 tests/browser/acceptance.spec.ts:89:1 › A02 A03 number validation and reference sample (1.7s)
+  ✓   9 tests/browser/acceptance.spec.ts:113:1 › A04 A05 single, batch, turbo target, stop, save and new session (3.5s)
+  ✓  10 tests/browser/acceptance.spec.ts:159:1 › A04 reveal controls, simulated page-hidden event and navigation pause (3.1s)
+  ✓  11 tests/browser/acceptance.spec.ts:198:3 › A06 A07 daily draft: resume, complete, practice, locked result (2.7s)
+  ✓  12 tests/browser/acceptance.spec.ts:198:3 › A06 A07 daily hunt: resume, complete, practice, locked result (2.3s)
+  ✓  13 tests/browser/acceptance.spec.ts:198:3 › A06 A07 daily quiz: resume, complete, practice, locked result (2.4s)
+  ✓  14 tests/browser/acceptance.spec.ts:265:1 › A07 hunt timeout settles after elapsed time and UTC midnight changes challenge (1.9s)
+  ✓  15 tests/browser/acceptance.spec.ts:284:1 › A08 comparison, random battle and independent quiz (2.1s)
+  ✓  16 tests/browser/acceptance.spec.ts:308:1 › A09 full-range explorer exact count, no matches, filters and random result (3.0s)
+  ✓  17 tests/browser/acceptance.spec.ts:335:1 › A10 sandbox keyboard, length, reset and best edit (1.3s)
+  ✓   7 tests/browser/acceptance.spec.ts:74:1 › A01 A11 every pattern detail has an accessible exact count and live example (13.4s)
+  ✓  20 tests/browser/acceptance.spec.ts:427:1 › A14 share link clipboard, real image download and focus restoration (1.4s)
+  ✓  18 tests/browser/acceptance.spec.ts:372:1 › A11 atlas is only stamped by daily specimens and survives reload (2.7s)
+  ✓  19 tests/browser/acceptance.spec.ts:401:1 › A12 A13 browser locale fallback, selection, theme persistence and route preservation (3.8s)
+  ✓  21 tests/browser/acceptance.spec.ts:456:3 › A15 mobile and tablet responsive routes: en (3.6s)
+  ✓  22 tests/browser/acceptance.spec.ts:456:3 › A15 mobile and tablet responsive routes: zh (3.6s)
+  ✓  23 tests/browser/acceptance.spec.ts:456:3 › A15 mobile and tablet responsive routes: ja (3.6s)
+  ✓  24 tests/browser/acceptance.spec.ts:456:3 › A15 mobile and tablet responsive routes: ko (3.4s)
+  ✓  25 tests/browser/acceptance.spec.ts:456:3 › A15 mobile and tablet responsive routes: de (3.6s)
+  ✓  26 tests/browser/acceptance.spec.ts:456:3 › A15 mobile and tablet responsive routes: fr (3.5s)
+  ✓  27 tests/browser/acceptance.spec.ts:492:1 › A15 keyboard navigation, mobile menu and reduced motion (2.1s)
+  ✓  30 tests/browser/acceptance.spec.ts:555:1 › A03 tiny nonzero probabilities never display as zero (1.2s)
+  ✓  28 tests/browser/acceptance.spec.ts:518:1 › A16 graceful corrupt storage and data-load failure retry (2.5s)
+  ✓  29 tests/browser/acceptance.spec.ts:540:1 › A01 404 renders a real recovery route (1.5s)
+
+  30 passed (43.5s)

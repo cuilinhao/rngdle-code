@@ -11,4 +11,4 @@
 | Responsive | Browser evidence at 1440/768/390 | Tested at same widths, no horizontal overflow | Browser A15 |
 | Public leaderboard | Reference mentions anonymous daily ranking | Not connected or fabricated; only genuine local results and mathematical rankings | PLAN.md scope boundaries |
 
-No pixel-identical claim is made: the user requested a color/theme change, and implementation and copy are independently authored. Functional agreement is supported by tests; inaccessible server internals and untested natural tab visibility are explicitly listed.
+No pixel-identical claim is made: the user requested a color/theme change, and implementation and copy are independently authored. Functional agreement is supported by tests; inaccessible server internals and scope differences are explicitly listed. Natural tab visibility was also verified manually in desktop Chrome after automated checks.

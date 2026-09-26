@@ -1,9 +1,15 @@
 {
-  "base": "http://127.0.0.1:4173",
-  "checkedAt": "2026-09-26T07:23:45.396Z",
+  "base": "https://rngdle.art",
+  "checkedAt": "2026-09-26T07:25:34.316Z",
   "passed": 291,
   "failed": [],
-  "networkRetries": [],
+  "networkRetries": [
+    {
+      "url": "https://rngdle.art/fr/sandbox",
+      "attempt": 1,
+      "error": "Command failed: curl --silent --show-error --location --max-time 30 --write-out \n%{http_code} https://rngdle.art/fr/sandbox\ncurl: (35) LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to rngdle.art:443 \n"
+    }
+  ],
   "results": [
     {
       "path": "/assets/index-C3ksoc9k.css",
