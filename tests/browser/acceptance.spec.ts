@@ -398,20 +398,19 @@ test("A11 atlas is only stamped by daily specimens and survives reload", async (
   await page.getByRole("button", { name: "Symmetry", exact: true }).click();
   await expect(page.locator(".atlas-card")).toHaveCount(1);
 });
-test("A12 A13 browser locale fallback, selection, theme persistence and route preservation", async ({
+test("A12 A13 English default, saved selection, theme persistence and route preservation", async ({
   browser,
   page,
 }) => {
-  const context = await browser.newContext({ locale: "ja-JP" });
-  const p = await context.newPage();
-  await p.goto(process.env.BASE_URL || "http://127.0.0.1:5173");
-  await expect(p).toHaveURL(/\/ja$/);
-  await context.close();
-  const fallback = await browser.newContext({ locale: "es-ES" });
-  const q = await fallback.newPage();
-  await q.goto(process.env.BASE_URL || "http://127.0.0.1:5173");
-  await expect(q).toHaveURL(/\/en$/);
-  await fallback.close();
+  for (const language of ["en-US", "zh-CN", "ja-JP", "ko-KR", "de-DE", "fr-FR", "es-ES"]) {
+    const context = await browser.newContext({ locale: language });
+    const p = await context.newPage();
+    await p.goto((process.env.BASE_URL || "http://127.0.0.1:5173") + "/?n=142857#main");
+    await expect(p).toHaveURL(/\/en\?n=142857#main$/);
+    await expect(p.locator("html")).toHaveAttribute("lang", "en-US");
+    await expect(p.getByRole("heading", {level: 1})).toContainText("How rare");
+    await context.close();
+  }
   await page.goto("/en/sandbox?n=142857");
   await expect(page.locator("main[data-ready=true]")).toBeVisible();
   await page.getByLabel("Language", { exact: true }).selectOption("zh");

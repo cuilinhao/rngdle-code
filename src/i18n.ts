@@ -1322,14 +1322,7 @@ export function translate(
     value = value.replaceAll("{" + k + "}", String(v));
   return value;
 }
-export function detectLocale(
-  languages: readonly string[],
-  saved?: string | null,
-): Locale {
+export function defaultLocale(saved?: string | null): Locale {
   if (saved && locales.includes(saved as Locale)) return saved as Locale;
-  for (const language of languages) {
-    const code = language.toLowerCase().split("-")[0];
-    if (locales.includes(code as Locale)) return code as Locale;
-  }
   return "en";
 }

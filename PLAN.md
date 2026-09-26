@@ -11,7 +11,7 @@ The reference site's terms reserve its code, design and generated content. No re
 1. Build an independent numeric rarity engine over integers 0–1,000,000 inclusive, using exact feature counts and score distribution calculated at build time. Natural decimal notation, no leading zeros. Document all rules and differences.
 2. Implement analysis, unlimited rolls (single, batch, turbo and stop conditions), daily games (draft, hunt and quiz), comparison, explorer, digit sandbox, pattern atlas and explanatory pages.
 3. Store game progress and settings locally. Dates use UTC. Provide shareable number links and downloadable number cards.
-4. Black/white/gray light and dark themes, six complete locales (en-US, zh-CN, ja, ko, de, fr), browser detection with English fallback, persistent manual choice.
+4. Black/white/gray light and dark themes, six complete locales (en-US, zh-CN, ja, ko, de, fr), English default regardless of browser language, persistent manual choice.
 5. Responsive layouts and accessible native inputs; localized URLs, titles and descriptions, sitemap and robots.
 6. Validate locally using real Chromium in the Codex environment, fix problems, commit to specified main branch, deploy to Vercel, configure rngdle.art where account access permits, and repeat acceptance checks online.
 
@@ -30,7 +30,7 @@ The reference site's terms reserve its code, design and generated content. No re
 | A09 | Explorer exact counts, constraints, random match and no results | Pass (see VERIFICATION.md) | Pass (see VERIFICATION.md) |
 | A10 | Sandbox editing, keyboard, length and best one-digit improvement | Pass (see VERIFICATION.md) | Pass (see VERIFICATION.md) |
 | A11 | Atlas pattern detail, progress and guides | Pass (see VERIFICATION.md) | Pass (see VERIFICATION.md) |
-| A12 | Six locales, fallback, route preservation and saved preference | Pass (see VERIFICATION.md) | Pass (see VERIFICATION.md) |
+| A12 | Six locales, English default, route preservation and saved preference | Pass (see VERIFICATION.md) | Pass (see VERIFICATION.md) |
 | A13 | Both themes, saved preference and readable monochrome state | Pass (see VERIFICATION.md) | Pass (see VERIFICATION.md) |
 | A14 | Share links, clipboard fallback and generated card | Pass (see VERIFICATION.md) | Pass (see VERIFICATION.md) |
 | A15 | 390/768/1440 layouts, keyboard and reduced motion | Pass (see VERIFICATION.md) | Pass (see VERIFICATION.md) |

@@ -19,7 +19,7 @@ import {
   locales,
   localeNames,
   htmlLangs,
-  detectLocale,
+  defaultLocale,
   translate,
   messages,
   type Locale,
@@ -80,7 +80,7 @@ function initialLocation() {
   const parts = location.pathname.split("/").filter(Boolean);
   let locale = parts[0] as Locale;
   if (!locales.includes(locale)) {
-    locale = detectLocale(navigator.languages, readStorage("language", ""));
+    locale = defaultLocale(readStorage("language", ""));
     const rest = location.pathname === "/" ? "" : location.pathname;
     history.replaceState(
       null,

@@ -1,0 +1,22 @@
+
+> rngdle-art@1.0.0 test:browser
+> playwright test --grep A12 A13|all primary routes
+
+
+Running 7 tests using 3 workers
+
+(node:64230) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:64231) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:64232) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 tests/browser/acceptance.spec.ts:44:3 › A01 A12 A16 A17 all primary routes, metadata and reload: en (3.1s)
+  ✓  3 tests/browser/acceptance.spec.ts:44:3 › A01 A12 A16 A17 all primary routes, metadata and reload: ja (3.1s)
+  ✓  2 tests/browser/acceptance.spec.ts:44:3 › A01 A12 A16 A17 all primary routes, metadata and reload: zh (3.3s)
+  ✓  4 tests/browser/acceptance.spec.ts:44:3 › A01 A12 A16 A17 all primary routes, metadata and reload: ko (2.4s)
+  ✓  5 tests/browser/acceptance.spec.ts:44:3 › A01 A12 A16 A17 all primary routes, metadata and reload: de (2.5s)
+  ✓  6 tests/browser/acceptance.spec.ts:44:3 › A01 A12 A16 A17 all primary routes, metadata and reload: fr (2.4s)
+  ✓  7 tests/browser/acceptance.spec.ts:401:1 › A12 A13 English default, saved selection, theme persistence and route preservation (4.3s)
+
+  7 passed (10.7s)

@@ -11,7 +11,7 @@ npm ci
 npm run dev
 ```
 
-The site runs at `http://127.0.0.1:5173`. Locale routes use `/en`, `/zh`, `/ja`, `/ko`, `/de`, `/fr`; the root detects browser language and remembers a manual preference.
+The site runs at `http://127.0.0.1:5173`. Locale routes use `/en`, `/zh`, `/ja`, `/ko`, `/de`, `/fr`. The root defaults to English regardless of browser language and remembers a manual preference. Explicit locale URLs always keep their requested language.
 
 ## Build and verify
 
