@@ -1,7 +1,7 @@
 import { test, expect } from "@playwright/test";
 
 for (const width of [320, 390]) {
-  test(`ad slots fit a ${width}px viewport with a reserved scrollbar gutter`, async ({ page }) => {
+  test(`homepage has no ad slots and fits a ${width}px viewport with a reserved scrollbar gutter`, async ({ page }) => {
     await page.setViewportSize({ width, height: 900 });
     await page.goto("/en");
     await expect(page.locator("main[data-ready=true]")).toBeVisible();
@@ -14,11 +14,7 @@ for (const width of [320, 390]) {
         return { left: box.left, right: box.right };
       }),
     }));
-    expect(geometry.boxes).toHaveLength(3);
+    expect(geometry.boxes).toHaveLength(0);
     expect(geometry.scrollWidth).toBeLessThanOrEqual(geometry.viewport);
-    for (const box of geometry.boxes) {
-      expect(box.left).toBeGreaterThanOrEqual(0);
-      expect(box.right).toBeLessThanOrEqual(geometry.viewport);
-    }
   });
 }
