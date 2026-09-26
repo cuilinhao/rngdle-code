@@ -1,0 +1,46 @@
+.ad-slot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin: 36px auto;
+  clear: both;
+}
+
+.ad-slot__label {
+  color: var(--muted);
+  font-size: 0.65rem;
+  letter-spacing: 0.08em;
+}
+
+.ad-slot__content {
+  flex: none;
+}
+
+.ad-slot--top {
+  margin-top: 0;
+}
+
+.ad-slot--top .ad-slot__content {
+  width: 320px;
+  min-height: 50px;
+}
+
+.ad-slot--rectangle .ad-slot__content {
+  width: 300px;
+  min-height: 250px;
+}
+
+.ad-slot--native .ad-slot__content {
+  width: 100%;
+  min-width: 0;
+  min-height: 280px;
+}
+
+@media (max-width: 360px) {
+  /* The page has 18px gutters; keep fixed vendor sizes intact on 320px phones. */
+  .ad-slot--top,
+  .ad-slot--rectangle {
+    margin-inline: -18px;
+  }
+}

@@ -17,6 +17,7 @@ import { HomeSeoSections } from "../src/SeoSections";
 import { homeContent } from "../src/seo-content";
 import { RarestNumbers } from "../src/RarestNumbers";
 import { DailyAnswer, DailyArchive } from "../src/DailyAnswers";
+import { AdSlot } from "../src/Ads";
 import {
   pageSeo,
   baseRoutes,
@@ -51,6 +52,7 @@ export function render(locale: Locale, route: string, daily?: any) {
   if (!route)
     page = (
       <>
+        <AdSlot placement="top" />
         <PageHead
           eyebrow={t("lab")}
           title={homeContent(locale).h1}
@@ -63,7 +65,9 @@ export function render(locale: Locale, route: string, daily?: any) {
           <Result n={142857} />
           <TierTable />
         </div>
+        <AdSlot placement="rectangle" />
         <HomeSeoSections />
+        <AdSlot placement="native" />
       </>
     );
   else if (!isKnownRoute(locale, route)) page = <NotFound />;

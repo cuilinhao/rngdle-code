@@ -54,6 +54,7 @@ import { homeContent } from "./seo-content";
 import { RarestNumbers } from "./RarestNumbers";
 import { DailyAnswer, DailyArchive } from "./DailyAnswers";
 import { applySeo, dailyDate, isKnownRoute, indexLocales } from "./seo";
+import { AdSlot } from "./Ads";
 export const routes = [
   "",
   "infinite",
@@ -118,6 +119,7 @@ function Home() {
   }
   return (
     <>
+      <AdSlot placement="top" />
       <PageHead
         eyebrow={t("lab")}
         title={content.h1}
@@ -141,6 +143,7 @@ function Home() {
         <Result n={n} />
         <TierTable />
       </div>
+      <AdSlot placement="rectangle" />
       <HomeSeoSections />
       <div className="section-heading feature-heading">
         <h2>{t("tools")}</h2>
@@ -163,6 +166,7 @@ function Home() {
           </A>
         ))}
       </div>
+      <AdSlot placement="native" />
     </>
   );
 }
@@ -352,7 +356,9 @@ function App() {
     return () => clearTimeout(timer);
   }, [toast]);
   let page: React.ReactNode;
-  if (!route) page = <Home key={url} />;
+  // Keep ad containers alive across locale/query changes; the number form
+  // already follows location.search without remounting the whole homepage.
+  if (!route) page = <Home />;
   else if (!isKnownRoute(locale, route)) page = <NotFound />;
   else if (route === "rarest-numbers") page = <RarestNumbers />;
   else if (dailyDate(route))

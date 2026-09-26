@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en"><meta charset="utf-8"><title>Local ad runtime browser checklist</title>
+<style>
+body { font: 16px system-ui; max-width: 900px; margin: 32px auto; padding: 12px; }
+button { margin: 4px; padding: 10px; cursor: pointer; } li { margin: 12px 0; }
+[data-result="PASS"] { color: #08752c; } [data-result="FAIL"] { color: #b00020; }
+#slots > div { border: 1px solid #888; margin: 10px; padding: 12px; min-height: 30px; }
+</style>
+<h1>Actual browser ad runtime checklist</h1>
+<p>Imports the real runtime and loads local classic supplier scripts. No external ad requests.
+Native supplier behavior is simulated at its boundary; production supplier behavior needs a separate check.</p>
+<button id="all">Run full checklist</button><ol id="results"></ol><h2>Rendered fixture ads</h2><div id="slots"></div>
+<script type="module">
+import { mountAd } from '/src/ads-runtime.mjs';
+const slots = document.querySelector('#slots');
+const cleanups = [];
+const nativeKey = 'fixture-native';
+const unit = (key, width = 320, height = 50) => ({ key, width, height, format: 'iframe',
+  src: `/tests/fixtures/ad-vendor.js?key=${key}&width=${width}&height=${height}` });
+const makeSlot = () => slots.appendChild(document.createElement('div'));
+const mount = (slot, ad) => { const cleanup = mountAd(slot, ad); cleanups.push(cleanup); return cleanup; };
+const assert = (condition, message) => { if (!condition) throw Error(message); };
+const until = async (condition) => {
+  const deadline = Date.now() + 5000;
+  while (!condition()) { if (Date.now() > deadline) throw Error('Timed out waiting for real script side effects'); await new Promise(r => setTimeout(r, 20)); }
+};
+const banner = slot => slot.querySelector('[data-banner]');
+let serial = 0;
+const cases = [
+  ['Banner injection and serialized options', async () => {
+    const id = ++serial, a = makeSlot(), b = makeSlot();
+    mount(a, unit(`first-${id}`, 728, 90)); mount(b, unit(`second-${id}`, 300, 250));
+    await until(() => banner(a) && banner(b));
+    assert(banner(a).dataset.banner === `first-${id}` && banner(b).dataset.banner === `second-${id}`, 'Wrong banner keys');
+    assert(banner(a).dataset.collision === 'false' && banner(b).dataset.collision === 'false', 'Shared atOptions collision');
+    assert(banner(a).dataset.width === '728' && banner(b).dataset.height === '250', 'Wrong banner sizes');
+  }],
+  ['Same slot mounts only once', async () => {
+    const key = `duplicate-${++serial}`, slot = makeSlot(), ad = unit(key);
+    const first = mount(slot, ad), second = mountAd(slot, ad);
+    assert(first === second, 'Duplicate mount returned a different cleanup');
+    await until(() => banner(slot));
+    assert(slot.querySelectorAll('script').length === 1 && slot.querySelectorAll('[data-banner]').length === 1, 'Duplicate script or banner');
+    assert(window.fixtureLoads.filter(value => value === key).length === 1, 'Supplier executed twice');
+  }],
+  ['Failed script releases the next banner', async () => {
+    const bad = makeSlot(), good = makeSlot(), key = `recovery-${++serial}`;
+    mount(bad, { ...unit('failure'), src: '/tests/fixtures/missing-ad-vendor.js' });
+    const failure = new Promise(resolve => bad.querySelector('script').addEventListener('error', () => resolve(true), { once: true }));
+    mount(good, unit(key));
+    await until(() => banner(good));
+    assert(await Promise.race([failure, Promise.resolve(false)]), 'Expected script error was not observed');
+    assert(banner(good).dataset.banner === key && banner(good).dataset.collision === 'false', 'Recovery banner has incorrect options');
+  }],
+  ['Cleanup removes contents and permits a fresh mount', async () => {
+    const slot = makeSlot(), key = `cleanup-${++serial}`, cleanup = mount(slot, unit(key));
+    await until(() => banner(slot)); cleanup(); cleanup();
+    assert(slot.childNodes.length === 0, 'Cleanup left script or banner in the slot');
+    mount(slot, unit(key + '-remounted'));
+    await until(() => banner(slot));
+    assert(banner(slot).dataset.banner === key + '-remounted', 'Remount failed');
+  }],
+  ['In-flight cleanup and cancelled queue preserve options', async () => {
+    const id = ++serial, active = makeSlot(), cancelled = makeSlot(), detached = makeSlot(), good = makeSlot();
+    const stopActive = mount(active, unit(`active-${id}`)), stopQueued = mount(cancelled, unit(`cancelled-${id}`));
+    mount(detached, unit(`detached-${id}`)); mount(good, unit(`survivor-${id}`));
+    stopActive(); stopQueued(); detached.remove();
+    await until(() => banner(good));
+    assert(active.childNodes.length === 0 && cancelled.childNodes.length === 0, 'Cancelled slot retained content');
+    assert(!window.fixtureLoads.includes(`cancelled-${id}`) && !window.fixtureLoads.includes(`detached-${id}`), 'Cancelled queued script executed');
+    assert(!window.fixtureCollisions?.includes(`active-${id}`) && banner(good).dataset.collision === 'false', 'Cleanup changed shared options early');
+  }],
+  ['Native script survives unmount/remount exactly once', async () => {
+    const slot = makeSlot(), native = { key: nativeKey, format: 'native', src: `/tests/fixtures/ad-vendor.js?native=1&key=${nativeKey}` };
+    const cleanup = mount(slot, native);
+    await until(() => slot.querySelector('[data-native-banner]'));
+    cleanup(); assert(slot.childNodes.length === 0, 'Native cleanup left target content');
+    slot.remove(); const replacement = makeSlot(); mount(replacement, native);
+    dispatchEvent(new PopStateEvent('popstate'));
+    await until(() => replacement.querySelector('[data-native-banner]'));
+    assert(window.fixtureLoads.filter(value => value === nativeKey).length === 1, 'Native supplier executed more than once');
+    assert(document.querySelectorAll(`script[src*="native=1&key=${nativeKey}"]`).length === 1, 'Native script count is not one');
+    assert(document.querySelectorAll(`#container-${nativeKey}`).length === 1, 'Duplicate native target');
+  }],
+];
+let running = false;
+async function run(indexes) {
+  if (running) return; running = true;
+  for (const cleanup of cleanups.splice(0)) cleanup(); slots.replaceChildren();
+  for (const index of indexes) {
+    const row = document.getElementById(`result-${index}`); row.dataset.result = 'RUNNING'; row.textContent = `${cases[index][0]}: RUNNING`;
+    try { await cases[index][1](); row.dataset.result = 'PASS'; row.textContent = `${cases[index][0]}: PASS`; }
+    catch (error) { row.dataset.result = 'FAIL'; row.textContent = `${cases[index][0]}: FAIL — ${error.message}`; }
+  }
+  running = false;
+}
+cases.forEach(([name], index) => {
+  const row = document.createElement('li'), result = document.createElement('span'), button = document.createElement('button');
+  result.id = `result-${index}`; result.textContent = `${name}: NOT RUN`; button.textContent = 'Run check'; button.onclick = () => run([index]);
+  row.append(result, button); document.querySelector('#results').append(row);
+});
+document.querySelector('#all').onclick = () => run(cases.map((_, index) => index));
+</script></html>
