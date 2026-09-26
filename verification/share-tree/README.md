@@ -39,3 +39,13 @@
 ## 验证边界
 
 这里记录的是本地发布前结果；生产部署需另行核验。浏览器覆盖 Codex IAB 与 Chromium；手机为视口模拟，未使用真实 iOS/Android 硬件或 Safari。扫码结论来自实际渲染截图和下载 PNG 的软件解码，未宣称摄像头实扫。懒加载 Three chunk 约 135 KB gzip，仍有 Vite 500 KB 未压缩体积提示，不阻塞构建。
+
+## 第一轮生产复验（应用提交 96d8c64）
+
+已推送 GitHub main；Vercel `dpl_6jCRfQtr2ezb1n8XRVCXgH9LS6JB` production READY，SHA 精确匹配，正式域名为 https://rngdle.art。
+
+- 正式域名 Chromium 完整回归 **59/59，0 失败、0 跳过、0 flaky**，97 秒。上述分享卡各项与原 A01–A17 同一套用例在线上全部通过。见 [生产逐项结果](production-browser-results.json)、[日志](production-browser.log)。
+- 288 页全量 HTTP、资源哈希与 SEO 校验 **318/318 项、4233/4233 条断言通过**；有 1 次 patterns.bin 下载超时重试，重试后完整内容哈希一致，0 warning。见 [HTTP 报告](production-http.json)。
+- 已逐张查看正式站 [桌面树形](production-tree.png)、[二维码](production-qr.png)、[手机界面](production-mobile.png)，并读取实际下载 PNG 的树冠像素与二维码。[秋季下载卡片](production-downloaded-autumn-card.png)、[春季下载卡片](production-spring-card.png)。
+- Codex IAB 已完成本地实际交互；正式域名的 IAB 会话连接超时，本轮线上结果来自 Codex 启动的独立 Chromium 实际页面和下载，不宣称在线 IAB 人工复验成功。
+- GitHub Linux CI 首轮为 **57/59**：两个检查在 click 返回时已错过 1.25 秒的中间 transition 状态。已保留 [真实失败记录](initial-ci-animation-failure.log)，后续测试改用受控时钟精确停在动画中途；未删测试、未放宽为终态、未添加重试。产品代码无变更。此处不能把首轮 CI 写成通过，修复后最终结果需另行记录。

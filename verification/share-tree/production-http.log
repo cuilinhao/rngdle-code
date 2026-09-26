@@ -1,0 +1,20 @@
+HTTP pages: 60/288
+HTTP pages: 120/288
+HTTP pages: 180/288
+HTTP pages: 240/288
+HTTP pages: 288/288
+{
+  "base": "https://rngdle.art",
+  "transport": "curl",
+  "routeCount": 288,
+  "indexedCount": 100,
+  "passed": 318,
+  "failed": [],
+  "checkSummary": {
+    "passed": 4233,
+    "failed": 0
+  },
+  "warnings": [],
+  "networkRetries": 1,
+  "report": "/Users/pgy/.codex/worktrees/share-tree-release/rngdle-code/verification/release-production-http.json"
+}

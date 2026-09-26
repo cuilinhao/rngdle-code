@@ -1,0 +1,86 @@
+GitHub Verify run 36238595587; application commit 96d8c64029e4883c258aa4c79c001e87f11ca120.
+CI initial result: 57 passed, 2 failed. Both failures observed qr when a transient transition state was expected.
+2026-09-26T11:25:10.8883140Z   1) tests/browser/share-tree-resilience.spec.ts:51:1 › closing during animation and reopening repeatedly leaves a working scene without page errors 
+2026-09-26T11:25:10.8883750Z 
+2026-09-26T11:25:10.8883963Z     Error: expect(locator).toHaveAttribute(expected) failed
+2026-09-26T11:25:10.8884228Z 
+2026-09-26T11:25:10.8884625Z     Locator:  locator('.share-tree')
+2026-09-26T11:25:10.8885017Z     Expected: "transition"
+2026-09-26T11:25:10.8885263Z     Received: "qr"
+2026-09-26T11:25:10.8885476Z     Timeout:  10000ms
+2026-09-26T11:25:10.8885614Z 
+2026-09-26T11:25:10.8885695Z     Call log:
+2026-09-26T11:25:10.8886066Z       - Expect "toHaveAttribute" locator('.share-tree') with timeout 10000ms
+2026-09-26T11:25:10.8886542Z       - waiting for locator('.share-tree')
+2026-09-26T11:25:10.8887174Z         24 × locator resolved to <div data-view="qr" data-ready="true" class="share-tree">…</div>
+2026-09-26T11:25:10.8887657Z            - unexpected value "qr"
+2026-09-26T11:25:10.8887831Z 
+2026-09-26T11:25:10.8887838Z 
+2026-09-26T11:25:10.8888137Z       58 |     await expect(page.locator('.share-tree')).toHaveAttribute('data-view', 'tree');
+2026-09-26T11:25:10.8888654Z       59 |     await page.locator('.share-tree-toggle').click();
+2026-09-26T11:25:10.8889200Z     > 60 |     await expect(page.locator('.share-tree')).toHaveAttribute('data-view', 'transition');
+2026-09-26T11:25:10.8889688Z          |                                               ^
+2026-09-26T11:25:10.8890032Z       61 |     await page.keyboard.press('Escape');
+2026-09-26T11:25:10.8890442Z       62 |     await expect(page.getByRole('dialog')).toHaveCount(0);
+2026-09-26T11:25:10.8890770Z       63 |   }
+2026-09-26T11:25:10.8891247Z         at /home/runner/work/rngdle-code/rngdle-code/tests/browser/share-tree-resilience.spec.ts:60:47
+2026-09-26T11:25:10.8891640Z 
+2026-09-26T11:25:10.8892054Z     attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+2026-09-26T11:25:10.8892797Z     test-results/share-tree-resilience-clos-dce70-g-scene-without-page-errors/test-failed-1.png
+2026-09-26T11:25:10.8893556Z     ────────────────────────────────────────────────────────────────────────────────────────────────
+2026-09-26T11:25:10.8893834Z 
+2026-09-26T11:25:10.8894850Z     Error Context: test-results/share-tree-resilience-clos-dce70-g-scene-without-page-errors/error-context.md
+2026-09-26T11:25:10.8895326Z 
+2026-09-26T11:25:10.8896103Z     attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+2026-09-26T11:25:10.8897117Z     test-results/share-tree-resilience-clos-dce70-g-scene-without-page-errors/trace.zip
+2026-09-26T11:25:10.8897768Z     Usage:
+2026-09-26T11:25:10.8898348Z 
+2026-09-26T11:25:10.8899062Z         npx playwright show-trace test-results/share-tree-resilience-clos-dce70-g-scene-without-page-errors/trace.zip
+2026-09-26T11:25:10.8899561Z 
+2026-09-26T11:25:10.8900120Z     ────────────────────────────────────────────────────────────────────────────────────────────────
+2026-09-26T11:25:10.8900517Z 
+2026-09-26T11:25:10.8901420Z   2) tests/browser/share-tree-resilience.spec.ts:94:1 › losing the real WebGL context during animation exposes the fallback QR 
+2026-09-26T11:25:10.8902012Z 
+2026-09-26T11:25:10.8902425Z     Error: expect(locator).toHaveAttribute(expected) failed
+2026-09-26T11:25:10.8902688Z 
+2026-09-26T11:25:10.8902817Z     Locator:  locator('.share-tree')
+2026-09-26T11:25:10.8903098Z     Expected: "transition"
+2026-09-26T11:25:10.8903341Z     Received: "qr"
+2026-09-26T11:25:10.8903546Z     Timeout:  10000ms
+2026-09-26T11:25:10.8903674Z 
+2026-09-26T11:25:10.8903758Z     Call log:
+2026-09-26T11:25:10.8904117Z       - Expect "toHaveAttribute" locator('.share-tree') with timeout 10000ms
+2026-09-26T11:25:10.8905592Z       - waiting for locator('.share-tree')
+2026-09-26T11:25:10.8906235Z         24 × locator resolved to <div data-view="qr" data-ready="true" class="share-tree">…</div>
+2026-09-26T11:25:10.8906706Z            - unexpected value "qr"
+2026-09-26T11:25:10.8906874Z 
+2026-09-26T11:25:10.8906881Z 
+2026-09-26T11:25:10.8907008Z        99 |   await readyTree(page);
+2026-09-26T11:25:10.8907699Z       100 |   await page.locator('.share-tree-toggle').click();
+2026-09-26T11:25:10.8908392Z     > 101 |   await expect(page.locator('.share-tree')).toHaveAttribute('data-view', 'transition');
+2026-09-26T11:25:10.8909128Z           |                                             ^
+2026-09-26T11:25:10.8910066Z       102 |   const lost = await page.locator('.share-tree canvas').evaluate(canvas => {
+2026-09-26T11:25:10.8910967Z       103 |     const context = (canvas as HTMLCanvasElement).getContext('webgl2');
+2026-09-26T11:25:10.8911862Z       104 |     const extension = context?.getExtension('WEBGL_lose_context');
+2026-09-26T11:25:10.8912890Z         at /home/runner/work/rngdle-code/rngdle-code/tests/browser/share-tree-resilience.spec.ts:101:45
+2026-09-26T11:25:10.8913428Z 
+2026-09-26T11:25:10.8914158Z     attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+2026-09-26T11:25:10.8915533Z     test-results/share-tree-resilience-losi-f87eb-ion-exposes-the-fallback-QR/test-failed-1.png
+2026-09-26T11:25:10.8916715Z     ────────────────────────────────────────────────────────────────────────────────────────────────
+2026-09-26T11:25:10.8917128Z 
+2026-09-26T11:25:10.8917795Z     Error Context: test-results/share-tree-resilience-losi-f87eb-ion-exposes-the-fallback-QR/error-context.md
+2026-09-26T11:25:10.8918271Z 
+2026-09-26T11:25:10.8918701Z     attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+2026-09-26T11:25:10.8919398Z     test-results/share-tree-resilience-losi-f87eb-ion-exposes-the-fallback-QR/trace.zip
+2026-09-26T11:25:10.8920065Z     Usage:
+2026-09-26T11:25:10.8920174Z 
+2026-09-26T11:25:10.8920741Z         npx playwright show-trace test-results/share-tree-resilience-losi-f87eb-ion-exposes-the-fallback-QR/trace.zip
+2026-09-26T11:25:10.8921229Z 
+2026-09-26T11:25:10.8921584Z     ────────────────────────────────────────────────────────────────────────────────────────────────
+2026-09-26T11:25:10.8921875Z 
+2026-09-26T11:25:10.8921958Z   2 failed
+2026-09-26T11:25:10.8922701Z     tests/browser/share-tree-resilience.spec.ts:51:1 › closing during animation and reopening repeatedly leaves a working scene without page errors 
+2026-09-26T11:25:10.8924039Z     tests/browser/share-tree-resilience.spec.ts:94:1 › losing the real WebGL context during animation exposes the fallback QR 
+2026-09-26T11:25:10.8924882Z   57 passed (1.7m)
+2026-09-26T11:25:11.0721488Z ##[error]Process completed with exit code 1.
+2026-09-26T11:25:11.0801607Z 

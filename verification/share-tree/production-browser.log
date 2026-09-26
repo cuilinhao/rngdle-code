@@ -1,0 +1,75 @@
+
+Running 59 tests using 3 workers
+
+(node:46722) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+(node:46720) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+(node:46721) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[1/59] tests/browser/acceptance.spec.ts:44:3 › A01 A12 A16 A17 all primary routes, metadata and reload: zh
+[2/59] tests/browser/acceptance.spec.ts:44:3 › A01 A12 A16 A17 all primary routes, metadata and reload: en
+[3/59] tests/browser/acceptance.spec.ts:44:3 › A01 A12 A16 A17 all primary routes, metadata and reload: ja
+[4/59] tests/browser/acceptance.spec.ts:44:3 › A01 A12 A16 A17 all primary routes, metadata and reload: ko
+[5/59] tests/browser/acceptance.spec.ts:44:3 › A01 A12 A16 A17 all primary routes, metadata and reload: de
+[6/59] tests/browser/acceptance.spec.ts:44:3 › A01 A12 A16 A17 all primary routes, metadata and reload: fr
+[7/59] tests/browser/acceptance.spec.ts:74:1 › A01 A11 every pattern detail has an accessible exact count and live example
+[8/59] tests/browser/acceptance.spec.ts:89:1 › A02 A03 number validation and reference sample
+[9/59] tests/browser/acceptance.spec.ts:113:1 › A04 A05 single, batch, turbo target, stop, save and new session
+[10/59] tests/browser/acceptance.spec.ts:159:1 › A04 reveal controls, simulated page-hidden event and navigation pause
+[11/59] tests/browser/acceptance.spec.ts:198:3 › A06 A07 daily draft: resume, complete, practice, locked result
+[12/59] tests/browser/acceptance.spec.ts:198:3 › A06 A07 daily hunt: resume, complete, practice, locked result
+[13/59] tests/browser/acceptance.spec.ts:198:3 › A06 A07 daily quiz: resume, complete, practice, locked result
+[14/59] tests/browser/acceptance.spec.ts:265:1 › A07 hunt timeout settles after elapsed time and UTC midnight changes challenge
+[15/59] tests/browser/acceptance.spec.ts:284:1 › A08 comparison, random battle and independent quiz
+[16/59] tests/browser/acceptance.spec.ts:308:1 › A09 full-range explorer exact count, no matches, filters and random result
+[17/59] tests/browser/acceptance.spec.ts:335:1 › A10 sandbox keyboard, length, reset and best edit
+[18/59] tests/browser/acceptance.spec.ts:372:1 › A11 atlas is only stamped by daily specimens and survives reload
+[19/59] tests/browser/acceptance.spec.ts:401:1 › A12 A13 English default, saved selection, theme persistence and route preservation
+[20/59] tests/browser/acceptance.spec.ts:426:1 › A14 share link clipboard, real image download and focus restoration
+[21/59] tests/browser/acceptance.spec.ts:455:3 › A15 mobile and tablet responsive routes: en
+[22/59] tests/browser/acceptance.spec.ts:455:3 › A15 mobile and tablet responsive routes: zh
+[23/59] tests/browser/acceptance.spec.ts:455:3 › A15 mobile and tablet responsive routes: ja
+[24/59] tests/browser/acceptance.spec.ts:455:3 › A15 mobile and tablet responsive routes: ko
+[25/59] tests/browser/acceptance.spec.ts:455:3 › A15 mobile and tablet responsive routes: de
+[26/59] tests/browser/acceptance.spec.ts:455:3 › A15 mobile and tablet responsive routes: fr
+[27/59] tests/browser/acceptance.spec.ts:491:1 › A15 keyboard navigation, mobile menu and reduced motion
+[28/59] tests/browser/acceptance.spec.ts:517:1 › A16 graceful corrupt storage and data-load failure retry
+[29/59] tests/browser/acceptance.spec.ts:539:1 › A01 404 renders a real recovery route
+[30/59] tests/browser/acceptance.spec.ts:554:1 › A03 tiny nonzero probabilities never display as zero
+[31/59] tests/browser/seo.spec.ts:5:1 › SEO survives client navigation and language changes
+[32/59] tests/browser/seo.spec.ts:46:1 › daily archive loads deterministic answer and its metadata through navigation
+[33/59] tests/browser/seo.spec.ts:77:1 › new SEO pages remain readable on mobile and without JavaScript
+[34/59] tests/browser/share-tree-resilience.spec.ts:39:1 › rapidly reversing the animation finishes on a scannable QR
+[35/59] tests/browser/share-tree-resilience.spec.ts:51:1 › closing during animation and reopening repeatedly leaves a working scene without page errors
+[36/59] tests/browser/share-tree-resilience.spec.ts:72:1 › the tree chunk is lazy and a failed chunk request leaves a scannable fallback
+[37/59] tests/browser/share-tree-resilience.spec.ts:94:1 › losing the real WebGL context during animation exposes the fallback QR
+[38/59] tests/browser/share-tree-resilience.spec.ts:119:1 › all six locales expose a scannable QR and reachable copy and download on a 320px short screen
+[39/59] tests/browser/share-tree-resilience.spec.ts:155:1 › enabling reduced motion during the animation settles on the requested scannable QR
+[40/59] tests/browser/share-tree.spec.ts:31:1 › download waits for the lazy tree and the saved PNG contains the tree
+[41/59] tests/browser/share-tree.spec.ts:65:1 › changing season never downloads the previous tree while its new image decodes
+[42/59] tests/browser/share-tree.spec.ts:113:1 › share tree animates to a QR that opens this result, and back to a tree
+[43/59] tests/browser/share-tree.spec.ts:137:1 › mobile reduced motion keeps the QR, controls and localized result usable
+[44/59] tests/browser/share-tree.spec.ts:154:1 › without WebGL a scannable result card and download are still available
+[45/59] tests/browser/share-tree.spec.ts:170:1 › tree interaction still works when only the WebGL snapshot export fails
+[46/59] tests/browser/share-tree.spec.ts:193:1 › a failed lazy tree request still offers a scannable fallback download
+[47/59] tests/browser/share-tree.spec.ts:204:3 › share card fits at 320px in en
+[48/59] tests/browser/share-tree.spec.ts:204:3 › share card fits at 320px in zh
+[49/59] tests/browser/share-tree.spec.ts:204:3 › share card fits at 320px in ja
+[50/59] tests/browser/share-tree.spec.ts:204:3 › share card fits at 320px in ko
+[51/59] tests/browser/share-tree.spec.ts:204:3 › share card fits at 320px in de
+[52/59] tests/browser/share-tree.spec.ts:204:3 › share card fits at 320px in fr
+[53/59] tests/browser/share-tree.spec.ts:216:1 › changing locale with history while the dialog is open rebuilds a working QR scene
+[54/59] tests/browser/theme.spec.ts:47:1 › A13 actual text contrast, button hover, validation and every tier in both themes
+[55/59] tests/browser/theme.spec.ts:71:3 › A13 A15 theme switch preserves geometry and both themes fit at 1440px
+[56/59] tests/browser/theme.spec.ts:71:3 › A13 A15 theme switch preserves geometry and both themes fit at 768px
+[57/59] tests/browser/theme.spec.ts:71:3 › A13 A15 theme switch preserves geometry and both themes fit at 390px
+[58/59] tests/browser/theme.spec.ts:99:1 › A14 rendered share PNG has actual dimensions and readable number/labels
+[59/59] tests/browser/theme.spec.ts:142:1 › A14 blocked clipboard retains a selected manual-copy link
+  59 passed (1.6m)

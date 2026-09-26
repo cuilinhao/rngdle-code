@@ -1,0 +1,779 @@
+{
+  "stats": {
+    "startTime": "2026-09-26T11:22:52.190Z",
+    "duration": 97027.966,
+    "expected": 59,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "tests": [
+    {
+      "file": "acceptance.spec.ts",
+      "line": 44,
+      "title": "A01 A12 A16 A17 all primary routes, metadata and reload: en",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 6751,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "acceptance.spec.ts",
+      "line": 44,
+      "title": "A01 A12 A16 A17 all primary routes, metadata and reload: zh",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 9250,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "acceptance.spec.ts",
+      "line": 44,
+      "title": "A01 A12 A16 A17 all primary routes, metadata and reload: ja",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 10309,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "acceptance.spec.ts",
+      "line": 44,
+      "title": "A01 A12 A16 A17 all primary routes, metadata and reload: ko",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 9307,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "acceptance.spec.ts",
+      "line": 44,
+      "title": "A01 A12 A16 A17 all primary routes, metadata and reload: de",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 9968,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "acceptance.spec.ts",
+      "line": 44,
+      "title": "A01 A12 A16 A17 all primary routes, metadata and reload: fr",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 9393,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "acceptance.spec.ts",
+      "line": 74,
+      "title": "A01 A11 every pattern detail has an accessible exact count and live example",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 9314,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "acceptance.spec.ts",
+      "line": 89,
+      "title": "A02 A03 number validation and reference sample",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1886,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "acceptance.spec.ts",
+      "line": 113,
+      "title": "A04 A05 single, batch, turbo target, stop, save and new session",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 3797,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "acceptance.spec.ts",
+      "line": 159,
+      "title": "A04 reveal controls, simulated page-hidden event and navigation pause",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 3116,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "acceptance.spec.ts",
+      "line": 198,
+      "title": "A06 A07 daily draft: resume, complete, practice, locked result",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 3063,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "acceptance.spec.ts",
+      "line": 198,
+      "title": "A06 A07 daily hunt: resume, complete, practice, locked result",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 3129,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "acceptance.spec.ts",
+      "line": 198,
+      "title": "A06 A07 daily quiz: resume, complete, practice, locked result",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 3347,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "acceptance.spec.ts",
+      "line": 265,
+      "title": "A07 hunt timeout settles after elapsed time and UTC midnight changes challenge",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2122,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "acceptance.spec.ts",
+      "line": 284,
+      "title": "A08 comparison, random battle and independent quiz",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2445,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "acceptance.spec.ts",
+      "line": 308,
+      "title": "A09 full-range explorer exact count, no matches, filters and random result",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 4014,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "acceptance.spec.ts",
+      "line": 335,
+      "title": "A10 sandbox keyboard, length, reset and best edit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1509,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "acceptance.spec.ts",
+      "line": 372,
+      "title": "A11 atlas is only stamped by daily specimens and survives reload",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 3157,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "acceptance.spec.ts",
+      "line": 401,
+      "title": "A12 A13 English default, saved selection, theme persistence and route preservation",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 11701,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "acceptance.spec.ts",
+      "line": 426,
+      "title": "A14 share link clipboard, real image download and focus restoration",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 6743,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "acceptance.spec.ts",
+      "line": 455,
+      "title": "A15 mobile and tablet responsive routes: en",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 5385,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "acceptance.spec.ts",
+      "line": 455,
+      "title": "A15 mobile and tablet responsive routes: zh",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 5106,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "acceptance.spec.ts",
+      "line": 455,
+      "title": "A15 mobile and tablet responsive routes: ja",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 5131,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "acceptance.spec.ts",
+      "line": 455,
+      "title": "A15 mobile and tablet responsive routes: ko",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 5066,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "acceptance.spec.ts",
+      "line": 455,
+      "title": "A15 mobile and tablet responsive routes: de",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 5091,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "acceptance.spec.ts",
+      "line": 455,
+      "title": "A15 mobile and tablet responsive routes: fr",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 4933,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "acceptance.spec.ts",
+      "line": 491,
+      "title": "A15 keyboard navigation, mobile menu and reduced motion",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2242,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "acceptance.spec.ts",
+      "line": 517,
+      "title": "A16 graceful corrupt storage and data-load failure retry",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2907,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "acceptance.spec.ts",
+      "line": 539,
+      "title": "A01 404 renders a real recovery route",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1329,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "acceptance.spec.ts",
+      "line": 554,
+      "title": "A03 tiny nonzero probabilities never display as zero",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1521,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "seo.spec.ts",
+      "line": 5,
+      "title": "SEO survives client navigation and language changes",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1742,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "seo.spec.ts",
+      "line": 46,
+      "title": "daily archive loads deterministic answer and its metadata through navigation",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2289,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "seo.spec.ts",
+      "line": 77,
+      "title": "new SEO pages remain readable on mobile and without JavaScript",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 4687,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "share-tree-resilience.spec.ts",
+      "line": 39,
+      "title": "rapidly reversing the animation finishes on a scannable QR",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 10046,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "share-tree-resilience.spec.ts",
+      "line": 51,
+      "title": "closing during animation and reopening repeatedly leaves a working scene without page errors",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 13781,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "share-tree-resilience.spec.ts",
+      "line": 72,
+      "title": "the tree chunk is lazy and a failed chunk request leaves a scannable fallback",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1857,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "share-tree-resilience.spec.ts",
+      "line": 94,
+      "title": "losing the real WebGL context during animation exposes the fallback QR",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 5689,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "share-tree-resilience.spec.ts",
+      "line": 119,
+      "title": "all six locales expose a scannable QR and reachable copy and download on a 320px short screen",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 18458,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "share-tree-resilience.spec.ts",
+      "line": 155,
+      "title": "enabling reduced motion during the animation settles on the requested scannable QR",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 4254,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "share-tree.spec.ts",
+      "line": 31,
+      "title": "download waits for the lazy tree and the saved PNG contains the tree",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 5067,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "share-tree.spec.ts",
+      "line": 65,
+      "title": "changing season never downloads the previous tree while its new image decodes",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 6227,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "share-tree.spec.ts",
+      "line": 113,
+      "title": "share tree animates to a QR that opens this result, and back to a tree",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 7491,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "share-tree.spec.ts",
+      "line": 137,
+      "title": "mobile reduced motion keeps the QR, controls and localized result usable",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 3662,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "share-tree.spec.ts",
+      "line": 154,
+      "title": "without WebGL a scannable result card and download are still available",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2071,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "share-tree.spec.ts",
+      "line": 170,
+      "title": "tree interaction still works when only the WebGL snapshot export fails",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 4689,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "share-tree.spec.ts",
+      "line": 193,
+      "title": "a failed lazy tree request still offers a scannable fallback download",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1352,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "share-tree.spec.ts",
+      "line": 204,
+      "title": "share card fits at 320px in en",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1245,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "share-tree.spec.ts",
+      "line": 204,
+      "title": "share card fits at 320px in zh",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1247,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "share-tree.spec.ts",
+      "line": 204,
+      "title": "share card fits at 320px in ja",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1354,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "share-tree.spec.ts",
+      "line": 204,
+      "title": "share card fits at 320px in ko",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1294,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "share-tree.spec.ts",
+      "line": 204,
+      "title": "share card fits at 320px in de",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1257,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "share-tree.spec.ts",
+      "line": 204,
+      "title": "share card fits at 320px in fr",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1343,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "share-tree.spec.ts",
+      "line": 216,
+      "title": "changing locale with history while the dialog is open rebuilds a working QR scene",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 4424,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "theme.spec.ts",
+      "line": 47,
+      "title": "A13 actual text contrast, button hover, validation and every tier in both themes",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1759,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "theme.spec.ts",
+      "line": 71,
+      "title": "A13 A15 theme switch preserves geometry and both themes fit at 1440px",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 6348,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "theme.spec.ts",
+      "line": 71,
+      "title": "A13 A15 theme switch preserves geometry and both themes fit at 768px",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 6206,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "theme.spec.ts",
+      "line": 71,
+      "title": "A13 A15 theme switch preserves geometry and both themes fit at 390px",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 6780,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "theme.spec.ts",
+      "line": 99,
+      "title": "A14 rendered share PNG has actual dimensions and readable number/labels",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 4547,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "theme.spec.ts",
+      "line": 142,
+      "title": "A14 blocked clipboard retains a selected manual-copy link",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1374,
+          "errors": []
+        }
+      ]
+    }
+  ]
+}

@@ -111,15 +111,20 @@ test('changing season never downloads the previous tree while its new image deco
 });
 
 test('share tree animates to a QR that opens this result, and back to a tree', async ({ page }, info) => {
+  await page.clock.install({ time: new Date('2026-09-26T00:00:00Z') });
   await page.goto('/en?n=142857');
   await page.getByRole('button', { name: 'Create share card', exact: true }).click();
   const tree = page.locator('.share-tree');
   await expect(tree).toHaveAttribute('data-ready', 'true');
   await expect(tree).toHaveAttribute('data-view', 'tree');
   await info.attach('tree', { body: await page.getByRole('dialog').screenshot({ path: info.outputPath('tree.png') }), contentType: 'image/png' });
+  await page.clock.pauseAt(new Date('2026-09-26T01:00:00Z'));
   await page.getByRole('button', { name: 'Show QR code', exact: true }).click();
+  await page.clock.runFor(160);
   await expect(tree).toHaveAttribute('data-view', 'transition');
+  await page.clock.fastForward(1400);
   await expect(tree).toHaveAttribute('data-view', 'qr');
+  await page.clock.resume();
   const png = await page.locator('.share-tree-viewport').screenshot();
   expect(await decodePng(png)).toBe(origin + '/en?n=142857');
   await info.attach('qr', { body: await page.getByRole('dialog').screenshot({ path: info.outputPath('qr.png') }), contentType: 'image/png' });

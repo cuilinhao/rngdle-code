@@ -28,6 +28,16 @@ async function readyTree(page: Page) {
   await expect(page.locator('.share-tree-toggle')).toBeEnabled();
 }
 
+async function openShareWithPausedClock(page: Page, path: string) {
+  await page.clock.install({ time: new Date('2026-09-26T00:00:00Z') });
+  await page.goto(path);
+  await openShare(page);
+  await readyTree(page);
+  // Pause before input so slow software rendering cannot finish the animation
+  // between a real click and the assertion/action that must interrupt it.
+  await page.clock.pauseAt(new Date('2026-09-26T01:00:00Z'));
+}
+
 async function expectVisibleQr(page: Page, url: string) {
   const viewport = page.locator('.share-tree-viewport');
   await viewport.scrollIntoViewIfNeeded();
@@ -37,13 +47,17 @@ async function expectVisibleQr(page: Page, url: string) {
 }
 
 test('rapidly reversing the animation finishes on a scannable QR', async ({ page }) => {
-  await page.goto('/en?n=142857');
-  await openShare(page);
-  await readyTree(page);
+  await openShareWithPausedClock(page, '/en?n=142857');
   const toggle = page.locator('.share-tree-toggle');
   await toggle.click();
+  await page.clock.runFor(160);
   await expect(page.locator('.share-tree')).toHaveAttribute('data-view', 'transition');
-  for (let i = 0; i < 6; i++) await toggle.click();
+  for (let i = 0; i < 6; i++) {
+    await toggle.click();
+    await page.clock.runFor(80);
+    await expect(page.locator('.share-tree')).toHaveAttribute('data-view', 'transition');
+  }
+  await page.clock.fastForward(1400);
   await expect(page.locator('.share-tree')).toHaveAttribute('data-view', 'qr');
   await expectVisibleQr(page, origin + '/en?n=142857');
 });
@@ -51,19 +65,19 @@ test('rapidly reversing the animation finishes on a scannable QR', async ({ page
 test('closing during animation and reopening repeatedly leaves a working scene without page errors', async ({ page }) => {
   const errors: string[] = [];
   page.on('pageerror', error => errors.push(error.message));
-  await page.goto('/en?n=12321');
+  await openShareWithPausedClock(page, '/en?n=12321');
   for (let attempt = 0; attempt < 3; attempt++) {
-    await openShare(page);
-    await readyTree(page);
     await expect(page.locator('.share-tree')).toHaveAttribute('data-view', 'tree');
     await page.locator('.share-tree-toggle').click();
+    await page.clock.runFor(160);
     await expect(page.locator('.share-tree')).toHaveAttribute('data-view', 'transition');
     await page.keyboard.press('Escape');
     await expect(page.getByRole('dialog')).toHaveCount(0);
+    await openShare(page);
+    await readyTree(page);
   }
-  await openShare(page);
-  await readyTree(page);
   await page.locator('.share-tree-toggle').click();
+  await page.clock.fastForward(1400);
   await expect(page.locator('.share-tree')).toHaveAttribute('data-view', 'qr');
   await expectVisibleQr(page, origin + '/en?n=12321');
   expect(errors).toEqual([]);
@@ -94,10 +108,9 @@ test('the tree chunk is lazy and a failed chunk request leaves a scannable fallb
 test('losing the real WebGL context during animation exposes the fallback QR', async ({ page }) => {
   const errors: string[] = [];
   page.on('pageerror', error => errors.push(error.message));
-  await page.goto('/en?n=1000000');
-  await openShare(page);
-  await readyTree(page);
+  await openShareWithPausedClock(page, '/en?n=1000000');
   await page.locator('.share-tree-toggle').click();
+  await page.clock.runFor(160);
   await expect(page.locator('.share-tree')).toHaveAttribute('data-view', 'transition');
   const lost = await page.locator('.share-tree canvas').evaluate(canvas => {
     const context = (canvas as HTMLCanvasElement).getContext('webgl2');
@@ -154,10 +167,9 @@ test('all six locales expose a scannable QR and reachable copy and download on a
 
 test('enabling reduced motion during the animation settles on the requested scannable QR', async ({ page }) => {
   await page.emulateMedia({ reducedMotion: 'no-preference' });
-  await page.goto('/en?n=777777');
-  await openShare(page);
-  await readyTree(page);
+  await openShareWithPausedClock(page, '/en?n=777777');
   await page.locator('.share-tree-toggle').click();
+  await page.clock.runFor(160);
   await expect(page.locator('.share-tree')).toHaveAttribute('data-view', 'transition');
   await page.emulateMedia({ reducedMotion: 'reduce' });
   await expect(page.locator('.share-tree')).toHaveAttribute('data-view', 'qr');
