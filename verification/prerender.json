@@ -1,6 +1,6 @@
 {
-  "count": 290,
-  "indexedCount": 102,
+  "count": 294,
+  "indexedCount": 106,
   "locales": [
     "en",
     "zh",
@@ -64,8 +64,11 @@
     "https://rngdle.art/en/patterns/hexRepeat",
     "https://rngdle.art/en/rarest-numbers",
     "https://rngdle.art/en/daily/answer",
+    "https://rngdle.art/en/daily/answer/2026-09-28",
     "https://rngdle.art/en/daily/answer/2026-09-27",
     "https://rngdle.art/en/daily/answer/2026-09-26",
+    "https://rngdle.art/en/guides/how-rarity-works",
+    "https://rngdle.art/en/guides/how-to-play",
     "https://rngdle.art/zh",
     "https://rngdle.art/zh/infinite",
     "https://rngdle.art/zh/daily",
@@ -115,6 +118,7 @@
     "https://rngdle.art/zh/patterns/hexRepeat",
     "https://rngdle.art/zh/rarest-numbers",
     "https://rngdle.art/zh/daily/answer",
+    "https://rngdle.art/zh/daily/answer/2026-09-28",
     "https://rngdle.art/zh/daily/answer/2026-09-27",
     "https://rngdle.art/zh/daily/answer/2026-09-26",
     "https://rngdle.art/ja",

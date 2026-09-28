@@ -1,7 +1,9 @@
 import { createCanvas, GlobalFonts } from "@napi-rs/canvas";
 import { readFileSync, mkdirSync, writeFileSync } from "node:fs";
 import { drawShareCard } from "../src/share-card.mjs";
+import { analyze } from "../src/engine.mjs";
 const seo = JSON.parse(readFileSync("public/data/seo.json", "utf8"));
+const stats = JSON.parse(readFileSync("public/data/stats.json", "utf8"));
 if (!GlobalFonts.registerFromPath("assets/fonts/Inter.ttf", "RngdleInter"))
   throw new Error("Social-card font could not be loaded");
 mkdirSync("public/og", { recursive: true });
@@ -25,6 +27,29 @@ card(
   "NUMBER RARITY CALCULATOR",
   "The rarest number in the full-range ranking",
 );
+const guideCards = [
+  {
+    file: "guide-how-rarity-works",
+    row: analyze(777777, stats),
+    label: "RNGDLE RARITY EXPLAINED",
+    subtitle: "How the RNGDLE.ART rarity score works",
+  },
+  {
+    file: "guide-rarest-numbers",
+    row: seo.rankings[0],
+    label: "THE RAREST NUMBER",
+    subtitle: "Explore the independent RNGDLE.ART ranking",
+  },
+  {
+    file: "guide-how-to-play",
+    row: analyze(123456, stats),
+    label: "HOW TO PLAY RNGDLE",
+    subtitle: "A beginner's guide to analyzing your roll",
+  },
+];
+for (const { file, row, label, subtitle } of guideCards) {
+  card(file, row, label, subtitle);
+}
 for (const day of seo.dailyDates) {
   const daily = JSON.parse(
     readFileSync(`public/data/daily/${day}.json`, "utf8"),
@@ -37,5 +62,5 @@ for (const day of seo.dailyDates) {
   );
 }
 console.log(
-  `Generated ${seo.dailyDates.length + 1} social cards at 1200 × 630.`,
+  `Generated ${seo.dailyDates.length + guideCards.length + 1} social cards at 1200 × 630.`,
 );

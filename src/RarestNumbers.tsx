@@ -3,6 +3,7 @@ import { patterns, MAX } from "./engine.mjs";
 import { NumberForm } from "./components";
 import { Faq, ArticleByline } from "./SeoSections";
 import { rarestContent, seoData } from "./seo-content";
+import { RarestGuideSections, RelatedGuides } from "./GuideArticles";
 
 export function RarestNumbers() {
   const { locale, t, fmt, navigate } = useApp();
@@ -17,6 +18,7 @@ export function RarestNumbers() {
       />
       <article className="article panel seo-sections">
         <ArticleByline route="rarest-numbers" />
+        {locale === "en" && <RarestGuideSections />}
         <section>
           <h2>{zh ? "最稀有的 100 个数字" : "The 100 rarest numbers"}</h2>
           <p>{content.paragraphs[0]}</p>
@@ -130,6 +132,7 @@ export function RarestNumbers() {
             onChange={(n) => navigate("/?n=" + n)}
           />
         </section>
+        {locale === "en" && <RelatedGuides current="rarest-numbers" />}
       </article>
     </>
   );

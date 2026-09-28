@@ -4,6 +4,8 @@ import { AppContext, PageHead } from "../src/core";
 import { Result, NumberForm, TierTable } from "../src/components";
 import { Compare, Sandbox, Explore, Atlas, NotFound } from "../src/Tools";
 import { Guides, Article } from "../src/Guides";
+import { GuideArticle } from "../src/GuideArticles";
+import { englishGuideRoutes } from "../src/guide-content";
 import {
   translate,
   locales,
@@ -27,6 +29,7 @@ import {
 } from "../src/seo";
 export const routeList = baseRoutes;
 export { routesFor, indexLocales };
+export { articleDates } from "../src/seo-content";
 const nav = [
   "analyze",
   "infinite",
@@ -125,6 +128,7 @@ export function render(locale: Locale, route: string, daily?: any) {
   else if (route === "patterns") page = <Atlas />;
   else if (route.startsWith("patterns/")) page = <Atlas id={route.slice(9)} />;
   else if (route === "guides") page = <Guides />;
+  else if (englishGuideRoutes.includes(route)) page = <GuideArticle route={route} />;
   else if (routeList.includes(route)) page = <Article name={route} />;
   else page = <NotFound />;
   const body = renderToString(

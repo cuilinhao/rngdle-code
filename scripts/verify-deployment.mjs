@@ -187,12 +187,16 @@ try {
   policy.check("latest-published-date", seo.dailyDates.includes(latestDay) && latestDay === [...seo.dailyDates].sort().at(-1), { latestDay, dailyDates: seo.dailyDates });
   policy.check("unique-route-map", new Set(pages.map((p) => p.path)).size === pages.length, { routeCount, indexedCount, locales });
   if (waitSeconds > 0) await waitForDeployment(waitSeconds, latestDay);
-  const allowedLanguages = [...indexLocales.map((locale) => htmlLangs[locales.indexOf(locale)]), "x-default"].sort();
   const expectedAssets = assetReferences(read("dist/en.html").toString("utf8"));
   policy.check("local-build-assets", expectedAssets.length > 0, { expectedAssets });
   const imagePaths = new Set(), assetPaths = new Set(expectedAssets);
   let completed = 0;
   await pool(pages, async ({ path, locale, route, day, expected, expectedHtmlHash }) => {
+    const allowedLanguages = [
+      ...indexLocales.filter((language) => routesFor(language).includes(route))
+        .map((language) => htmlLangs[locales.indexOf(language)]),
+      "x-default",
+    ].sort();
     await inspect(path, "page", (item, response) => {
       const { head, body, meta, links } = documentParts(response.text), visible = visibleText(body);
       const metaValues = (name, property = "name") => meta.filter((tag) => tag[property] === name).map((tag) => tag.content);

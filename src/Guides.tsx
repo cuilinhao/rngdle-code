@@ -5,6 +5,7 @@ import { TierTable } from "./components";
 import { patterns, TOTAL } from "./engine.mjs";
 import { Faq, RarestLink, ArticleByline } from "./SeoSections";
 import { methodologyContent } from "./seo-content";
+import { guideArticles } from "./guide-content";
 const copy: Record<string, string[]> = {
   method1: [
     "We examine every integer from 0 through 1,000,000, written without leading zeros. For each pattern, its probability is its exact match count divided by 1,000,001.",
@@ -115,7 +116,7 @@ const copy: Record<string, string[]> = {
 Object.assign(messages, copy);
 export const guideRoutes = ["methodology", "badges", "ep", "leaderboard"];
 export function Guides() {
-  const { t } = useApp();
+  const { t, locale } = useApp();
   return (
     <>
       <PageHead
@@ -125,9 +126,17 @@ export function Guides() {
       />
       <ArticleByline route="guides" />
       <div className="guide-grid">
+        {locale === "en" && guideArticles.map((article, i) => (
+          <A to={"/" + article.route} key={article.route} className="panel guide-card">
+            <span className="mono muted">0{i + 1}</span>
+            <h2>{article.h1}</h2>
+            <p className="muted small">{article.description}</p>
+            <span className="text-link">{t("read")}<ArrowUpRight size={17} /></span>
+          </A>
+        ))}
         {guideRoutes.map((path, i) => (
           <A to={"/" + path} key={path} className="panel guide-card">
-            <span className="mono muted">0{i + 1}</span>
+            <span className="mono muted">0{i + 1 + (locale === "en" ? guideArticles.length : 0)}</span>
             <h2>{t(path)}</h2>
             <p className="muted small">
               {t(

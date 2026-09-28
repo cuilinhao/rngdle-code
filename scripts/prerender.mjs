@@ -6,6 +6,7 @@ import {
   locales,
   indexLocales,
   messages,
+  articleDates,
 } from "../.prerender/ssr.js";
 import { patterns, MAX, TOTAL } from "../src/engine.mjs";
 const original = readFileSync("dist/index.html", "utf8");
@@ -79,8 +80,8 @@ for (const locale of locales)
                 "utf8",
               ),
             ).dateModified
-          : route === "rarest-numbers"
-            ? seo.dateModified
+          : route === "rarest-numbers" || route === "guides" || route.startsWith("guides/")
+            ? articleDates(route).dateModified
             : route.startsWith("daily/answer")
               ? seo.latestDay
               : undefined,

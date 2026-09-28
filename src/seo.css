@@ -1,6 +1,17 @@
 .seo-sections {
   margin-top: 2rem;
 }
+.guide-breadcrumb {
+  margin-block: 1.5rem;
+}
+.guide-article li,
+.related-guides li {
+  margin-block: 0.6rem;
+}
+[data-testid="guide-pattern-odds"] caption {
+  text-align: left;
+  margin-block: 0.5rem;
+}
 .seo-sections section + section,
 .daily-answer section + section {
   margin-top: 2rem;

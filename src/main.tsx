@@ -47,6 +47,8 @@ import Infinite from "./Infinite";
 import Daily from "./Daily";
 import { Compare, Sandbox, Explore, Atlas, NotFound } from "./Tools";
 import { Guides, Article } from "./Guides";
+import { GuideArticle } from "./GuideArticles";
+import { englishGuideRoutes } from "./guide-content";
 import "./style.css";
 import "./seo.css";
 import { HomeSeoSections } from "./SeoSections";
@@ -376,6 +378,7 @@ function App() {
   else if (route === "patterns") page = <Atlas />;
   else if (route.startsWith("patterns/")) page = <Atlas id={route.slice(9)} />;
   else if (route === "guides") page = <Guides />;
+  else if (englishGuideRoutes.includes(route)) page = <GuideArticle route={route} />;
   else if (routes.includes(route)) page = <Article name={route} />;
   else page = <NotFound />;
   return (

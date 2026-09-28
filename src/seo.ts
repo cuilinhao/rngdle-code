@@ -11,6 +11,7 @@ import {
   articleDates,
 } from "./seo-content";
 import { dailyContent, archiveContent } from "./daily-content";
+import { englishGuideRoutes, featuredPatternIds, guideContent } from "./guide-content";
 
 export const SITE = "https://rngdle.art";
 export const indexLocales: Locale[] = ["en", "zh"];
@@ -46,7 +47,11 @@ export const extraRoutes = [
   ...seo.dailyDates.map((day: string) => "daily/answer/" + day),
 ];
 export function routesFor(locale: Locale) {
-  return [...baseRoutes, ...(indexLocales.includes(locale) ? extraRoutes : [])];
+  return [
+    ...baseRoutes,
+    ...(indexLocales.includes(locale) ? extraRoutes : []),
+    ...(locale === "en" ? englishGuideRoutes : []),
+  ];
 }
 export function isKnownRoute(locale: Locale, route: string) {
   return routesFor(locale).includes(route);
@@ -71,6 +76,7 @@ export function pageSeo(locale: Locale, route: string, daily?: any) {
     content = patternContent(locale, route.slice(9));
   else if (route === "methodology") content = methodologyContent(locale);
   else if (route === "rarest-numbers" && valid) content = rarestContent(locale);
+  else if (englishGuideRoutes.includes(route) && valid) content = guideContent(route);
   else if (day && valid && daily?.date === day)
     content = dailyContent(locale, daily);
   else if (
@@ -109,7 +115,8 @@ export function pageSeo(locale: Locale, route: string, daily?: any) {
           : "Seeded daily number solutions and rarity scores for RNGDLE.ART.",
       };
   }
-  const image = `${SITE}/og/${day && valid ? "daily-" + day : "default"}.png`;
+  const guide = locale === "en" && valid ? guideContent(route) : undefined;
+  const image = `${SITE}/og/${guide ? guide.image : day && valid ? "daily-" + day : "default"}.png`;
   const noindex = !valid || !indexLocales.includes(locale);
   const org = {
     "@type": "Organization",
@@ -147,6 +154,8 @@ export function pageSeo(locale: Locale, route: string, daily?: any) {
         crumb(zh ? "首页" : "Home", "", 1),
         ...(route.startsWith("patterns/")
           ? [crumb(t("patterns"), "patterns", 2)]
+          : guide
+            ? [crumb(t("guides"), "guides", 2)]
           : day
             ? [
                 crumb(
@@ -159,7 +168,7 @@ export function pageSeo(locale: Locale, route: string, daily?: any) {
         crumb(
           content.h1 || content.title,
           route,
-          route.startsWith("patterns/") || day ? 3 : 2,
+          route.startsWith("patterns/") || day || guide ? 3 : 2,
         ),
       ],
     });
@@ -245,6 +254,34 @@ export function pageSeo(locale: Locale, route: string, daily?: any) {
   const dates = articleDates(route);
   if (["guides", "badges", "ep", "leaderboard"].includes(route))
     graph.push(article(dates.datePublished, dates.dateModified));
+  if (guide && englishGuideRoutes.includes(route)) {
+    graph.push(article(dates.datePublished, dates.dateModified));
+    graph.push({
+      "@type": "HowTo",
+      name: guide.stepsTitle,
+      step: guide.steps.map((text, i) => ({
+        "@type": "HowToStep",
+        position: i + 1,
+        text,
+      })),
+    });
+  }
+  if (guide && route === "rarest-numbers")
+    graph.push({
+      "@type": "Dataset",
+      name: "Selected pattern counts in 0–1,000,000",
+      description: "Exact counts of five selected RNGDLE.ART patterns across all 1,000,001 integers, including both endpoints. These are independent rules, not official badge probabilities.",
+      url: url + "#pattern-odds",
+      creator: org,
+      license: pageUrl(locale, "terms"),
+      isAccessibleForFree: true,
+      isBasedOn: pageUrl(locale, "methodology"),
+      variableMeasured: featuredPatternIds.map((id) => ({
+        "@type": "PropertyValue",
+        name: t("p_" + id),
+        value: stats.counts[id],
+      })),
+    });
   if (route === "about")
     graph.push({
       "@type": "AboutPage",
@@ -290,6 +327,7 @@ export function pageSeo(locale: Locale, route: string, daily?: any) {
     type: graph.some((x) => x["@type"] === "Article") ? "article" : "website",
     alternates: valid
       ? indexLocales
+          .filter((l) => isKnownRoute(l, route))
           .map((l) => ({
             lang: htmlLangs[locales.indexOf(l)],
             url: pageUrl(l, route),

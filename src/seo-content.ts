@@ -3,6 +3,7 @@ import statsData from "../public/data/stats.json";
 import seoDataFile from "../public/data/seo.json";
 import { translate, type Locale, htmlLangs, locales } from "./i18n";
 import "./pattern-text";
+import { englishGuideRoutes, guidesUpdatedAt, rarestGuide } from "./guide-content";
 
 export type FaqItem = { question: string; answer: string };
 export type SeoContent = {
@@ -40,13 +41,16 @@ const year = seoData.dateModified.slice(0, 4);
 const guidesPublishedAt = "2026-09-26T07:10:12.639Z";
 const seoPublishedAt = "2026-09-26T10:32:57.784Z";
 export function articleDates(route: string) {
+  const newGuide = englishGuideRoutes.includes(route);
+  const editorialUpdate = newGuide || route === "rarest-numbers" || route === "guides";
+  const modified = editorialUpdate ? guidesUpdatedAt : seoPublishedAt;
   return {
     datePublished:
-      route === "rarest-numbers" ? seoPublishedAt : guidesPublishedAt,
+      newGuide ? guidesUpdatedAt : route === "rarest-numbers" ? seoPublishedAt : guidesPublishedAt,
     dateModified:
-      Date.parse(seoData.dateModified) > Date.parse(seoPublishedAt)
+      Date.parse(seoData.dateModified) > Date.parse(modified)
         ? seoData.dateModified
-        : seoPublishedAt,
+        : modified,
   };
 }
 export const contentNumber = (locale: Locale, n: number, digits = 0) =>
@@ -794,16 +798,17 @@ export function rarestContent(locale: Locale): SeoContent {
       ],
     };
   return {
-    title: `The Rarest Numbers Between 0 and ${max} — Ranked & Explained (${year})`,
-    description: `What is the rarest number? We ranked every integer from 0 to ${max} by rarity score. See the top 100 rarest numbers, why they are rare, and check any number yourself.`,
-    h1: `The Rarest Numbers Between 0 and ${max}`,
-    summary,
+    title: rarestGuide.title,
+    description: rarestGuide.description,
+    h1: rarestGuide.h1,
+    summary: rarestGuide.summary,
     paragraphs: [
       `The table selects the highest-scoring 100 of all ${total} integers, ordered by descending score and then ascending integer for equal scores. Top % includes every tied score in the full range, so adjacent display positions do not necessarily represent different rarity levels.`,
       "Uncommon features contribute more information through −log₂(match probability), with related signals discounted within each family. A larger number is not automatically rarer, and matching more patterns does not guarantee a higher score.",
       `Short numbers are scarce within 0–${max}, and lengths of one to four digits supply an additional signal. This ranking includes 0 and single-digit values. The existing highest and lowest leaderboards begin at 1,000, so their leaders may differ.`,
     ],
     faqs: [
+      ...rarestGuide.faqs,
       {
         question: `What is the rarest number between 0 and ${max}?`,
         answer: summary,

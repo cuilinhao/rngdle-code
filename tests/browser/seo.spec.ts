@@ -12,7 +12,7 @@ test("SEO survives client navigation and language changes", async ({
   );
   await page.locator('a[href="/en/rarest-numbers"]').first().click();
   await expect(page).toHaveURL(/\/en\/rarest-numbers$/);
-  await expect(page.locator("h1")).toContainText("Rarest Numbers");
+  await expect(page.locator("h1")).toHaveText("What Is the Rarest Number in RNGdle?");
   await expect(page.locator("link[rel=canonical]")).toHaveAttribute(
     "href",
     "https://rngdle.art/en/rarest-numbers",
@@ -29,7 +29,7 @@ test("SEO survives client navigation and language changes", async ({
     page.locator(`time[datetime="${article.datePublished}"]`).first(),
   ).toHaveText("2026-09-26 10:32 UTC");
   await page.getByLabel("Language", { exact: true }).selectOption("zh");
-  await expect(page.locator("h1")).not.toContainText("Rarest Numbers");
+  await expect(page.locator("h1")).not.toContainText("Rarest Number");
   await expect(page.locator("meta[name=robots]")).toHaveAttribute(
     "content",
     "index,follow",
