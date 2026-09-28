@@ -3,7 +3,8 @@ import statsData from "../public/data/stats.json";
 import seoData from "../public/data/seo.json";
 import { TOTAL, patterns } from "./engine.mjs";
 
-export const guidesUpdatedAt = "2026-09-28T01:35:11.497Z";
+// First production READY: dpl_N8cGt8yQRpaV5giu8mdgLpmhqWS1 (5bb8a5b).
+export const guidesUpdatedAt = "2026-09-28T02:07:06.956Z";
 export const featuredPatternIds = [
   "fibonacci", "repdigit", "palindrome", "prime", "harshad",
 ];
