@@ -330,10 +330,10 @@ try {
     item.check("http-status", response.status === 200, { expected: 200, actual: response.status });
     item.check("png-1200x630", isPng && width === 1200 && height === 630, { isPng, width, height, bytes: png.length });
   }));
-  await pool(["/favicon.svg", ...assetPaths], (path) => inspect(path, "asset", (item, response) => {
+  await pool(["/favicon.ico", "/favicon-16x16.png", "/favicon-32x32.png", "/apple-touch-icon.png", "/android-chrome-192x192.png", "/android-chrome-512x512.png", "/site.webmanifest", ...assetPaths], (path) => inspect(path, "asset", (item, response) => {
     item.check("http-status", response.status === 200, { expected: 200, actual: response.status });
     item.check("nonempty-asset", response.bytes.length > 0 && !/^\s*<!doctype html/i.test(response.text), { bytes: response.bytes.length, contentType: response.contentType });
-    if (path.startsWith("/assets/")) {
+    if (path.startsWith("/assets/") || path === "/site.webmanifest" || /\.(?:ico|png)$/.test(path)) {
       const expectedHash = hash(read(`dist${path}`)), actualHash = hash(response.bytes);
       item.check("current-build-sha256", expectedHash === actualHash, { expected: expectedHash, actual: actualHash });
     }

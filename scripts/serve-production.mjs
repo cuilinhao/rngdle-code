@@ -8,6 +8,8 @@ const mime = {
   ".js": "text/javascript",
   ".css": "text/css",
   ".json": "application/json",
+  ".webmanifest": "application/manifest+json",
+  ".ico": "image/x-icon",
   ".svg": "image/svg+xml",
   ".png": "image/png",
   ".bin": "application/octet-stream",

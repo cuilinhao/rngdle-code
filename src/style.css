@@ -1966,6 +1966,10 @@ td a:hover {
     width: 14px;
     left: 8px;
   }
+  .header-controls,
+  .language-control {
+    min-width: 0;
+  }
   .header-controls {
     gap: 1px;
   }
