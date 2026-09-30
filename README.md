@@ -1,6 +1,8 @@
 # RNGDLE.ART
 
-A number rarity lab with Catskills-inspired pale-leaf and forest light/dark themes and English (US), Simplified Chinese, Japanese, Korean, German and French interfaces.
+A number rarity lab with a Catskills-inspired leaf theme: light (pale leaf) by default, with a switchable dark (forest) theme. Interfaces in English (US), Simplified Chinese, Japanese, Korean, German and French.
+
+Typefaces are Instrument Sans (body) and Instrument Serif (display), both under the SIL Open Font License 1.1. They are self-hosted from the `@fontsource/instrument-sans` and `@fontsource/instrument-serif` npm packages and bundled into `dist/assets`, so the site makes no requests to Google Fonts.
 
 ## Develop
 

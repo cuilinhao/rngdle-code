@@ -1,3 +1,8 @@
+import "@fontsource/instrument-sans/400.css";
+import "@fontsource/instrument-sans/500.css";
+import "@fontsource/instrument-sans/600.css";
+import "@fontsource/instrument-serif/400.css";
+import "@fontsource/instrument-serif/400-italic.css";
 import React, { useEffect, useState } from "react";
 import { createRoot } from "react-dom/client";
 import {
@@ -294,7 +299,7 @@ function Footer() {
 function App() {
   const [locale, setLocaleState] = useState<Locale>(initialLocale),
     [url, setUrl] = useState(location.pathname + location.search),
-    [theme, setThemeState] = useState(() => readStorage("theme", "dark")),
+    [theme, setThemeState] = useState(() => readStorage("theme", "light")),
     [toast, setToast] = useState(""),
     [shared, setShared] = useState<number | null>(null);
   const [dailyData, setDailyData] = useState<any>(() => {

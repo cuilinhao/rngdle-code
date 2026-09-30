@@ -51,7 +51,7 @@ function document(locale, route) {
     )
     .join("");
   return original
-    .replace(/lang="en-US"/, `lang="${lang}" data-theme="dark"`)
+    .replace(/lang="en-US"/, `lang="${lang}" data-theme="light"`)
     .replace(/<title>.*?<\/title>/, `<title>${escape(title)}</title>`)
     .replace(
       /<meta name="description" content="[^"]*"\s*\/?\s*>/,

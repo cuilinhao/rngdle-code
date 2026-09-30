@@ -415,9 +415,9 @@ test("A12 A13 English default, saved selection, theme persistence and route pres
   await expect(page.locator("main[data-ready=true]")).toBeVisible();
   await page.getByLabel("Language", { exact: true }).selectOption("zh");
   await expect(page).toHaveURL(/\/zh\/sandbox\?n=142857/);
-  await page.getByRole("button", { name: "浅色主题", exact: true }).click();
+  await page.getByRole("button", { name: "深色主题", exact: true }).click();
   await page.reload();
-  await expect(page.locator("html")).toHaveAttribute("data-theme", "light");
+  await expect(page.locator("html")).toHaveAttribute("data-theme", "dark");
   await page.goto("/");
   await expect(page.locator("main[data-ready=true]")).toBeVisible();
   await expect(page).toHaveURL(/\/zh$/);
