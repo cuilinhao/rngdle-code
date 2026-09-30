@@ -102,3 +102,38 @@
 
 执行过程中的实际配置、存档与结果记录在本节。
 
+### 6.1 迁移前存档（2026-09-30）
+
+Namecheap（BasicDNS，nameserver `dns1/dns2.registrar-servers.com`，DNSSEC 关闭）：
+
+| 类型 | 主机 | 值 | TTL |
+|---|---|---|---|
+| A | @ | 216.150.1.1 | 30 min |
+| A | @ | 216.150.16.1 | Automatic |
+| CNAME | www | ca491a073f28d8ac.vercel-dns-016.com. | 30 min |
+| TXT | @ | google-site-verification=glu6f0r_tQELGN47bhlHbBOgofWRoFm8xuCrm__BkgU | Automatic |
+| TXT（邮件设置，Email Forwarding 自动生成） | @ | v=spf1 include:spf.efwd.registrar-servers.com ~all | Automatic |
+
+Vercel 项目 `linhaos-projects/rngdle-art`（Pro）绑定域名：`rngdle.art`、`www.rngdle.art`、`rngdle-art.vercel.app`，均为 Production。
+
+### 6.2 Cloudflare Pages
+
+- 账号：Cuilinhao2021（account `8021c9867ba6881cf688f0a25af0d32f`）。
+- GitHub App「Cloudflare Workers and Pages」安装在 `cuilinhao` 个人账号，仅授权 `rngdle-code` 一个仓库。
+- 项目 `rngdle-art`：生产分支 `main`，构建命令 `npm run build`，输出 `dist`，环境变量 `NODE_VERSION=22`。地址 https://rngdle-art.pages.dev 。
+- 构建耗时约 1 分钟，低于每日工作流 300 秒的部署等待上限，上限无需调整。
+
+### 6.3 pages.dev 验收（提交 `2f88df2`）
+
+- 远程验收工作流 `Remote acceptance` 运行 36704803640，全部通过：
+  - URL 行为：180 个地址与当前 Vercel 生产一致（含两类已审阅差异，见 `scripts/compare-hosts.mjs`）。
+  - 响应头：安全头、HSTS、`/assets` 长缓存、`/data` 重新验证、pages.dev `X-Robots-Tag: noindex` 均符合预期。
+  - 爬虫：Googlebot、Bingbot、GPTBot、OAI-SearchBot、ClaudeBot、PerplexityBot、Google-Extended 访问 `/robots.txt`、`/en`、`/llms.txt` 均为 200，robots.txt 未被改写。
+  - 内容：345 项、4436/4436 条检查通过（HTML sha256、canonical、hreflang、JSON-LD、sitemap、llms.txt 等）。
+  - 浏览器：Playwright 75/75 通过，0 flaky，0 skipped。
+- 首轮验收（运行 36704046975）发现 `/<语言>/index.html` 在 Pages 返回 404、Vercel 返回 308，已用 `public/_redirects` 补齐。
+
+### 6.4 添加站点受阻
+
+- Cloudflare 后台「连接域名」流程在提交前会调用域名注册检查接口 `registrar/domains/batch_check?id=rngdle.art`，该接口对 `.art` 返回 422，页面一直停在加载状态，未发出创建站点请求。自动导入与手动输入 DNS 两种方式均复现。
+
