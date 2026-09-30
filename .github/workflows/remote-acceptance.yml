@@ -1,0 +1,69 @@
+name: Remote acceptance
+on:
+  workflow_dispatch:
+    inputs:
+      base_url:
+        description: Origin to verify (for example https://rngdle.art)
+        required: true
+        default: https://rngdle.art
+      reference_url:
+        description: Optional origin whose URL behavior the target must match
+        required: false
+        default: ''
+      browser:
+        description: Run the Playwright browser suite
+        type: boolean
+        default: true
+permissions:
+  contents: read
+jobs:
+  accept:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci --registry=https://registry.npmjs.org
+      - run: npm run build
+      - name: URL behavior, headers and crawler access
+        id: hosts
+        continue-on-error: true
+        env:
+          BASE_URL: ${{ inputs.base_url }}
+          REFERENCE_URL: ${{ inputs.reference_url }}
+        run: node scripts/compare-hosts.mjs
+      - name: Published content (HTML hashes, SEO metadata, discovery files)
+        id: content
+        continue-on-error: true
+        env:
+          BASE_URL: ${{ inputs.base_url }}
+        run: node scripts/verify-deployment.mjs
+      - name: Browser suite
+        id: browser
+        if: inputs.browser
+        continue-on-error: true
+        env:
+          CI: true
+          BASE_URL: ${{ inputs.base_url }}
+        run: |
+          npx playwright install --with-deps chromium
+          npm run test:browser
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: remote-acceptance
+          path: |
+            verification/host-comparison.json
+            verification/release-production-http.json
+            verification/browser-results.json
+            playwright-report/
+            test-results/
+      - name: Result
+        if: always()
+        run: |
+          echo "hosts=${{ steps.hosts.outcome }} content=${{ steps.content.outcome }} browser=${{ steps.browser.outcome }}"
+          test "${{ steps.hosts.outcome }}" = success
+          test "${{ steps.content.outcome }}" = success
+          test "${{ steps.browser.outcome }}" != failure
