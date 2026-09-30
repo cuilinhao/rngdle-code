@@ -55,13 +55,22 @@ const list = await paths();
 report.pathCount = list.length;
 
 if (reference) {
+  // Differences accepted after review: both end in the same final response and neither
+  // path is linked anywhere. Vercel strips a trailing slash before answering 404, and
+  // collapses duplicate slashes; Cloudflare Pages answers directly (pages keep their
+  // absolute canonical URL).
+  const accepted = (path, a, b) =>
+    (/\/$/.test(path) && path !== "/" && a.status === 308 && b.status === 404) ||
+    (path.includes("//") && a.status === 308 && b.status === 200);
   report.comparison = [];
   for (const path of list) {
     const [a, b] = await Promise.all([get(reference, path), get(base, path)]);
-    const same = a.status === b.status && a.location === b.location
+    let same = a.status === b.status && a.location === b.location
       && (a.status !== 200 || a.headers["content-type"]?.split(";")[0] === b.headers["content-type"]?.split(";")[0]);
+    const acceptedDifference = !same && accepted(path, a, b);
+    if (acceptedDifference) same = true;
     report.comparison.push({ path, reference: { status: a.status, location: a.location, type: a.headers["content-type"] },
-      candidate: { status: b.status, location: b.location, type: b.headers["content-type"] }, same });
+      candidate: { status: b.status, location: b.location, type: b.headers["content-type"] }, same, acceptedDifference });
     check("url-behavior", same, { path, reference: { status: a.status, location: a.location }, candidate: { status: b.status, location: b.location } });
   }
 }

@@ -60,6 +60,9 @@ jobs:
             verification/browser-results.json
             playwright-report/
             test-results/
+      - name: Summary annotations
+        if: always()
+        run: node scripts/summarize-acceptance.mjs
       - name: Result
         if: always()
         run: |
