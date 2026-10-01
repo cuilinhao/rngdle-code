@@ -26,7 +26,7 @@
 2. `rngdle.art` 与 `www.rngdle.art` 都直接返回 200，保持现状，不做 www 跳转。
 3. 域名未使用邮件转发，不需要 MX；新增 SPF `v=spf1 -all` 与 DMARC `p=reject` 防止冒用。
 4. Namecheap 若开启 DNSSEC，先关闭再更换 nameserver。
-5. Cloudflare 不屏蔽 AI 爬虫，不启用托管 robots.txt，Bot Fight Mode 关闭。
+5. robots.txt 完全由项目自己编写，Cloudflare 不托管、不改写；不屏蔽 AI 爬虫，Bot Fight Mode 关闭。长期规则与检查方法见第 3.1 节。
 6. 关闭会改写 HTML 的功能：Email Address Obfuscation、Rocket Loader、Automatic HTTPS Rewrites、Web Analytics 自动注入。验收脚本逐字节比对 HTML，任何改写都会导致失败。
 7. pages.dev 备用地址返回 `X-Robots-Tag: noindex`，避免重复内容。
 8. 去掉 Deploy Hook，每日发布依赖 push 触发构建，GitHub 不再保存任何部署密钥。
@@ -43,6 +43,53 @@
 | 每日发布中断 | 工作流改为 push 触发，手动运行验证 | 手动运行成功；次日 08:05（北京时间）定时运行由用户观察 |
 | pages.dev 重复内容 | `X-Robots-Tag: noindex`（仅 pages.dev 主机） | 响应头检查：pages.dev 有、正式域名没有 |
 | GSC 验证失效 | 保留 `google-site-verification` TXT | 从 Cloudflare 权威 DNS 查询到该 TXT |
+
+### 3.1 robots.txt 与爬虫访问（长期规则）
+
+原则：**robots.txt 完全由本项目自己编写和发布，Cloudflare 不托管、不改写、不追加任何内容；搜索引擎与 AI 爬虫必须能正常抓取全站。** 这条规则在迁移后长期有效，以后改 Cloudflare 设置或部署方式时都要遵守。
+
+**唯一来源**
+
+- robots.txt 由 `scripts/prerender.mjs` 在每次构建时生成到 `dist/robots.txt`，当前内容（63 字节）：
+
+  ```
+  User-agent: *
+  Allow: /
+  Sitemap: https://rngdle.art/sitemap.xml
+  ```
+
+- 修改 robots.txt 只改 `scripts/prerender.mjs` 中生成它的代码，推送到 `main` 由 Cloudflare Pages 自动发布。不在 Cloudflare 后台、Workers、转换规则或 `public/` 下另放一份 robots.txt。
+- 同时生成并发布的爬虫入口：`/sitemap.xml`、`/llms.txt`（供 AI 读取），规则相同。
+
+**Cloudflare 中必须保持的设置**（站点 `rngdle.art`）
+
+| 位置 | 设置 | 要求 |
+|---|---|---|
+| AI Crawl Control → 信号 | Enable Bot Preference Sync | **关闭**（开启后会把 Cloudflare 规则加到 robots.txt 开头） |
+| AI Crawl Control → 信号 | 内容信号（Content Signals） | **未设置** |
+| AI Crawl Control → 安全 | 各爬虫「阻止爬网程序」 | **全部关闭** |
+| 添加站点 / 安全性 → 设置 | AI 自动程序策略：搜索、代理、训练 | **允许（不阻止）** |
+| 安全性 → 设置 | Bot Fight 模式、AI 迷宫 | **关闭**（会质询或给爬虫注入内容） |
+| 安全性 → 设置 | 电子邮件地址混淆 | **关闭**（改写 HTML） |
+| SSL/TLS → 边缘证书 | 自动 HTTPS 重写 | **关闭**（改写 HTML） |
+| 速度 → 设置 | Rocket Loader、RUM Web Analytics 注入 | **关闭**（改写 HTML） |
+
+**pages.dev 与正式域名的区别**
+
+- 正式域名 `rngdle.art`、`www.rngdle.art`：无 `X-Robots-Tag`，允许索引。
+- `*.rngdle-art.pages.dev`：`public/_headers` 返回 `X-Robots-Tag: noindex`，避免重复内容。robots.txt 内容相同，不另做屏蔽，以免爬虫读不到 noindex。
+
+**检查方法**（改 Cloudflare 设置、改 robots.txt 或怀疑抓取异常时执行）
+
+1. 运行 GitHub Actions「Remote acceptance」，`base_url` 填 `https://rngdle.art`（再跑一次 `https://www.rngdle.art`）。`scripts/compare-hosts.mjs` 会：
+   - 检查 robots.txt 与上面的内容逐字节一致（`robots-content`）；
+   - 以 Googlebot、Bingbot、GPTBot、OAI-SearchBot、ClaudeBot、PerplexityBot、Google-Extended 七种 UA 请求 `/robots.txt`、`/en`、`/llms.txt`，要求全部 200，且各 UA 拿到的 robots.txt 完全相同（`crawler-access`、`robots-unmodified`）；
+   - 检查正式域名无 `X-Robots-Tag`、pages.dev 有 noindex。
+   - 同一工作流中的 `verify-deployment.mjs` 逐页核对 HTML、sitemap、llms.txt 与构建产物一致。
+2. Cloudflare → AI Crawl Control：
+   - 「信号」页：Bot Preference Sync 关闭，内容信号「未设置」，robots.txt 请求无失败，无违规；
+   - 「安全」页：所有爬虫「未成功」为 0，阻止开关全部关闭。
+3. Google Search Console（`sc-domain:rngdle.art`）：设置 → robots.txt 报告状态为「已获取」，网址检查「测试实际版本」可抓取。
 
 ## 4. 执行步骤与验收标准
 
@@ -182,4 +229,12 @@ Vercel 项目 `linhaos-projects/rngdle-art`（Pro）绑定域名：`rngdle.art`�
   - 内容 349 项、4473/4473 条检查通过；
   - 浏览器 75/75 通过。
 - 仍需观察：次日北京时间 08:05 起的每日定时发布（推送 → Pages 构建 → 正式域名核验）；GSC「网址检查」实时测试与抓取统计。
+
+### 6.9 robots.txt 与爬虫访问检查（2026-10-01 17:45，按第 3.1 节）
+
+- 线上内容：`https://rngdle.art/robots.txt`、`https://www.rngdle.art/robots.txt` 均 200，与构建产物逐字节一致（63 字节），无 Cloudflare 追加内容。
+- Cloudflare AI Crawl Control：
+  - 信号：Bot Preference Sync 关闭；内容信号「未设置」；robots.txt 请求 rngdle.art 成功 27 次、www 成功 9 次，未成功 0；无违规。
+  - 安全：33 个爬虫的阻止开关全部关闭。过去 7 天已放行 Amazonbot 19、PerplexityBot 15、ClaudeBot 14、BingBot 13、OAI-SearchBot 11、GPTBot 9、Googlebot 4 次请求，未成功均为 0（其中部分来自验收测试；Amazonbot 不在测试名单中，为真实抓取）。
+- 外部实测：Remote acceptance 运行 36844683907（`rngdle.art`）：七种爬虫 UA 访问 `/robots.txt`、`/en`、`/llms.txt` 全部 200，robots.txt 各 UA 一致；184 个地址 0 失败；内容 4473/4473 通过。
 
