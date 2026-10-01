@@ -136,4 +136,23 @@ Vercel 项目 `linhaos-projects/rngdle-art`（Pro）绑定域名：`rngdle.art`�
 ### 6.4 添加站点受阻
 
 - Cloudflare 后台「连接域名」流程在提交前会调用域名注册检查接口 `registrar/domains/batch_check?id=rngdle.art`，该接口对 `.art` 返回 422，页面一直停在加载状态，未发出创建站点请求。自动导入与手动输入 DNS 两种方式均复现。
+- 最后一次（手动输入 DNS）提交最终在后台完成：2026-10-01 复查时站点 `rngdle.art`（Free）已存在，停在手动录入 DNS 页面。
+
+### 6.5 Cloudflare 站点配置（2026-10-01）
+
+- 爬虫策略：搜索、代理、训练三类均为「允许（不阻止）」；Bot Preference Sync（改写 robots.txt）关闭。
+- DNS 记录（全部「仅 DNS」，切换前流量仍到 Vercel）：
+
+| 类型 | 名称 | 内容 |
+|---|---|---|
+| A | @ | 216.150.1.1 |
+| A | @ | 216.150.16.1 |
+| CNAME | www | ca491a073f28d8ac.vercel-dns-016.com |
+| TXT | @ | google-site-verification=glu6f0r_tQELGN47bhlHbBOgofWRoFm8xuCrm__BkgU |
+| TXT | @ | v=spf1 -all |
+| TXT | _dmarc | v=DMARC1; p=reject; sp=reject; adkim=s; aspf=s |
+
+- 分配的 nameserver：`liberty.ns.cloudflare.com`、`milan.ns.cloudflare.com`。
+- SSL/TLS：完全（严格）；始终使用 HTTPS 开启；自动 HTTPS 重写关闭；Cloudflare HSTS 不启用（由 `_headers` 提供，避免重复）。
+- 关闭改写 HTML 的功能：电子邮件地址混淆（原为开启，已关闭）、Rocket Loader、Speed Brain、Cloudflare Fonts、Early Hints、RUM Web Analytics 均为关闭。Bot Fight 模式、AI 迷宫关闭。
 
