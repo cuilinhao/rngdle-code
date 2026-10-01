@@ -172,7 +172,8 @@ Vercel 项目 `linhaos-projects/rngdle-art`（Pro）绑定域名：`rngdle.art`�
 - 每日工作流手动运行 36842100327：全部步骤成功（当天快照已于早间发布，本次无新提交，核验了正式域名内容）。「推送快照即触发构建」由当天 `github-actions[bot]` 提交 `6c704f5` 触发 Cloudflare Pages 构建成功得到确认。
 - Vercel：项目 `linhaos-projects/rngdle-art` 已移除 `rngdle.art`、`www.rngdle.art`，并断开 Git 连接；项目保留，10 月 13 日到期停用。
   - 注意：断开前 Vercel 按无 `vercel.json` 的 `main` 重建，`rngdle-art.vercel.app` 不再是有效的预渲染站点（多数页面 404）。该地址不再使用，也不再作为验收基准。
-- GitHub：删除 secret `VERCEL_DEPLOY_HOOK`、移除 Vercel GitHub App 对本仓库的访问——需账号密码确认（sudo），由用户完成。
+- GitHub：secret `VERCEL_DEPLOY_HOOK` 已删除（用户完成密码确认），仓库现无任何 Actions secret。
+- Vercel GitHub App 安装在 `cuilinhao` 账号且授权「All repositories」，只移除本仓库需改为逐个选择仓库，会影响其他仓库，故未改动；Vercel 项目已断开 Git 连接，不会再从本仓库部署。是否收紧或卸载该 App 由用户决定。
 
 ### 6.8 最终线上验收（提交 `0f10eb3`）
 
