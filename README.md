@@ -42,7 +42,7 @@ CI installs Playwright Chromium and runs the browser suite headlessly. Local acc
 
 `src/engine.mjs` defines the mathematics. `scripts/build-data.mjs` enumerates the entire range and generates independently calculated counts, a 2 MB score index and a 4 MB pattern index. Main page analysis is immediate; larger indices load only for games/exploration. No private upstream APIs are used.
 
-`src/core.tsx` owns preferences and storage, `src/games.mjs` pure game rules, and the page files consume the same shared engine. `scripts/ssr.tsx` renders static content at build time; React then attaches the interactive application. Vercel serves `dist` as static files with clean URLs and a real 404 page.
+`src/core.tsx` owns preferences and storage, `src/games.mjs` pure game rules, and the page files consume the same shared engine. `scripts/ssr.tsx` renders static content at build time; React then attaches the interactive application. Cloudflare Pages serves `dist` as static files with clean URLs and a real 404 page.
 
 The app intentionally stores progress only in this browser. Clearing storage or switching devices starts fresh. There is no account system, shared global leaderboard, or cross-device sync. Anonymous competitor data is never fabricated.
 
@@ -54,20 +54,18 @@ The requested [Web Clone skill](https://github.com/Jane-xiaoer/claude-skill-web-
 
 Repository: `git@github.com:cuilinhao/rngdle-code.git`, branch `main`.
 
-```sh
-npx vercel --prod
-```
+Hosting is Cloudflare Pages (project `rngdle-art`, connected to this repository). Every push to `main` builds with `npm run build` and publishes `dist`; there is no manual deploy command. Response headers are in `public/_headers` and redirects in `public/_redirects`. DNS for `rngdle.art` is managed in Cloudflare (registrar: Namecheap). No secrets are required by the application.
 
-Vercel configuration is in `vercel.json`. Domain target: `rngdle.art`; DNS stays at Namecheap. No secrets are required by the application. Vercel CLI credentials and `.vercel` metadata are not committed. See `DEPLOYMENT.md` for the actual deployed URL, commit and DNS status.
+`.github/workflows/remote-acceptance.yml` (manual) checks any origin: URL behavior against a reference origin, response headers, search/AI crawler access, published HTML hashes and SEO metadata, and the Playwright suite. See `DEPLOYMENT.md` and `docs/CLOUDFLARE-MIGRATION.md` for the current deployment and the migration from Vercel.
 
 ## Analytics and Search Console
 
-GA4 uses the public measurement ID `G-FN1KFQ0VMX`, configured in `src/analytics.mjs`. It runs only in production builds served from `rngdle.art` or `www.rngdle.art`; localhost and Vercel preview hosts do not send analytics. Each new page path sends one `page_view` after the localized title is updated, including language changes and browser back/forward navigation. Editing a number or changing the theme does not send another page view. Reported page URLs and referrers exclude query strings and fragments.
+GA4 uses the public measurement ID `G-FN1KFQ0VMX`, configured in `src/analytics.mjs`. It runs only in production builds served from `rngdle.art` or `www.rngdle.art`; localhost, `pages.dev` and other preview hosts do not send analytics. Each new page path sends one `page_view` after the localized title is updated, including language changes and browser back/forward navigation. Editing a number or changing the theme does not send another page view. Reported page URLs and referrers exclude query strings and fragments.
 
 Keep **Enhanced measurement disabled** for the `RNGDLE.ART Web` stream: page views are sent by the app with `send_page_view: false`, and enabling automatic history tracking would double-count navigation. See [Google's manual pageview guidance](https://developers.google.com/analytics/devguides/collection/ga4/views). Form and site-search collection are also disabled. Google signals and ad personalization are disabled in the client configuration. The privacy page describes GA4 usage in all six languages.
 
-The existing Search Console Domain property `sc-domain:rngdle.art` is verified through a DNS TXT record at Namecheap. Keep that record; no HTML verification tag is needed. The sitemap is generated during every build at `https://rngdle.art/sitemap.xml` and referenced by `robots.txt`.
+The existing Search Console Domain property `sc-domain:rngdle.art` is verified through a DNS TXT record (now in Cloudflare DNS). Keep that record; no HTML verification tag is needed. The sitemap is generated during every build at `https://rngdle.art/sitemap.xml` and referenced by `robots.txt`.
 
 ## SEO and daily publishing
 
-`docs/SEO-GEO.md` documents the content models, indexing policy, verification commands and activation steps for the UTC daily publishing workflow. `npm run test:seo` checks the built HTML, FAQ/schema parity, complete ranking, image dimensions and internal links. Scheduled publication needs the workflow on main and the `VERCEL_DEPLOY_HOOK` repository secret.
+`docs/SEO-GEO.md` documents the content models, indexing policy, verification commands and activation steps for the UTC daily publishing workflow. `npm run test:seo` checks the built HTML, FAQ/schema parity, complete ranking, image dimensions and internal links. Scheduled publication needs the workflow on main; the snapshot commit it pushes triggers the Cloudflare Pages production build.

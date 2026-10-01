@@ -48,11 +48,11 @@ BASE_URL=http://127.0.0.1:4173 npm run test:browser
 启用条件：
 
 1. 将已验证的实现合入仓库默认分支 `main`。
-2. 在 Vercel 项目创建绑定 `main` 的生产 Deploy Hook，将完整 hook URL 保存为 GitHub Actions secret `VERCEL_DEPLOY_HOOK`。不将 URL 写入仓库或日志。
+2. Cloudflare Pages 项目 `rngdle-art` 连接本仓库 `main`。工作流推送快照提交即触发生产构建，无需 Deploy Hook 或 secret。（2026-10-01 前使用 Vercel Deploy Hook，见下方历史记录。）
 3. 仓库允许 Actions 的 `contents: write`，分支策略允许工作流提交快照；否则该步骤会明确失败。
-4. 手动运行一次 Publish daily answers，确认保存快照、构建及测试通过、Vercel 部署成功，并检查当天 URL 和 sitemap。
+4. 手动运行一次 Publish daily answers，确认保存快照、构建及测试通过、Cloudflare Pages 部署成功，并检查当天 URL 和 sitemap。
 
-工作流先构建与验收，再以中文提交信息保存快照与清单，最后请求生产重建。若 main 在测试期间变化，push 会安全失败，应重跑工作流以验证最新代码，不将未测试的 rebase 结果发布。
+工作流先构建与验收，再以中文提交信息保存快照与清单；推送即触发 Cloudflare Pages 生产构建，最后等待并核验正式域名内容。若 main 在测试期间变化，push 会安全失败，应重跑工作流以验证最新代码，不将未测试的 rebase 结果发布。
 
 构建只读已有快照；引擎版本变动不改历史日期记录。历史日期页面显示当时的引擎版本。当前常青榜单随引擎源码和生成器变更重新计算。
 

@@ -19,14 +19,12 @@ jobs:
         with:
           node-version: 22
           cache: npm
-      - name: Check deployment configuration
-        env:
-          DEPLOY_HOOK: ${{ secrets.VERCEL_DEPLOY_HOOK }}
-        run: test -n "$DEPLOY_HOOK" || { echo 'Configure the VERCEL_DEPLOY_HOOK repository secret for the main production branch.'; exit 1; }
       - run: npm ci --registry=https://registry.npmjs.org
       - run: npm run build
       - run: npm test
       - run: npm run test:seo
+      # Cloudflare Pages builds and publishes every push to main through its GitHub
+      # integration, so committing the snapshot is what triggers the production build.
       - name: Preserve immutable daily snapshots
         run: |
           git config user.name 'github-actions[bot]'
@@ -41,10 +39,6 @@ jobs:
         run: |
           git fetch origin main
           test "$(git rev-parse HEAD)" = "$(git rev-parse origin/main)" || { echo 'main changed during verification; rerun this workflow.'; exit 1; }
-      - name: Request production rebuild
-        env:
-          DEPLOY_HOOK: ${{ secrets.VERCEL_DEPLOY_HOOK }}
-        run: curl --fail --silent --show-error --request POST "$DEPLOY_HOOK" --output /dev/null
       - name: Verify published production content
         env:
           BASE_URL: https://rngdle.art

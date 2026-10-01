@@ -96,6 +96,8 @@ for (const [name, href, production, id] of [
   ["localhost", "http://localhost:5173/en", true, measurementId],
   ["local production preview", "http://127.0.0.1:4173/en", true, measurementId],
   ["Vercel preview", "https://rngdle-demo.vercel.app/en", true, measurementId],
+  ["Cloudflare Pages host", "https://rngdle-art.pages.dev/en", true, measurementId],
+  ["Cloudflare Pages preview", "https://2f88df27.rngdle-art.pages.dev/en", true, measurementId],
   ["lookalike host", "https://rngdle.art.example/en", true, measurementId],
   ["non-HTTPS origin", "http://rngdle.art/en", true, measurementId],
   ["missing measurement ID", "https://rngdle.art/en", true, ""],

@@ -27,7 +27,7 @@ test('ads load only for production exact apex and www hosts', async (t) => {
   const { adsEnabled } = await browser(t);
   assert.equal(adsEnabled(true, 'rngdle.art'), true);
   assert.equal(adsEnabled(true, 'www.rngdle.art'), true);
-  for (const host of ['localhost', 'rngdle.art.example', 'demo.vercel.app', '']) assert.equal(adsEnabled(true, host), false);
+  for (const host of ['localhost', 'rngdle.art.example', 'demo.vercel.app', 'rngdle-art.pages.dev', '2f88df27.rngdle-art.pages.dev', '']) assert.equal(adsEnabled(true, host), false);
   assert.equal(adsEnabled(false, 'rngdle.art'), false);
 });
 
