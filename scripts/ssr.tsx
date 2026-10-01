@@ -19,6 +19,7 @@ import { HomeSeoSections } from "../src/SeoSections";
 import { homeContent } from "../src/seo-content";
 import { RarestNumbers } from "../src/RarestNumbers";
 import { DailyAnswer, DailyArchive } from "../src/DailyAnswers";
+import { TechTrendinBadge } from "../src/TechTrendinBadge";
 import {
   pageSeo,
   baseRoutes,
@@ -157,6 +158,7 @@ export function render(locale: Locale, route: string, daily?: any) {
               RNGDLE.ART
             </a>
             <p>{t("footer")}</p>
+            <TechTrendinBadge />
           </div>
           {["guides", "about", "privacy", "terms", "contact"].map((k) => (
             <a key={k} href={path(k)}>

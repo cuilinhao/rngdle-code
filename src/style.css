@@ -870,6 +870,15 @@ footer {
   max-width: 240px;
   margin-top: 15px;
 }
+.techtrendin-badge {
+  display: inline-flex;
+  max-width: 100%;
+  margin-top: 16px;
+}
+.techtrendin-badge img {
+  display: block;
+  max-width: 100%;
+}
 .footer-inner > div:not(:first-child) > a {
   display: block;
   color: var(--muted);

@@ -60,6 +60,7 @@ import { HomeSeoSections } from "./SeoSections";
 import { homeContent } from "./seo-content";
 import { RarestNumbers } from "./RarestNumbers";
 import { DailyAnswer, DailyArchive } from "./DailyAnswers";
+import { TechTrendinBadge } from "./TechTrendinBadge";
 import { applySeo, dailyDate, isKnownRoute, indexLocales } from "./seo";
 export const routes = [
   "",
@@ -256,6 +257,7 @@ function Footer() {
             RNGDLE<span className="brand-art">.ART</span>
           </A>
           <p>{t("footer")}</p>
+          <TechTrendinBadge />
         </div>
         {[
           ["tools", ...nav.slice(0, 6)],
