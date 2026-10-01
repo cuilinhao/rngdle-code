@@ -1,4 +1,17 @@
-# Deployment record — 2026-09-26
+# Deployment record
+
+## Current deployment — Cloudflare Pages (since 2026-10-01)
+
+- Repository: https://github.com/cuilinhao/rngdle-code ; branch `main`.
+- Hosting: Cloudflare Pages project `rngdle-art` (account Cuilinhao2021), connected through the "Cloudflare Workers and Pages" GitHub App (access limited to this repository). Every push to `main` runs `npm run build` (Node 22, `NODE_VERSION=22`) and publishes `dist`; a build takes about one minute.
+- Domains: https://rngdle.art and https://www.rngdle.art both serve the site directly (canonical URLs point to `rngdle.art`). Fallback: https://rngdle-art.pages.dev (returns `X-Robots-Tag: noindex`).
+- DNS: Cloudflare (nameservers `liberty.ns.cloudflare.com`, `milan.ns.cloudflare.com`, set at Namecheap; DNSSEC off). Records: `@` and `www` CNAME `rngdle-art.pages.dev` (proxied), Google site verification TXT, `v=spf1 -all`, `_dmarc` `v=DMARC1; p=reject; sp=reject; adkim=s; aspf=s`.
+- Headers and redirects: `public/_headers`, `public/_redirects`. Cloudflare features that rewrite HTML (email obfuscation, Rocket Loader, automatic HTTPS rewrites, RUM injection) are off; AI crawlers are allowed and Cloudflare does not manage `robots.txt`.
+- Daily answers: `.github/workflows/daily-answers.yml` pushes the snapshot commit, which triggers the Pages production build, then verifies https://rngdle.art. No deploy hook or secret is used.
+- Acceptance: `.github/workflows/remote-acceptance.yml` (manual). Cut-over runs 36841184578 (`rngdle.art`) and 36841344830 (`www.rngdle.art`) against the Vercel deployment as reference: 184/184 URL behaviors identical, 4473/4473 content checks, 75/75 browser tests.
+- Migration plan and log: `docs/CLOUDFLARE-MIGRATION.md`. Vercel is no longer used; everything below is history.
+
+## Deployment record — 2026-09-26 (Vercel, historical)
 
 - Repository: https://github.com/cuilinhao/rngdle-code ; branch `main`.
 - Application/dependency release: `1c6213af455d1e438e0fd668e8f563e33dd0aea1`.

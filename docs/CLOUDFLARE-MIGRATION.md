@@ -156,3 +156,13 @@ Vercel 项目 `linhaos-projects/rngdle-art`（Pro）绑定域名：`rngdle.art`�
 - SSL/TLS：完全（严格）；始终使用 HTTPS 开启；自动 HTTPS 重写关闭；Cloudflare HSTS 不启用（由 `_headers` 提供，避免重复）。
 - 关闭改写 HTML 的功能：电子邮件地址混淆（原为开启，已关闭）、Rocket Loader、Speed Brain、Cloudflare Fonts、Early Hints、RUM Web Analytics 均为关闭。Bot Fight 模式、AI 迷宫关闭。
 
+### 6.6 切换（2026-10-01）
+
+- 16:57 Namecheap nameserver 改为 Custom DNS：`liberty.ns.cloudflare.com`、`milan.ns.cloudflare.com`。约 10 分钟后注册局生效，Cloudflare 站点变为活动。
+- Pages 自定义域添加 `rngdle.art`、`www.rngdle.art`：Cloudflare 将指向 Vercel 的两条 A 与 www CNAME 替换为指向 `rngdle-art.pages.dev` 的代理 CNAME，两个域名几分钟内变为「活动 · SSL 已启用」。
+- 正式域名响应头：`server: cloudflare`，无 `x-vercel-id`；安全头、HSTS 与迁移前一致，无 `X-Robots-Tag`。
+- 验收（以 Vercel 部署 `rngdle-art.vercel.app` 为 URL 行为基准）：
+  - `rngdle.art`，运行 36841184578：URL 行为 184/184 一致，内容 349 项、4473/4473 条检查通过，浏览器 75/75 通过。
+  - `www.rngdle.art`，运行 36841344830：结果相同。
+  - 爬虫：7 种搜索/AI 爬虫 UA 访问 `/robots.txt`、`/en`、`/llms.txt` 均 200，robots.txt 与构建产物逐字节一致。
+
