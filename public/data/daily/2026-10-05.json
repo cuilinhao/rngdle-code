@@ -1,0 +1,690 @@
+{
+  "date": "2026-10-05",
+  "version": "art-1.0.0",
+  "sourceHash": "07fdaed095b128b7c59cc6e7f8056b790d5f9ced737060f04c1395cbfd51ccfa",
+  "datePublished": "2026-10-05T05:26:04.506Z",
+  "dateModified": "2026-10-05T05:26:04.506Z",
+  "officialMode": "hunt",
+  "topNumber": {
+    "n": 222321,
+    "score": 423,
+    "percent": 0.6984993015006985,
+    "patterns": [
+      "quad",
+      "run",
+      "descRun"
+    ]
+  },
+  "patternOfDay": "quad",
+  "modes": {
+    "draft": {
+      "numbers": [
+        {
+          "n": 164482,
+          "score": 162,
+          "percent": 60.12123987876012,
+          "patterns": [
+            "repeat",
+            "semiprime"
+          ]
+        },
+        {
+          "n": 20618,
+          "score": 192,
+          "percent": 38.75916124083876,
+          "patterns": [
+            "zigzag"
+          ]
+        },
+        {
+          "n": 584958,
+          "score": 235,
+          "percent": 18.582181417818582,
+          "patterns": [
+            "pairs",
+            "zigzag"
+          ]
+        },
+        {
+          "n": 348937,
+          "score": 202,
+          "percent": 32.394267605732395,
+          "patterns": [
+            "repeat",
+            "prime"
+          ]
+        },
+        {
+          "n": 77224,
+          "score": 179,
+          "percent": 47.58925241074759,
+          "patterns": [
+            "pairs"
+          ]
+        }
+      ],
+      "winner": {
+        "n": 584958,
+        "score": 235,
+        "percent": 18.582181417818582,
+        "patterns": [
+          "pairs",
+          "zigzag"
+        ]
+      },
+      "winnerIndices": [
+        2
+      ]
+    },
+    "hunt": {
+      "numbers": [
+        {
+          "n": 222321,
+          "score": 423,
+          "percent": 0.6984993015006985,
+          "patterns": [
+            "quad",
+            "run",
+            "descRun"
+          ]
+        },
+        {
+          "n": 80813,
+          "score": 238,
+          "percent": 17.527982472017527,
+          "patterns": [
+            "repeat",
+            "zigzag",
+            "semiprime"
+          ]
+        },
+        {
+          "n": 915143,
+          "score": 270,
+          "percent": 9.226790773209228,
+          "patterns": [
+            "repeat",
+            "zigzag",
+            "happy",
+            "prime"
+          ]
+        },
+        {
+          "n": 755457,
+          "score": 186,
+          "percent": 43.17055682944317,
+          "patterns": [
+            "triple"
+          ]
+        },
+        {
+          "n": 645877,
+          "score": 236,
+          "percent": 18.144281855718145,
+          "patterns": [
+            "repeat",
+            "happy",
+            "prime"
+          ]
+        },
+        {
+          "n": 166958,
+          "score": 133,
+          "percent": 85.13401486598514,
+          "patterns": [
+            "repeat"
+          ]
+        },
+        {
+          "n": 704855,
+          "score": 116,
+          "percent": 98.51910148089851,
+          "patterns": [
+            "repeat"
+          ]
+        },
+        {
+          "n": 479835,
+          "score": 163,
+          "percent": 58.702241297758704,
+          "patterns": []
+        },
+        {
+          "n": 372419,
+          "score": 199,
+          "percent": 34.663165336834666,
+          "patterns": [
+            "zigzag"
+          ]
+        },
+        {
+          "n": 158547,
+          "score": 118,
+          "percent": 94.5875054124946,
+          "patterns": [
+            "repeat"
+          ]
+        },
+        {
+          "n": 925620,
+          "score": 118,
+          "percent": 94.5875054124946,
+          "patterns": [
+            "repeat"
+          ]
+        },
+        {
+          "n": 710821,
+          "score": 178,
+          "percent": 48.39205160794839,
+          "patterns": [
+            "repeat",
+            "semiprime"
+          ]
+        },
+        {
+          "n": 268399,
+          "score": 188,
+          "percent": 41.38615861384139,
+          "patterns": [
+            "repeat",
+            "semiprime"
+          ]
+        },
+        {
+          "n": 921861,
+          "score": 139,
+          "percent": 80.61801938198062,
+          "patterns": [
+            "repeat",
+            "harshad"
+          ]
+        },
+        {
+          "n": 223004,
+          "score": 211,
+          "percent": 28.435571564428436,
+          "patterns": [
+            "pairs"
+          ]
+        },
+        {
+          "n": 226120,
+          "score": 226,
+          "percent": 21.101778898221102,
+          "patterns": [
+            "triple",
+            "happy"
+          ]
+        },
+        {
+          "n": 15531,
+          "score": 212,
+          "percent": 27.993772006227992,
+          "patterns": [
+            "pairs"
+          ]
+        },
+        {
+          "n": 104084,
+          "score": 242,
+          "percent": 16.305883694116307,
+          "patterns": [
+            "pairs",
+            "zigzag",
+            "happy"
+          ]
+        },
+        {
+          "n": 274347,
+          "score": 258,
+          "percent": 11.786288213711787,
+          "patterns": [
+            "pairs",
+            "parity",
+            "harshad"
+          ]
+        },
+        {
+          "n": 49409,
+          "score": 246,
+          "percent": 14.875485124514876,
+          "patterns": [
+            "pairs",
+            "prime"
+          ]
+        },
+        {
+          "n": 587702,
+          "score": 116,
+          "percent": 98.51910148089851,
+          "patterns": [
+            "repeat"
+          ]
+        },
+        {
+          "n": 362262,
+          "score": 186,
+          "percent": 43.17055682944317,
+          "patterns": [
+            "triple"
+          ]
+        },
+        {
+          "n": 915130,
+          "score": 190,
+          "percent": 40.035259964740035,
+          "patterns": [
+            "repeat",
+            "zigzag"
+          ]
+        },
+        {
+          "n": 669748,
+          "score": 162,
+          "percent": 60.12123987876012,
+          "patterns": [
+            "repeat"
+          ]
+        },
+        {
+          "n": 8904,
+          "score": 341,
+          "percent": 2.493197506802493,
+          "patterns": [
+            "zigzag",
+            "harshad"
+          ]
+        },
+        {
+          "n": 97795,
+          "score": 244,
+          "percent": 15.705584294415706,
+          "patterns": [
+            "pairs",
+            "semiprime"
+          ]
+        },
+        {
+          "n": 785178,
+          "score": 159,
+          "percent": 63.09063690936309,
+          "patterns": [
+            "pairs"
+          ]
+        },
+        {
+          "n": 294266,
+          "score": 139,
+          "percent": 80.61801938198062,
+          "patterns": [
+            "pairs"
+          ]
+        },
+        {
+          "n": 158911,
+          "score": 198,
+          "percent": 34.96156503843496,
+          "patterns": [
+            "triple",
+            "semiprime"
+          ]
+        },
+        {
+          "n": 376572,
+          "score": 219,
+          "percent": 24.293275706724295,
+          "patterns": [
+            "repeat",
+            "descRun"
+          ]
+        }
+      ],
+      "winner": {
+        "n": 222321,
+        "score": 423,
+        "percent": 0.6984993015006985,
+        "patterns": [
+          "quad",
+          "run",
+          "descRun"
+        ]
+      },
+      "winnerIndices": [
+        0
+      ]
+    },
+    "quiz": {
+      "rounds": [
+        {
+          "round": 1,
+          "options": [
+            {
+              "n": 865524,
+              "score": 118,
+              "percent": 94.5875054124946,
+              "patterns": [
+                "repeat"
+              ]
+            },
+            {
+              "n": 715701,
+              "score": 171,
+              "percent": 53.11134688865311,
+              "patterns": [
+                "pairs",
+                "harshad"
+              ]
+            }
+          ],
+          "winner": {
+            "n": 715701,
+            "score": 171,
+            "percent": 53.11134688865311,
+            "patterns": [
+              "pairs",
+              "harshad"
+            ]
+          },
+          "winnerIndex": 1
+        },
+        {
+          "round": 2,
+          "options": [
+            {
+              "n": 403788,
+              "score": 118,
+              "percent": 94.5875054124946,
+              "patterns": [
+                "repeat"
+              ]
+            },
+            {
+              "n": 738077,
+              "score": 203,
+              "percent": 31.884968115031885,
+              "patterns": [
+                "triple",
+                "semiprime"
+              ]
+            }
+          ],
+          "winner": {
+            "n": 738077,
+            "score": 203,
+            "percent": 31.884968115031885,
+            "patterns": [
+              "triple",
+              "semiprime"
+            ]
+          },
+          "winnerIndex": 1
+        },
+        {
+          "round": 3,
+          "options": [
+            {
+              "n": 999773,
+              "score": 371,
+              "percent": 1.5131984868015131,
+              "patterns": [
+                "triple",
+                "run",
+                "prime"
+              ]
+            },
+            {
+              "n": 349887,
+              "score": 155,
+              "percent": 65.21173478826522,
+              "patterns": [
+                "repeat"
+              ]
+            }
+          ],
+          "winner": {
+            "n": 999773,
+            "score": 371,
+            "percent": 1.5131984868015131,
+            "patterns": [
+              "triple",
+              "run",
+              "prime"
+            ]
+          },
+          "winnerIndex": 0
+        },
+        {
+          "round": 4,
+          "options": [
+            {
+              "n": 567428,
+              "score": 250,
+              "percent": 13.854086145913854,
+              "patterns": [
+                "ascRun"
+              ]
+            },
+            {
+              "n": 55130,
+              "score": 169,
+              "percent": 54.3016456983543,
+              "patterns": [
+                "repeat"
+              ]
+            }
+          ],
+          "winner": {
+            "n": 567428,
+            "score": 250,
+            "percent": 13.854086145913854,
+            "patterns": [
+              "ascRun"
+            ]
+          },
+          "winnerIndex": 0
+        },
+        {
+          "round": 5,
+          "options": [
+            {
+              "n": 209992,
+              "score": 218,
+              "percent": 24.984075015924983,
+              "patterns": [
+                "triple",
+                "run"
+              ]
+            },
+            {
+              "n": 461863,
+              "score": 116,
+              "percent": 98.51910148089851,
+              "patterns": [
+                "repeat"
+              ]
+            }
+          ],
+          "winner": {
+            "n": 209992,
+            "score": 218,
+            "percent": 24.984075015924983,
+            "patterns": [
+              "triple",
+              "run"
+            ]
+          },
+          "winnerIndex": 0
+        },
+        {
+          "round": 6,
+          "options": [
+            {
+              "n": 49412,
+              "score": 232,
+              "percent": 19.205780794219205,
+              "patterns": [
+                "repeat",
+                "parity"
+              ]
+            },
+            {
+              "n": 803571,
+              "score": 189,
+              "percent": 40.947159052840945,
+              "patterns": [
+                "semiprime"
+              ]
+            }
+          ],
+          "winner": {
+            "n": 49412,
+            "score": 232,
+            "percent": 19.205780794219205,
+            "patterns": [
+              "repeat",
+              "parity"
+            ]
+          },
+          "winnerIndex": 0
+        },
+        {
+          "round": 7,
+          "options": [
+            {
+              "n": 324077,
+              "score": 120,
+              "percent": 92.24190775809224,
+              "patterns": [
+                "repeat"
+              ]
+            },
+            {
+              "n": 738686,
+              "score": 228,
+              "percent": 20.528579471420528,
+              "patterns": [
+                "pairs",
+                "zigzag"
+              ]
+            }
+          ],
+          "winner": {
+            "n": 738686,
+            "score": 228,
+            "percent": 20.528579471420528,
+            "patterns": [
+              "pairs",
+              "zigzag"
+            ]
+          },
+          "winnerIndex": 1
+        },
+        {
+          "round": 8,
+          "options": [
+            {
+              "n": 157309,
+              "score": 187,
+              "percent": 42.33865766134234,
+              "patterns": [
+                "semiprime"
+              ]
+            },
+            {
+              "n": 430000,
+              "score": 380,
+              "percent": 1.3237986762013239,
+              "patterns": [
+                "quad",
+                "run"
+              ]
+            }
+          ],
+          "winner": {
+            "n": 430000,
+            "score": 380,
+            "percent": 1.3237986762013239,
+            "patterns": [
+              "quad",
+              "run"
+            ]
+          },
+          "winnerIndex": 1
+        },
+        {
+          "round": 9,
+          "options": [
+            {
+              "n": 795215,
+              "score": 116,
+              "percent": 98.51910148089851,
+              "patterns": [
+                "repeat"
+              ]
+            },
+            {
+              "n": 170262,
+              "score": 169,
+              "percent": 54.3016456983543,
+              "patterns": [
+                "repeat",
+                "harshad",
+                "happy"
+              ]
+            }
+          ],
+          "winner": {
+            "n": 170262,
+            "score": 169,
+            "percent": 54.3016456983543,
+            "patterns": [
+              "repeat",
+              "harshad",
+              "happy"
+            ]
+          },
+          "winnerIndex": 1
+        },
+        {
+          "round": 10,
+          "options": [
+            {
+              "n": 170648,
+              "score": 199,
+              "percent": 34.663165336834666,
+              "patterns": [
+                "zigzag"
+              ]
+            },
+            {
+              "n": 370833,
+              "score": 154,
+              "percent": 65.89313410686589,
+              "patterns": [
+                "triple"
+              ]
+            }
+          ],
+          "winner": {
+            "n": 170648,
+            "score": 199,
+            "percent": 34.663165336834666,
+            "patterns": [
+              "zigzag"
+            ]
+          },
+          "winnerIndex": 0
+        }
+      ]
+    }
+  },
+  "specimen": {
+    "n": 852915,
+    "score": 118,
+    "percent": 94.5875054124946,
+    "patterns": [
+      "repeat"
+    ]
+  }
+}
