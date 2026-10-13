@@ -1,7 +1,5 @@
 name: Publish daily answers
 on:
-  schedule:
-    - cron: '5 0 * * *'
   workflow_dispatch:
 permissions:
   contents: write

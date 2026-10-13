@@ -7,7 +7,7 @@
 - Domains: https://rngdle.art and https://www.rngdle.art both serve the site directly (canonical URLs point to `rngdle.art`). Fallback: https://rngdle-art.pages.dev (returns `X-Robots-Tag: noindex`).
 - DNS: Cloudflare (nameservers `liberty.ns.cloudflare.com`, `milan.ns.cloudflare.com`, set at Namecheap; DNSSEC off). Records: `@` and `www` CNAME `rngdle-art.pages.dev` (proxied), Google site verification TXT, `v=spf1 -all`, `_dmarc` `v=DMARC1; p=reject; sp=reject; adkim=s; aspf=s`.
 - Headers and redirects: `public/_headers`, `public/_redirects`. Cloudflare features that rewrite HTML (email obfuscation, Rocket Loader, automatic HTTPS rewrites, RUM injection) are off; AI crawlers are allowed and Cloudflare does not manage `robots.txt`.
-- Daily answers: `.github/workflows/daily-answers.yml` pushes the snapshot commit, which triggers the Pages production build, then verifies https://rngdle.art. No deploy hook or secret is used.
+- Daily answers: automatic daily publication was stopped on 2026-10-13. `.github/workflows/daily-answers.yml` has no schedule and only retains `workflow_dispatch`; the workflow is also disabled in GitHub Actions. If manually enabled and run, it pushes the snapshot commit, which triggers the Pages production build, then verifies https://rngdle.art. No deploy hook or secret is used.
 - Acceptance: `.github/workflows/remote-acceptance.yml` (manual). Cut-over runs 36841184578 (`rngdle.art`) and 36841344830 (`www.rngdle.art`) against the Vercel deployment as reference: 184/184 URL behaviors identical, 4473/4473 content checks, 75/75 browser tests.
 - Migration plan and log: `docs/CLOUDFLARE-MIGRATION.md`. Vercel is no longer used; everything below is history.
 

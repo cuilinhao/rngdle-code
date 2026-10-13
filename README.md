@@ -68,4 +68,4 @@ The existing Search Console Domain property `sc-domain:rngdle.art` is verified t
 
 ## SEO and daily publishing
 
-`docs/SEO-GEO.md` documents the content models, indexing policy, verification commands and activation steps for the UTC daily publishing workflow. `npm run test:seo` checks the built HTML, FAQ/schema parity, complete ranking, image dimensions and internal links. Scheduled publication needs the workflow on main; the snapshot commit it pushes triggers the Cloudflare Pages production build.
+`docs/SEO-GEO.md` documents the content models, indexing policy, verification commands and manual publishing steps. `npm run test:seo` checks the built HTML, FAQ/schema parity, complete ranking, image dimensions and internal links. Automatic daily publication was stopped on 2026-10-13: the schedule was removed from `daily-answers.yml`, and the workflow is disabled in GitHub Actions. To publish snapshots manually, enable the workflow and use `Run workflow`; its snapshot commit triggers the Cloudflare Pages production build.

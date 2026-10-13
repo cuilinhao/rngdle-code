@@ -41,16 +41,16 @@ BASE_URL=http://127.0.0.1:4173 npm run test:browser
 
 `verification/prerender.json` 分别记录总 HTML 数与可索引 URL 数。初次完成包含原有 94 个 en/zh URL，加榜单、归档、首日答案各 2 个，共 100 个索引 URL；之后随历史积累增长。
 
-## 每日自动发布
+## 每日答案手动发布
 
-仓库工作流 `.github/workflows/daily-answers.yml` 每天 UTC 00:05 运行，也支持手动触发。GitHub Actions 的调度可能排队或延迟，[官方调度说明](https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows#schedule)。
+2026-10-13 已停止每日自动发布：仓库工作流 `.github/workflows/daily-answers.yml` 已移除 `schedule`，只保留 `workflow_dispatch`；GitHub Actions 中的 Publish daily answers 工作流也已停用。重新启用该工作流后仍需手动触发，不会恢复每日定时运行。普通代码推送仍会触发 Cloudflare Pages 构建。
 
-启用条件：
+需要手动发布快照时：
 
 1. 将已验证的实现合入仓库默认分支 `main`。
 2. Cloudflare Pages 项目 `rngdle-art` 连接本仓库 `main`。工作流推送快照提交即触发生产构建，无需 Deploy Hook 或 secret。（2026-10-01 前使用 Vercel Deploy Hook，见下方历史记录。）
 3. 仓库允许 Actions 的 `contents: write`，分支策略允许工作流提交快照；否则该步骤会明确失败。
-4. 手动运行一次 Publish daily answers，确认保存快照、构建及测试通过、Cloudflare Pages 部署成功，并检查当天 URL 和 sitemap。
+4. 在 GitHub Actions 中启用 Publish daily answers，再通过 `Run workflow` 手动运行，确认保存快照、构建及测试通过、Cloudflare Pages 部署成功，并检查当天 URL 和 sitemap。
 
 工作流先构建与验收，再以中文提交信息保存快照与清单；推送即触发 Cloudflare Pages 生产构建，最后等待并核验正式域名内容。若 main 在测试期间变化，push 会安全失败，应重跑工作流以验证最新代码，不将未测试的 rebase 结果发布。
 
